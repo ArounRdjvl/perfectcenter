@@ -1,4 +1,4 @@
-import styles from "../styles/Example.module.css"
+import "../styles/Example.module.less"
 
 export interface ExampleProps {
     sentence: string
@@ -6,7 +6,7 @@ export interface ExampleProps {
 
 export function Example(props: ExampleProps) {
     return (
-        <div className={styles.hey}>
+        <div className="hey">
             <div>this is my example component</div>
             <div>{props.sentence}</div>
         </div>

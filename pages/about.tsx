@@ -1,22 +1,19 @@
-import { Alert, Button } from "react-bootstrap"
+import { Navigation } from "../ components/Navigation"
+import { Example } from "../ components/Example"
+import { Icon } from 'rsuite';
+
 
 export default function Home() {
     return (
-        <div style={{ padding: "1rem" }}>
-            <Alert show={true} variant="success">
-                <Alert.Heading>How's it going?!</Alert.Heading>
-                <p>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor
-                    ligula, eget lacinia odio sem nec elit. Cras mattis
-                    consectetur purus sit amet fermentum.
-                </p>
-                <hr />
-                <div className="d-flex justify-content-end">
-                    <Button onClick={() => {}} variant="outline-success">
-                        Close me y'all!
-                    </Button>
-                </div>
-            </Alert>
+        <div>
+            <Navigation />
+            <div>
+                <Icon icon="linkedin-square" size="3x" />
+                <Icon icon="youtube-square" size="3x" />
+                <Icon icon="facebook-square" size="3x" />
+            </div>
+            <Example />
+            <Example />
         </div>
     )
 }
