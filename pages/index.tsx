@@ -4,6 +4,7 @@ import { Navigation } from "../ components/Navigation"
 import { Button } from "rsuite"
 import "rsuite/lib/styles/index.less"
 import "../styles/Home.module.less"
+import { Logo } from "../ components/Logo"
 
 export default function index() {
     return (
@@ -13,6 +14,8 @@ export default function index() {
             </Head>
 
             <Navigation />
+
+            <Logo />
 
             <div className="hero">
                 <h1 className="title">Welcome to React Suite</h1>
