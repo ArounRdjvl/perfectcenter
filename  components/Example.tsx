@@ -1,7 +1,7 @@
 import "../styles/Example.module.less"
 
 export interface ExampleProps {
-    sentence: string
+    sentence?: string
 }
 
 export function Example(props: ExampleProps) {
