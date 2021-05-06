@@ -1,36 +1,77 @@
 import Link from "next/link"
-import { Dropdown, Nav, Navbar } from "rsuite"
+import React from "react"
+import {
+    Button,
+    Menu,
+    AppBar,
+    MenuItem,
+    Fade,
+    Container
+} from "@material-ui/core"
+
+const heightHeader = 90
 
 export function Navigation() {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
+
+    const handleClose = () => {
+        setAnchorEl(null)
+    }
+
     return (
         <>
-            <div style={{ position : "absolute", width : "100%" }}>
+            <div style={{ position: "absolute", width: "100%", top: 0, left: 0}}>
                 <img
                     src=".\Logo.png"
-                    height="100"
+                    height={heightHeader}
                     style={{ display: "block", margin: "auto" }}
                 />
             </div>
-            <Navbar appearance="subtle">
-                <Navbar.Body>
-                    <Nav>
-                        <Nav.Item>Accueil</Nav.Item>
-                        <Dropdown title="A propos">
-                            <Dropdown.Item>Company</Dropdown.Item>
-                            <Dropdown.Item>Team</Dropdown.Item>
-                            <Dropdown.Item>Contact</Dropdown.Item>
-                        </Dropdown>
-                        <Nav.Item>Articles</Nav.Item>
-                        <Nav.Item>Nous contacter</Nav.Item>
-                    </Nav>
+            <Container>
+                <AppBar
+                    color="transparent"
+                    position="static"
+                    style={{ height: heightHeader, boxShadow: "none" }}
+                >
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between"
+                        }}
+                    >
+                        <div>
+                            <Button>Accueil</Button>
+                            <Button onClick={handleClick}>A propos</Button>
+                            <Menu
+                                id="simple-menu"
+                                anchorEl={anchorEl}
+                                keepMounted
+                                open={Boolean(anchorEl)}
+                                onClose={handleClose}
+                                TransitionComponent={Fade}
+                            >
+                                <MenuItem>Company</MenuItem>
+                                <MenuItem>Team</MenuItem>
+                                <MenuItem>Contact</MenuItem>
+                            </Menu>
+                            <Button>Articles</Button>
+                            <Link href="/contact">
+                                <Button>Nous contacter</Button>
+                            </Link>
+                        </div>
 
-                    <Nav pullRight>
-                        <Nav.Item>PerfectCorporate</Nav.Item>
-                        <Nav.Item>PerfectCare</Nav.Item>
-                        <Nav.Item>PerfectCircle</Nav.Item>
-                    </Nav>
-                </Navbar.Body>
-            </Navbar>
+                        <div>
+                            <Button>PerfectCorporate</Button>
+                            <Button>PerfectCare</Button>
+                            <Button>PerfectCircle</Button>
+                        </div>
+                    </div>
+                </AppBar>
+            </Container>
         </>
     )
 }

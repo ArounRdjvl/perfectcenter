@@ -1,8 +1,6 @@
 import React from "react"
 import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
-import { Button } from "rsuite"
-import "rsuite/lib/styles/index.less"
 import "../styles/Home.module.less"
 import { Logo } from "../ components/Logo"
 
@@ -24,9 +22,6 @@ export default function index() {
                     friendly development experience.
                     <br />
                 </p>
-                <Button appearance="primary" href="https://rsuitejs.com/">
-                    Getting started
-                </Button>
             </div>
 
         </div>
