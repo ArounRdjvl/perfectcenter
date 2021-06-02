@@ -7,7 +7,8 @@ export function getTheme() {
                 main: "#3B424A"
             },
             secondary: {
-                main: "#849994"
+                main: "#849994",
+                contrastText: "#fff"
             }
         },
         typography: {
@@ -20,6 +21,12 @@ export function getTheme() {
             h3: {
                 fontSize: "1.6rem"
             },
-        }
+        },
+        img: {
+            margin: 'auto',
+            display: 'block',
+            maxWidth: '100%',
+            maxHeight: '100%',
+          },
     })
 }

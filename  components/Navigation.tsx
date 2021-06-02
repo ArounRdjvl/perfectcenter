@@ -24,7 +24,9 @@ export function Navigation() {
 
     return (
         <>
-            <div style={{ position: "absolute", width: "100%", top: 0, left: 0}}>
+            <div
+                style={{ position: "absolute", width: "100%", top: 0, left: 0 }}
+            >
                 <img
                     src=".\Logo.png"
                     height={heightHeader}
@@ -55,7 +57,9 @@ export function Navigation() {
                                 TransitionComponent={Fade}
                             >
                                 <MenuItem>Company</MenuItem>
-                                <MenuItem>Team</MenuItem>
+                                <MenuItem>
+                                    <Link href="/membres">Membres</Link>
+                                </MenuItem>
                                 <MenuItem>Contact</MenuItem>
                             </Menu>
                             <Button>Articles</Button>
