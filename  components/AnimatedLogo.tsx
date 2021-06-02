@@ -32,7 +32,9 @@ export function AnimatedLogo() {
 
     return (
         <animated.div style={{
-            width: "100%",
+            width: 400,
+            left: "50%",
+            marginLeft: -200,
             height: springProps.height,
             position: "fixed",
             top: springProps.top,
