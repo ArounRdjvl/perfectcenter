@@ -90,7 +90,9 @@ export function Navigation(props: NavigationProps) {
                             TransitionComponent={Fade}
                         >
                             <MenuItem>Company</MenuItem>
-                            <MenuItem>Team</MenuItem>
+                            <MenuItem>
+                                <Link href="/membres">Membres</Link>
+                            </MenuItem>
                             <MenuItem>Contact</MenuItem>
                         </Menu>
                         <Button>Articles</Button>
