@@ -10,7 +10,7 @@ export default function Home() {
             </Typography>
             
             <Link href="/" style={{marginTop:"1rem"}}>
-                <Button size="large">Accueil</Button>
+                <Button variant="contained" color="secondary" size="large">Accueil</Button>
             </Link>
         </div>
     </Container>

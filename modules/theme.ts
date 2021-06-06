@@ -9,6 +9,10 @@ export function getTheme() {
             secondary: {
                 main: "#849994",
                 contrastText: "#fff"
+            },
+            text:{
+                primary: "#3B424A",
+                secondary: "#EBEAE8"
             }
         },
         typography: {
@@ -21,12 +25,6 @@ export function getTheme() {
             h3: {
                 fontSize: "1.6rem"
             },
-        },
-        img: {
-            margin: 'auto',
-            display: 'block',
-            maxWidth: '100%',
-            maxHeight: '100%',
-          },
+        }
     })
 }
