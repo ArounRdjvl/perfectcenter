@@ -9,6 +9,10 @@ export function getTheme() {
             secondary: {
                 main: "#849994",
                 contrastText: "#fff"
+            },
+            text:{
+                primary: "#3B424A",
+                secondary: "#EBEAE8"
             }
         },
         typography: {

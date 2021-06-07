@@ -11,9 +11,7 @@ function MyApp({
 }) {
     return (
         <ThemeProvider theme={getTheme()}>
-            <div style={{backgroundColor: "#EBEAE8"}}>
-                <Component {...pageProps} />
-            </div>
+            <Component {...pageProps} />
         </ThemeProvider>
     )
 }

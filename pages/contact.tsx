@@ -88,7 +88,9 @@ export default function contact() {
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />
-                    <Button onClick={submitForm}>Envoyer</Button>
+                    <Button variant="contained" color="secondary" onClick={submitForm} style={{alignSelf:"center"}}>
+                         Envoyer
+                    </Button>
                 </Grid>
                 <Grid
                     item
@@ -111,7 +113,7 @@ export default function contact() {
                         }}
                     ></div>
                     <div style={{zIndex: 1}}>
-                        <Typography variant="h1" align="center"  style={{margin: spacing(1)}} >Venir à PerfectCenter</Typography>
+                        <Typography variant="h1" align="center" color="textSecondary" style={{margin: spacing(1)}} >Venir à PerfectCenter</Typography>
                         <Divider /> 
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.306362520997!2d2.3082491156748466!3d48.87143597928878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8823b9b9a9b19%3A0x4e5130e5e04510fa!2sPerfectCenter!5e0!3m2!1sfr!2sfr!4v1620315685130!5m2!1sfr!2sfr"
@@ -121,23 +123,23 @@ export default function contact() {
                             loading="lazy"
                         ></iframe>
                         <Divider />
-                        <p style={{ textAlign: "center" }}>
-                            34 rue du colisée
-                            <br /> 75008 - Paris
-                        </p>
+                        <Typography color="textSecondary" style={{ textAlign: "center" }}>
+                                34 rue du colisée :
+                                <br /> 75008 - Paris
+                        </Typography>
                         <div>
-                            <Typography variant="h2" style={{ textDecoration: "underline", margin: spacing(1) }}>
+                            <Typography variant="h2" color="textSecondary" style={{ textDecoration: "underline", margin: spacing(1)}}>
                                 Métro :
                             </Typography>
                             <div
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
-                                    margin: "0 0 0.5rem 1rem"
+                                    margin: "0 0 0.5rem 2rem"
                                 }}
                             >
                                 <img src="icons/metro1.png" width={30} />
-                                <Typography style={{ marginLeft: "1rem" }}>
+                                <Typography color="textSecondary" style={{ marginLeft: "1rem" }}>
                                     Station Franklin-Roosevelt
                                 </Typography>
                             </div>
@@ -146,20 +148,57 @@ export default function contact() {
                                     display: "flex",
                                     alignItems: "center",
                                     marginLeft: "1rem",
-                                    margin: "0 0 0.5rem 1rem"
+                                    margin: "0 0 0.5rem 2rem"
                                 }}
                             >
                                 <img src="icons/metro9.png" width={30} />
-                                <Typography style={{ marginLeft: "1rem" }}>
+                                <Typography color="textSecondary" style={{ marginLeft: "1rem" }}>
                                     Station Saint Philippe du Roule
                                 </Typography>
                             </div>
-                            <Typography variant="h2" style={{ textDecoration: "underline", margin: spacing(1) }}>
+                            <Typography variant="h2" color="textSecondary" style={{ textDecoration: "underline", margin: spacing(1) }}>
                                 Bus :
                             </Typography>
-                            <Typography variant="h2" style={{ textDecoration: "underline", margin: spacing(1) }}>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    margin: "0 0 0.5rem 2rem"
+                                }}
+                            >
+                                <img src="icons/bus32.png" width={30} />
+                                <Typography color="textSecondary" style={{ marginLeft: "1rem" }}>
+                                    Arrêt Saint Philippe du Roule
+                                </Typography>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    marginLeft: "1rem",
+                                    margin: "0 0 0.5rem 2rem"
+                                }}
+                            >
+                                <img src="icons/bus43.png" width={30} />
+                                <Typography color="textSecondary" style={{ marginLeft: "1rem" }}>
+                                    Arrêt Saint Augustin - La boétie
+                                </Typography>
+                            </div>
+                            <Typography variant="h2" color="textSecondary" style={{ textDecoration: "underline", margin: spacing(1) }}>
                                 RER :
                             </Typography>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    margin: "0 0 0.5rem 2rem"
+                                }}
+                            >
+                                <img src="icons/RERE.png" width={30} />
+                                <Typography color="textSecondary" style={{ marginLeft: "1rem" }}>
+                                    Station Haussmann St Lazard
+                                </Typography>
+                            </div>
                         </div>
                     </div>
                 </Grid>
