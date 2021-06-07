@@ -93,7 +93,6 @@ export function Navigation(props: NavigationProps) {
                             <MenuItem>
                                 <Link href="/membres">Membres</Link>
                             </MenuItem>
-                            <MenuItem>Contact</MenuItem>
                         </Menu>
                         <Button>Articles</Button>
                         <Link href="/contact">
