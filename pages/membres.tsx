@@ -13,12 +13,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         margin: "auto",
         maxWidth: 500
-    },
-    img: {
-        margin: "auto",
-        display: "block",
-        maxWidth: "100%",
-        maxHeight: "100%"
     }
 }))
 
@@ -57,7 +51,8 @@ export default function membres() {
                                     backgroundColor: "#E3CCB4",
                                     position: "absolute",
                                     height: "100%",
-                                    width: "70%"
+                                    width: "70%",
+                                    borderRadius: "30px"
                                 }}
                             ></div>
                             <img
@@ -89,25 +84,24 @@ export default function membres() {
                         <div
                             style={{
                                 position: "absolute",
-                                marginLeft: "4rem",
+                                marginLeft: "5rem",
                                 zIndex: 0,
-                                height: "10rem"
                             }}
                         >
                             <img
                                 style={{
-                                    height: "12rem",
+                                    maxHeight: "12rem",
                                     zIndex: 11,
-                                    marginTop: "1rem"
+                                    marginTop: "1rem",
+                                    borderRadius: "30px"
                                 }}
-                                className={classes.img}
                                 alt="complex"
                                 src="tom.png"
                             />
                         </div>
                     </Grid>
                     <Grid
-                        xs={4}
+                        xs={6}
                         style={{
                             marginTop: "2rem",
                             position: "relative"
@@ -119,9 +113,10 @@ export default function membres() {
                                 backgroundColor: theme.palette.secondary.main,
                                 zIndex: 0,
                                 position: "absolute",
-                                height: "140%",
-                                width: "140%",
-                                left: "-40%"
+                                height: "160%",
+                                width: "130%",
+                                left: "-30%",
+                                borderRadius: "30px"
                             }}
                         ></div>
                         <div
