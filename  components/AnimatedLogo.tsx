@@ -13,7 +13,7 @@ export function AnimatedLogo() {
 
     function calculateSpringProps() {
         const ratio = window.pageYOffset / window.innerHeight
-        if (ratio < 1) {
+        if (ratio < 0.7) {
             return { top: (1 - ratio) * 200, height: (1 - ratio) * 300 + 100 }
         }
         return { top: 0, height: 100 }
