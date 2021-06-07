@@ -11,15 +11,22 @@ export function AnimatedLogo() {
         animationData: animation
     }
 
-    const [springProps, setSpring] = useSpring(() => ({ top: 200, height: 400 }));
-
-    const handleScroll = () => {
+    function calculateSpringProps() {
         const ratio = window.pageYOffset / window.innerHeight
         if (ratio < 1) {
-            setSpring({ top: (1 - ratio) * 200, height: (1 - ratio) * 300 + 100 })
-        } else {
-            setSpring({ top: 0, height: 100 })
+            return { top: (1 - ratio) * 200, height: (1 - ratio) * 300 + 100 }
         }
+        return { top: 0, height: 100 }
+    }
+
+    const [springProps, setSpring] = useSpring(() => ({ top: 0, height: 0, opacity: 0 }))
+
+    React.useEffect(() => {
+        setSpring({...calculateSpringProps(), opacity: 1, immediate: true})
+    }, [])
+
+    const handleScroll = () => {
+        setSpring(calculateSpringProps())
     };
 
     React.useEffect(() => {
@@ -34,6 +41,7 @@ export function AnimatedLogo() {
         <animated.div style={{
             width: 400,
             left: "50%",
+            opacity: springProps.opacity,
             marginLeft: -200,
             height: springProps.height,
             position: "fixed",
