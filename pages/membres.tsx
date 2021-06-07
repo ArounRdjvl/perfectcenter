@@ -14,10 +14,6 @@ const useStyles = makeStyles((theme) => ({
         margin: "auto",
         maxWidth: 500
     },
-    image: {
-        width: 128,
-        height: 128
-    },
     img: {
         margin: "auto",
         display: "block",
@@ -37,22 +33,16 @@ export default function membres() {
             <Container>
                 <Navigation />
 
-                <Grid style={{ minHeight: "10rem" }} container>
+                <Grid style={{ minHeight: "10rem" }} justify="center" container>
                     <Grid
-                        xs={4}
+                        xs={3}
                         style={{
-                            position: "relative"
+                            position: "relative",
+                            zIndex: 10
                         }}
                         item
                     >
-                        <div
-                            style={{
-                                backgroundColor: "#E3CCB4",
-                                position: "absolute",
-                                height: "100%",
-                                width: "70%"
-                            }}
-                        ></div>
+
                         <Grid
                             container
                             direction="column"
@@ -62,30 +52,54 @@ export default function membres() {
                                 zIndex: 0
                             }}
                         >
+                            <div
+                                style={{
+                                    backgroundColor: "#E3CCB4",
+                                    position: "absolute",
+                                    height: "100%",
+                                    width: "70%"
+                                }}
+                            ></div>
                             <img
                                 src="picto/facebook_fonce.png"
                                 width={40}
-                                style={{ margin: theme.spacing(1) }}
+                                style={{
+                                    margin: theme.spacing(1),
+                                    zIndex: 11
+                                }}
                             />
                             <img
                                 src="picto/Instagram_fonce.png"
                                 width={40}
-                                style={{ margin: theme.spacing(1) }}
+                                style={{
+                                    margin: theme.spacing(1),
+                                    zIndex: 11
+                                }}
                             />
                             <img
                                 src="picto/Linkedin_fonce.png"
                                 width={40}
-                                style={{ margin: theme.spacing(1) }}
+                                style={{
+                                    margin: theme.spacing(1),
+                                    zIndex: 11
+                                }}
                             />
+
                         </Grid>
                         <div
-                            className={classes.image}
                             style={{
                                 position: "absolute",
-                                zIndex: 0
+                                marginLeft: "4rem",
+                                zIndex: 0,
+                                height: "10rem"
                             }}
                         >
                             <img
+                                style={{
+                                    height: "12rem",
+                                    zIndex: 11,
+                                    marginTop: "1rem"
+                                }}
                                 className={classes.img}
                                 alt="complex"
                                 src="tom.png"
@@ -93,7 +107,7 @@ export default function membres() {
                         </div>
                     </Grid>
                     <Grid
-                        xs={8}
+                        xs={4}
                         style={{
                             marginTop: "2rem",
                             position: "relative"
@@ -105,9 +119,9 @@ export default function membres() {
                                 backgroundColor: theme.palette.secondary.main,
                                 zIndex: 0,
                                 position: "absolute",
-                                height: "120%",
-                                width: "120%",
-                                left: "-20%"
+                                height: "140%",
+                                width: "140%",
+                                left: "-40%"
                             }}
                         ></div>
                         <div
@@ -118,7 +132,6 @@ export default function membres() {
                             }}
                         >
                             <Typography
-                                style={{ zIndex: 1 }}
                                 variant="h1"
                                 align="center"
                             >
