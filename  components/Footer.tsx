@@ -100,7 +100,7 @@ export function Footer() {
                         justifyContent: "center"
                     }}>
                         <img
-                            src="picto/facebook_fonce.png"
+                            src="picto/Facebook_fonce.png"
                             width={50}
                             style={{ margin: theme.spacing(1) }}
                         />

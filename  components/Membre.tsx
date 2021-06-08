@@ -1,47 +1,207 @@
-import Link from "next/link"
 import React from "react"
-import {
-    Grid,
-    useTheme,
-    Typography
-} from "@material-ui/core"
+import { Grid, useTheme, Typography } from "@material-ui/core"
+import { Divider } from "./Divider"
 
-const heightHeader = 90
+export interface UserProps {
+    photo?: string
+    name?: string
+    poste?: string
+    desc?: string
+    facebook?: string
+    linkedin?: string
+    instagram?: string
+}
 
 export interface MembreProps {
-
+    pair?: boolean
+    user?: UserProps
 }
 
 export function Membre(props: MembreProps) {
-    const [anchorEl, setAnchorEl] = React.useState(null)
-    const [shadow, setShadow] = React.useState<boolean>(false)
     const theme = useTheme()
+    const pair = props.pair
 
-    function handleClose() {
-        setAnchorEl(null)
+    if (pair) {
+        return (
+            <>
+                <Grid
+                    justify="center"
+                    container
+                    style={{
+                        height: "15rem",
+                        marginBottom: "2rem"
+                    }}
+                >
+                    <Grid
+                        xs={3}
+                        style={{
+                            position: "relative",
+                            zIndex: 10
+                        }}
+                        item
+                    >
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "space-around",
+                                paddingLeft: "0.8rem",
+                                backgroundColor: "#E3CCB4",
+                                position: "absolute",
+                                height: "70%",
+                                width: "70%",
+                                borderRadius: "30px"
+                            }}
+                        >
+                            <a href={props.user?.facebook}>
+                                <img
+                                    src="picto/Facebook_fonce.png"
+                                    width={40}
+                                    style={{
+                                        zIndex: 2
+                                    }}
+                                />
+                            </a>
+                            <a href={props.user?.instagram}>
+                                <img
+                                    src="picto/Instagram_fonce.png"
+                                    width={40}
+                                    style={{
+                                        zIndex: 2
+                                    }}
+                                />
+                            </a>
+                            <a href={props.user?.linkedin}>
+                                <img
+                                    src="picto/Linkedin_fonce.png"
+                                    width={40}
+                                    style={{
+                                        zIndex: 2
+                                    }}
+                                />
+                            </a>
+                        </div>
+
+                        <div
+                            style={{
+                                position: "absolute",
+                                top: "1rem",
+                                left: "4rem"
+                            }}
+                        >
+                            <img
+                                style={{
+                                    maxHeight: "12rem",
+                                    borderRadius: "30px"
+                                }}
+                                alt={props.user?.name}
+                                src={props.user?.photo}
+                            />
+                        </div>
+                    </Grid>
+                    <Grid
+                        xs={6}
+                        style={{
+                            position: "relative",
+                            paddingTop: "3rem"
+                        }}
+                        item
+                    >
+                        <div
+                            style={{
+                                position: "relative",
+                                zIndex: 2,
+                                margin: theme.spacing(2),
+                                color: "white"
+                            }}
+                        >
+                            <Typography variant="h1" align="center">
+                                {props.user?.name}
+                            </Typography>
+                            <Divider color="beige" />
+                            <Typography
+                                variant="h2"
+                                align="center"
+                                style={{
+                                    margin: theme.spacing(1)
+                                }}
+                            >
+                                {props.user?.poste}
+                            </Typography>
+                            <Typography variant="body1" align="center">
+                                {props.user?.desc}
+                            </Typography>
+                        </div>
+                        <div
+                            style={{
+                                backgroundColor: theme.palette.secondary.main,
+                                position: "absolute",
+                                height: "80%",
+                                width: "130%",
+                                right: 0,
+                                bottom: 0,
+                                borderRadius: "30px"
+                            }}
+                        ></div>
+                    </Grid>
+                </Grid>
+            </>
+        )
     }
-
-    function handleScroll() {
-        if (window.pageYOffset === 0) {
-            setShadow(false)
-        } else {
-            setShadow(true)
-        }
-    }
-
-    React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [])
-
-
     return (
         <>
-
-            <Grid style={{ minHeight: "10rem" }} justify="center" container>
+            <Grid
+                justify="center"
+                container
+                style={{
+                    height: "15rem",
+                    marginBottom: "2rem"
+                }}
+            >
+                <Grid
+                    xs={6}
+                    style={{
+                        position: "relative",
+                        paddingTop: "3rem"
+                    }}
+                    item
+                >
+                    <div
+                        style={{
+                            position: "relative",
+                            zIndex: 2,
+                            margin: theme.spacing(2)
+                        }}
+                    >
+                        <Typography variant="h1" align="center">
+                            {props.user?.name}
+                        </Typography>
+                        <Divider color="vert" />
+                        <Typography
+                            variant="h2"
+                            align="center"
+                            style={{
+                                margin: theme.spacing(1)
+                            }}
+                        >
+                            {props.user?.poste}
+                        </Typography>
+                        <Typography variant="body1" align="center">
+                            {props.user?.desc}
+                        </Typography>
+                    </div>
+                    <div
+                        style={{
+                            backgroundColor: "#E3CCB4",
+                            position: "absolute",
+                            height: "80%",
+                            width: "130%",
+                            left: 0,
+                            bottom: 0,
+                            borderRadius: "30px"
+                        }}
+                    ></div>
+                </Grid>
                 <Grid
                     xs={3}
                     style={{
@@ -50,110 +210,65 @@ export function Membre(props: MembreProps) {
                     }}
                     item
                 >
-
-                    <Grid
-                        container
-                        direction="column"
-                        justify="center"
+                    <div
                         style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-around",
+                            alignItems: "flex-end",
+                            paddingRight: "0.8rem",
+                            backgroundColor: theme.palette.secondary.main,
                             position: "absolute",
-                            zIndex: 0
+                            height: "70%",
+                            width: "70%",
+                            right: 0,
+                            borderRadius: "30px"
                         }}
                     >
-                        <div
-                            style={{
-                                backgroundColor: "#E3CCB4",
-                                position: "absolute",
-                                height: "100%",
-                                width: "70%",
-                                borderRadius: "30px"
-                            }}
-                        ></div>
-                        <img
-                            src="picto/facebook_fonce.png"
-                            width={40}
-                            style={{
-                                margin: theme.spacing(1),
-                                zIndex: 11
-                            }}
-                        />
-                        <img
-                            src="picto/Instagram_fonce.png"
-                            width={40}
-                            style={{
-                                margin: theme.spacing(1),
-                                zIndex: 11
-                            }}
-                        />
-                        <img
-                            src="picto/Linkedin_fonce.png"
-                            width={40}
-                            style={{
-                                margin: theme.spacing(1),
-                                zIndex: 11
-                            }}
-                        />
+                        <a href={props.user?.facebook}>
+                            <img
+                                src="picto/Facebook_clair.png"
+                                width={40}
+                                style={{
+                                    zIndex: 2
+                                }}
+                            />
+                        </a>
+                        <a href={props.user?.instagram}>
+                            <img
+                                src="picto/Instagram_clair.png"
+                                width={40}
+                                style={{
+                                    zIndex: 2
+                                }}
+                            />
+                        </a>
+                        <a href={props.user?.linkedin}>
+                            <img
+                                src="picto/Linkedin_clair.png"
+                                width={40}
+                                style={{
+                                    zIndex: 2
+                                }}
+                            />
+                        </a>
+                    </div>
 
-                    </Grid>
                     <div
                         style={{
                             position: "absolute",
-                            marginLeft: "5rem",
-                            zIndex: 0,
+                            top: "1rem",
+                            right: "4rem"
                         }}
                     >
                         <img
                             style={{
                                 maxHeight: "12rem",
-                                zIndex: 11,
-                                marginTop: "1rem",
                                 borderRadius: "30px"
                             }}
-                            alt="complex"
-                            src="tom.png"
+                            alt={props.user?.name}
+                            src={props.user?.photo}
                         />
-                    </div>
-                </Grid>
-                <Grid
-                    xs={6}
-                    style={{
-                        marginTop: "2rem",
-                        position: "relative"
-                    }}
-                    item
-                >
-                    <div
-                        style={{
-                            backgroundColor: theme.palette.secondary.main,
-                            zIndex: 0,
-                            position: "absolute",
-                            height: "160%",
-                            width: "130%",
-                            left: "-30%",
-                            borderRadius: "30px"
-                        }}
-                    ></div>
-                    <div
-                        style={{
-                            zIndex: 1,
-                            position: "absolute",
-                            margin: theme.spacing(2)
-                        }}
-                    >
-                        <Typography
-                            variant="h1"
-                            align="center"
-                        >
-                            Tom Henrion
-                            </Typography>
-                        <Typography variant="h2" align="center">
-                            Aucun Poste
-                            </Typography>
-                        <Typography variant="body1" align="center">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing exercitationem repudiandae nemo iure
-                            aperiam!
-                    </Typography>
                     </div>
                 </Grid>
             </Grid>

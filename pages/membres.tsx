@@ -3,23 +3,22 @@ import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
 import { Membre } from "../ components/Membre"
 import "../styles/Home.module.less"
-import { makeStyles } from "@material-ui/core/styles"
-import { Container, useTheme } from "@material-ui/core"
+import { Container } from "@material-ui/core"
+import { Footer } from "../ components/Footer"
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1
-    },
-    paper: {
-        padding: theme.spacing(2),
-        margin: "auto",
-        maxWidth: 500
+const dataMembres = {
+    membre1: {
+        name: "Tom Henrion",
+        photo: "membres/tom.png",
+        poste: "Aucun Poste",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing exercitationem repudiandae nemo iure aperiam!",
+        facebook:"https://www.facebook.com/henrion.tom",
+        instagram:"https://www.instagram.com/tomhenrion/?hl=fr",
+        linkedin:"https://www.linkedin.com/in/tom-henrion-5b7364178/"
     }
-}))
+}
 
 export default function membres() {
-    const theme = useTheme()
-    const classes = useStyles()
     return (
         <div>
             <Head>
@@ -27,8 +26,10 @@ export default function membres() {
             </Head>
             <Container>
                 <Navigation />
-                <Membre/>
+                <Membre pair={true} user={dataMembres.membre1} />
+                <Membre pair={false} user={dataMembres.membre1} />
             </Container>
+            <Footer/>
         </div>
     )
 }
