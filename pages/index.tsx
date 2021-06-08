@@ -170,7 +170,7 @@ export default function index() {
                         <Divider color="vert" />
                         <div style={imageHandleStyle}>
                             <img
-                                src="picto/Coeur_sur_main.png"
+                                src="picto/produits.png"
                                 width="100%"
                                 style={{ margin: "auto" }}
                             />
