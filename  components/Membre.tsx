@@ -53,7 +53,7 @@ export function Membre(props: MembreProps) {
                                 borderRadius: "30px"
                             }}
                         >
-                            <a href={props.user?.facebook}>
+                            <a href={props.user?.facebook} target="_blank">
                                 <img
                                     src="picto/Facebook_fonce.png"
                                     width={40}
@@ -62,7 +62,7 @@ export function Membre(props: MembreProps) {
                                     }}
                                 />
                             </a>
-                            <a href={props.user?.instagram}>
+                            <a href={props.user?.instagram} target="_blank">
                                 <img
                                     src="picto/Instagram_fonce.png"
                                     width={40}
@@ -71,7 +71,7 @@ export function Membre(props: MembreProps) {
                                     }}
                                 />
                             </a>
-                            <a href={props.user?.linkedin}>
+                            <a href={props.user?.linkedin} target="_blank">
                                 <img
                                     src="picto/Linkedin_fonce.png"
                                     width={40}
@@ -225,7 +225,7 @@ export function Membre(props: MembreProps) {
                             borderRadius: "30px"
                         }}
                     >
-                        <a href={props.user?.facebook}>
+                        <a href={props.user?.facebook} target="_blank">
                             <img
                                 src="picto/Facebook_clair.png"
                                 width={40}
@@ -234,7 +234,7 @@ export function Membre(props: MembreProps) {
                                 }}
                             />
                         </a>
-                        <a href={props.user?.instagram}>
+                        <a href={props.user?.instagram} target="_blank">
                             <img
                                 src="picto/Instagram_clair.png"
                                 width={40}
@@ -243,7 +243,7 @@ export function Membre(props: MembreProps) {
                                 }}
                             />
                         </a>
-                        <a href={props.user?.linkedin}>
+                        <a href={props.user?.linkedin} target="_blank">
                             <img
                                 src="picto/Linkedin_clair.png"
                                 width={40}

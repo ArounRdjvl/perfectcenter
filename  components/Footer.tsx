@@ -80,26 +80,34 @@ export function Footer() {
                                 justifyContent: "center"
                             }}
                         >
-                            <img
-                                src="picto/Facebook_fonce.png"
-                                width={50}
-                                style={{ margin: theme.spacing(1) }}
-                            />
-                            <img
-                                src="picto/Instagram_fonce.png"
-                                width={50}
-                                style={{ margin: theme.spacing(1) }}
-                            />
-                            <img
-                                src="picto/Linkedin_fonce.png"
-                                width={50}
-                                style={{ margin: theme.spacing(1) }}
-                            />
-                            <img
-                                src="picto/YT_Fonce.png"
-                                width={50}
-                                style={{ margin: theme.spacing(1) }}
-                            />
+                            <a href="https://www.facebook.com/PerfectCenterParis" target="_blank">
+                                <img
+                                    src="picto/Facebook_fonce.png"
+                                    width={50}
+                                    style={{ margin: theme.spacing(1) }}
+                                />
+                            </a>
+                            <a href="https://www.instagram.com/perfectcenter_/?hl=fr" target="_blank">
+                                <img
+                                    src="picto/Instagram_fonce.png"
+                                    width={50}
+                                    style={{ margin: theme.spacing(1) }}
+                                />
+                            </a>
+                            <a href="https://www.linkedin.com/company/perfectcenter/" target="_blank">
+                                <img
+                                    src="picto/Linkedin_fonce.png"
+                                    width={50}
+                                    style={{ margin: theme.spacing(1) }}
+                                />
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g" target="_blank">
+                                <img
+                                    src="picto/YT_Fonce.png"
+                                    width={50}
+                                    style={{ margin: theme.spacing(1) }}
+                                />
+                            </a>
                         </div>
                     </Grid>
                 </Grid>
