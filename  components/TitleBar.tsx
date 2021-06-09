@@ -56,25 +56,11 @@ export function TitleBar(props: TitleProps) {
         )
     }
     return (
-        <div
-                    style={{
-                        display: "flex",
-                        position: "relative",
-                        borderRadius: 20,
-                        padding: "2rem 5rem",
-                        margin: "0 auto",
-                        top: "10%",
-                        height: "80%",
-                        width: "45%",
-                        zIndex: 1,
-                        justifyContent: "center"
-                    }}
-                >
-                    <Typography variant="h1">
-                        {props.title}
-                        <Divider color={props.color} />
-                    </Typography>
-                </div>
-
+        <>
+            <Typography variant="h1" align="center" style={{ margin: "2rem auto" }}>
+                {props.title}
+                <Divider color={props.color} />
+            </Typography>
+        </>
     )
 }
