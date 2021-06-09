@@ -23,6 +23,7 @@ export function Divider(props: DividerProps) {
                 width: props.width ? props.width : 110,
                 margin: props.margin ? props.margin : "auto",
                 borderRadius: 100,
+                marginTop:"0.3rem"
             }}>
             </div>
         </div>
