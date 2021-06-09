@@ -1,13 +1,18 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react"
-import Document, { Html, Main, NextScript } from "next/document"
+import Document, { Html, Main, NextScript, Head } from "next/document"
 import { ServerStyleSheets } from "@material-ui/core/styles"
-import Head from "next/head"
 
 export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="fr">
+                <Head>
+                    <link
+                        href="http://fonts.cdnfonts.com/css/louis-george-cafe"
+                        rel="stylesheet"
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
