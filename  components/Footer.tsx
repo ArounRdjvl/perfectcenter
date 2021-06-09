@@ -17,7 +17,7 @@ export function Footer() {
                 style={{
                     backgroundColor: "#3B424A",
                     position: "absolute",
-                    borderRadius: "30px",
+                    borderRadius: "20px",
                     height: "50%",
                     width: "45%",
                     top: 0,
@@ -28,7 +28,7 @@ export function Footer() {
                 style={{
                     backgroundColor: "#E3CCB4",
                     position: "absolute",
-                    borderRadius: "30px",
+                    borderRadius: "20px",
                     zIndex: 1,
                     display: "flex",
                     alignItems: "center",
@@ -115,7 +115,7 @@ export function Footer() {
             <div
                 style={{
                     backgroundColor: "#849994",
-                    borderRadius: "30px",
+                    borderRadius: "20px",
                     position: "absolute",
                     height: "50%",
                     width: "45%",

@@ -22,7 +22,7 @@ export function TitleBar(props: TitleProps) {
                     style={{
                         display: "flex",
                         position: "relative",
-                        borderRadius: 30,
+                        borderRadius: 20,
                         padding: "2rem 5rem",
                         margin: "0 auto",
                         top: "10%",
@@ -41,7 +41,7 @@ export function TitleBar(props: TitleProps) {
                 <div
                     style={{
                         display: "flex",
-                        borderRadius: 30,
+                        borderRadius: 20,
                         position: "absolute",
                         backgroundColor: "#849994",
                         top: 0,
@@ -59,7 +59,7 @@ export function TitleBar(props: TitleProps) {
                     style={{
                         display: "flex",
                         position: "relative",
-                        borderRadius: 30,
+                        borderRadius: 20,
                         padding: "2rem 5rem",
                         margin: "0 auto",
                         top: "10%",

@@ -92,7 +92,7 @@ export default function index() {
                 <div style={{ position: "relative", paddingBottom: "2rem" }}>
                     <div
                         style={{
-                            borderRadius: 30,
+                            borderRadius: 20,
                             padding: "2rem 7rem",
                             position: "relative",
                             backgroundColor: "#E3CCB4",
@@ -119,7 +119,7 @@ export default function index() {
                     </div>
                     <div
                         style={{
-                            borderRadius: 30,
+                            borderRadius: 20,
                             position: "absolute",
                             backgroundColor: "#849994",
                             bottom: 0,
@@ -136,7 +136,7 @@ export default function index() {
                     </div>
                     <div
                         style={{
-                            borderRadius: 30,
+                            borderRadius: 20,
                             overflow: "hidden",
                             position: "absolute",
                             bottom: "1rem",

@@ -50,7 +50,7 @@ export function Membre(props: MembreProps) {
                                 position: "absolute",
                                 height: "70%",
                                 width: "70%",
-                                borderRadius: "30px"
+                                borderRadius: "20px"
                             }}
                         >
                             <a href={props.user?.facebook} target="_blank">
@@ -92,7 +92,7 @@ export function Membre(props: MembreProps) {
                             <img
                                 style={{
                                     maxHeight: "12rem",
-                                    borderRadius: "30px"
+                                    borderRadius: "20px"
                                 }}
                                 alt={props.user?.name}
                                 src={props.user?.photo}
@@ -140,7 +140,7 @@ export function Membre(props: MembreProps) {
                                 width: "130%",
                                 right: 0,
                                 bottom: 0,
-                                borderRadius: "30px"
+                                borderRadius: "20px"
                             }}
                         ></div>
                     </Grid>
@@ -198,7 +198,7 @@ export function Membre(props: MembreProps) {
                             width: "130%",
                             left: 0,
                             bottom: 0,
-                            borderRadius: "30px"
+                            borderRadius: "20px"
                         }}
                     ></div>
                 </Grid>
@@ -222,7 +222,7 @@ export function Membre(props: MembreProps) {
                             height: "70%",
                             width: "70%",
                             right: 0,
-                            borderRadius: "30px"
+                            borderRadius: "20px"
                         }}
                     >
                         <a href={props.user?.facebook} target="_blank">
@@ -264,7 +264,7 @@ export function Membre(props: MembreProps) {
                         <img
                             style={{
                                 maxHeight: "12rem",
-                                borderRadius: "30px"
+                                borderRadius: "20px"
                             }}
                             alt={props.user?.name}
                             src={props.user?.photo}

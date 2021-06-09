@@ -52,7 +52,7 @@ export default function contact() {
                         zIndex: 2,
                         margin: "3rem 0 3rem 0",
                         backgroundColor: "#E3CCB4",
-                        borderRadius: "50px",
+                        borderRadius: "20px",
                         display: "flex",
                         flexDirection: "column",
                         padding: "2rem 5rem"
@@ -119,7 +119,7 @@ export default function contact() {
                             zIndex: 0,
                             position: "absolute",
                             backgroundColor: "#849994",
-                            borderRadius: "50px",
+                            borderRadius: "20px",
                             width: "120%",
                             height: "100%"
                         }}
