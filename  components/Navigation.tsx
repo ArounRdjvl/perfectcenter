@@ -73,9 +73,10 @@ export function Navigation(props: NavigationProps) {
                 <div
                     style={{
                         position: "fixed",
-                        width: "100%",
-                        top: 0,
-                        left: 0
+                        width: 400,
+                        left: "50%",
+                        marginLeft: -200,
+                        zIndex: 10
                     }}
                 >
                     <img
