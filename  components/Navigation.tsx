@@ -6,14 +6,31 @@ import {
     AppBar,
     MenuItem,
     Fade,
-    Container
+    Container,
+    Typography,
+    withStyles
 } from "@material-ui/core"
-
+import { FiberPin } from "@material-ui/icons"
 const heightHeader = 90
 
 export interface NavigationProps {
     displayLogo?: boolean
 }
+
+const PerfectButton = withStyles({
+    root: {
+        fontFamily: "fonts/LouisGeorgeCafe",
+        textTransform: "none",
+        fontSize: 18,
+        marginTop:"1rem"
+    }
+})(Button)
+
+const PerfectSubButton = withStyles({
+    root:{
+        marginTop:0,
+    }
+})(PerfectButton)
 
 export function Navigation(props: NavigationProps) {
     const displayLogo = props.displayLogo != null ? props.displayLogo : true
@@ -37,11 +54,11 @@ export function Navigation(props: NavigationProps) {
     }
 
     React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll)
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            window.removeEventListener("scroll", handleScroll)
+        }
     }, [])
 
     // pas fou comme code mais next galère avec les classnames react
@@ -52,13 +69,22 @@ export function Navigation(props: NavigationProps) {
 
     return (
         <>
-            {displayLogo && <div style={{ position: "fixed", width: "100%", top: 0, left: 0 }}>
-                <img
-                    src=".\Logo.png"
-                    height={heightHeader}
-                    style={{ display: "block", margin: "auto" }}
-                />
-            </div>}
+            {displayLogo && (
+                <div
+                    style={{
+                        position: "fixed",
+                        width: "100%",
+                        top: 0,
+                        left: 0
+                    }}
+                >
+                    <img
+                        src=".\Logo.png"
+                        height={heightHeader}
+                        style={{ display: "block", margin: "auto" }}
+                    />
+                </div>
+            )}
             <div style={{ height: heightHeader, width: "100%" }} />
             <AppBar
                 color="transparent"
@@ -73,14 +99,17 @@ export function Navigation(props: NavigationProps) {
                 <Container
                     style={{
                         display: "flex",
-                        justifyContent: "space-between"
+                        justifyContent: "space-between",
+                        flexDirection: "row"
                     }}
                 >
                     <div>
                         <Link href="/">
-                            <Button>Accueil</Button>
+                            <PerfectButton>Accueil</PerfectButton>
                         </Link>
-                        <Button onClick={handleClick}>A propos</Button>
+                        <PerfectButton onClick={handleClick}>
+                            A propos
+                        </PerfectButton>
                         <Menu
                             id="simple-menu"
                             anchorEl={anchorEl}
@@ -89,21 +118,28 @@ export function Navigation(props: NavigationProps) {
                             onClose={handleClose}
                             TransitionComponent={Fade}
                         >
-                            <MenuItem>Company</MenuItem>
                             <MenuItem>
-                                <Link href="/membres">Membres</Link>
+                                <Link href="/membres">
+                                    <PerfectSubButton>Membre</PerfectSubButton>
+                                </Link>
                             </MenuItem>
                         </Menu>
-                        <Button>Articles</Button>
+                        <PerfectButton>Articles</PerfectButton>
                         <Link href="/contact">
-                            <Button>Nous contacter</Button>
+                            <PerfectButton>Nous contacter</PerfectButton>
                         </Link>
                     </div>
 
                     <div>
-                        <Button>PerfectCorporate</Button>
-                        <Button>PerfectCare</Button>
-                        <Button>PerfectCircle</Button>
+                        <Link href="/">
+                            <PerfectButton>PerfectCorporate</PerfectButton>
+                        </Link>
+                        <Link href="/">
+                            <PerfectButton>PerfectCare</PerfectButton>
+                        </Link>
+                        <Link href="/circle">
+                            <PerfectButton>PerfectCircle</PerfectButton>
+                        </Link>
                     </div>
                 </Container>
             </AppBar>
