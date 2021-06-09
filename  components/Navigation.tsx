@@ -7,10 +7,17 @@ import {
     MenuItem,
     Fade,
     Container,
-    Typography
+    makeStyles
 } from "@material-ui/core"
 import { FiberPin } from "@material-ui/icons"
+
 const heightHeader = 90
+
+const useStyles = makeStyles((theme) => ({
+    boxShadowNone: {
+        boxShadow: "none"
+    }
+}))
 
 export interface NavigationProps {
     displayLogo?: boolean
@@ -21,7 +28,9 @@ export function Navigation(props: NavigationProps) {
     const [anchorEl, setAnchorEl] = React.useState(null)
     const [shadow, setShadow] = React.useState<boolean>(false)
 
-    function handleClick(event) {
+    const classes = useStyles()
+
+    function handleClick(event: any) {
         setAnchorEl(event.currentTarget)
     }
 
@@ -44,12 +53,6 @@ export function Navigation(props: NavigationProps) {
             window.removeEventListener("scroll", handleScroll)
         }
     }, [])
-
-    // pas fou comme code mais next galère avec les classnames react
-    const styleBoxShadow = {}
-    if (!shadow) {
-        styleBoxShadow.boxShadow = "none"
-    }
 
     return (
         <>
@@ -77,9 +80,9 @@ export function Navigation(props: NavigationProps) {
                 style={{
                     height: heightHeader,
                     backgroundColor: "#EBEAE8",
-                    zIndex: 9,
-                    ...styleBoxShadow
+                    zIndex: 9
                 }}
+                className={!shadow ? classes.boxShadowNone : ""}
             >
                 <Container
                     style={{
@@ -92,9 +95,7 @@ export function Navigation(props: NavigationProps) {
                         <Link href="/">
                             <Button>Accueil</Button>
                         </Link>
-                        <Button onClick={handleClick}>
-                            A propos
-                        </Button>
+                        <Button onClick={handleClick}>A propos</Button>
                         <Menu
                             id="simple-menu"
                             anchorEl={anchorEl}
@@ -104,9 +105,7 @@ export function Navigation(props: NavigationProps) {
                             TransitionComponent={Fade}
                         >
                             <MenuItem>
-                                <Link href="/membres">
-                                    Membres
-                                </Link>
+                                <Link href="/membres">Membres</Link>
                             </MenuItem>
                         </Menu>
                         <Button>Articles</Button>

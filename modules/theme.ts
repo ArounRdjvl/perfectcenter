@@ -1,23 +1,4 @@
 import { createMuiTheme } from "@material-ui/core"
-import LouisGeorgeCafe from "../assets/fonts/LouisGeorgeCafe.ttf"
-import LouisGeorgeCafeItalic from "../assets/fonts/LouisGeorgeCafe-Italic.ttf"
-
-const fontFace = [
-    /* ne fonctionne pas pour l'instant
-    {
-        fontFamily: "louisGeorgeCafe",
-        fontStyle: "normal",
-        fontWeight: "normal",
-        src: `url(${LouisGeorgeCafe})`
-    },
-    {
-        fontFamily: "louisGeorgeCafe",
-        fontStyle: "italic",
-        fontWeight: "normal",
-        src: `url(${LouisGeorgeCafeItalic})`
-    },
-    */
-]
 
 export function getTheme() {
     return createMuiTheme({
@@ -51,9 +32,9 @@ export function getTheme() {
                 "@global": {
                     "html,body,body > div:first-child,div#__next,div#__next > div":
                         {
-                            height: "100%"
-                        },
-                    "@font-face": fontFace
+                            height: "100%",
+                            backgroundColor: "#EBEAE8"
+                        }
                 }
             }
         }
