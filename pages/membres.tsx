@@ -36,7 +36,7 @@ export default function membres() {
             </Head>
             <Container>
                 <Navigation />
-                <TitleBar title="Notre Equipe" background={true}/>
+                <TitleBar title="Notre Equipe" background={true} color="vert"/>
                 <Membre pair={true} user={dataMembres.membre1} />
                 <Membre pair={false} user={dataMembres.membre2} />
                 <Footer />

@@ -5,6 +5,7 @@ import React from "react"
 export interface TitleProps {
     title?: string
     background?: boolean
+    color: "beige" | "noir" | "vert"
 }
 
 export function TitleBar(props: TitleProps) {
@@ -35,7 +36,7 @@ export function TitleBar(props: TitleProps) {
                 >
                     <Typography variant="h1">
                         {props.title}
-                        <Divider color="vert" />
+                        <Divider color={props.color} />
                     </Typography>
                 </div>
                 <div
@@ -71,7 +72,7 @@ export function TitleBar(props: TitleProps) {
                 >
                     <Typography variant="h1">
                         {props.title}
-                        <Divider color="vert" />
+                        <Divider color={props.color} />
                     </Typography>
                 </div>
 
