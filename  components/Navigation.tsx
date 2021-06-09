@@ -7,8 +7,7 @@ import {
     MenuItem,
     Fade,
     Container,
-    Typography,
-    withStyles
+    Typography
 } from "@material-ui/core"
 import { FiberPin } from "@material-ui/icons"
 const heightHeader = 90
@@ -16,21 +15,6 @@ const heightHeader = 90
 export interface NavigationProps {
     displayLogo?: boolean
 }
-
-const PerfectButton = withStyles({
-    root: {
-        fontFamily: "fonts/LouisGeorgeCafe",
-        textTransform: "none",
-        fontSize: 18,
-        marginTop:"1rem"
-    }
-})(Button)
-
-const PerfectSubButton = withStyles({
-    root:{
-        marginTop:0,
-    }
-})(PerfectButton)
 
 export function Navigation(props: NavigationProps) {
     const displayLogo = props.displayLogo != null ? props.displayLogo : true
@@ -106,11 +90,11 @@ export function Navigation(props: NavigationProps) {
                 >
                     <div>
                         <Link href="/">
-                            <PerfectButton>Accueil</PerfectButton>
+                            <Button>Accueil</Button>
                         </Link>
-                        <PerfectButton onClick={handleClick}>
+                        <Button onClick={handleClick}>
                             A propos
-                        </PerfectButton>
+                        </Button>
                         <Menu
                             id="simple-menu"
                             anchorEl={anchorEl}
@@ -121,25 +105,25 @@ export function Navigation(props: NavigationProps) {
                         >
                             <MenuItem>
                                 <Link href="/membres">
-                                    <PerfectSubButton>Membre</PerfectSubButton>
+                                    Membres
                                 </Link>
                             </MenuItem>
                         </Menu>
-                        <PerfectButton>Articles</PerfectButton>
+                        <Button>Articles</Button>
                         <Link href="/contact">
-                            <PerfectButton>Nous contacter</PerfectButton>
+                            <Button>Nous contacter</Button>
                         </Link>
                     </div>
 
                     <div>
                         <Link href="/">
-                            <PerfectButton>PerfectCorporate</PerfectButton>
+                            <Button>PerfectCorporate</Button>
                         </Link>
                         <Link href="/">
-                            <PerfectButton>PerfectCare</PerfectButton>
+                            <Button>PerfectCare</Button>
                         </Link>
                         <Link href="/circle">
-                            <PerfectButton>PerfectCircle</PerfectButton>
+                            <Button>PerfectCircle</Button>
                         </Link>
                     </div>
                 </Container>

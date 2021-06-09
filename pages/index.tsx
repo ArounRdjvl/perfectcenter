@@ -1,7 +1,6 @@
 import React from "react"
 import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
-import "../styles/Home.module.less"
 import { AnimatedLogo } from "../ components/AnimatedLogo"
 import { Container, Grid, Paper, Typography, useTheme } from "@material-ui/core"
 import { Divider } from "../ components/Divider"
@@ -10,7 +9,6 @@ import { Footer } from "../ components/Footer"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function index() {
-    const theme = useTheme()
 
     const itemStyle: CSS.Properties = {
         display: "flex",
