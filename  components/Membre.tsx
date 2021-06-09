@@ -206,7 +206,7 @@ export function Membre(props: MembreProps) {
                     xs={3}
                     style={{
                         position: "relative",
-                        zIndex: 10
+                        zIndex: 3
                     }}
                     item
                 >
