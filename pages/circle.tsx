@@ -1,12 +1,29 @@
 import React from "react"
 import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
+import { Divider } from "../ components/Divider"
 import "../styles/Home.module.less"
-import { Container, Typography, withStyles } from "@material-ui/core"
+import { Container, Grid, Typography, withStyles } from "@material-ui/core"
 import { Footer } from "../ components/Footer"
 import { TitleBar } from "../ components/TitleBar"
+import CSS from "csstype"
 
 export default function circle() {
+    
+    const itemStyle: CSS.Properties = {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-end"
+    }
+
+    const imageHandleStyle: CSS.Properties = {
+        flexGrow: 1,
+        display: "flex",
+        width: "10rem",
+        height: "10rem"
+    }
+
     return (
         <div>
             <Head>
@@ -15,8 +32,42 @@ export default function circle() {
             <Container>
                 <Navigation />
 
-                <TitleBar title="Nos Practiciens" background={true} />
-
+                <TitleBar title="Nos Practiciens" background={true} color="vert"/>
+                <Grid container justify="space-around" style={{margin: "4rem 0"}}>
+                    <Grid item sm={3} style={itemStyle}>
+                        <div style={imageHandleStyle}>
+                            <img
+                                src="picto/Valeurs.png"
+                                height="100%"
+                                style={{ margin: "auto" }}
+                            />
+                        </div>
+                        <Typography variant="h2">Partage nos valeurs</Typography>
+                        <Divider color="vert" />
+                    </Grid>
+                    <Grid item sm={3} style={itemStyle}>
+                        <div style={imageHandleStyle}>
+                            <img
+                                src="picto/Teste.png"
+                                height="100%"
+                                style={{ margin: "auto" }}
+                            />
+                        </div>
+                        <Typography variant="h2">Testés et validés</Typography>
+                        <Divider color="beige" />
+                    </Grid>
+                    <Grid item sm={3} style={itemStyle}>
+                        <div style={imageHandleStyle}>
+                            <img
+                                src="picto/Engagement.png"
+                                height="100%"
+                                style={{ margin: "auto" }}
+                            />
+                        </div>
+                        <Typography variant="h2">Engagés</Typography>
+                        <Divider color="vert" />
+                    </Grid>
+                </Grid>
                 <div style={{ position: "relative", paddingBottom: "2rem" }}>
                     <div
                         style={{
@@ -76,7 +127,7 @@ export default function circle() {
                         <img src="tom.png" style={{ width: "100%" }} />
                     </div>
                 </div>
-                <TitleBar title="Coaching" />
+                <TitleBar title="Coaching" color="beige" />
                 <Footer />
             </Container>
         </div>
