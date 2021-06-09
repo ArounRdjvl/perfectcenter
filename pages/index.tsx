@@ -154,7 +154,7 @@ export default function index() {
                 <Divider color="vert" />
                 <Grid container style={{margin: "4rem 0"}}>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h2">Entrprise</Typography>
+                        <Typography variant="h2">Entreprise</Typography>
                         <Divider color="beige" />
                         <div style={imageHandleStyle}>
                             <img
