@@ -25,9 +25,7 @@ export function getTheme() {
             h3: {
                 fontSize: "1.6rem"
             },
-            fontFamily: [
-                "font/LouisGeorgesCafe",
-              ].join(','),
+            fontFamily: "fonts/LouisGeorgeCafe/"
         },
     })
 }

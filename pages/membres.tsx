@@ -5,6 +5,7 @@ import { Membre } from "../ components/Membre"
 import "../styles/Home.module.less"
 import { Container } from "@material-ui/core"
 import { Footer } from "../ components/Footer"
+import { TitleBar } from "../ components/TitleBar"
 
 const dataMembres = {
     membre1: {
@@ -53,6 +54,7 @@ export default function membres() {
             </Head>
             <Container>
                 <Navigation />
+                <TitleBar title="Notre Equipe" background={true}/>
                 <Membre pair={true} user={dataMembres.membre1} />
                 <Membre pair={false} user={dataMembres.membre2} />
                 <Membre pair={true} user={dataMembres.membre3} />
