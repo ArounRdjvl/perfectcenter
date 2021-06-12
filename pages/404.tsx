@@ -23,7 +23,7 @@ export default function Home() {
             >
                 <div
                     style={{
-                        width: 400
+                        width: 200
                     }}
                 >
                     <Lottie

@@ -56,7 +56,8 @@ export function Footer() {
                         item
                         xs={4}
                         style={{
-                            position: "relative"
+                            position: "relative",
+                            margin:"auto"
                         }}
                     >
                         <Typography variant="h1" align="center">
