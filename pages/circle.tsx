@@ -19,8 +19,8 @@ export default function circle() {
     const imageHandleStyle: CSS.Properties = {
         flexGrow: 1,
         display: "flex",
-        width: "10rem",
-        height: "10rem"
+        width: "7rem",
+        height: "7rem"
     }
 
     return (
@@ -37,49 +37,67 @@ export default function circle() {
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Valeurs.png"
-                                height="100%"
+                                height="85%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h2">Partage nos valeurs</Typography>
-                        <Divider color="vert" />
-                    </Grid>
-                    <Grid item sm={3} style={itemStyle}>
-                        <div style={imageHandleStyle}>
-                            <img
-                                src="picto/Teste.png"
-                                height="100%"
-                                style={{ margin: "auto" }}
-                            />
-                        </div>
-                        <Typography variant="h2">Testés et validés</Typography>
-                        <Divider color="beige" />
+                        <Typography variant="h3">Partage nos valeurs</Typography>
+                        <Divider color="vert" width="90px" />
                     </Grid>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Engagement.png"
-                                height="100%"
+                                height="70%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h2">Engagés</Typography>
-                        <Divider color="vert" />
+                        <Typography variant="h3">Engagés</Typography>
+                        <Divider color="beige" width="90px" />
+                    </Grid>
+                    <Grid item sm={3} style={itemStyle}>
+                        <div style={imageHandleStyle}>
+                            <img
+                                src="picto/Teste.png"
+                                height="60%"
+                                style={{ margin: "auto" }}
+                            />
+                        </div>
+                        <Typography variant="h3">Testés et validés</Typography>
+                        <Divider color="vert" width="90px" />
                     </Grid>
                 </Grid>
-                <div style={{ position: "relative", paddingBottom: "2rem" }}>
+                <div 
+                    style={{ 
+                        position: "relative",
+                        paddingBottom: "2rem",
+                        height: "100%",
+                        width: "70%",
+                        margin: "auto"
+                        }}>
                     <div
                         style={{
                             borderRadius: 20,
-                            padding: "2rem 7rem",
+                            padding: "2rem 9rem 2rem 4rem ",
                             position: "relative",
+                            display: "flex",
+                            flexDirection: "row",
                             backgroundColor: "#E3CCB4",
                             height: "80%",
                             width: "90%",
                             zIndex: 1
                         }}
                     >
-                        <Typography>
+                        <div 
+                            style={{
+                                top: 1,
+                                left: 1,
+                                height: "100%",
+                                width: "10%",
+                            }}>
+                             <img src="picto/guillemets.png" style={{ width: "140%", marginLeft: "-2rem",}} />
+                        </div>
+                        <Typography >
                             Avant d'être un centre de bien-être, j'ai souhaité
                             que cet endroit soit un lieu d'échanges et de
                             partages. <br />
@@ -102,19 +120,19 @@ export default function circle() {
                             backgroundColor: "#849994",
                             bottom: 0,
                             right: 0,
-                            width: "60%",
+                            width: "70%",
                             height: "50%",
                             zIndex: 0,
                             padding: "0.5rem 1rem   "
                         }}
                     >
-                        <Typography style={{ position: "absolute", bottom: "0.3rem" }}>
-                            Tom Henrion - Créateur de bienveillance
+                        <Typography style={{ position: "absolute", bottom: 0, marginBottom:"5px" }}>
+                            Erik Henrion - Fondateur de PerfectCenter
                         </Typography>
                     </div>
                     <div
                         style={{
-                            borderRadius: 30,
+                            borderRadius: 20,
                             overflow: "hidden",
                             position: "absolute",
                             bottom: "1rem",
@@ -123,7 +141,7 @@ export default function circle() {
                             zIndex: 2
                         }}
                     >
-                        <img src="tom.png" style={{ width: "100%" }} />
+                        <img src="erik.png" style={{ width: "100%" }} />
                     </div>
                 </div>
                 <TitleBar title="Coaching" color="beige" />

@@ -20,8 +20,8 @@ export default function index() {
     const imageHandleStyle: CSS.Properties = {
         flexGrow: 1,
         display: "flex",
-        width: "10rem",
-        height: "10rem"
+        width: "6rem",
+        height: "6rem"
     }
 
     return (
@@ -41,65 +41,83 @@ export default function index() {
                 </Typography>
                 <Divider color="vert" />
 
-                <Grid container style={{margin: "4rem 0"}}>
+                <Grid container style={{margin: "2rem 0rem 4rem 0rem"}}>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Coeur_sur_main.png"
-                                width="100%"
+                                width="80%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h2">Bienveillance</Typography>
-                        <Divider color="beige" />
+                        <Typography variant="h4">Bienveillance</Typography>
+                        <Divider color="beige" width="75px" height="5px" />
                     </Grid>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Bras_mains.png"
-                                width="100%"
+                                width="80%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h2">Entraide</Typography>
-                        <Divider color="vert" />
+                        <Typography variant="h4">Entraide</Typography>
+                        <Divider color="vert" width="75px" height="5px" />
                     </Grid>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Coeur_deuxmains.png"
-                                width="100%"
+                                width="80%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h2">Générosité</Typography>
-                        <Divider color="beige" />
+                        <Typography variant="h4">Générosité</Typography>
+                        <Divider color="beige" width="75px" height="5px" />
                     </Grid>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/Coeur_main.png"
-                                width="100%"
+                                width="80%"
                                 style={{ margin: "auto" }}
                             />
                         </div>
-                        <Typography variant="h1">Partage</Typography>
-                        <Divider color="vert" />
+                        <Typography variant="h4">Partage</Typography>
+                        <Divider color="vert" width="75px" height="5px" />
                     </Grid>
                 </Grid>
-                <div style={{ position: "relative", paddingBottom: "2rem" }}>
+                <div 
+                    style={{ 
+                        position: "relative",
+                        paddingBottom: "2rem",
+                        height: "100%",
+                        width: "70%",
+                        margin: "auto"
+                        }}>
                     <div
                         style={{
                             borderRadius: 20,
-                            padding: "2rem 7rem",
+                            padding: "2rem 9rem 2rem 4rem ",
                             position: "relative",
+                            display: "flex",
+                            flexDirection: "row",
                             backgroundColor: "#E3CCB4",
                             height: "80%",
                             width: "90%",
                             zIndex: 1
                         }}
                     >
-                        <Typography>
+                        <div 
+                            style={{
+                                top: 1,
+                                left: 1,
+                                height: "100%",
+                                width: "10%",
+                            }}>
+                             <img src="picto/guillemets.png" style={{ width: "140%", marginLeft: "-2rem",}} />
+                        </div>
+                        <Typography >
                             Avant d'être un centre de bien-être, j'ai souhaité
                             que cet endroit soit un lieu d'échanges et de
                             partages. <br />
@@ -122,14 +140,14 @@ export default function index() {
                             backgroundColor: "#849994",
                             bottom: 0,
                             right: 0,
-                            width: "60%",
+                            width: "70%",
                             height: "50%",
                             zIndex: 0,
                             padding: "0.5rem 1rem   "
                         }}
                     >
-                        <Typography style={{ position: "absolute", bottom: 0 }}>
-                            Tom Henrion - Créateur de bienveillance
+                        <Typography style={{ position: "absolute", bottom: 0, marginBottom:"5px" }}>
+                            Erik Henrion - Fondateur de PerfectCenter
                         </Typography>
                     </div>
                     <div
@@ -143,20 +161,20 @@ export default function index() {
                             zIndex: 2
                         }}
                     >
-                        <img src="tom.png" style={{ width: "100%" }} />
+                        <img src="erik.png" style={{ width: "100%" }} />
                     </div>
                 </div>
                 <Typography variant="h1" align="center" style={{marginTop: "4rem"}}>
                     Nos Services
                 </Typography>
                 <Divider color="vert" />
-                <Grid container style={{margin: "4rem 0"}}>
+                <Grid container style={{margin: "2rem 0 1rem"}}>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h2">Entreprise</Typography>
-                        <Divider color="beige" />
+                        <Typography variant="h3">Nos Praticiens</Typography>
+                        <Divider color="vert" width="80px" height="4px" />
                         <div style={imageHandleStyle}>
                             <img
-                                src="picto/Malette.png"
+                                src="picto/therapeute.png"
                                 width="100%"
                                 style={{ margin: "auto" }}
                             />
@@ -164,8 +182,8 @@ export default function index() {
                         <ExpandMoreIcon />
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h2">Nos produits</Typography>
-                        <Divider color="vert" />
+                        <Typography variant="h3">Nos produits</Typography>
+                        <Divider color="beige" width="80px" height="4px" margin="0 0 1rem"/>
                         <div style={imageHandleStyle}>
                             <img
                                 src="picto/produits.png"
@@ -176,11 +194,11 @@ export default function index() {
                         <ExpandMoreIcon />
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h2">Nos Praticiens</Typography>
-                        <Divider color="beige" />
+                        <Typography variant="h3">Entreprise</Typography>
+                        <Divider color="vert" width="80px" height="4px" />
                         <div style={imageHandleStyle}>
                             <img
-                                src="picto/therapeute.png"
+                                src="picto/Malette.png"
                                 width="100%"
                                 style={{ margin: "auto" }}
                             />

@@ -25,6 +25,9 @@ export function getTheme() {
             h3: {
                 fontSize: "1.6rem"
             },
+            h4: {
+                fontSize: "1.4rem"
+            },
             fontFamily: "Louis George Café, sans-serif"
         },
         overrides: {

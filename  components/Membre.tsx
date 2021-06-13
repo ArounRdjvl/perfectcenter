@@ -29,7 +29,8 @@ export function Membre(props: MembreProps) {
                     container
                     style={{
                         height: "15rem",
-                        marginBottom: "2rem"
+                        marginLeft:"-5rem",
+                        marginBottom: "3rem"
                     }}
                 >
                     <Grid
@@ -115,12 +116,12 @@ export function Membre(props: MembreProps) {
                                 color: "white"
                             }}
                         >
-                            <Typography variant="h1" align="center">
+                            <Typography variant="h2" align="center">
                                 {props.user?.name}
                             </Typography>
                             <Divider color="beige" />
                             <Typography
-                                variant="h2"
+                                variant="h4"
                                 align="center"
                                 style={{
                                     margin: theme.spacing(1)
@@ -155,7 +156,8 @@ export function Membre(props: MembreProps) {
                 container
                 style={{
                     height: "15rem",
-                    marginBottom: "2rem"
+                    marginLeft:"5rem",
+                    marginBottom: "3rem"
                 }}
             >
                 <Grid
@@ -173,12 +175,12 @@ export function Membre(props: MembreProps) {
                             margin: theme.spacing(2)
                         }}
                     >
-                        <Typography variant="h1" align="center">
+                        <Typography variant="h2" align="center">
                             {props.user?.name}
                         </Typography>
                         <Divider color="vert" />
                         <Typography
-                            variant="h2"
+                            variant="h4"
                             align="center"
                             style={{
                                 margin: theme.spacing(1)

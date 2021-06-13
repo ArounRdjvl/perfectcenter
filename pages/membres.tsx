@@ -11,16 +11,16 @@ const dataMembres = {
         name: "Erik Henrion",
         photo: "membres/erik.png",
         poste: "Gérant - Fondateur",
-        desc: "Passionné de technologies et de formations, ma conviction est que la technologie doit être au service de l'humain et non l'inverse. Il est BG le daron !",
-        facebook: "https://www.facebook.com/henrion.tom",
-        instagram: "https://www.instagram.com/tomhenrion/?hl=fr",
-        linkedin: "https://www.linkedin.com/in/tom-henrion-5b7364178/"
+        desc: "Passionné de technologies et de formations, ma conviction est que la technologie doit être au service de l'humain et non l'inverse.",
+        facebook: "https://www.facebook.com/ErikHenrion",
+        instagram: "https://www.instagram.com/erikhenrion",
+        linkedin: "https://www.linkedin.com/in/henrionerik/"
     },
     membre2: {
         name: "Tom Henrion",
         photo: "membres/tom.png",
-        poste: "Manager (askip)",
-        desc: "Je suis en Génie Informatique mais en soit je sais pas ce que je fais là-bas. Faut trouver des trucs a dire. Je pense pas que je vais réussir car en vrai il y a vraiment beaucoup d’espace.",
+        poste: "Manager",
+        desc: "Je suis en Génie Informatique mais en soit je sais pas ce que je fais là-bas. Je pense pas que je vais réussir car en vrai il y a vraiment beaucoup d’espace.",
         facebook: "https://www.facebook.com/henrion.tom",
         instagram: "https://www.instagram.com/tomhenrion/?hl=fr",
         linkedin: "https://www.linkedin.com/in/tom-henrion-5b7364178/"
@@ -28,11 +28,11 @@ const dataMembres = {
     membre3: {
         name: "Téo Henrion",
         photo: "membres/teo.png",
-        poste: "Mascotte de PerfectCenter",
+        poste: "Manager",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing exercitationem repudiandae nemo iure aperiam!",
         facebook: "https://www.facebook.com/henrion.teo",
-        instagram: "https://www.instagram.com/tomhenrion/?hl=fr",
-        linkedin: "https://www.linkedin.com/in/tom-henrion-5b7364178/"
+        instagram: "https://www.instagram.com/teo_hrn",
+        linkedin: "https://www.linkedin.com/in/t%C3%A9o-henrion-39a9801a4"
     },
     membre4: {
         name: "Aroun Radjavelou",
