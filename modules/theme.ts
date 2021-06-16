@@ -1,5 +1,11 @@
 import { createMuiTheme } from "@material-ui/core"
 
+export const colors = {
+    beige: "#E3CCB4",
+    noir: "#3B424A",
+    vert: "#849994"
+}
+
 export function getTheme() {
     return createMuiTheme({
         palette: {
@@ -31,13 +37,35 @@ export function getTheme() {
             fontFamily: "Louis George Café, sans-serif"
         },
         overrides: {
+            MuiButton: {
+                root: {
+                    borderRadius: 30,
+                    textTransform: "none"
+                }
+            },
+            MuiFormLabel: {
+                root: {
+                    color: "#3B424A"
+                }
+            },
+            MuiInput: {
+                underline: {
+                    "&:before, &:after ,&:hover:not(.Mui-disabled):before": {
+                        borderBottomColor: colors.vert
+                    }
+                }
+            },
             MuiCssBaseline: {
                 "@global": {
                     "html,body,body > div:first-child,div#__next,div#__next > div":
-                        {
-                            height: "100%",
-                            backgroundColor: "#EBEAE8"
-                        }
+                    {
+                        height: "100%",
+                        backgroundColor: "#EBEAE8"
+                    },
+                    a: {
+                        color: "inherit",
+                        textDecoration: "none"
+                    }
                 }
             }
         }
