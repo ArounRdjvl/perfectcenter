@@ -66,7 +66,7 @@ const dataCoach = {
     }
 }
 
-export default function circle() {
+export default function perfectcircle() {
     
     const itemStyle: CSS.Properties = {
         display: "flex",
@@ -166,8 +166,8 @@ export default function circle() {
                             <Typography variant="h4" style={{marginBottom:"1rem"}}>
                                 Nos créateurs de bien-être..
                             </Typography>
-                            <Typography >
-                                Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... <br />
+                            <Typography align="justify">
+                                Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... 
                                 Nous capitalisons nos talents pour offrir des prestations liées au bien-être et au développement de tout potentiel, de son vrai "Soi". 
                                 En entreprise et en individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des personnes qui viennent à nous... <br />
                                 Nous créons des événements, formations et ateliers en collectif en plus des consultations individuelles que nous pouvons proposer.

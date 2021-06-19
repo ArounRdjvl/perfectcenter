@@ -133,7 +133,7 @@ export default function index() {
                                 Bienvenu à PerfectCenter
                             </Typography>
                             <Divider color="vert" margin="0 0 1rem" />
-                            <Typography>
+                            <Typography align="justify">
                                 Avant d'être un centre de bien-être, j'ai
                                 souhaité que cet endroit soit un lieu d'échanges
                                 et de partages. <br />

@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <div
             style={{
-                marginTop: "5rem",
+                marginTop: "3rem",
                 position: "relative",
                 height: "12rem",
                 width: "100%"
