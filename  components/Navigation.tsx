@@ -88,14 +88,15 @@ export function Navigation(props: NavigationProps) {
                     style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        flexDirection: "row"
+                        flexDirection: "row",
+                        margin:"auto"
                     }}
                 >
                     <div>
                         <Link href="/">
-                            <Button>Accueil</Button>
+                            <Button  style={{margin: "0 5px 0 5px" }} >Accueil</Button>
                         </Link>
-                        <Button onClick={handleClick}>A propos</Button>
+                        <Button onClick={handleClick} style={{margin: "0 5px 0 5px" }}>A propos</Button>
                         <Menu
                             id="simple-menu"
                             anchorEl={anchorEl}
@@ -108,21 +109,21 @@ export function Navigation(props: NavigationProps) {
                                 <Link href="/membres">Membres</Link>
                             </MenuItem>
                         </Menu>
-                        <Button>Articles</Button>
+                        <Button style={{margin: "0 5px 0 5px" }}>Articles</Button>
                         <Link href="/contact">
-                            <Button>Nous contacter</Button>
+                            <Button style={{margin: "0 5px 0 5px" }}>Nous contacter</Button>
                         </Link>
                     </div>
 
                     <div>
                         <Link href="/">
-                            <Button>PerfectCorporate</Button>
+                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCorporate</Button>
                         </Link>
                         <Link href="/">
-                            <Button>PerfectCare</Button>
+                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCare</Button>
                         </Link>
                         <Link href="/circle">
-                            <Button>PerfectCircle</Button>
+                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCircle</Button>
                         </Link>
                     </div>
                 </Container>

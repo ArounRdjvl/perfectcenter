@@ -43,7 +43,7 @@ export default function contact() {
     return (
         <Container>
             <Navigation />
-            <Grid container>
+            <Grid container style={{marginTop:"2rem"}}>
                 <Grid
                     item
                     xs={12}
@@ -98,9 +98,27 @@ export default function contact() {
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                     />
-                    <Button variant="contained" color="secondary" onClick={submitForm} style={{alignSelf:"center", margin: "2rem"}}>
-                         Envoyer
-                    </Button>
+                    <div 
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                        }}>
+                        <Button variant="contained" color="secondary" onClick={submitForm} style={{alignSelf:"center", margin: "2rem"}}>
+                            Envoyer
+                        </Button>
+                        <img
+                            src="picto/Feuille.png"
+                            width={130}
+                            style={{
+                                position:"absolute",
+                                zIndex: 2,
+                                marginLeft:"2rem",
+                                marginTop:"1rem"
+                            }}
+                        />
+                    </div>
+                    
+                    
                 </Grid>
                 <Grid
                     item

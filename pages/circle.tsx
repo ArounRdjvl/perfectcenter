@@ -5,7 +5,21 @@ import { Divider } from "../ components/Divider"
 import { Container, Grid, Typography, withStyles } from "@material-ui/core"
 import { Footer } from "../ components/Footer"
 import { TitleBar } from "../ components/TitleBar"
+import { Coach } from "../ components/Coach"
 import CSS from "csstype"
+import { CoachProps } from "../ components/Coach"
+
+const dataCoach = {
+    Coach1: {
+        name: "Laurent BROSSEAU",
+        photo: "membres/erik.png",
+        practice: "Préparateur Physique et Mental"
+    },
+    Coach2: {
+        name: "Tom HENRION",
+        photo: "membres/tom.png",
+    }
+}
 
 export default function circle() {
     
@@ -32,7 +46,7 @@ export default function circle() {
                 <Navigation />
 
                 <TitleBar title="Nos Practiciens" background={true} color="vert"/>
-                <Grid container justify="space-around" style={{margin: "4rem 0"}}>
+                <Grid container justify="space-around" style={{margin: "1rem 0 4rem"}}>
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
                             <img
@@ -97,21 +111,23 @@ export default function circle() {
                             }}>
                              <img src="picto/guillemets.png" style={{ width: "140%", marginLeft: "-2rem",}} />
                         </div>
-                        <Typography >
-                            Avant d'être un centre de bien-être, j'ai souhaité
-                            que cet endroit soit un lieu d'échanges et de
-                            partages. <br />
-                            Le cabaret historique "le Boeuf sur le toit" était
-                            le point de rendez-vous de tout Paris mais il était
-                            aussi un incubateur de talents. Il permettait
-                            notamment à des artistes sans le sou de pouvoir
-                            s'exprimer et se lancer.
-                            <br />
-                            J'ai donc décidé de prolonger l'histoire en créant
-                            un centre avec des prestations haut de gamme et
-                            composé de personnes partageant les mêmes valeurs de
-                            générosité et de bienveillance.
-                        </Typography>
+                        <div 
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems:"center",
+                                alignContent:"center"
+                            }}>
+                            <Typography variant="h4" style={{marginBottom:"1rem"}}>
+                                Nos créateurs de bien-être..
+                            </Typography>
+                            <Typography >
+                                Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... <br />
+                                Nous capitalisons nos talents pour offrir des prestations liées au bien-être et au développement de tout potentiel, de son vrai "Soi". 
+                                En entreprise et en individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des personnes qui viennent à nous... <br />
+                                Nous créons des événements, formations et ateliers en collectif en plus des consultations individuelles que nous pouvons proposer.
+                            </Typography>
+                        </div>
                     </div>
                     <div
                         style={{
@@ -144,7 +160,27 @@ export default function circle() {
                         <img src="erik.png" style={{ width: "100%" }} />
                     </div>
                 </div>
-                <TitleBar title="Coaching" color="beige" />
+                <TitleBar title="Nos Coachs" color="beige" />
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        alignContent: "flex-start",
+                        justifyContent: "space-evenly"
+                    }}>
+
+                    <Coach pair={true} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach1} />
+                    <Coach pair={true} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach1} />
+                    <Coach pair={true} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach1} />
+                    <Coach pair={true} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach1} />
+                    <Coach pair={true} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach1} />
+                    
+                </div>
                 <Footer />
             </Container>
         </div>

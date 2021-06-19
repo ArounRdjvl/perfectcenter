@@ -117,21 +117,33 @@ export default function index() {
                             }}>
                              <img src="picto/guillemets.png" style={{ width: "140%", marginLeft: "-2rem",}} />
                         </div>
-                        <Typography >
-                            Avant d'être un centre de bien-être, j'ai souhaité
-                            que cet endroit soit un lieu d'échanges et de
-                            partages. <br />
-                            Le cabaret historique "le Boeuf sur le toit" était
-                            le point de rendez-vous de tout Paris mais il était
-                            aussi un incubateur de talents. Il permettait
-                            notamment à des artistes sans le sou de pouvoir
-                            s'exprimer et se lancer.
-                            <br />
-                            J'ai donc décidé de prolonger l'histoire en créant
-                            un centre avec des prestations haut de gamme et
-                            composé de personnes partageant les mêmes valeurs de
-                            générosité et de bienveillance.
-                        </Typography>
+                        <div 
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems:"center",
+                                alignContent:"center"
+                            }}>
+                            <Typography variant="h4">
+                                Bienvenu à PerfectCenter
+                            </Typography>
+                            <Divider color="vert" margin="0 0 1rem"/>
+                            <Typography >
+                                Avant d'être un centre de bien-être, j'ai souhaité
+                                que cet endroit soit un lieu d'échanges et de
+                                partages. <br />
+                                Le cabaret historique "le Boeuf sur le toit" était
+                                le point de rendez-vous de tout Paris mais il était
+                                aussi un incubateur de talents. Il permettait
+                                notamment à des artistes sans le sou de pouvoir
+                                s'exprimer et se lancer.
+                                <br />
+                                J'ai donc décidé de prolonger l'histoire en créant
+                                un centre avec des prestations haut de gamme et
+                                composé de personnes partageant les mêmes valeurs de
+                                générosité et de bienveillance.
+                            </Typography>
+                        </div>
                     </div>
                     <div
                         style={{
@@ -170,7 +182,7 @@ export default function index() {
                 <Divider color="vert" />
                 <Grid container style={{margin: "2rem 0 1rem"}}>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h3">Nos Praticiens</Typography>
+                        <Typography variant="h3">PerfectCircle</Typography>
                         <Divider color="vert" width="80px" height="4px" />
                         <div style={imageHandleStyle}>
                             <img
@@ -179,10 +191,11 @@ export default function index() {
                                 style={{ margin: "auto" }}
                             />
                         </div>
+                        <Typography variant="h4" style={{ margin:"1rem"}}>Nos Praticiens</Typography>
                         <ExpandMoreIcon />
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h3">Nos produits</Typography>
+                        <Typography variant="h3">PerfectCare</Typography>
                         <Divider color="beige" width="80px" height="4px" margin="0 0 1rem"/>
                         <div style={imageHandleStyle}>
                             <img
@@ -191,10 +204,11 @@ export default function index() {
                                 style={{ margin: "auto" }}
                             />
                         </div>
+                        <Typography variant="h4" style={{ margin:"1rem"}}>Nos produits</Typography>
                         <ExpandMoreIcon />
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
-                        <Typography variant="h3">Entreprise</Typography>
+                        <Typography variant="h3">PerfectCorporate</Typography>
                         <Divider color="vert" width="80px" height="4px" />
                         <div style={imageHandleStyle}>
                             <img
@@ -203,6 +217,7 @@ export default function index() {
                                 style={{ margin: "auto" }}
                             />
                         </div>
+                        <Typography variant="h4" style={{ margin:"1rem"}}>Entreprise</Typography>
                         <ExpandMoreIcon />
                     </Grid>
                 </Grid>

@@ -7,9 +7,9 @@ export function Footer() {
     return (
         <div
             style={{
-                marginTop: "3rem",
+                marginTop: "5rem",
                 position: "relative",
-                height: "10rem",
+                height: "12rem",
                 width: "100%"
             }}
         >
@@ -18,7 +18,7 @@ export function Footer() {
                     backgroundColor: "#3B424A",
                     position: "absolute",
                     borderRadius: "20px",
-                    height: "50%",
+                    height: "40%",
                     width: "45%",
                     top: 0,
                     left: 0
@@ -32,7 +32,7 @@ export function Footer() {
                     zIndex: 1,
                     display: "flex",
                     alignItems: "center",
-                    height: "65%",
+                    height: "53%",
                     width: "84%",
                     left: "8%",
                     top: "17%"
@@ -116,9 +116,10 @@ export function Footer() {
             <div
                 style={{
                     backgroundColor: "#849994",
+                    marginBottom:"33px",
                     borderRadius: "20px",
                     position: "absolute",
-                    height: "50%",
+                    height: "40%",
                     width: "45%",
                     bottom: 0,
                     right: 0

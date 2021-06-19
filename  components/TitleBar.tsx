@@ -15,7 +15,7 @@ export function TitleBar(props: TitleProps) {
             <div
                 style={{
                     position: "relative",
-                    marginBottom: "2rem",
+                    marginTop:"2rem",
                     height: "10rem",
                     margin:"auto"
                 }}
@@ -25,17 +25,17 @@ export function TitleBar(props: TitleProps) {
                         display: "flex",
                         position: "relative",
                         borderRadius: 20,
-                        padding: "2rem 5rem",
                         margin: "0 auto",
                         top: "10%",
                         backgroundColor: "#E3CCB4",
-                        height: "65%",
-                        width: "45%",
+                        height: "55%",
+                        width: "35%",
                         zIndex: 1,
-                        justifyContent: "center"
+                        flexDirection: "column",
+                        alignItems: "center"
                     }}
                 >
-                    <Typography variant="h1" align="center">
+                    <Typography variant="h1" align="center" style={{margin:"auto"}}>
                         {props.title}
                         <Divider color={props.color} />
                     </Typography>
@@ -47,9 +47,9 @@ export function TitleBar(props: TitleProps) {
                         position: "absolute",
                         backgroundColor: "#849994",
                         top: 0,
-                        left: "25%",
-                        width: "45%",
-                        height: "65%",
+                        left: "30%",
+                        width: "35%",
+                        height: "55%",
                         zIndex: 0
                     }}
                 ></div>
