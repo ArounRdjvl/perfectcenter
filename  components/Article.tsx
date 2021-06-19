@@ -5,16 +5,15 @@ import { Divider } from "./Divider"
 export interface UserProps {
     photo?: string
     name?: string
-    practice1?: string
-    practice2?: string
+    description?: string
 }
 
-export interface CoachProps {
+export interface ArticleProps {
     pair?: boolean
     user?: UserProps
 }
 
-export function Coach(props: CoachProps) {
+export function Article(props: ArticleProps) {
     const theme = useTheme()
     const pair = props.pair
 
@@ -23,13 +22,13 @@ export function Coach(props: CoachProps) {
             <> 
                 <div
                     style={{
-                            width: "19rem",
-                            height: "100%",
-                            margin: "0.2rem 0.2rem",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                        }}>
+                        width: "25rem",
+                        height: "100%",
+                        margin: "0.2rem 0.2rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                    }}>
 
                     <div
                         style={{
@@ -48,7 +47,7 @@ export function Coach(props: CoachProps) {
                     </div>
                     <img
                         style={{
-                            maxHeight: "17rem",
+                            maxHeight: "13rem",
                             borderRadius: "20px",
                             display: "flex",
                             zIndex: 2
@@ -62,21 +61,18 @@ export function Coach(props: CoachProps) {
                             backgroundColor: "#849994",
                             position: "relative",
                             width: "100%",
-                            height: "6rem",
+                            height: "12rem",
                             bottom : "1rem",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 1,
-                            padding: "0rem 1rem",
+                            padding: "1rem 15px",
                             color: "white"
                         }}>
-                            <Typography align="center" style={{position: "relative", top:"3px"}}>
-                                {props.user?.practice1}
-                            </Typography>
-                            <Typography align="center" style={{position: "relative", top:"5px"}}>
-                                {props.user?.practice2}
+                            <Typography align="justify" style={{position: "relative", top:"3px"}}>
+                                {props.user?.description}
                             </Typography>
                     </div>
                 </div>
@@ -87,13 +83,13 @@ export function Coach(props: CoachProps) {
         <>
             <div
                 style={{
-                        width: "19rem",
-                        height: "29rem",
-                        margin: "0.2rem 0.2rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}>
+                    width: "25rem",
+                    height: "100%",
+                    margin: "0.2rem 0.2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                }}>
 
                 <div
                     style={{
@@ -113,7 +109,7 @@ export function Coach(props: CoachProps) {
                 </div>
                 <img
                     style={{
-                        maxHeight: "17rem",
+                        maxHeight: "13rem",
                         borderRadius: "20px",
                         display: "flex",
                         zIndex: 2
@@ -127,19 +123,17 @@ export function Coach(props: CoachProps) {
                         backgroundColor: "#E3CCB4",
                         position: "relative",
                         width: "100%",
-                        height: "6rem",
+                        height: "12rem",
                         bottom : "1rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        zIndex: 1
+                        padding: "1rem 15px",
+                        zIndex: 1,
                     }}>
-                        <Typography align="center" style={{position: "relative", top:"5px"}}>
-                                {props.user?.practice1}
-                        </Typography>
-                        <Typography align="center" style={{position: "relative", top:"5px"}}>
-                            {props.user?.practice2}
+                        <Typography align="justify" style={{position: "relative", top:"3px"}}>
+                            {props.user?.description}
                         </Typography>
                 </div>
             </div>

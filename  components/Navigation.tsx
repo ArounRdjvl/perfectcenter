@@ -109,7 +109,9 @@ export function Navigation(props: NavigationProps) {
                                 <Link href="/membres">Membres</Link>
                             </MenuItem>
                         </Menu>
-                        <Button style={{margin: "0 5px 0 5px" }}>Articles</Button>
+                        <Link href="/articles">
+                            <Button style={{margin: "0 5px 0 5px" }}>Articles</Button>
+                        </Link>
                         <Link href="/contact">
                             <Button style={{margin: "0 5px 0 5px" }}>Nous contacter</Button>
                         </Link>
@@ -122,7 +124,7 @@ export function Navigation(props: NavigationProps) {
                         <Link href="/">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCare</Button>
                         </Link>
-                        <Link href="/circle">
+                        <Link href="/perfectcircle">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCircle</Button>
                         </Link>
                     </div>

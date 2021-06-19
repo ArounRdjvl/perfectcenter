@@ -8,7 +8,7 @@ interface BackgroundProps {
 
 const useStyles = makeStyles((theme) => {
     // à paramétrer possiblement
-    const pictoSize = "15%"
+    const pictoSize = "7%"
     const groupHeight = "100vh"
     return {
         root: {
