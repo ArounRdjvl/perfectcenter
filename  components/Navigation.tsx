@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core"
 import { FiberPin } from "@material-ui/icons"
 
-const heightHeader = 90
+export const heightHeader = 90
 
 const useStyles = makeStyles((theme) => ({
     boxShadowNone: {

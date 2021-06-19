@@ -57,9 +57,8 @@ export function getTheme() {
             },
             MuiCssBaseline: {
                 "@global": {
-                    "html,body,body > div:first-child,div#__next,div#__next > div":
+                    "html,body,body > div:first-child,div#__next":
                     {
-                        height: "100%",
                         backgroundColor: "#EBEAE8"
                     },
                     a: {

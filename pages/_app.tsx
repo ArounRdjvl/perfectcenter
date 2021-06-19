@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@material-ui/styles"
 import { getTheme } from "../modules/theme"
 import { CssBaseline } from "@material-ui/core"
+import { Background } from "../ components/Background"
 
 function MyApp({
     Component,
@@ -12,6 +13,7 @@ function MyApp({
     return (
         <ThemeProvider theme={getTheme()}>
             <CssBaseline />
+            <Background />
             <Component {...pageProps} />
         </ThemeProvider>
     )
