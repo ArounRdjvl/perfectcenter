@@ -5,7 +5,8 @@ import { Divider } from "./Divider"
 export interface UserProps {
     photo?: string
     name?: string
-    practice?: string
+    practice1?: string
+    practice2?: string
 }
 
 export interface CoachProps {
@@ -24,7 +25,7 @@ export function Coach(props: CoachProps) {
                     style={{
                             width: "19rem",
                             height: "29rem",
-                            margin: "1rem 1rem",
+                            margin: "0.2rem 0.2rem",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
@@ -47,7 +48,7 @@ export function Coach(props: CoachProps) {
                     </div>
                     <img
                         style={{
-                            maxHeight: "19rem",
+                            maxHeight: "17rem",
                             borderRadius: "20px",
                             display: "flex",
                             zIndex: 2
@@ -64,13 +65,17 @@ export function Coach(props: CoachProps) {
                             height: "6rem",
                             bottom : "1rem",
                             display: "flex",
+                            flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 1,
                             color: "white"
                         }}>
-                            <Typography style={{position: "relative", top:"4px"}}>
-                                {props.user?.practice}
+                            <Typography align="center" style={{position: "relative", top:"3px"}}>
+                                {props.user?.practice1}
+                            </Typography>
+                            <Typography align="center" style={{position: "relative", top:"5px"}}>
+                                {props.user?.practice2}
                             </Typography>
                     </div>
                 </div>
@@ -83,7 +88,7 @@ export function Coach(props: CoachProps) {
                 style={{
                         width: "19rem",
                         height: "29rem",
-                        margin: "1rem 1rem",
+                        margin: "0.2rem 0.2rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
@@ -107,7 +112,7 @@ export function Coach(props: CoachProps) {
                 </div>
                 <img
                     style={{
-                        maxHeight: "19rem",
+                        maxHeight: "17rem",
                         borderRadius: "20px",
                         display: "flex",
                         zIndex: 2
@@ -124,12 +129,16 @@ export function Coach(props: CoachProps) {
                         height: "6rem",
                         bottom : "1rem",
                         display: "flex",
+                        flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
                         zIndex: 1
                     }}>
-                        <Typography style={{position: "relative", top:"4px"}}>
-                            {props.user?.practice}
+                        <Typography align="center" style={{position: "relative", top:"5px"}}>
+                                {props.user?.practice1}
+                        </Typography>
+                        <Typography align="center" style={{position: "relative", top:"5px"}}>
+                            {props.user?.practice2}
                         </Typography>
                 </div>
             </div>

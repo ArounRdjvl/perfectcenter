@@ -12,12 +12,57 @@ import { CoachProps } from "../ components/Coach"
 const dataCoach = {
     Coach1: {
         name: "Laurent BROSSEAU",
-        photo: "membres/erik.png",
-        practice: "Préparateur Physique et Mental"
+        photo: "coach/Laurent_BROSSEAU.png",
+        practice1: "Préparateur Physique et Mental"
     },
     Coach2: {
-        name: "Tom HENRION",
-        photo: "membres/tom.png",
+        name: "Paola PEREZ",
+        photo: "coach/Paola_PEREZ.png",
+        practice1: "Coach et Consultante en Harmonie Relationnelle"
+    },
+    Coach3: {
+        name: "Laetitia LEMEUNIER",
+        photo: "coach/Laetitia_LEMEUNIER.png",
+        practice1: "Sophrologue - Hypnothérapeute -",
+        practice2: "Massage bien-être"
+    },
+    Coach4: {
+        name: "Christelle SIVRÉ",
+        photo: "coach/Christelle_SIVRE.png",
+        practice1: "Instructrice Wim Hof - Coach de vie"
+    },
+    Coach5: {
+        name: "Richard ESPINASSE",
+        photo: "coach/Richard_ESPINASSE.png",
+        practice1: "Coach en prise de parole en public"
+    },
+    Coach6: {
+        name: "Nadia CHABANE",
+        photo: "coach/Nadia_CHABANE.png",
+        practice1: "Coach thérapeutique"
+    },
+    Coach7: {
+        name: "Ashuma ASH",
+        photo: "coach/Ashuma_ASH.png",
+        practice1: "Sophrologue - Relaxologue"
+    },
+    Coach8: {
+        name: "Bruno LESCURE",
+        photo: "coach/Bruno_LESCURE.png",
+        practice1: "Coach en stratégie d'entreprise", 
+        practice2: " Coach mentor"
+    },
+    Coach9: {
+        name: "Malika ARNAUD",
+        photo: "coach/Malika_ARNAUD.png",
+        practice1: "Coach en accompagnement à la réussite",
+        practice2: "Thérapeute Bien-être"
+    },
+    Coach10: {
+        name: "Nicolas LAVROFF",
+        photo: "coach/Nicolas_LAVROFF.png",
+        practice1: "Coach certifié - Formateur - Thérapeute",
+        practice2: "Méditation de Pleine Conscience"
     }
 }
 
@@ -170,15 +215,15 @@ export default function circle() {
                     }}>
 
                     <Coach pair={true} user={dataCoach.Coach1} />
-                    <Coach pair={false} user={dataCoach.Coach1} />
-                    <Coach pair={true} user={dataCoach.Coach1} />
-                    <Coach pair={false} user={dataCoach.Coach1} />
-                    <Coach pair={true} user={dataCoach.Coach1} />
-                    <Coach pair={false} user={dataCoach.Coach1} />
-                    <Coach pair={true} user={dataCoach.Coach1} />
-                    <Coach pair={false} user={dataCoach.Coach1} />
-                    <Coach pair={true} user={dataCoach.Coach1} />
-                    <Coach pair={false} user={dataCoach.Coach1} />
+                    <Coach pair={false} user={dataCoach.Coach2} />
+                    <Coach pair={true} user={dataCoach.Coach3} />
+                    <Coach pair={false} user={dataCoach.Coach4} />
+                    <Coach pair={true} user={dataCoach.Coach5} />
+                    <Coach pair={false} user={dataCoach.Coach6} />
+                    <Coach pair={true} user={dataCoach.Coach7} />
+                    <Coach pair={false} user={dataCoach.Coach8} />
+                    <Coach pair={true} user={dataCoach.Coach9} />
+                    <Coach pair={false} user={dataCoach.Coach10} />
                     
                 </div>
                 <Footer />
