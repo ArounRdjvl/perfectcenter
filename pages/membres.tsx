@@ -29,7 +29,7 @@ const dataMembres = {
         name: "Téo HENRION",
         photo: "membres/teo.png",
         poste: "Manager",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing exercitationem repudiandae nemo iure aperiam!",
+        desc: "Sportif de haut niveau en handball depuis plusieurs années, j'ai toujours été convaincu que le travail d'équipe était la solution pour réaliser de beaux projets, avec des valeurs communes. Je suis fier d'apporter mon énergie ainsi que mes compétences d'ingénieur conception et innovation de produit au sein de l'équipe Perfect !",
         facebook: "https://www.facebook.com/henrion.teo",
         instagram: "https://www.instagram.com/teo_hrn",
         linkedin: "https://www.linkedin.com/in/t%C3%A9o-henrion-39a9801a4"
