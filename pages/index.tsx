@@ -2,6 +2,7 @@ import React from "react"
 import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
 import { AnimatedLogo } from "../ components/AnimatedLogo"
+import { Background } from "../ components/Background"
 import { Container, Grid, Paper, Typography, useTheme } from "@material-ui/core"
 import { Divider } from "../ components/Divider"
 import CSS from "csstype"
@@ -9,6 +10,9 @@ import { Footer } from "../ components/Footer"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 
 export default function index() {
+
+    const ref = React.useRef<HTMLDivElement>(null)
+
     const itemStyle: CSS.Properties = {
         display: "flex",
         flexDirection: "column",
@@ -24,10 +28,12 @@ export default function index() {
     }
 
     return (
-        <div>
+        <div ref={ref}>
             <Head>
                 <title>Home</title>
             </Head>
+
+            <Background elRef={ref} />
 
             <Navigation displayLogo={false} />
 

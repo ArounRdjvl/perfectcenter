@@ -2,6 +2,10 @@ import React from "react"
 import { makeStyles, useTheme } from "@material-ui/core"
 import { heightHeader } from "./Navigation"
 
+interface BackgroundProps {
+    elRef : any
+}
+
 const useStyles = makeStyles((theme) => {
     // à paramétrer possiblement
     const pictoSize = "15%"
@@ -9,8 +13,9 @@ const useStyles = makeStyles((theme) => {
     return {
         root: {
             position: "absolute",
-            width: "100%",
+            left: 0,
             top: heightHeader,
+            width: "100%",
             overflow: "hidden"
         },
         leftSnap: {
@@ -32,23 +37,21 @@ const useStyles = makeStyles((theme) => {
     }
 })
 
-export function Background() {
+export function Background(props: BackgroundProps) {
     const classes = useStyles(useTheme())
 
     const [groupNumber, setGroupNumber] = React.useState<number>(0)
     const [height, setHeight] = React.useState<number>(0)
 
-    React.useEffect(() => {
-        console.log(document.documentElement.scrollHeight)
-        console.log(window.innerHeight)
-        const ratio = document.documentElement.scrollHeight / window.innerHeight
-        setGroupNumber(Math.ceil(ratio))
-    }, [])
 
     React.useEffect(() => {
         // seems ok to do it like that
-        setHeight(document.documentElement.scrollHeight - heightHeader)
-    }, [])
+        if (props.elRef?.current) {
+            const ratio = props.elRef.current.scrollHeight / window.innerHeight
+            setGroupNumber(Math.ceil(ratio))
+            setHeight(props.elRef.current.scrollHeight - heightHeader)
+        }
+    }, [props.elRef])
 
     const groups = []
 

@@ -1,9 +1,12 @@
 import React from "react"
+import { Background } from "../ components/Background"
 import { Button, Container, Link, Typography } from "@material-ui/core"
 import animation from "../assets/logo404.json"
 import Lottie from "react-lottie"
 
 export default function Home() {
+    const ref = React.useRef<HTMLDivElement>(null)
+
     const bodymovinOptions = {
         loop: true,
         autoplay: true,
@@ -12,7 +15,9 @@ export default function Home() {
     }
 
     return (
-        <Container style={{ display: "flex", height: "100%" }}>
+        <Container ref={ref} style={{ display: "flex", height: "100vh" }}>
+            <Background elRef={ref} />
+
             <div
                 style={{
                     margin: "auto",

@@ -1,5 +1,6 @@
 import React from "react"
 import { Navigation } from "../ components/Navigation"
+import { Background } from "../ components/Background"
 import { Footer } from "../ components/Footer"
 import {
     Button,
@@ -18,6 +19,8 @@ export default function contact() {
     const [email, setEmail] = React.useState<string>("")
     const [subject, setSubject] = React.useState<string>("")
     const [content, setContent] = React.useState<string>("")
+
+    const ref = React.useRef<HTMLDivElement>(null)
 
     const { palette, spacing } = useTheme()
 
@@ -41,7 +44,8 @@ export default function contact() {
     }
 
     return (
-        <Container>
+        <Container ref={ref}>
+            <Background elRef={ref} /> 
             <Navigation />
             <Grid container style={{marginTop:"2rem"}}>
                 <Grid

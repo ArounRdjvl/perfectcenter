@@ -1,6 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
+import { Background } from "../ components/Background"
 import { Membre } from "../ components/Membre"
 import { Container } from "@material-ui/core"
 import { Footer } from "../ components/Footer"
@@ -55,14 +56,18 @@ const dataMembres = {
 }
 
 export default function membres() {
+    const ref = React.useRef<HTMLDivElement>(null)
+
     return (
-        <div>
+        <div ref={ref}>
+            <Background elRef={ref} />
+
             <Head>
                 <title>Notre Equipe</title>
             </Head>
             <Container>
                 <Navigation />
-                <TitleBar title="Notre Equipe" background={true} color="vert"/>
+                <TitleBar title="Notre Equipe" background={true} color="vert" />
                 <Membre pair={true} user={dataMembres.membre1} />
                 <Membre pair={false} user={dataMembres.membre2} />
                 <Membre pair={true} user={dataMembres.membre3} />
