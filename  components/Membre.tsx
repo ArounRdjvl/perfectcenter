@@ -129,7 +129,7 @@ export function Membre(props: MembreProps) {
                             >
                                 {props.user?.poste}
                             </Typography>
-                            <Typography variant="body1" align="center">
+                            <Typography variant="body1" align="justify">
                                 {props.user?.desc}
                             </Typography>
                         </div>
@@ -188,7 +188,7 @@ export function Membre(props: MembreProps) {
                         >
                             {props.user?.poste}
                         </Typography>
-                        <Typography variant="body1" align="center">
+                        <Typography variant="body1" align="justify">
                             {props.user?.desc}
                         </Typography>
                     </div>
