@@ -3,6 +3,7 @@ import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
 import { AnimatedLogo } from "../ components/AnimatedLogo"
 import { Background } from "../ components/Background"
+import { Animations } from "../ components/Animations"
 import { Container, Grid, Paper, Typography, useTheme } from "@material-ui/core"
 import { Divider } from "../ components/Divider"
 import CSS from "csstype"
@@ -37,7 +38,9 @@ export default function index() {
 
             <Navigation displayLogo={false} />
 
-            <AnimatedLogo />
+            <Animations />
+
+            <AnimatedLogo delay={1000} />
             <div style={{ height: "100vh" }} />
 
             <Container>
