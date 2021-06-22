@@ -46,7 +46,7 @@ const dataMembres = {
     },
     membre5: {
         name: "Laurent BROSSEAU",
-        photo: "membres/aroun.png",
+        photo: "membres/Laurent_BROSSEAU.png",
         poste: "Aucun Poste",
         desc: "Préparateur physique et mental, entraineur d'aviron. 20 ans d'expérience dans le management sportif, avec une flamme dynamique pour transmettre de l'énergie vers l'exploration de nos limites individuelles, et dans la synergie d'équipe. Je garde la vocation et le rêve de forger le mental au travers d'expériences sportives. le feeling pour adapter le haut niveau vers un sport santé qui a du sens pour chacun, à un moment donné de sa vie.",
         facebook: "https://www.facebook.com/aroun.rdj.rdj",

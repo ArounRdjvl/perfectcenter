@@ -28,7 +28,7 @@ export function Membre(props: MembreProps) {
                     justify="center"
                     container
                     style={{
-                        height: "15rem",
+                        maxHeight: "40rem",
                         marginLeft:"-5rem",
                         marginBottom: "3rem"
                     }}
@@ -155,7 +155,7 @@ export function Membre(props: MembreProps) {
                 justify="center"
                 container
                 style={{
-                    height: "15rem",
+                    maxHeight: "40rem",
                     marginLeft:"5rem",
                     marginBottom: "3rem"
                 }}
