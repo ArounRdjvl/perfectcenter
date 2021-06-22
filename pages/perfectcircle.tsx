@@ -91,9 +91,8 @@ export default function perfectcircle() {
             <Head>
                 <title>PerfectCircle</title>
             </Head>
+            <Navigation />
             <Container>
-                <Navigation />
-
                 <TitleBar
                     title="Nos Practiciens"
                     background={true}

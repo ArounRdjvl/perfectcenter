@@ -40,7 +40,7 @@ export default function index() {
 
             <Animations />
 
-            <AnimatedLogo delay={1000} />
+            <AnimatedLogo delay={600} />
             <div style={{ height: "100vh" }} />
 
             <Container>
