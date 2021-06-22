@@ -111,19 +111,9 @@ export function Navigation(props: NavigationProps) {
                         <Link href="/">
                             <Button  style={{margin: "0 5px 0 5px" }} >Accueil</Button>
                         </Link>
-                        <Button onClick={handleClick} style={{margin: "0 5px 0 5px" }}>A propos</Button>
-                        <Menu
-                            id="simple-menu"
-                            anchorEl={anchorEl}
-                            keepMounted
-                            open={Boolean(anchorEl)}
-                            onClose={handleClose}
-                            TransitionComponent={Fade}
-                        >
-                            <MenuItem>
-                                <Link href="/membres">Membres</Link>
-                            </MenuItem>
-                        </Menu>
+                        <Link href="/membres">
+                            <Button style={{margin: "0 5px 0 5px" }}>Membres</Button>
+                        </Link>
                         <Link href="/articles">
                             <Button style={{margin: "0 5px 0 5px" }}>Articles</Button>
                         </Link>
@@ -133,10 +123,10 @@ export function Navigation(props: NavigationProps) {
                     </div>
 
                     <div>
-                        <Link href="/">
+                        <Link href="/perfectcorporate">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCorporate</Button>
                         </Link>
-                        <Link href="/">
+                        <Link href="/perfectcare">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCare</Button>
                         </Link>
                         <Link href="/perfectcircle">
