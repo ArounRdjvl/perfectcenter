@@ -49,7 +49,7 @@ export function Membre(props: MembreProps) {
                                 paddingLeft: "0.8rem",
                                 backgroundColor: "#E3CCB4",
                                 position: "absolute",
-                                height: "70%",
+                                height: "12rem",
                                 width: "70%",
                                 borderRadius: "20px"
                             }}
@@ -113,7 +113,8 @@ export function Membre(props: MembreProps) {
                                 position: "relative",
                                 zIndex: 2,
                                 margin: theme.spacing(2),
-                                color: "white"
+                                color: "white",
+                                paddingRight:theme.spacing(5)
                             }}
                         >
                             <Typography variant="h2" align="center">
@@ -172,7 +173,8 @@ export function Membre(props: MembreProps) {
                         style={{
                             position: "relative",
                             zIndex: 2,
-                            margin: theme.spacing(2)
+                            margin: theme.spacing(2),
+                            paddingLeft:theme.spacing(5)
                         }}
                     >
                         <Typography variant="h2" align="center">
@@ -221,7 +223,7 @@ export function Membre(props: MembreProps) {
                             paddingRight: "0.8rem",
                             backgroundColor: theme.palette.secondary.main,
                             position: "absolute",
-                            height: "70%",
+                            height: "12rem",
                             width: "70%",
                             right: 0,
                             borderRadius: "20px"

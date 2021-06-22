@@ -121,7 +121,7 @@ export function Navigation(props: NavigationProps) {
                         <Link href="/">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCorporate</Button>
                         </Link>
-                        <Link href="/">
+                        <Link href="/perfectcare">
                             <Button style={{margin: "0 5px 0 5px" }}>PerfectCare</Button>
                         </Link>
                         <Link href="/perfectcircle">
