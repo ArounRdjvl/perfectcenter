@@ -63,14 +63,29 @@ export function Navigation(props: NavigationProps) {
                         width: 400,
                         left: "50%",
                         marginLeft: -200,
-                        zIndex: 10
+                        zIndex: 10,
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "center"
                     }}
                 >
                     <img
+                        src="/picto/braket_left.png"
+                        height={heightHeader}
+                        style={{maxHeight: "2rem",}}
+                    />
+                    <img
                         src=".\Logo.png"
                         height={heightHeader}
-                        style={{ display: "block", margin: "auto" }}
+                        style={{ display: "block", margin: "0 2rem" }}
                     />
+                    <img
+                        src="/picto/braket_right.png"
+                        height={heightHeader}
+                        style={{maxHeight: "2rem",}}
+                    />
+                    
                 </div>
             )}
             <div style={{ height: heightHeader, width: "100%" }} />
