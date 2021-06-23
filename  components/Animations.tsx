@@ -2,6 +2,7 @@ import React from "react"
 import { makeStyles, useTheme } from "@material-ui/core"
 import { colors } from "../modules/theme"
 import { useSpring, animated, config } from "react-spring"
+import { AnimatedImage } from "./AnimatedImage"
 
 export interface AnimationsProps {}
 
@@ -90,6 +91,15 @@ export function Animations(props: AnimationsProps) {
                 size="13rem"
             />
             
+            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "20vw", y : "17vh"}} width="6rem" />
+            <AnimatedImage url="picto/Feuille.png" position={{x: "8vw", y : "40vh"}} width="7rem" />
+            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "75vw", y : "60vh"}} width="12rem" rotation={5} />
+            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "10vw", y : "53vh"}} width="14rem" rotation={-7} />
+            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "45vw", y : "76vh"}} width="7rem" rotation={135} mirror/>
+            <AnimatedImage url="picto/Feuille.png" position={{x: "75vw", y : "40vh"}} width="7rem" rotation={30} />
+            <AnimatedImage url="picto/Feuille.png" position={{x: "65vw", y : "15vh"}} width="7rem" rotation={180} mirror />
+
+
         </div>
     )
 }
