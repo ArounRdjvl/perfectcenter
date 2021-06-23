@@ -40,8 +40,8 @@ export default function Home() {
                     Error 404 : Stay Calm, Everything's good.
                 </Typography>
 
-                <Link href="/" style={{ marginTop: "1rem" }}>
-                    <Button variant="contained" color="secondary" size="large">
+                <Link href="/" underline="none" style={{ marginTop: "1rem"}}>
+                    <Button variant="contained" color="secondary" size="large" >
                         Accueil
                     </Button>
                 </Link>
