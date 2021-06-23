@@ -91,9 +91,8 @@ export default function perfectcircle() {
             <Head>
                 <title>PerfectCircle</title>
             </Head>
+            <Navigation />
             <Container>
-                <Navigation />
-
                 <TitleBar
                     title="Nos Practiciens"
                     background={true}
@@ -221,7 +220,8 @@ export default function perfectcircle() {
                             style={{
                                 position: "absolute",
                                 bottom: 0,
-                                marginBottom: "5px"
+                                marginBottom: "5px",
+                                color:"white"
                             }}
                         >
                             Erik Henrion - Fondateur de PerfectCenter

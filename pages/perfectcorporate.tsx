@@ -19,40 +19,48 @@ export default function perfectcorporate() {
     }
 
     return (
-        <div ref={ref}>
+        <div ref={ref} style={{ height: "100vh" }}>
             <Background elRef={ref} />
             <Head>
                 <title>PerfectCorporate</title>
             </Head>
-            <Container >
-                <Navigation />
-                <div
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%"
+                }}
+            >
+                <Navigation displayLogo={false} />
+                <Container
                     style={{
-                        margin: "auto",
                         display: "flex",
+                        flexGrow: 1,
                         flexDirection: "column",
-                        alignItems: "center"
+                        justifyContent: "space-between"
                     }}
                 >
-                    <div
-                        style={{
-                            width: 450
-                        }}
-                    >
-                        <Lottie
-                            options={bodymovinOptions}
-                            style={{ margin: "auto" }}
-                        />
+                    <div>
+                        <div
+                            style={{
+                                margin: "0 auto",
+                                width: 450
+                            }}
+                        >
+                            <Lottie
+                                options={bodymovinOptions}
+                                style={{ margin: "auto" }}
+                            />
+                        </div>
                     </div>
-
                     <TitleBar
                         background={true}
                         title="Page en cours de construction"
                         color="vert"
                     />
-                </div>
-                <Footer />
-            </Container>
+                    <Footer />
+                </Container>
+            </div>
         </div>
     )
 }
