@@ -123,23 +123,24 @@ export function Product(props: DisplayProps) {
                                         __html: props.product?.desc
                                     }}
                                 ></Typography>
-                                <Button
-                                    variant="contained"
-                                    color="secondary"
+
+                                <Link
+                                    underline="none"
+                                    color="inherit"
+                                    target="_blank"
+                                    href={props.product?.moreAboutLink}
                                     style={{
                                         alignSelf: "center",
                                         zIndex: 2
                                     }}
                                 >
-                                    <Link
-                                        underline="none"
-                                        color="inherit"
-                                        target="_blank"
-                                        href={props.product?.moreAboutLink}
+                                    <Button
+                                        variant="contained"
+                                        color="secondary"
                                     >
                                         En savoir plus
-                                    </Link>
-                                </Button>
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </Grid>
@@ -250,23 +251,20 @@ export function Product(props: DisplayProps) {
                                     __html: props.product?.desc
                                 }}
                             ></Typography>
-                            <Button
-                                variant="contained"
-                                color="secondary"
+                            <Link
+                                underline="none"
+                                color="inherit"
+                                target="_blank"
+                                href={props.product?.moreAboutLink}
                                 style={{
                                     alignSelf: "center",
                                     zIndex: 2
                                 }}
                             >
-                                <Link
-                                    underline="none"
-                                    color="inherit"
-                                    target="_blank"
-                                    href={props.product?.moreAboutLink}
-                                >
+                                <Button variant="contained" color="secondary">
                                     En savoir plus
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                         </div>
                         <div
                             style={{
