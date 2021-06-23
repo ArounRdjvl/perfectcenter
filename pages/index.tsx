@@ -4,15 +4,33 @@ import { Navigation } from "../ components/Navigation"
 import { AnimatedLogo } from "../ components/AnimatedLogo"
 import { Background } from "../ components/Background"
 import { Animations } from "../ components/Animations"
-import { Container, Grid, Paper, Typography, useTheme } from "@material-ui/core"
+import {
+    Container,
+    Grid,
+    IconButton,
+    makeStyles,
+    Paper,
+    Typography,
+    useTheme
+} from "@material-ui/core"
 import { Divider } from "../ components/Divider"
 import CSS from "csstype"
 import { Footer } from "../ components/Footer"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import { division, DivisionDesc } from "../ components/DivisionDesc"
+
+const useStyles = makeStyles((theme) => {
+    return {
+        buttonStyles: { position: "relative", zIndex: 3 }
+    }
+})
 
 export default function index() {
-
     const ref = React.useRef<HTMLDivElement>(null)
+
+    const classes = useStyles()
+
+    const [clicked, setClicked] = React.useState<division | null>("circle")
 
     const itemStyle: CSS.Properties = {
         display: "flex",
@@ -218,7 +236,9 @@ export default function index() {
                         <Typography variant="h4" style={{ margin: "1rem" }}>
                             Nos Praticiens
                         </Typography>
-                        <ExpandMoreIcon />
+                        <IconButton className={classes.buttonStyles} onClick={() => setClicked("circle")}>
+                            <ExpandMoreIcon />
+                        </IconButton>
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
                         <Typography variant="h3">PerfectCare</Typography>
@@ -238,7 +258,9 @@ export default function index() {
                         <Typography variant="h4" style={{ margin: "1rem" }}>
                             Nos produits
                         </Typography>
-                        <ExpandMoreIcon />
+                        <IconButton className={classes.buttonStyles} onClick={() => setClicked("care")}>
+                            <ExpandMoreIcon />
+                        </IconButton>
                     </Grid>
                     <Grid item sm={4} style={itemStyle}>
                         <Typography variant="h3">PerfectCorporate</Typography>
@@ -253,9 +275,12 @@ export default function index() {
                         <Typography variant="h4" style={{ margin: "1rem" }}>
                             Entreprise
                         </Typography>
-                        <ExpandMoreIcon />
+                        <IconButton className={classes.buttonStyles} onClick={() => setClicked("corporate")}>
+                            <ExpandMoreIcon />
+                        </IconButton>
                     </Grid>
                 </Grid>
+                {clicked && <DivisionDesc division={clicked} />}
                 <Footer />
             </Container>
         </div>
