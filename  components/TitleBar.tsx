@@ -15,9 +15,8 @@ export function TitleBar(props: TitleProps) {
             <div
                 style={{
                     position: "relative",
-                    marginTop:"2rem",
-                    height: "10rem",
-                    margin:"auto"
+                    marginTop: "2rem",
+                    height: "10rem"
                 }}
             >
                 <div
@@ -29,16 +28,20 @@ export function TitleBar(props: TitleProps) {
                         top: "10%",
                         backgroundColor: "#E3CCB4",
                         height: "55%",
-                        width: "35%",
+                        width: "40%",
                         zIndex: 1,
                         flexDirection: "column",
-                        alignItems: "center"
+                        alignItems: "center",
+                        justifyContent:"center"
                     }}
                 >
-                    <Typography variant="h1" align="center" style={{margin:"auto"}}>
+                    <Typography
+                        variant="h1"
+                        align="center"
+                    >
                         {props.title}
-                        <Divider color={props.color} />
                     </Typography>
+                    <Divider color={props.color} />
                 </div>
                 <div
                     style={{
@@ -47,8 +50,8 @@ export function TitleBar(props: TitleProps) {
                         position: "absolute",
                         backgroundColor: "#849994",
                         top: 0,
-                        left: "30%",
-                        width: "35%",
+                        left: "28%",
+                        width: "40%",
                         height: "55%",
                         zIndex: 0
                     }}
@@ -58,7 +61,11 @@ export function TitleBar(props: TitleProps) {
     }
     return (
         <>
-            <Typography variant="h1" align="center" style={{ margin: "2rem auto" }}>
+            <Typography
+                variant="h1"
+                align="center"
+                style={{ margin: "2rem auto" }}
+            >
                 {props.title}
                 <Divider color={props.color} />
             </Typography>
