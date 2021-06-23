@@ -52,8 +52,6 @@ export default function index() {
                 <title>Home</title>
             </Head>
 
-            <Background elRef={ref} />
-
             <Navigation displayLogo={false} />
 
             <Animations />
