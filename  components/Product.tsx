@@ -7,7 +7,7 @@ import { getRedirectStatus } from "next/dist/lib/load-custom-routes"
 export interface ProductProps {
     name?: string
     title?: string
-    desc?: string
+    desc?: JSX.Element
     moreAboutLink?: string
 }
 
@@ -119,14 +119,9 @@ export function Product(props: DisplayProps) {
                                         paddingTop: theme.spacing(4),
                                         paddingBottom: theme.spacing(4)
                                     }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: props.product?.desc
-                                    }}
-                                ></Typography>
-
+                                >{props.product?.desc}</Typography>
                                 <Link
                                     underline="none"
-                                    color="inherit"
                                     target="_blank"
                                     href={props.product?.moreAboutLink}
                                     style={{
@@ -247,13 +242,9 @@ export function Product(props: DisplayProps) {
                                     paddingTop: theme.spacing(4),
                                     paddingBottom: theme.spacing(4)
                                 }}
-                                dangerouslySetInnerHTML={{
-                                    __html: props.product?.desc
-                                }}
-                            ></Typography>
+                            >{props.product?.desc}</Typography>
                             <Link
                                 underline="none"
-                                color="inherit"
                                 target="_blank"
                                 href={props.product?.moreAboutLink}
                                 style={{
