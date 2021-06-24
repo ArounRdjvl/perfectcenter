@@ -1,52 +1,105 @@
-import { Typography, Grid, useTheme } from "@material-ui/core"
+import {
+    Typography,
+    Grid,
+    useTheme,
+    Divider as MuiDivider,
+    useMediaQuery,
+    makeStyles
+} from "@material-ui/core"
 import { Divider } from "../ components/Divider"
 import React from "react"
+import { colors } from "../modules/theme"
+
+const useStyles = makeStyles((theme) => {
+    return {
+        firstOnMd: {
+            [theme.breakpoints.down("sm")]: {
+                order: -1
+            }
+        }
+    }
+})
 
 export function Footer() {
     const theme = useTheme()
+    const classes = useStyles(theme)
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+
     return (
         <div
             style={{
                 marginTop: "3rem",
                 position: "relative",
-                height: "12rem",
                 width: "100%"
             }}
         >
             <div
                 style={{
-                    backgroundColor: "#3B424A",
+                    backgroundColor: colors.noir,
                     position: "absolute",
-                    borderRadius: "20px",
+                    borderRadius: 20,
                     height: "40%",
-                    width: "45%",
+                    width: isMobile ? "80%" : "45%",
                     top: 0,
                     left: 0
                 }}
-            ></div>
+            />
             <div
                 style={{
-                    backgroundColor: "#E3CCB4",
+                    backgroundColor: colors.vert,
+                    borderRadius: 20,
                     position: "absolute",
-                    borderRadius: "20px",
-                    zIndex: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    height: "53%",
-                    width: "84%",
-                    left: "8%",
-                    top: "17%"
+                    height: "40%",
+                    width: isMobile ? "80%" : "45%",
+                    bottom: 0,
+                    right: 0,
+                    overflow: "hidden"
                 }}
             >
-                <Grid container>
+                <Typography
+                    noWrap
+                    style={{
+                        marginLeft: "2rem",
+                        marginBottom: "2px",
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0
+                    }}
+                >
+                    Copyright © 2021 perfectcenter.fr® All rights reserved
+                </Typography>
+            </div>
+
+            <div
+                style={{
+                    padding: "2rem 0"
+                }}
+            >
+                <Grid
+                    container
+                    style={{
+                        backgroundColor: "#E3CCB4",
+                        position: "relative",
+                        borderRadius: 20,
+                        display: "flex",
+                        alignItems: "center",
+                        width: "84%",
+                        left: "8%",
+                        padding: "1rem 0"
+                    }}
+                >
                     <Grid
                         item
-                        xs={4}
+                        xs={12}
+                        md={4}
                         style={{
                             position: "relative"
                         }}
                     >
-                        <Typography style={{ marginLeft: "5rem" }}>
+                        <Typography
+                            style={{ marginLeft: isMobile ? 0 : "5rem" }}
+                            align={isMobile ? "center" : "left"}
+                        >
                             34 rue du colisée - 75008 Paris
                             <br /> 01 42 89 52 37
                             <br /> Contact@perfectcenter.fr
@@ -54,11 +107,14 @@ export function Footer() {
                     </Grid>
                     <Grid
                         item
-                        xs={4}
+                        xs={12}
+                        md={4}
                         style={{
                             position: "relative",
-                            margin:"auto"
+                            margin: "auto",
+                            padding: "1rem 0"
                         }}
+                        className={classes.firstOnMd}
                     >
                         <Typography variant="h1" align="center">
                             PerfectCenter
@@ -67,7 +123,8 @@ export function Footer() {
                     </Grid>
                     <Grid
                         item
-                        xs={4}
+                        xs={12}
+                        md={4}
                         style={{
                             position: "relative"
                         }}
@@ -81,28 +138,40 @@ export function Footer() {
                                 justifyContent: "center"
                             }}
                         >
-                            <a href="https://www.facebook.com/PerfectCenterParis" target="_blank">
+                            <a
+                                href="https://www.facebook.com/PerfectCenterParis"
+                                target="_blank"
+                            >
                                 <img
                                     src="picto/Facebook_fonce.png"
                                     width={50}
                                     style={{ margin: theme.spacing(1) }}
                                 />
                             </a>
-                            <a href="https://www.instagram.com/perfectcenter_/?hl=fr" target="_blank">
+                            <a
+                                href="https://www.instagram.com/perfectcenter_/?hl=fr"
+                                target="_blank"
+                            >
                                 <img
                                     src="picto/Instagram_fonce.png"
                                     width={50}
                                     style={{ margin: theme.spacing(1) }}
                                 />
                             </a>
-                            <a href="https://www.linkedin.com/company/perfectcenter/" target="_blank">
+                            <a
+                                href="https://www.linkedin.com/company/perfectcenter/"
+                                target="_blank"
+                            >
                                 <img
                                     src="picto/Linkedin_fonce.png"
                                     width={50}
                                     style={{ margin: theme.spacing(1) }}
                                 />
                             </a>
-                            <a href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g" target="_blank">
+                            <a
+                                href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g"
+                                target="_blank"
+                            >
                                 <img
                                     src="picto/YT_Fonce.png"
                                     width={50}
@@ -112,31 +181,6 @@ export function Footer() {
                         </div>
                     </Grid>
                 </Grid>
-            </div>
-            <div
-                style={{
-                    backgroundColor: "#849994",
-                    marginBottom:"33px",
-                    borderRadius: "20px",
-                    position: "absolute",
-                    height: "40%",
-                    width: "45%",
-                    bottom: 0,
-                    right: 0
-                }}
-            >
-                <Typography
-                    align="center"
-                    style={{
-                        marginLeft: "2rem",
-                        marginBottom: "2px",
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0
-                    }}
-                >
-                    Copyright © 2021 perfectcenter.fr® All rights reserved
-                </Typography>
             </div>
         </div>
     )

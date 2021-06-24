@@ -7,13 +7,13 @@ import {
     Fade,
     Container,
     makeStyles,
-    Link,
     useMediaQuery,
     useTheme,
     IconButton,
     Popover,
     Divider
 } from "@material-ui/core"
+import Link from "next/link"
 import MenuIcon from "@material-ui/icons/Menu"
 import MenuOpenIcon from "@material-ui/icons/MenuOpen"
 import { animated, config, useSpring } from "react-spring"
@@ -23,13 +23,8 @@ export const heightHeader = 90
 const useStyles = makeStyles((theme) => ({
     boxShadowNone: {
         boxShadow: "none"
-    },
-    buttonMobile: {
-        width: "100%",
-        height: "100%"
     }
 }))
-
 export interface NavigationProps {
     displayLogo?: boolean
 }
@@ -146,54 +141,26 @@ export function Navigation(props: NavigationProps) {
                                     }}
                                 >
                                     <Link href="/">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            Accueil
-                                        </Button>
+                                        <Button>Accueil</Button>
                                     </Link>
                                     <Link href="/membres">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            Membres
-                                        </Button>
+                                        <Button>Membres</Button>
                                     </Link>
                                     <Link href="/articles">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            Articles
-                                        </Button>
+                                        <Button>Articles</Button>
                                     </Link>
                                     <Link href="/contact">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            Nous contacter
-                                        </Button>
+                                        <Button>Nous contacter</Button>
                                     </Link>
                                     <Divider />
                                     <Link href="/perfectcorporate">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            PerfectCorporate
-                                        </Button>
+                                        <Button>PerfectCorporate</Button>
                                     </Link>
                                     <Link href="/perfectcare">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            PerfectCare
-                                        </Button>
+                                        <Button>PerfectCare</Button>
                                     </Link>
                                     <Link href="/perfectcircle">
-                                        <Button
-                                            className={classes.buttonMobile}
-                                        >
-                                            PerfectCircle
-                                        </Button>
+                                        <Button>PerfectCircle</Button>
                                     </Link>
                                 </div>
                             </div>
