@@ -1,6 +1,7 @@
-import { Typography, useTheme } from "@material-ui/core"
+import { Typography, useMediaQuery, useTheme } from "@material-ui/core"
 import { Divider } from "./Divider"
 import React from "react"
+import { colors } from "../modules/theme"
 
 export interface TitleProps {
     title?: string
@@ -10,52 +11,55 @@ export interface TitleProps {
 
 export function TitleBar(props: TitleProps) {
     const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+
     if (props.background) {
         return (
             <div
                 style={{
-                    position: "relative",
                     marginTop: "2rem",
-                    height: "10rem"
+                    paddingTop: "1rem"
                 }}
             >
                 <div
                     style={{
-                        display: "flex",
-                        position: "relative",
-                        borderRadius: 20,
-                        margin: "0 auto",
-                        top: "10%",
-                        backgroundColor: "#E3CCB4",
-                        height: "55%",
-                        width: "40%",
-                        zIndex: 1,
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent:"center"
+                        width: isMobile ? "80%" : "40%",
+                        margin: "auto",
+                        position: "relative"
                     }}
                 >
-                    <Typography
-                        variant="h1"
-                        align="center"
+                    <div
+                        style={{
+                            position: "relative",
+                            borderRadius: 20,
+                            margin: "0 auto",
+                            backgroundColor: colors.beige,
+                            zIndex: 1,
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "1rem"
+                        }}
                     >
-                        {props.title}
-                    </Typography>
-                    <Divider color={props.color} />
+                        <Typography variant="h1" align="center">
+                            {props.title}
+                        </Typography>
+                        <Divider color={props.color} />
+                    </div>
+                    <div
+                        style={{
+                            borderRadius: 20,
+                            position: "absolute",
+                            backgroundColor: colors.vert,
+                            top: "-1rem",
+                            bottom: "1rem",
+                            left: "-1rem",
+                            right: "1rem",
+                            zIndex: 0
+                        }}
+                    />
                 </div>
-                <div
-                    style={{
-                        display: "flex",
-                        borderRadius: 20,
-                        position: "absolute",
-                        backgroundColor: "#849994",
-                        top: 0,
-                        left: "28%",
-                        width: "40%",
-                        height: "55%",
-                        zIndex: 0
-                    }}
-                ></div>
             </div>
         )
     }
