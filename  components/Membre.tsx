@@ -30,7 +30,6 @@ export function Membre(props: MembreProps) {
                         direction="column"
                         container
                         style={{
-                            maxHeight: "40rem",
                             marginTop: "3rem"
                         }}
                     >
@@ -175,7 +174,6 @@ export function Membre(props: MembreProps) {
                     container
                     direction="column"
                     style={{
-                        maxHeight: "40rem",
                         marginTop: "3rem"
                     }}
                 >
@@ -310,7 +308,6 @@ export function Membre(props: MembreProps) {
                     justify="center"
                     container
                     style={{
-                        maxHeight: "40rem",
                         marginLeft: "-5rem",
                         marginTop: "3rem"
                     }}
@@ -420,7 +417,7 @@ export function Membre(props: MembreProps) {
                             style={{
                                 backgroundColor: theme.palette.secondary.main,
                                 position: "absolute",
-                                height: "80%",
+                                height: "85%",
                                 width: "130%",
                                 right: 0,
                                 bottom: 0,
@@ -438,7 +435,6 @@ export function Membre(props: MembreProps) {
                 justify="center"
                 container
                 style={{
-                    maxHeight: "40rem",
                     marginLeft: "5rem",
                     marginTop: "3rem"
                 }}
@@ -480,7 +476,7 @@ export function Membre(props: MembreProps) {
                         style={{
                             backgroundColor: "#E3CCB4",
                             position: "absolute",
-                            height: "80%",
+                            height: "85%",
                             width: "130%",
                             left: 0,
                             bottom: 0,
