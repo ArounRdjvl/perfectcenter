@@ -55,10 +55,16 @@ export function getTheme() {
                     }
                 }
             },
+            MuiLink: {
+                underlineHover: {
+                    "&:hover": {
+                        textDecoration: "none"
+                    }
+                }
+            },
             MuiCssBaseline: {
                 "@global": {
-                    "html,body,body > div:first-child,div#__next":
-                    {
+                    "html,body,body > div:first-child,div#__next": {
                         backgroundColor: "#EBEAE8"
                     },
                     a: {

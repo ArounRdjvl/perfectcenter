@@ -1,4 +1,3 @@
-import Link from "next/link"
 import React from "react"
 import {
     Button,
@@ -7,7 +6,8 @@ import {
     MenuItem,
     Fade,
     Container,
-    makeStyles
+    makeStyles,
+    Link
 } from "@material-ui/core"
 import { FiberPin } from "@material-ui/icons"
 
@@ -73,19 +73,22 @@ export function Navigation(props: NavigationProps) {
                     <img
                         src="/picto/braket_left.png"
                         height={heightHeader}
-                        style={{maxHeight: "2rem",}}
+                        style={{ maxHeight: "2rem" }}
                     />
-                    <img
-                        src=".\Logo.png"
-                        height={heightHeader}
-                        style={{ display: "block", margin: "0 2rem" }}
-                    />
+                    <Link href="/">
+                        <div>
+                            <img
+                                src=".\Logo.png"
+                                height={heightHeader}
+                                style={{ display: "block", margin: "0 2rem" }}
+                            />
+                        </div>
+                    </Link>
                     <img
                         src="/picto/braket_right.png"
                         height={heightHeader}
-                        style={{maxHeight: "2rem",}}
+                        style={{ maxHeight: "2rem" }}
                     />
-                    
                 </div>
             )}
             <div style={{ height: heightHeader, width: "100%" }} />
@@ -104,33 +107,47 @@ export function Navigation(props: NavigationProps) {
                         display: "flex",
                         justifyContent: "space-between",
                         flexDirection: "row",
-                        margin:"auto"
+                        margin: "auto"
                     }}
                 >
                     <div>
                         <Link href="/">
-                            <Button  style={{margin: "0 5px 0 5px" }} >Accueil</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                Accueil
+                            </Button>
                         </Link>
                         <Link href="/membres">
-                            <Button style={{margin: "0 5px 0 5px" }}>Membres</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                Membres
+                            </Button>
                         </Link>
                         <Link href="/articles">
-                            <Button style={{margin: "0 5px 0 5px" }}>Articles</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                Articles
+                            </Button>
                         </Link>
                         <Link href="/contact">
-                            <Button style={{margin: "0 5px 0 5px" }}>Nous contacter</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                Nous contacter
+                            </Button>
                         </Link>
                     </div>
 
                     <div>
                         <Link href="/perfectcorporate">
-                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCorporate</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                PerfectCorporate
+                            </Button>
                         </Link>
                         <Link href="/perfectcare">
-                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCare</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                PerfectCare
+                            </Button>
                         </Link>
                         <Link href="/perfectcircle">
-                            <Button style={{margin: "0 5px 0 5px" }}>PerfectCircle</Button>
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                PerfectCircle
+                            </Button>
                         </Link>
                     </div>
                 </Container>

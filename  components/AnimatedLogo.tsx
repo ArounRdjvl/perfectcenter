@@ -2,6 +2,7 @@ import React from "react"
 import animation from "../assets/logo.json"
 import Lottie from "react-lottie"
 import { useSpring, animated } from "react-spring"
+import { heightHeader } from "./Navigation"
 
 export interface AnimatedLogoProps {
     delay: number
@@ -25,12 +26,12 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
 
     function calculateSpringProps() {
         const ratio = window.pageYOffset / window.innerHeight
-        const height = (1 - ratio) * 300 + 100
+        const height = (1 - ratio) * 300 + heightHeader
         const defaultY = (window.innerHeight - height) / 2
-        if (ratio < 0.7) {
+        if (ratio < 0.8) {
             return { top: (1 - ratio) * defaultY, height }
         }
-        return { top: 0, height: 100 }
+        return { top: 0, height: heightHeader }
     }
 
     React.useEffect(() => {
@@ -65,10 +66,10 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
     return (
         <animated.div
             style={{
-                width: 400,
+                width: 300,
                 left: "50%",
                 opacity: springProps.opacity,
-                marginLeft: -200,
+                marginLeft: -150,
                 height: springProps.height,
                 position: "fixed",
                 top: springProps.top,
