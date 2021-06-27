@@ -4,6 +4,7 @@ import {
     useMediaQuery,
     useTheme
 } from "@material-ui/core"
+import clsx from "clsx"
 import React from "react"
 import { Divider } from "../Divider"
 
@@ -15,9 +16,45 @@ const useStyles = makeStyles((theme) => {
             height: "100%",
             width: "70%",
             [theme.breakpoints.down("sm")]: {
-                width: "100%"
+                width: "100%",
+                paddingBottom : "9rem"
             },
             margin: "auto"
+        },
+        image : {
+            borderRadius: 20,
+            position: "absolute",
+            bottom: "1rem",
+            right: "1rem",
+            width: "10rem",
+            zIndex: 2
+        },
+        imageMobile : {
+            bottom: 0,
+            left: "1rem",
+        },
+        greenDiv : {
+            borderRadius: 20,
+            position: "absolute",
+            backgroundColor: "#849994",
+            bottom: 0,
+            right: 0,
+            width: "70%",
+            height: "10rem",
+            zIndex: 0,
+            padding: "0.5rem 1rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end"
+        },
+        greenDivMobile : {
+            left: "10rem",
+            bottom: "1rem",
+            paddingLeft: "2rem",
+            width: "auto",
+            right: "2rem",
+            height: "auto",
+            paddingTop: "2rem"
         }
     }
 })
@@ -33,13 +70,13 @@ export function WelcomeMsg() {
             <div
                 style={{
                     borderRadius: 20,
-                    padding: isMobile ? "2rem" : "2rem 9rem 2rem 4rem ",
+                    padding: isMobile ? "3rem 2rem 2rem 2rem" : "3rem 9rem 2rem 4rem ",
                     position: "relative",
                     display: "flex",
                     flexDirection: "row",
                     backgroundColor: "#E3CCB4",
                     height: "80%",
-                    width: "90%",
+                    width: isMobile ? "100%" : "90%",
                     zIndex: 1
                 }}
             >
@@ -48,7 +85,8 @@ export function WelcomeMsg() {
                     style={{
                         position: "absolute",
                         left: "2rem",
-                        width: "2rem"
+                        width: "2rem",
+                        top: "1rem"
                     }}
                 />
                 <div
@@ -80,38 +118,15 @@ export function WelcomeMsg() {
                 </div>
             </div>
             <div
-                style={{
-                    borderRadius: 20,
-                    position: "absolute",
-                    backgroundColor: "#849994",
-                    bottom: 0,
-                    right: 0,
-                    width: "70%",
-                    height: "50%",
-                    zIndex: 0,
-                    padding: "0.5rem 1rem   "
-                }}
+                className={clsx(classes.greenDiv, isMobile && classes.greenDivMobile)}
             >
-                <Typography
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        marginBottom: "5px"
-                    }}
-                >
+                <Typography>
                     Erik Henrion - Fondateur de PerfectCenter
                 </Typography>
             </div>
             <img
                 src="erik.png"
-                style={{
-                    borderRadius: 20,
-                    position: "absolute",
-                    bottom: "1rem",
-                    right: "1rem",
-                    width: "10rem",
-                    zIndex: 2
-                }}
+                className={clsx(classes.image, isMobile && classes.imageMobile)}
             />
         </div>
     )
