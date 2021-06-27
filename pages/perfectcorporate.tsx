@@ -24,43 +24,36 @@ export default function perfectcorporate() {
             <Head>
                 <title>PerfectCorporate</title>
             </Head>
-            <div
+            <Navigation displayLogo={false} />
+            <Container
                 style={{
                     display: "flex",
+                    flexGrow: 1,
                     flexDirection: "column",
+                    justifyContent: "space-between",
                     height: "100%"
                 }}
             >
-                <Navigation displayLogo={false} />
-                <Container
-                    style={{
-                        display: "flex",
-                        flexGrow: 1,
-                        flexDirection: "column",
-                        justifyContent: "space-between"
-                    }}
-                >
-                    <div>
-                        <div
-                            style={{
-                                margin: "0 auto",
-                                width: 450
-                            }}
-                        >
-                            <Lottie
-                                options={bodymovinOptions}
-                                style={{ margin: "auto" }}
-                            />
-                        </div>
+                <div>
+                    <div
+                        style={{
+                            margin: "0 auto",
+                            width: 450
+                        }}
+                    >
+                        <Lottie
+                            options={bodymovinOptions}
+                            style={{ margin: "auto" }}
+                        />
                     </div>
-                    <TitleBar
-                        background={true}
-                        title="Page en cours de construction"
-                        color="vert"
-                    />
-                    <Footer />
-                </Container>
-            </div>
+                </div>
+                <TitleBar
+                    background={true}
+                    title="Page en cours de construction"
+                    color="vert"
+                />
+                <Footer />
+            </Container>
         </div>
     )
 }

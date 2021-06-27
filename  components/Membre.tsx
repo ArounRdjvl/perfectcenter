@@ -371,7 +371,7 @@ export function Membre(props: MembreProps) {
                         >
                             <img
                                 style={{
-                                    maxHeight: "12rem",
+                                    maxWidth: "11rem",
                                     borderRadius: "20px"
                                 }}
                                 alt={props.user?.name}
@@ -545,7 +545,7 @@ export function Membre(props: MembreProps) {
                     >
                         <img
                             style={{
-                                maxHeight: "12rem",
+                                maxWidth: "11rem",
                                 borderRadius: "20px"
                             }}
                             alt={props.user?.name}
