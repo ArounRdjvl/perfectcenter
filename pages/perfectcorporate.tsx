@@ -38,7 +38,7 @@ export default function perfectcorporate() {
                     <div
                         style={{
                             margin: "0 auto",
-                            width: 450
+                            width: "35%"
                         }}
                     >
                         <Lottie

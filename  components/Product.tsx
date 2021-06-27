@@ -53,7 +53,7 @@ export function Product(props: DisplayProps) {
                                     position: "absolute",
                                     borderRadius: "20px",
                                     height: "8rem",
-                                    width: "30rem",
+                                    width: "50%",
                                     top: -10,
                                     zIndex: -1,
                                     left: -10
@@ -148,7 +148,7 @@ export function Product(props: DisplayProps) {
                                     position: "absolute",
                                     borderRadius: "20px",
                                     height: "8rem",
-                                    width: "30rem",
+                                    width: "50%",
                                     zIndex: -1,
                                     bottom: -10,
                                     right: -10
@@ -184,7 +184,7 @@ export function Product(props: DisplayProps) {
                                 position: "absolute",
                                 borderRadius: "20px",
                                 height: "8rem",
-                                width: "30rem",
+                                width: "50%",
                                 top: -10,
                                 zIndex: -1,
                                 left: -10
@@ -280,7 +280,7 @@ export function Product(props: DisplayProps) {
                                 position: "absolute",
                                 borderRadius: "20px",
                                 height: "8rem",
-                                width: "30rem",
+                                width: "50%",
                                 zIndex: -1,
                                 bottom: -10,
                                 right: -10
