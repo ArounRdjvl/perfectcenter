@@ -3,15 +3,79 @@ import Head from "next/head"
 import { Navigation } from "../ components/Navigation"
 import { Divider } from "../ components/Divider"
 import { Background } from "../ components/Background"
-import { Container, Grid, Typography, withStyles } from "@material-ui/core"
+import {
+    Container,
+    Grid,
+    makeStyles,
+    Typography,
+    useMediaQuery,
+    useTheme,
+    withStyles
+} from "@material-ui/core"
 import { Footer } from "../ components/Footer"
 import { TitleBar } from "../ components/TitleBar"
 import { Coach } from "../ components/Coach"
 import CSS from "csstype"
 import { CoachProps } from "../ components/Coach"
 import { dataCoachs } from "../modules/data"
+import clsx from "clsx"
+
+const useStyles = makeStyles((theme) => {
+    return {
+        root: {
+            position: "relative",
+            paddingBottom: "2rem",
+            height: "100%",
+            width: "70%",
+            [theme.breakpoints.down("sm")]: {
+                width: "100%",
+                paddingBottom: "9rem"
+            },
+            margin: "auto"
+        },
+        image: {
+            borderRadius: 20,
+            position: "absolute",
+            bottom: "1rem",
+            right: "1rem",
+            width: "10rem",
+            zIndex: 2
+        },
+        imageMobile: {
+            bottom: 0,
+            left: "1rem"
+        },
+        greenDiv: {
+            borderRadius: 20,
+            position: "absolute",
+            backgroundColor: "#849994",
+            bottom: 0,
+            right: 0,
+            width: "70%",
+            height: "10rem",
+            zIndex: 0,
+            padding: "0.5rem 1rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end"
+        },
+        greenDivMobile: {
+            left: "10rem",
+            bottom: "1rem",
+            paddingLeft: "2rem",
+            width: "auto",
+            right: "2rem",
+            height: "auto",
+            paddingTop: "2rem"
+        }
+    }
+})
 
 export default function perfectcircle() {
+    const theme = useTheme()
+    const classes = useStyles(theme)
+
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
     const ref = React.useRef<HTMLDivElement>(null)
 
     const itemStyle: CSS.Properties = {
@@ -83,41 +147,31 @@ export default function perfectcircle() {
                         <Divider color="vert" width="90px" />
                     </Grid>
                 </Grid>
-                <div
-                    style={{
-                        position: "relative",
-                        paddingBottom: "2rem",
-                        height: "100%",
-                        width: "70%",
-                        margin: "auto"
-                    }}
-                >
+                <div className={classes.root}>
                     <div
                         style={{
                             borderRadius: 20,
-                            padding: "2rem 9rem 2rem 4rem ",
+                            padding: isMobile
+                                ? "3rem 2rem 2rem 2rem"
+                                : "3rem 9rem 2rem 4rem ",
                             position: "relative",
                             display: "flex",
                             flexDirection: "row",
                             backgroundColor: "#E3CCB4",
                             height: "80%",
-                            width: "90%",
+                            width: isMobile ? "100%" : "90%",
                             zIndex: 1
                         }}
                     >
-                        <div
+                        <img
+                            src="picto/guillemets.png"
                             style={{
-                                top: 1,
-                                left: 1,
-                                height: "100%",
-                                width: "10%"
+                                position: "absolute",
+                                left: "2rem",
+                                width: "2rem",
+                                top: "1rem"
                             }}
-                        >
-                            <img
-                                src="picto/guillemets.png"
-                                style={{ width: "140%", marginLeft: "-2rem" }}
-                            />
-                        </div>
+                        />
                         <div
                             style={{
                                 display: "flex",
@@ -126,12 +180,10 @@ export default function perfectcircle() {
                                 alignContent: "center"
                             }}
                         >
-                            <Typography
-                                variant="h4"
-                                style={{ marginBottom: "1rem" }}
-                            >
+                            <Typography variant="h4">
                                 Nos créateurs de bien-être..
                             </Typography>
+                            <Divider color="vert" margin="0 0 1rem" />
                             <Typography align="justify">
                                 Coach, thérapeute, conférencier, consultant,
                                 sophrologue, coach sportif... Nous capitalisons
@@ -148,42 +200,22 @@ export default function perfectcircle() {
                         </div>
                     </div>
                     <div
-                        style={{
-                            borderRadius: 20,
-                            position: "absolute",
-                            backgroundColor: "#849994",
-                            bottom: 0,
-                            right: 0,
-                            width: "70%",
-                            height: "50%",
-                            zIndex: 0,
-                            padding: "0.5rem 1rem   "
-                        }}
+                        className={clsx(
+                            classes.greenDiv,
+                            isMobile && classes.greenDivMobile
+                        )}
                     >
-                        <Typography
-                            style={{
-                                position: "absolute",
-                                bottom: 0,
-                                marginBottom: "5px",
-                                color: "white"
-                            }}
-                        >
+                        <Typography>
                             Erik Henrion - Fondateur de PerfectCenter
                         </Typography>
                     </div>
-                    <div
-                        style={{
-                            borderRadius: 20,
-                            overflow: "hidden",
-                            position: "absolute",
-                            bottom: "1rem",
-                            right: "1rem",
-                            width: "10rem",
-                            zIndex: 2
-                        }}
-                    >
-                        <img src="erik.png" style={{ width: "100%" }} />
-                    </div>
+                    <img
+                        src="erik.png"
+                        className={clsx(
+                            classes.image,
+                            isMobile && classes.imageMobile
+                        )}
+                    />
                 </div>
                 <TitleBar title="Nos Coachs" color="beige" />
                 <div
