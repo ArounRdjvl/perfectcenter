@@ -1,5 +1,6 @@
-import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core"
+import { makeStyles, useMediaQuery, useTheme, Typography} from "@material-ui/core"
 import clsx from "clsx"
+import React from "react"
 import { colors } from "../../modules/theme"
 
 export type division = "circle" | "care" | "corporate"
@@ -80,36 +81,38 @@ export function DivisionDesc(props: DivisionDescProps) {
     if (props.division == "circle") {
         content = (
             <>
-                <p>
+                <Typography>
                     PerfectCircle regroupe un large nombre de praticiens,
                     thérapeuthes et beacoup d'autres interventants. Une grande
                     divesité d'activité permet à notre clientèle de s'orienter
                     vers la solution adaptée à ces besoins
-                </p>
-                <p>
+                </Typography>
+                <Typography>
                     Une communauté de coachs, thémapeutes et divers
                     intervenants. Avec la possibilité de louer les espaces et
                     matériels et protifer de prix attractifs sur les produits
                     PerfectCenter
-                </p>
+                </Typography>
             </>
         )
     } else if (props.division == "care") {
         content = (
             <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                natus voluptate necessitatibus architecto laborum voluptatibus
-                nobis quis consequatur et adipisci quod, doloremque ad nemo!
-                Esse non laudantium totam eligendi quaerat.
+                <Typography>
+                    PerfectCare regroupe un large choix de produit sélectionner par nos soins. 
+                    Ces produits sont utilisés régulièrement par notre coach et thérapeutes comme les fleurs de bach ou encore le Psio.
+                </Typography>
+                <Typography>
+                    Nous vous invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous par télephone.
+                </Typography>
             </>
         )
     } else if (props.division == "corporate") {
         content = (
             <>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                quod quae, eveniet dolores animi, corrupti eligendi ipsa id
-                tempore ex laudantium suscipit consectetur, placeat dolorem.
-                Pariatur porro dolorem similique expedita!
+                <Typography>
+                    Des offres spécialement adaptées aux entreprises avec des solutions répondant aux problématiques de Qualité de Vie au Travail, de télétravail, de gestion du stress..
+                </Typography>
             </>
         )
     }
