@@ -1,8 +1,8 @@
 import React from "react"
-import animation from "../assets/logo.json"
+import animation from "../../../assets/logo.json"
 import Lottie from "react-lottie"
 import { useSpring, animated } from "react-spring"
-import { heightHeader } from "./Navigation"
+import { heightHeader } from "../../Navigation"
 
 export interface AnimatedLogoProps {
     delay: number

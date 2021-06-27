@@ -1,6 +1,6 @@
-import { makeStyles, useTheme } from "@material-ui/core"
+import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core"
 import clsx from "clsx"
-import { colors } from "../modules/theme"
+import { colors } from "../../modules/theme"
 
 export type division = "circle" | "care" | "corporate"
 
@@ -12,7 +12,9 @@ const useStyles = makeStyles((theme) => {
     return {
         root: {
             minHeight: "10rem",
-            margin: "0 5rem",
+            [theme.breakpoints.up("md")] : {
+                margin: "0 5rem",
+            },
             position: "relative"
         },
         greenDiv: {
@@ -25,10 +27,13 @@ const useStyles = makeStyles((theme) => {
         },
         beigeDiv: {
             position: "relative",
-            borderRadius: 30,
+            borderRadius: 20,
             backgroundColor: colors.beige,
-            padding: "2rem 3rem",
-            minHeight: "10rem"
+            padding: "1rem 2rem",
+            [theme.breakpoints.up("md")] : {
+                padding: "2rem 3rem",
+                minHeight: "10rem"
+            }
         },
         leftGreenDiv: {
             left: "-2rem"
@@ -41,7 +46,7 @@ const useStyles = makeStyles((theme) => {
         },
         blackDiv: {
             position: "absolute",
-            borderRadius: 30,
+            borderRadius: 20,
             backgroundColor: colors.noir,
             padding: "2rem 3rem",
             height: "100%",
@@ -61,12 +66,15 @@ const useStyles = makeStyles((theme) => {
         rightBlackDiv: {
             right: "-2rem",
             width: "50%"
-        },
+        }
     }
 })
 
 export function DivisionDesc(props: DivisionDescProps) {
-    const classes = useStyles(useTheme())
+    const theme = useTheme()
+    const classes = useStyles(theme)
+
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
     let content
     if (props.division == "circle") {
@@ -108,18 +116,26 @@ export function DivisionDesc(props: DivisionDescProps) {
 
     return (
         <div className={classes.root}>
-            <div
-                className={clsx(classes.greenDiv, {
-                    [classes.leftGreenDiv]: props.division == "circle",
-                    [classes.middleGreenDiv]: props.division == "care",
-                    [classes.rightGreenDiv]: props.division == "corporate"
-                })}
-            />
-            <div className={clsx(classes.blackDiv, {
-                    [classes.rightBlackDiv]: props.division == "circle",
-                    [classes.middleBlackDiv]: props.division == "care",
-                    [classes.leftBlackDiv]: props.division == "corporate"
-                })} />
+            {!isMobile && (
+                <>
+                    <div
+                        className={clsx(classes.greenDiv, {
+                            [classes.leftGreenDiv]: props.division == "circle",
+                            [classes.middleGreenDiv]: props.division == "care",
+                            [classes.rightGreenDiv]:
+                                props.division == "corporate"
+                        })}
+                    />
+                    <div
+                        className={clsx(classes.blackDiv, {
+                            [classes.rightBlackDiv]: props.division == "circle",
+                            [classes.middleBlackDiv]: props.division == "care",
+                            [classes.leftBlackDiv]:
+                                props.division == "corporate"
+                        })}
+                    />
+                </>
+            )}
             <div className={classes.beigeDiv}>{content}</div>
         </div>
     )
