@@ -12,7 +12,7 @@ export const dataMembres = [
         name: "Tom HENRION",
         photo: "membres/tom.png",
         poste: "Manager",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum ",
+        desc: "Ingénieur Informatique de formation, je suis heureux de pouvoir mettre mes compétences de management au service de PerfectCenter. Ayant fait de nombreux sport collectif, je suis persuadé que l'esprit d'équipe était la clé de la réussite.",
         facebook: "https://www.facebook.com/henrion.tom",
         instagram: "https://www.instagram.com/tomhenrion/?hl=fr",
         linkedin: "https://www.linkedin.com/in/tom-henrion-5b7364178/"
