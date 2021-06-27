@@ -1,22 +1,19 @@
 import React from "react"
 import {
     Button,
-    Menu,
     AppBar,
-    MenuItem,
-    Fade,
     Container,
     makeStyles,
     useMediaQuery,
     useTheme,
     IconButton,
-    Popover,
     Divider
 } from "@material-ui/core"
 import Link from "next/link"
 import MenuIcon from "@material-ui/icons/Menu"
 import MenuOpenIcon from "@material-ui/icons/MenuOpen"
 import { animated, config, useSpring } from "react-spring"
+import { useFlux } from "../modules/Flux"
 
 export const heightHeader = 90
 
@@ -33,23 +30,14 @@ const vhToPixel = (value: number) => (window.innerHeight * value) / 100
 
 export function Navigation(props: NavigationProps) {
     const displayLogo = props.displayLogo != null ? props.displayLogo : true
-    const [anchorEl, setAnchorEl] = React.useState(null)
     const [shadow, setShadow] = React.useState<boolean>(false)
 
-    const [menuOpen, setMenuOpen] = React.useState<boolean>(false)
+    const [menuOpen, setMenuOpen] = useFlux<boolean>("menuOpen", false)
 
     const theme = useTheme()
     const classes = useStyles()
 
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
-
-    function handleClick(event: any) {
-        setAnchorEl(event.currentTarget)
-    }
-
-    function handleClose() {
-        setAnchorEl(null)
-    }
 
     function handleScroll() {
         if (window.pageYOffset === 0) {
@@ -79,9 +67,54 @@ export function Navigation(props: NavigationProps) {
         }
     })
 
+    const staticLogo = (
+        <div
+            style={{
+                pointerEvents: "none",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 10,
+                padding: "0 4rem"
+            }}
+        >
+            <div
+                style={{
+                    display: "flex",
+                    overflow: "hidden",
+                    alignItems: "center",
+                    flexDirection: "row",
+                    justifyContent: "center"
+                }}
+            >
+                <img
+                    src="/picto/braket_left.png"
+                    height={heightHeader}
+                    style={{ maxHeight: "2rem" }}
+                />
+                <Link href="/">
+                    <div>
+                        <img
+                            src=".\Logo.png"
+                            height={heightHeader}
+                            style={{ display: "block", margin: isMobile ? "0" : "0 2rem" }}
+                        />
+                    </div>
+                </Link>
+                <img
+                    src="/picto/braket_right.png"
+                    height={heightHeader}
+                    style={{ maxHeight: "2rem" }}
+                />
+            </div>
+        </div>
+    )
+
     if (isMobile) {
         return (
             <>
+                {displayLogo && staticLogo}
                 <div style={{ height: heightHeader, width: "100%" }} />
                 <AppBar
                     color="transparent"
@@ -173,41 +206,7 @@ export function Navigation(props: NavigationProps) {
 
     return (
         <>
-            {displayLogo && (
-                <div
-                    style={{
-                        position: "fixed",
-                        width: 400,
-                        left: "50%",
-                        marginLeft: -200,
-                        zIndex: 10,
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}
-                >
-                    <img
-                        src="/picto/braket_left.png"
-                        height={heightHeader}
-                        style={{ maxHeight: "2rem" }}
-                    />
-                    <Link href="/">
-                        <div>
-                            <img
-                                src=".\Logo.png"
-                                height={heightHeader}
-                                style={{ display: "block", margin: "0 2rem" }}
-                            />
-                        </div>
-                    </Link>
-                    <img
-                        src="/picto/braket_right.png"
-                        height={heightHeader}
-                        style={{ maxHeight: "2rem" }}
-                    />
-                </div>
-            )}
+            {displayLogo && staticLogo}
             <div style={{ height: heightHeader, width: "100%" }} />
             <AppBar
                 color="transparent"

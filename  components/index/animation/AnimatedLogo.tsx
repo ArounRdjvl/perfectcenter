@@ -3,9 +3,16 @@ import animation from "../../../assets/logo.json"
 import Lottie from "react-lottie"
 import { useSpring, animated } from "react-spring"
 import { heightHeader } from "../../Navigation"
+import { useFlux } from "../../../modules/Flux"
 
 export interface AnimatedLogoProps {
     delay: number
+}
+
+const menu: {
+    current: boolean | null
+} = {
+    current: false
 }
 
 export function AnimatedLogo(props: AnimatedLogoProps) {
@@ -18,17 +25,19 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
 
     const [play, setPlay] = React.useState<boolean>(false)
 
+    const [menuOpen] = useFlux<boolean>("menuOpen")
+
     const [springProps, setSpring] = useSpring(() => ({
         top: 0,
         height: 0,
         opacity: 0
     }))
 
-    function calculateSpringProps() {
+    const calculateSpringProps = () => {
         const ratio = window.pageYOffset / window.innerHeight
         const height = (1 - ratio) * 300 + heightHeader
         const defaultY = (window.innerHeight - height) / 2
-        if (ratio < 0.8) {
+        if (ratio < 0.8 && !menu.current) {
             return { top: (1 - ratio) * defaultY, height }
         }
         return { top: 0, height: heightHeader }
@@ -54,25 +63,29 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
     }
 
     React.useEffect(() => {
-        window.addEventListener("scroll", handleEvent)
-        window.addEventListener("resize", handleEvent)
+        window.addEventListener("scroll", () => handleEvent())
+        window.addEventListener("resize", () => handleEvent())
 
         return () => {
-            window.removeEventListener("scroll", handleEvent)
-            window.removeEventListener("resize", handleEvent)
+            window.removeEventListener("scroll", () => handleEvent())
+            window.removeEventListener("resize", () => handleEvent())
         }
     }, [])
+
+    React.useEffect(() => {
+        menu.current = menuOpen
+        handleEvent()
+    }, [menuOpen])
 
     return (
         <animated.div
             style={{
-                width: 300,
-                left: "50%",
                 opacity: springProps.opacity,
-                marginLeft: -150,
                 height: springProps.height,
-                position: "fixed",
                 top: springProps.top,
+                position: "fixed",
+                pointerEvents: "none",
+                width: "100%",
                 zIndex: 10
             }}
         >
