@@ -109,7 +109,7 @@ export default function perfectcircle() {
                 <Grid
                     container
                     justify="space-around"
-                    style={{ margin: "1rem 0 4rem" }}
+                    style={{ margin: "3rem 0 4rem" }}
                 >
                     <Grid item sm={3} style={itemStyle}>
                         <div style={imageHandleStyle}>
