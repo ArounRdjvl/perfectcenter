@@ -11,7 +11,7 @@ export interface UserProps {
 
 export interface CoachProps {
     pair?: boolean
-    user?: UserProps
+    user?: UserProps 
 }
 
 export function Coach(props: CoachProps) {
@@ -42,7 +42,7 @@ export function Coach(props: CoachProps) {
                             justifyContent: "center",
                             zIndex: 1
                         }}>
-                            <Typography variant="h2" align="center">
+                            <Typography variant="h4" align="center">
                                 {props.user?.name}
                             </Typography>
                     </div>
@@ -107,7 +107,7 @@ export function Coach(props: CoachProps) {
                         zIndex: 1,
                         color: "white"
                     }}>
-                        <Typography variant="h2" align="center">
+                        <Typography variant="h4" align="center">
                             {props.user?.name}
                         </Typography>
                 </div>

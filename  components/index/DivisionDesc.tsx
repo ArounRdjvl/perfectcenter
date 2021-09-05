@@ -97,13 +97,12 @@ export function DivisionDesc(props: DivisionDescProps) {
                             }}
                             >
                                 <Typography style={{fontSize:"20px",margin:"0rem 0rem 1rem 0rem"}}>
-                                        <b>Particulier ?</b>
+                                        <b>Trouver un praticien</b>
                                 </Typography>
                                 <Typography align="justify">
-                                    PerfectCircle regroupe un grand nombre de praticiens,
-                                    thérapeuthes et d'interventants. La grande
-                                    divesité des activités de nos membres de PerfectCircle permet à notre clientèle de s'orienter
-                                    vers la solution qui est adaptée à ses besoins.
+                                    PerfectCircle regroupe de nombreux praticiens,
+                                    thérapeuthes et interventants divers. C'est ce qui permet à notre clientèle d'être accompagnée
+                                    vers la solution qui est la plus adaptée à ses besoins spécifiques.
                                 </Typography>
                                 <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
                                     <Link href="/perfectcircle" underline="none" style={{ marginTop: "2rem"}}>
@@ -122,15 +121,12 @@ export function DivisionDesc(props: DivisionDescProps) {
                             }}
                             >
                                 <Typography style={{fontSize:"20px", margin:"0rem 0rem 1rem 0rem"}}>
-                                        <b>Practicien ?</b>
+                                        <b>Rejoindre PerfectCircle</b>
                                 </Typography >
                                 <Typography align="justify">    
-                                    Vous êtes practicien et vous pensez partager les même valeurs que nous ? Alors rejoingnez-nous !
+                                    Vous êtes praticien ou thérapeute, et partagez les mêmes valeurs que nous ? Alors rejoingnez l'équipe PerfectCircle !
                                 </Typography>
-                                <Typography align="justify">    
-                                    En nous rejoignant, vous aurez la possibilité de louer nos locaux et de profiter de nos équipements.
-                                    Vous aure également des prix attractifs sur nos produits.
-                                </Typography>
+                                
                                 <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
                                     <Link href="/contact" underline="none" style={{ marginTop: "2rem", }}>
                                         <Button variant="contained" color="secondary" size="large" >
@@ -200,9 +196,29 @@ export function DivisionDesc(props: DivisionDescProps) {
     } else if (props.division == "corporate") {
         content = (
             <>
-                <Typography>
-                    Des offres spécialement adaptées aux entreprises avec des solutions répondant aux problématiques de Qualité de Vie au Travail, de télétravail, de gestion du stress..
-                </Typography>
+                <div style={{
+                    display: "flex", 
+                    flexDirection:"column", 
+                    alignItems:"center",
+                    padding: "0rem 2rem 0rem 2rem"
+                    }}
+                >
+                        <div style={{
+                            width: "70%",
+                            display: "flex", 
+                            flexDirection:"column", 
+                            alignItems:"center",
+                            }}
+                        >
+                            <Typography style={{fontSize:"20px", margin:"0rem 0rem 1rem 0rem"}}>
+                                <b>Séminaires et formations !</b>
+                            </Typography>
+                            <Typography>
+                                Nous travaillons actuellement à des offres de séminaires et des formations à destination du personnel des entreprises.
+                                PerfectCenter est en cours d'agrément QUALIOPI et CPF.
+                            </Typography>
+                        </div>
+                </div>
             </>
         )
     }

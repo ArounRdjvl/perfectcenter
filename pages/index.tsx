@@ -56,6 +56,9 @@ export default function index() {
             <Container>
                 <Valeurs />
                 <WelcomeMsg />
+                <div style={{display:"flex", justifyContent:"center", margin:"3rem 0 3rem 0"}}>
+                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
+                </div>
                 <Services />
                 <Footer />
             </Container>

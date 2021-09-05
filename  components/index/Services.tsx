@@ -22,7 +22,6 @@ export function Services() {
             <Typography
                 variant="h1"
                 align="center"
-                style={{ marginTop: "4rem" }}
             >
                 Nos Services
             </Typography>
