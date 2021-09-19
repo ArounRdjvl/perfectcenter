@@ -16,6 +16,7 @@ import { Footer } from "../ components/Footer"
 import { Services } from "../ components/index/Services"
 import { WelcomeMsg } from "../ components/index/WelcomeMsg"
 import { Valeurs } from "../ components/index/Valeurs"
+import { Newsletter } from " components/Newsletter"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -59,7 +60,12 @@ export default function index() {
                 <div style={{display:"flex", justifyContent:"center", margin:"3rem 0 3rem 0"}}>
                     <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
                 </div>
-                <Services />
+                <Services/>
+                
+                <div style={{display:"flex", justifyContent:"center", margin:"6rem 0 4rem 0"}}>
+                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
+                </div>
+                <Newsletter/>
                 <Footer />
             </Container>
         </div>
