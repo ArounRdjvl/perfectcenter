@@ -1,8 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import jwt from "jsonwebtoken"
 import { KEY } from "modules/utils"
+import { PrismaClient } from "@prisma/client"
+const bcrypt = require("bcrypt")
 
-export default function (req: NextApiRequest, res: NextApiResponse) {
+const prisma = new PrismaClient()
+
+export default async function (req: NextApiRequest, res: NextApiResponse) {
     if (!req.body) {
         res.statusCode = 404
         res.end("Error")
@@ -10,13 +14,34 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
     }
     const { username, password } = req.body
 
-    // TODO currently accepting connexion from everyone
-    // waiting to setup database
-    // if user = admin & password = admin then it's an admin
-    res.json({
-        token: jwt.sign({
-            username: username,
-            admin: username === "admin" && password === "admin"
-        }, KEY)
+    const user = await prisma.user.findUnique({
+        select: {
+            email: true,
+            username: true,
+            password: true,
+            isAdmin: true
+        },
+        where: {
+            username: username
+        }
     })
+
+    console.log(user)
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+        res.json({
+            token: jwt.sign(
+                {
+                    username: user.username,
+                    email: user.email,
+                    admin: user.isAdmin
+                },
+                KEY
+            )
+        })
+    } else {
+        res.json({
+            error: "wrong password or user does not exist"
+        })
+    }
 }

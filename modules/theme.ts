@@ -1,5 +1,4 @@
-import { createMuiTheme } from "@material-ui/core"
-
+import { createTheme } from '@material-ui/core/styles'
 export const colors = {
     beige: "#E3CCB4",
     noir: "#3B424A",
@@ -7,7 +6,7 @@ export const colors = {
 }
 
 export function getTheme() {
-    return createMuiTheme({
+    return createTheme({
         palette: {
             primary: {
                 main: "#3B424A"

@@ -15,13 +15,18 @@ export function useConnexion() {
         : { username: null, admin: null }
 
     async function connect(username: string, password: string) {
-        const { token } = await fetchJson("/api/login", {
+        const { token, error } = await fetchJson("/api/login", {
             username,
             password
         })
-        setToken(token)
-        // TODO not really secure
-        localStorage.setItem(tokenKey, token)
+        if (error) {
+            throw new Error(error)
+        }
+        if (token) {
+            setToken(token)
+            // TODO not really secure
+            localStorage.setItem(tokenKey, token)
+        }
     }
 
     function disconnect() {
