@@ -1,0 +1,68 @@
+
+# NDC (faire la réservation de salles)
+User : 
+- id
+- email
+- mot de passe
+- prénom
+- nom
+- téléphone
+- adresse postale
+- rcp / siret (si membre de perfect center)
+- role utilisateur 
+
+Membre :
+-> hérite de user
+- activités
+- prestations
+- catégories ?
+
+Activité:
+- nom
+
+Prestation:
+- nom
+- prix (optionnel)
+- description
+
+Role utilisateur:
+- role : client / membre / admin / (ambassadeur?) 
+
+Salles:
+- id 
+- nom de salle ?
+- bâtiment
+- étage
+- surface
+- prix (par jour ou heure ? ou demi journée ?)
+- ouverture de la reservation : (1 semaine / 1 mois en avance)
+
+- liste des sous salles
+- liste des équipements fixes
+
+Equipement:
+- id
+- nom
+- prix / unité de temps
+
+Reservation:
+-> par demin journée ou tranches d'horaires ?
+- début
+- fin
+- id
+- salle 
+- équipements optionnels
+
+Produit: TODO
+
+
+
+# questions:
+
+role d'ambassadeur, (quelle est la différence avec membre) ?
+définir prix par jour ou prix par heure ou autre poru les salles
+tranches horaire (matin, midi, après-midi, soir) équivalence ?
+ouverture des réservation en différé (en fonction de la "taille") -> définir une semaine avant/ un mois avant
+prix des prestation (en unité de temps ? /h /jour ...)
+Produit (champs des produits)
+catégories dans les membres ?
