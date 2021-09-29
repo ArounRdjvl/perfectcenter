@@ -46,10 +46,10 @@ Equipement:
 - prix / unité de temps
 
 Reservation:
+- id
 -> par demin journée ou tranches d'horaires ?
 - début
 - fin
-- id
 - salle 
 - équipements optionnels
 
