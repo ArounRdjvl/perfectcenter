@@ -24,7 +24,7 @@ import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll"
 
 export const useStyles = makeStyles((theme) => {
     return {
-        buttonStyles: { position: "relative", zIndex: 3 },
+        buttonStyles: { position: "relative", zIndex: 3},
         itemStyle: {
             display: "flex",
             flexDirection: "column",
@@ -63,7 +63,7 @@ export default function index() {
                 style={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "-10rem",
+                    marginTop: "-9.5rem",
                     marginBottom: "5rem"
                 }}
             >
@@ -75,8 +75,8 @@ export default function index() {
                     offset={-120}
                     duration={500}
                 >
-                    <IconButton className={classes.buttonStyles}>
-                        <ExpandMoreIcon />
+                    <IconButton color="primary" className={classes.buttonStyles}>
+                        <ExpandMoreIcon fontSize="large" />
                     </IconButton>
                 </Link>
             </div>
