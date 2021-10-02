@@ -6,6 +6,7 @@ import { Animations } from "../ components/index/animation/Animations"
 import {
     Container,
     Grid,
+    IconButton,
     makeStyles,
     Typography,
     useMediaQuery,
@@ -17,6 +18,9 @@ import { Services } from "../ components/index/Services"
 import { WelcomeMsg } from "../ components/index/WelcomeMsg"
 import { Valeurs } from "../ components/index/Valeurs"
 import { Newsletter } from " components/Newsletter"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import { Link, animateScroll as scroll } from "react-scroll"
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -52,20 +56,64 @@ export default function index() {
             <Animations />
 
             <AnimatedLogo delay={600} />
+
             <div style={{ height: "100vh" }} />
 
-            <Container>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "-10rem",
+                    marginBottom: "5rem"
+                }}
+            >
+                <Link
+                    activeClass="active"
+                    to="container"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                    duration={500}
+                >
+                    <IconButton className={classes.buttonStyles}>
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </Link>
+            </div>
+
+            <Container id="container">
+
                 <Valeurs />
                 <WelcomeMsg />
-                <div style={{display:"flex", justifyContent:"center", margin:"3rem 0 3rem 0"}}>
-                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        margin: "3rem 0 3rem 0"
+                    }}
+                >
+                    <img
+                        src="picto/Separateur.png"
+                        width={250}
+                        style={{ zIndex: 2 }}
+                    />
                 </div>
-                <Services/>
-                
-                <div style={{display:"flex", justifyContent:"center", margin:"6rem 0 4rem 0"}}>
-                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
+                <Services />
+
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        margin: "6rem 0 4rem 0"
+                    }}
+                >
+                    <img
+                        src="picto/Separateur.png"
+                        width={250}
+                        style={{ zIndex: 2 }}
+                    />
                 </div>
-                <Newsletter/>
+                <Newsletter />
                 <Footer />
             </Container>
         </div>
