@@ -22,16 +22,25 @@ export function getTheme() {
         },
         typography: {
             h1: {
-                fontSize: "2rem"
+                fontSize: "2.2rem",
+                fontWeight: "bold"
             },
             h2: {
-                fontSize: "1.8rem"
+                fontSize: "1.8rem",
+                fontWeight: "bold"
             },
             h3: {
-                fontSize: "1.6rem"
+                fontSize: "1.4rem",
+                fontWeight: "bold"
             },
             h4: {
-                fontSize: "1.4rem"
+                fontSize: "1.3rem"
+            },
+            body1: {
+                fontSize: "1.1rem"
+            },
+            body2: {
+                fontSize: "0.9rem"
             },
             fontFamily: "Louis George Café, sans-serif"
         },

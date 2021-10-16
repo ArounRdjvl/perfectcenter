@@ -92,13 +92,16 @@ export function Animations(props: AnimationsProps) {
                 size="13rem"
             />
             
-            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "20vw", y : "17vh"}} width="6rem" />
-            <AnimatedImage url="picto/Feuille.png" position={{x: "8vw", y : "40vh"}} width="7rem" />
-            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "75vw", y : "60vh"}} width="12rem" rotation={5} />
-            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "10vw", y : "53vh"}} width="14rem" rotation={-7} />
-            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "45vw", y : "76vh"}} width="7rem" rotation={135} mirror/>
-            <AnimatedImage url="picto/Feuille.png" position={{x: "75vw", y : "40vh"}} width="7rem" rotation={30} />
-            <AnimatedImage url="picto/Feuille.png" position={{x: "65vw", y : "15vh"}} width="7rem" rotation={180} mirror />
+            <AnimatedImage url="picto/Feuille_grande_Beige.png" position={{x: "33vw", y : "13vh"}} width="8rem" />
+            <AnimatedImage url="picto/Feuille.png" position={{x: "25vw", y : "45vh"}} width="7rem" rotation={-30} />
+            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "6vw", y : "17vh"}} width="15rem" rotation={-7} />
+            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "65vw", y : "37vh"}} width="15rem" rotation={190} mirror/>
+            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "25vw", y : "68vh"}} width="10rem" rotation={190} mirror/>
+            <AnimatedImage url="picto/Picto_fleur.png" position={{x: "-4vw", y : "65vh"}} width="20rem" rotation={200} mirror/>
+            <AnimatedImage url="picto/Feuille.png" position={{x: "58vw", y : "78vh"}} width="9rem" rotation={215} mirror/>
+            <AnimatedImage url="picto/Feuille.png" position={{x: "51vw", y : "19vh"}} width="7rem" rotation={20} />
+            <AnimatedImage url="picto/Feuille_grande.png" position={{x: "80vw", y : "15vh"}} width="10rem" rotation={190} mirror/>
+            <AnimatedImage url="picto/Feuille_grande_Beige.png" position={{x: "80vw", y : "70vh"}} width="12rem" rotation={210} mirror/>
 
         </div>
     )

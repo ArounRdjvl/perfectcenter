@@ -25,7 +25,7 @@ export function Newsletter() {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
             }}
         >
             <div

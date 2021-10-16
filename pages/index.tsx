@@ -17,6 +17,7 @@ import { Services } from "../ components/index/Services"
 import { WelcomeMsg } from "../ components/index/WelcomeMsg"
 import { Valeurs } from "../ components/index/Valeurs"
 import { Newsletter } from " components/Newsletter"
+import { Divider2 } from " components/Dividder2"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -57,15 +58,10 @@ export default function index() {
             <Container>
                 <Valeurs />
                 <WelcomeMsg />
-                <div style={{display:"flex", justifyContent:"center", margin:"3rem 0 3rem 0"}}>
-                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
-                </div>
-                <Services/>
-                
-                <div style={{display:"flex", justifyContent:"center", margin:"6rem 0 4rem 0"}}>
-                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
-                </div>
-                <Newsletter/>
+                <Divider2 />
+                <Services />
+                <Divider2 />
+                <Newsletter />
                 <Footer />
             </Container>
         </div>

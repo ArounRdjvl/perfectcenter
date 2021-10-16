@@ -23,7 +23,7 @@ export function Services() {
                 variant="h1"
                 align="center"
             >
-                Nos Services
+                Nos 3 pôles
             </Typography>
             <Divider color="vert" />
             <Grid container style={{ margin: "2rem 0 1rem" }}>
