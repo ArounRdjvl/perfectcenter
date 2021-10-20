@@ -186,14 +186,14 @@ export function Navigation(props: NavigationProps) {
                                         <Button>Nous contacter</Button>
                                     </Link>
                                     <Divider />
-                                    <Link href="/perfectcorporate">
-                                        <Button>PerfectCorporate</Button>
-                                    </Link>
                                     <Link href="/perfectcare">
                                         <Button>PerfectCare</Button>
                                     </Link>
                                     <Link href="/perfectcircle">
                                         <Button>PerfectCircle</Button>
+                                    </Link>
+                                    <Link href="/perfectcorporate">
+                                        <Button>PerfectCorporate</Button>
                                     </Link>
                                 </div>
                             </div>
@@ -250,11 +250,6 @@ export function Navigation(props: NavigationProps) {
                     </div>
 
                     <div>
-                        <Link href="/perfectcorporate">
-                            <Button style={{ margin: "0 5px 0 5px" }}>
-                                PerfectCorporate
-                            </Button>
-                        </Link>
                         <Link href="/perfectcare">
                             <Button style={{ margin: "0 5px 0 5px" }}>
                                 PerfectCare
@@ -263,6 +258,11 @@ export function Navigation(props: NavigationProps) {
                         <Link href="/perfectcircle">
                             <Button style={{ margin: "0 5px 0 5px" }}>
                                 PerfectCircle
+                            </Button>
+                        </Link>
+                        <Link href="/perfectcorporate">
+                            <Button style={{ margin: "0 5px 0 5px" }}>
+                                PerfectCorporate
                             </Button>
                         </Link>
                     </div>

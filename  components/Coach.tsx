@@ -11,7 +11,7 @@ export interface UserProps {
 
 export interface CoachProps {
     pair?: boolean
-    user?: UserProps
+    user?: UserProps 
 }
 
 export function Coach(props: CoachProps) {
@@ -25,7 +25,7 @@ export function Coach(props: CoachProps) {
                     style={{
                             width: "19rem",
                             height: "100%",
-                            margin: "0.2rem 0.2rem",
+                            margin: "1rem 0.2rem",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
@@ -39,10 +39,11 @@ export function Coach(props: CoachProps) {
                             height: "5rem",
                             display: "flex",
                             alignItems: "center",
+                            padding: "0rem 1rem",
                             justifyContent: "center",
                             zIndex: 1
                         }}>
-                            <Typography variant="h2" align="center">
+                            <Typography variant="h4" align="center">
                                 {props.user?.name}
                             </Typography>
                     </div>
@@ -59,10 +60,10 @@ export function Coach(props: CoachProps) {
                     <div
                         style={{
                             borderRadius: 20,
-                            backgroundColor: "#849994",
+                            backgroundColor: "#E3CCB4",
                             position: "relative",
                             width: "100%",
-                            height: "6rem",
+                            height: "7rem",
                             bottom : "1rem",
                             display: "flex",
                             flexDirection: "column",
@@ -70,7 +71,6 @@ export function Coach(props: CoachProps) {
                             justifyContent: "center",
                             zIndex: 1,
                             padding: "0rem 1rem",
-                            color: "white"
                         }}>
                             <Typography align="center" style={{position: "relative", top:"3px"}}>
                                 {props.user?.practice1}
@@ -89,7 +89,7 @@ export function Coach(props: CoachProps) {
                 style={{
                         width: "19rem",
                         height: "29rem",
-                        margin: "0.2rem 0.2rem",
+                        margin: "1rem 0.2rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
@@ -103,11 +103,12 @@ export function Coach(props: CoachProps) {
                         height: "5rem",
                         display: "flex",
                         alignItems: "center",
+                        padding: "0rem 1rem",
                         justifyContent: "center",
                         zIndex: 1,
                         color: "white"
                     }}>
-                        <Typography variant="h2" align="center">
+                        <Typography variant="h4" align="center">
                             {props.user?.name}
                         </Typography>
                 </div>
@@ -124,16 +125,17 @@ export function Coach(props: CoachProps) {
                 <div
                     style={{
                         borderRadius: 20,
-                        backgroundColor: "#E3CCB4",
+                        backgroundColor: "#849994",
                         position: "relative",
                         width: "100%",
-                        height: "6rem",
+                        height: "7rem",
                         bottom : "1rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
-                        zIndex: 1
+                        zIndex: 1,
+                        color: "white"
                     }}>
                         <Typography align="center" style={{position: "relative", top:"5px"}}>
                                 {props.user?.practice1}

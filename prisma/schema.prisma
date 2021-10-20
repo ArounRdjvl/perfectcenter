@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id        Int     @id @default(autoincrement())
+    email     String  @unique
+    firstname String  @unique
+    lastname  String  @unique
+    password  String
+    address   String
+    isAdmin   Boolean
+    Member    Member?
+}
+
+model Member {
+    id         Int                @id @default(autoincrement())
+    user       User               @relation(fields: [userId], references: [id])
+    userId     Int
+    rcp        String
+    siret      String
+    activities ActivityOfMember[]
+    services   Service[]
+    Booking    Booking[]
+}
+
+model Activity {
+    id         Int                @id @default(autoincrement())
+    name       String
+    activities ActivityOfMember[]
+}
+
+model ActivityOfMember {
+    member     Member   @relation(fields: [memberId], references: [id])
+    memberId   Int
+    activity   Activity @relation(fields: [activityId], references: [id])
+    activityId Int
+
+    @@id([memberId, activityId])
+}
+
+model Service {
+    id          Int     @id @default(autoincrement())
+    name        String
+    price       Decimal
+    description String
+    member      Member  @relation(fields: [memberId], references: [id])
+    memberId    Int
+}
+
+model Room {
+    id               Int               @id @default(autoincrement())
+    name             String
+    building         String
+    floor            String
+    area             Float
+    price            Decimal
+    bookingOpen      Int // number of days before booking is avaiable
+    parentRoomId     Int?
+    parentRoom       Room?             @relation("parentRoom", fields: [parentRoomId], references: [id])
+    innerRooms       Room[]            @relation("parentRoom")
+    staticEquipments StaticEquipment[]
+    Booking          Booking[]
+}
+
+model StaticEquipment {
+    id     Int    @id @default(autoincrement())
+    name   String
+    room   Room   @relation(fields: [roomId], references: [id])
+    roomId Int
+}
+
+model OptionalEquipment {
+    id        Int      @id @default(autoincrement())
+    name      String
+    price     Decimal?
+    booking   Booking? @relation(fields: [bookingId], references: [id])
+    bookingId Int?
+}
+
+model Booking {
+    id                 Int                 @id @default(autoincrement())
+    start              DateTime
+    end                DateTime
+    owner              Member              @relation(fields: [memberId], references: [id])
+    memberId           Int
+    room               Room                @relation(fields: [roomId], references: [id])
+    roomId             Int
+    optionalEquipments OptionalEquipment[]
+}

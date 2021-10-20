@@ -10,18 +10,23 @@ export function useConnexion() {
         setToken(localStorage.getItem(tokenKey))
     }, [])
 
-    const { username, admin } = token
-        ? (jwt.decode(token) as { username: string; admin: boolean })
-        : { username: null, admin: null }
+    const { email, admin } = token
+        ? (jwt.decode(token) as { email: string; admin: boolean })
+        : { email: null, admin: null }
 
-    async function connect(username: string, password: string) {
-        const { token } = await fetchJson("/api/login", {
-            username,
+    async function connect(email: string, password: string) {
+        const { token, error } = await fetchJson("/api/login", {
+            email,
             password
         })
-        setToken(token)
-        // TODO not really secure
-        localStorage.setItem(tokenKey, token)
+        if (error) {
+            throw new Error(error)
+        }
+        if (token) {
+            setToken(token)
+            // TODO not really secure
+            localStorage.setItem(tokenKey, token)
+        }
     }
 
     function disconnect() {
@@ -32,7 +37,7 @@ export function useConnexion() {
     return {
         connected: token != null,
         token,
-        username,
+        email,
         admin,
         connect,
         disconnect,

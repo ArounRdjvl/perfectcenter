@@ -70,7 +70,7 @@ export function WelcomeMsg() {
             <div
                 style={{
                     borderRadius: 20,
-                    padding: isMobile ? "3rem 2rem 2rem 2rem" : "3rem 9rem 2rem 4rem ",
+                    padding: isMobile ? "3rem 2rem 3rem 2rem" : "3rem 9rem 3rem 4rem ",
                     position: "relative",
                     display: "flex",
                     flexDirection: "row",

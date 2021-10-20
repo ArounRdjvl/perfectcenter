@@ -22,7 +22,7 @@ export function Membre(props: MembreProps) {
     const pair = props.pair
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
     if (isMobile) {
-        if (pair) {
+        if (!pair) {
             return (
                 <>
                     <Grid
@@ -48,9 +48,10 @@ export function Membre(props: MembreProps) {
                                     flexDirection: "row",
                                     justifyContent: "center",
                                     backgroundColor: "#E3CCB4",
-                                    borderRadius: "20px",
-                                    height: "12rem",
-                                    width: "16rem"
+                                    borderRadius: "20px 20px 0 0",
+                                    height: "10rem",
+                                    width: "14rem",
+                                    
                                 }}
                             >
                                 <div
@@ -58,16 +59,19 @@ export function Membre(props: MembreProps) {
                                         display: "flex",
                                         flexDirection: "column",
                                         justifyContent: "space-around",
-                                        maxWidth: "40px"
+                                        maxWidth: "50px",
+                                        marginLeft:"1rem",
+                                        marginRight:"1rem"
                                     }}
                                 >
                                     <a
                                         href={props.user?.facebook}
                                         target="_blank"
+                                        style={{display:"flex", justifyContent:"center", alignItems:"center"}}
                                     >
                                         <img
                                             src="picto/Facebook_fonce.png"
-                                            width={40}
+                                            width={45}
                                             style={{
                                                 zIndex: 2
                                             }}
@@ -76,10 +80,11 @@ export function Membre(props: MembreProps) {
                                     <a
                                         href={props.user?.instagram}
                                         target="_blank"
+                                        style={{display:"flex", justifyContent:"center", alignItems:"center"}}
                                     >
                                         <img
                                             src="picto/Instagram_fonce.png"
-                                            width={40}
+                                            width={45}
                                             style={{
                                                 zIndex: 2
                                             }}
@@ -88,10 +93,11 @@ export function Membre(props: MembreProps) {
                                     <a
                                         href={props.user?.linkedin}
                                         target="_blank"
+                                        style={{display:"flex", justifyContent:"center", alignItems:"center"}}
                                     >
                                         <img
                                             src="picto/Linkedin_fonce.png"
-                                            width={40}
+                                            width={45}
                                             style={{
                                                 zIndex: 2
                                             }}
@@ -101,15 +107,13 @@ export function Membre(props: MembreProps) {
 
                                 <div
                                     style={{
-                                        position: "relative",
-                                        top: "1rem",
-                                        left: "1rem"
+                                        position: "relative"
                                     }}
                                 >
                                     <img
                                         style={{
                                             maxHeight: "10rem",
-                                            borderRadius: "20px"
+                                            borderRadius: "0 20px 0 0"
                                         }}
                                         alt={props.user?.name}
                                         src={props.user?.photo}
@@ -127,41 +131,36 @@ export function Membre(props: MembreProps) {
                         >
                             <div
                                 style={{
+                                    backgroundColor: theme.palette.secondary.main,
                                     position: "relative",
-                                    zIndex: 2,
-                                    margin: theme.spacing(2),
-                                    color: "white"
+                                    display:"flex",
+                                    justifyContent:"center",
+                                    alignItems:"center",
+                                    height: "3rem",
+                                    width: "100%",
+                                    borderRadius:"20px",
+                                    top: 0,
                                 }}
                             >
-                                <Typography variant="h2" align="center">
+                                <Typography variant="h3" align="center" color="textSecondary">
                                     {props.user?.name}
-                                </Typography>
-                                <Divider color="beige" />
-                                <Typography
-                                    variant="h4"
-                                    align="center"
-                                    style={{
-                                        margin: theme.spacing(1)
-                                    }}
-                                >
-                                    {props.user?.poste}
-                                </Typography>
-                                <Typography variant="body1" align="justify">
-                                    {props.user?.desc}
                                 </Typography>
                             </div>
                             <div
                                 style={{
-                                    backgroundColor:
-                                        theme.palette.secondary.main,
-                                    position: "absolute",
-                                    height: "100%",
-                                    width: "100%",
-                                    right: 0,
-                                    bottom: 0,
-                                    borderRadius: "20px"
+                                    padding: "1rem 1rem",
+                                    position: "relative",
+                                    zIndex: 2,
                                 }}
-                            ></div>
+                            >
+                                <Typography variant="h4" align="center" >
+                                    {props.user?.poste}
+                                </Typography>
+                                <Typography variant="body2" align="justify" style={{marginTop:"1.2rem"}}>
+                                    {props.user?.desc}
+                                </Typography>
+                            </div>
+                            
                         </Grid>
                     </Grid>
                 </>
@@ -192,124 +191,132 @@ export function Membre(props: MembreProps) {
                                 flexDirection: "row",
                                 justifyContent: "center",
                                 backgroundColor: theme.palette.secondary.main,
-                                borderRadius: "20px",
-                                height: "12rem",
-                                width: "16rem"
+                                borderRadius: "20px 20px 0 0",
+                                height: "10rem",
+                                width: "14rem"
                             }}
                         >
                             <div
                                 style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    justifyContent: "space-around",
-                                    maxWidth: "40px"
-                                }}
-                            >
-                                <a href={props.user?.facebook} target="_blank">
-                                    <img
-                                        src="picto/Facebook_clair.png"
-                                        width={40}
-                                        style={{
-                                            zIndex: 2
-                                        }}
-                                    />
-                                </a>
-                                <a href={props.user?.instagram} target="_blank">
-                                    <img
-                                        src="picto/Instagram_clair.png"
-                                        width={40}
-                                        style={{
-                                            zIndex: 2
-                                        }}
-                                    />
-                                </a>
-                                <a href={props.user?.linkedin} target="_blank">
-                                    <img
-                                        src="picto/Linkedin_clair.png"
-                                        width={40}
-                                        style={{
-                                            zIndex: 2
-                                        }}
-                                    />
-                                </a>
-                            </div>
-
-                            <div
-                                style={{
-                                    position: "relative",
-                                    top: "1rem",
-                                    left: "1rem"
+                                    position: "relative"
                                 }}
                             >
                                 <img
                                     style={{
                                         maxHeight: "10rem",
-                                        borderRadius: "20px"
+                                        borderRadius: "20px 0 0 0"
                                     }}
                                     alt={props.user?.name}
                                     src={props.user?.photo}
                                 />
                             </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "space-around",
+                                    maxWidth: "70px",
+                                    marginLeft:"1rem",
+                                    marginRight:"1rem"
+                                }}
+                            >
+                                <a 
+                                    href={props.user?.facebook} 
+                                    target="_blank"
+                                    style={{display:"flex", justifyContent:"center", alignItems:"center"}}
+                                >
+                                    <img
+                                        src="picto/Facebook_clair.png"
+                                        width={45}
+                                        style={{
+                                            zIndex: 2
+                                        }}
+                                    />
+                                </a>
+                                <a 
+                                    href={props.user?.instagram}
+                                    target="_blank"
+                                    style={{display:"flex", justifyContent:"center", alignItems:"center"}}
+                                >
+                                    <img
+                                        src="picto/Instagram_clair.png"
+                                        width={45}
+                                        style={{
+                                            zIndex: 2
+                                        }}
+                                    />
+                                </a>
+                                <a 
+                                    href={props.user?.linkedin}
+                                    target="_blank"
+                                    style={{display:"flex", justifyContent:"center", alignItems:"center"}}
+                                >
+                                    <img
+                                        src="picto/Linkedin_clair.png"
+                                        width={45}
+                                        style={{
+                                            zIndex: 2
+                                        }}
+                                    />
+                                </a>
+                            </div>
                         </div>
                     </Grid>
                     <Grid
-                        xs={12}
-                        style={{
-                            position: "relative",
-                            minWidth: "16rem"
-                        }}
-                        item
-                    >
-                        <div
+                            xs={12}
                             style={{
                                 position: "relative",
-                                zIndex: 2,
-                                margin: theme.spacing(2)
+                                minWidth: "16rem"
                             }}
+                            item
                         >
-                            <Typography variant="h2" align="center">
-                                {props.user?.name}
-                            </Typography>
-                            <Divider color="vert" />
-                            <Typography
-                                variant="h4"
-                                align="center"
+                            <div
                                 style={{
-                                    margin: theme.spacing(1)
+                                    backgroundColor: "#E3CCB4",
+                                    position: "relative",
+                                    display:"flex",
+                                    justifyContent:"center",
+                                    alignItems:"center",
+                                    height: "3rem",
+                                    width: "100%",
+                                    borderRadius:"20px",
+                                    top: 0,
                                 }}
                             >
-                                {props.user?.poste}
-                            </Typography>
-                            <Typography variant="body1" align="justify">
-                                {props.user?.desc}
-                            </Typography>
-                        </div>
-                        <div
-                            style={{
-                                backgroundColor: "#E3CCB4",
-                                position: "absolute",
-                                height: "100%",
-                                width: "100%",
-                                left: 0,
-                                bottom: 0,
-                                borderRadius: "20px"
-                            }}
-                        ></div>
-                    </Grid>
+                                <Typography variant="h3" align="center">
+                                    {props.user?.name}
+                                </Typography>
+                            </div>
+                            <div
+                                style={{
+                                    padding: "1rem 1rem",
+                                    position: "relative",
+                                    zIndex: 2,
+                                }}
+                            >
+                                <Typography variant="h4" align="center" >
+                                    {props.user?.poste}
+                                </Typography>
+                                <Typography variant="body2" align="justify" style={{marginTop:"1.2rem"}}>
+                                    {props.user?.desc}
+                                </Typography>
+                            </div>
+                            
+                        </Grid>
                     
                 </Grid>
             </>
         )
     }
-    if (pair) {
+    if (!pair) {
         return (
             <>
                 <Grid
-                    justify="center"
+                    justify="flex-start"
                     container
                     style={{
-                        marginLeft: "-5rem",
-                        marginTop: "3rem"
+                        padding:"3rem 0 1rem 0",
+                        marginLeft:"-1rem"
                     }}
                 >
                     <Grid
@@ -322,6 +329,9 @@ export function Membre(props: MembreProps) {
                     >
                         <div
                             style={{
+                                right:0,
+                                top:0,
+                                marginRight:"2rem",
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "space-around",
@@ -329,7 +339,7 @@ export function Membre(props: MembreProps) {
                                 backgroundColor: "#E3CCB4",
                                 position: "absolute",
                                 height: "12rem",
-                                width: "70%",
+                                width: "13rem",
                                 borderRadius: "20px"
                             }}
                         >
@@ -366,7 +376,7 @@ export function Membre(props: MembreProps) {
                             style={{
                                 position: "absolute",
                                 top: "1rem",
-                                left: "4rem"
+                                right:0
                             }}
                         >
                             <img
@@ -380,50 +390,47 @@ export function Membre(props: MembreProps) {
                         </div>
                     </Grid>
                     <Grid
-                        xs={6}
+                        xs={8}
                         style={{
                             position: "relative",
-                            paddingTop: "3rem"
+                            paddingTop: "2rem"
                         }}
                         item
                     >
                         <div
                             style={{
+                                backgroundColor: theme.palette.secondary.main,
                                 position: "relative",
-                                zIndex: 2,
-                                margin: theme.spacing(2),
-                                color: "white",
-                                paddingRight: theme.spacing(5)
+                                display:"flex",
+                                justifyContent:"center",
+                                alignItems:"center",
+                                height: "3rem",
+                                width: "100%",
+                                right: 0,
+                                top: 0,
+                                borderRadius: "0 30px 30px 0"
                             }}
                         >
-                            <Typography variant="h2" align="center">
+                            <Typography variant="h2" align="center" color="textSecondary">
                                 {props.user?.name}
-                            </Typography>
-                            <Divider color="beige" />
-                            <Typography
-                                variant="h4"
-                                align="center"
-                                style={{
-                                    margin: theme.spacing(1)
-                                }}
-                            >
-                                {props.user?.poste}
-                            </Typography>
-                            <Typography variant="body1" align="justify">
-                                {props.user?.desc}
                             </Typography>
                         </div>
                         <div
                             style={{
-                                backgroundColor: theme.palette.secondary.main,
-                                position: "absolute",
-                                height: "85%",
-                                width: "130%",
-                                right: 0,
-                                bottom: 0,
-                                borderRadius: "20px"
+                                padding: "1rem 4rem",
+                                position: "relative",
+                                zIndex: 2,
                             }}
-                        ></div>
+                        >
+                            <Typography variant="h3" align="center" >
+                                {props.user?.poste}
+                            </Typography>
+                            <Divider color="beige" />
+                            <Typography variant="body1" align="justify" style={{marginTop:"1.2rem"}}>
+                                {props.user?.desc}
+                            </Typography>
+                        </div>
+                        
                     </Grid>
                 </Grid>
             </>
@@ -432,15 +439,15 @@ export function Membre(props: MembreProps) {
     return (
         <>
             <Grid
-                justify="center"
+                justify="flex-end"
                 container
                 style={{
-                    marginLeft: "5rem",
-                    marginTop: "3rem"
+                    padding:"3rem 0 1rem 0",
+                    marginLeft:"1rem"
                 }}
             >
                 <Grid
-                    xs={6}
+                    xs={8}
                     style={{
                         position: "relative",
                         paddingTop: "3rem"
@@ -448,41 +455,38 @@ export function Membre(props: MembreProps) {
                     item
                 >
                     <div
-                        style={{
-                            position: "relative",
-                            zIndex: 2,
-                            margin: theme.spacing(2),
-                            paddingLeft: theme.spacing(5)
-                        }}
-                    >
-                        <Typography variant="h2" align="center">
-                            {props.user?.name}
-                        </Typography>
-                        <Divider color="vert" />
-                        <Typography
-                            variant="h4"
-                            align="center"
                             style={{
-                                margin: theme.spacing(1)
+                                backgroundColor: "#E3CCB4",
+                                position: "relative",
+                                display:"flex",
+                                justifyContent:"center",
+                                alignItems:"center",
+                                height: "3rem",
+                                width: "100%",
+                                right: 0,
+                                top: 0,
+                                borderRadius: "30px 0 0 30px "
                             }}
                         >
-                            {props.user?.poste}
-                        </Typography>
-                        <Typography variant="body1" align="justify">
-                            {props.user?.desc}
-                        </Typography>
-                    </div>
-                    <div
-                        style={{
-                            backgroundColor: "#E3CCB4",
-                            position: "absolute",
-                            height: "85%",
-                            width: "130%",
-                            left: 0,
-                            bottom: 0,
-                            borderRadius: "20px"
-                        }}
-                    ></div>
+                            <Typography variant="h2" align="center">
+                                {props.user?.name}
+                            </Typography>
+                        </div>
+                        <div
+                            style={{
+                                padding: "1rem 4rem",
+                                position: "relative",
+                                zIndex: 2,
+                            }}
+                        >
+                            <Typography variant="h3" align="center" >
+                                {props.user?.poste}
+                            </Typography>
+                            <Divider color="beige" />
+                            <Typography variant="body1" align="justify" style={{marginTop:"1.2rem"}}>
+                                {props.user?.desc}
+                            </Typography>
+                        </div>
                 </Grid>
                 <Grid
                     xs={3}
@@ -502,8 +506,9 @@ export function Membre(props: MembreProps) {
                             backgroundColor: theme.palette.secondary.main,
                             position: "absolute",
                             height: "12rem",
-                            width: "70%",
-                            right: 0,
+                            width: "13rem",
+                            left: 0,
+                            marginLeft:"2rem",
                             borderRadius: "20px"
                         }}
                     >
@@ -535,22 +540,21 @@ export function Membre(props: MembreProps) {
                             />
                         </a>
                     </div>
-
                     <div
-                        style={{
-                            position: "absolute",
-                            top: "1rem",
-                            right: "4rem"
-                        }}
-                    >
-                        <img
                             style={{
-                                maxWidth: "11rem",
-                                borderRadius: "20px"
+                                position: "absolute",
+                                top: "1rem",
+                                left:0
                             }}
-                            alt={props.user?.name}
-                            src={props.user?.photo}
-                        />
+                        >
+                            <img
+                                style={{
+                                    maxWidth: "11rem",
+                                    borderRadius: "20px"
+                                }}
+                                alt={props.user?.name}
+                                src={props.user?.photo}
+                            />
                     </div>
                 </Grid>
             </Grid>

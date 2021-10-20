@@ -40,21 +40,16 @@ export const dataMembres = [
 export const dataProducts = [
     {
         name: "PSIO",
-        title: "PSIO : Accélérateur de bien-être",
+        title: "Accélérateur de bien-être",
         desc: (
             <>
-                Une solution innovante, simple et efficace à toute personne
-                désireuse d'améliorer sa qualité de vie et retrouver sons
-                bien-être. Utilisant la technologie de la stimulation
-                sensorielle, le PSIO est une paire de lunette de
-                lumino-relaxation qui envoie des sons et des lumières à des
-                rythmes précis, avec plus de 200 programmes adaptés pour le
-                matin, l'après-midi et le soir lors d'une méditation, une
-                turbo-sieste ou une relaxation. <br />
-                <br /> Etant une alternative aux médicaments et garantissant des
-                effets durables, le PSIO agit entre autres sur le
-                dysfonctionnement corporel, le sommeil, la fatigue, le
-                surmenage, la dépression, l'anxiété et la gestion des émotions."
+                Utilisant la technologie de la stimulation sensorielle, les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que :
+                <br />  - Le stress
+                <br />  - La fatigue
+                <br />  - Le dysfonctionnement corporel
+                <br />  - La dépression
+                <br />  - La gestion des émotions
+                <br />C’est une solution innovante, simple et efficace à toute personne désireuse d’améliorer sa qualité de vie et retrouver son bien-être. 
             </>
         ),
         moreAboutLink: "https://www.psio.com/fr/catalogue/psio-2.html"
@@ -81,7 +76,7 @@ export const dataProducts = [
 
 export const dataCoachs = [
     {
-        name: "Laurent BROSSEAU",
+        name: "Laurent CONSTANTINZAFIROS",
         photo: "coach/Laurent_BROSSEAU.png",
         practice1: "Préparateur Physique et Mental"
     },
@@ -125,14 +120,13 @@ export const dataCoachs = [
     {
         name: "Malika ARNAUD",
         photo: "coach/Malika_ARNAUD.png",
-        practice1: "Coach en accompagnement à la réussite",
-        practice2: "Thérapeute Bien-être"
+        practice1: "Coach en accompagnement à la réussite - Thérapeute Bien-être"
     },
     {
         name: "Nicolas LAVROFF",
         photo: "coach/Nicolas_LAVROFF.png",
         practice1: "Coach certifié - Formateur - Thérapeute",
-        practice2: "Méditation de Pleine Conscience"
+        practice2: "- Méditation de Pleine Conscience"
     }
 ]
 

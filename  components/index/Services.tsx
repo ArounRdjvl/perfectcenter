@@ -22,9 +22,8 @@ export function Services() {
             <Typography
                 variant="h1"
                 align="center"
-                style={{ marginTop: "4rem" }}
             >
-                Nos Services
+                Nos 3 pôles
             </Typography>
             <Divider color="vert" />
             <Grid container style={{ margin: "2rem 0 1rem" }}>
@@ -38,10 +37,11 @@ export function Services() {
                             style={{ margin: "auto" }}
                         />
                     </div>
-                    <Typography variant="h4" style={{ margin: "1rem" }}>
+                    <Typography variant="h4" style={{ marginTop: "1rem" }}>
                         Nos Praticiens
                     </Typography>
                     <IconButton
+                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("circle")}
                     >
@@ -70,6 +70,7 @@ export function Services() {
                         Nos produits
                     </Typography>
                     <IconButton
+                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("care")}
                     >
@@ -93,6 +94,7 @@ export function Services() {
                         Entreprise
                     </Typography>
                     <IconButton
+                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("corporate")}
                     >
