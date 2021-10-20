@@ -21,14 +21,15 @@ const useStyles = makeStyles((theme) => {
         },
         greenDiv: {
             position: "absolute",
-            top: "-2rem",
-            height: "55%",
+            top: "-3.2rem",
+            height: "70%",
             width: "30%",
             backgroundColor: colors.vert,
             borderRadius: 20
         },
         beigeDiv: {
             position: "relative",
+            marginTop:"-0.8rem",
             borderRadius: 20,
             backgroundColor: colors.beige,
             padding: "1rem 2rem",

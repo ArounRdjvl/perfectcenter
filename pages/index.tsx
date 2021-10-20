@@ -6,6 +6,7 @@ import { Animations } from "../ components/index/animation/Animations"
 import {
     Container,
     Grid,
+    IconButton,
     makeStyles,
     Typography,
     useMediaQuery,
@@ -17,11 +18,14 @@ import { Services } from "../ components/index/Services"
 import { WelcomeMsg } from "../ components/index/WelcomeMsg"
 import { Valeurs } from "../ components/index/Valeurs"
 import { Newsletter } from " components/Newsletter"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import { Link, animateScroll as scroll } from "react-scroll"
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll"
 import { Divider2 } from " components/Dividder2"
 
 export const useStyles = makeStyles((theme) => {
     return {
-        buttonStyles: { position: "relative", zIndex: 3 },
+        buttonStyles: { position: "relative", zIndex: 3},
         itemStyle: {
             display: "flex",
             flexDirection: "column",
@@ -53,9 +57,33 @@ export default function index() {
             <Animations />
 
             <AnimatedLogo delay={600} />
+
             <div style={{ height: "100vh" }} />
 
-            <Container>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "-9.5rem",
+                    marginBottom: "5rem"
+                }}
+            >
+                <Link
+                    activeClass="active"
+                    to="container"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                    duration={500}
+                >
+                    <IconButton color="primary" className={classes.buttonStyles}>
+                        <ExpandMoreIcon fontSize="large" />
+                    </IconButton>
+                </Link>
+            </div>
+
+            <Container id="container">
+
                 <Valeurs />
                 <WelcomeMsg />
                 <Divider2 />
