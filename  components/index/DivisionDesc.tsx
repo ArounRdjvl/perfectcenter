@@ -232,16 +232,14 @@ export function DivisionDesc(props: DivisionDescProps) {
                         className={clsx(classes.greenDiv, {
                             [classes.leftGreenDiv]: props.division == "circle",
                             [classes.middleGreenDiv]: props.division == "care",
-                            [classes.rightGreenDiv]:
-                                props.division == "corporate"
+                            [classes.rightGreenDiv]: props.division == "corporate"
                         })}
                     />
                     <div
                         className={clsx(classes.blackDiv, {
                             [classes.rightBlackDiv]: props.division == "circle",
                             [classes.middleBlackDiv]: props.division == "care",
-                            [classes.leftBlackDiv]:
-                                props.division == "corporate"
+                            [classes.leftBlackDiv]: props.division == "corporate"
                         })}
                     />
                 </>

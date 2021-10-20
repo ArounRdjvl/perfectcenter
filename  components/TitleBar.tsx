@@ -13,44 +13,30 @@ export function TitleBar(props: TitleProps) {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
-    if (props.background) {
-        return (
+    return (
+        <div
+            style={{
+                paddingTop: "1rem",
+                paddingLeft: isMobile? "1rem" : "2rem",
+                width: "100%",
+                display:"flex", justifyContent:"flex-start"
+            }}
+        >
             <div
                 style={{
-                    paddingTop: "1rem",
-                    paddingLeft: isMobile? "1rem" : "3rem",
-                    width: "100%",
-                    display:"flex", justifyContent:"flex-start"
+                    position: "relative",
                 }}
             >
-                <div
-                    style={{
-                        position: "relative",
-                    }}
-                >
-                    <Typography variant="h1" align="center">
-                        {props.title}
-                    </Typography>
-                    <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
-                        <Divider color={props.color} />
-                    </div>
-                    
+                <Typography variant="h1" align="center">
+                    {props.title}
+                </Typography>
+                <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
+                    <Divider color={props.color} />
                 </div>
-                    
                 
             </div>
-        )
-    }
-    return (
-        <>
-            <Typography
-                variant="h1"
-                align="center"
-                style={{ margin: "2rem auto" }}
-            >
-                {props.title}
-                <Divider color={props.color} />
-            </Typography>
-        </>
+                
+            
+        </div>
     )
 }

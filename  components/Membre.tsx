@@ -425,7 +425,6 @@ export function Membre(props: MembreProps) {
                             <Typography variant="h3" align="center" >
                                 {props.user?.poste}
                             </Typography>
-                            <Divider color="beige" />
                             <Typography variant="body1" align="justify" style={{marginTop:"1.2rem"}}>
                                 {props.user?.desc}
                             </Typography>
@@ -482,7 +481,6 @@ export function Membre(props: MembreProps) {
                             <Typography variant="h3" align="center" >
                                 {props.user?.poste}
                             </Typography>
-                            <Divider color="beige" />
                             <Typography variant="body1" align="justify" style={{marginTop:"1.2rem"}}>
                                 {props.user?.desc}
                             </Typography>

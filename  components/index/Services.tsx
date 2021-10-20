@@ -41,9 +41,9 @@ export function Services() {
                         Nos Praticiens
                     </Typography>
                     <IconButton
-                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("circle")}
+                        style={{position:"relative", top:"1rem", marginTop: "1.5rem"}}
                     >
                         <ExpandMoreIcon />
                     </IconButton>
@@ -70,9 +70,9 @@ export function Services() {
                         Nos produits
                     </Typography>
                     <IconButton
-                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("care")}
+                        style={{position:"relative", top:"1rem", marginTop: "1.5rem"}}
                     >
                         <ExpandMoreIcon />
                     </IconButton>
@@ -94,9 +94,9 @@ export function Services() {
                         Entreprise
                     </Typography>
                     <IconButton
-                        style={{ marginTop: "1.5rem" }}
                         className={classes.buttonStyles}
                         onClick={() => setClicked("corporate")}
+                        style={{position:"relative", top:"1rem", marginTop: "1.5rem"}}
                     >
                         <ExpandMoreIcon />
                     </IconButton>

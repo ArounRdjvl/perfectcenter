@@ -36,8 +36,7 @@ export function Newsletter() {
                     flexDirection: "column",
                     alignItems: "center",
                     borderRadius: 50,
-                    padding: "1rem 5.5rem",
-                    background: colors.beige
+                    padding: "1rem 5.5rem"
                 }}
             >
                 <Typography align="justify" style={{fontSize: "28px"}}>
