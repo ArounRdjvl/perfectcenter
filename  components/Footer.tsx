@@ -60,7 +60,7 @@ export function Footer() {
                     noWrap
                     style={{
                         marginLeft: "2rem",
-                        marginBottom: "2px",
+                        marginBottom: "6px",
                         position: "absolute",
                         bottom: 0,
                         left: 0

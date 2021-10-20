@@ -37,3 +37,7 @@ yarn-error.log*
 .vs
 
 .certificates
+certificates
+
+# Keep environment variables out of version control
+.env

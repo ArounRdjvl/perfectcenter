@@ -151,9 +151,7 @@ export default function perfectcircle() {
                     <div
                         style={{
                             borderRadius: 20,
-                            padding: isMobile
-                                ? "3rem 2rem 2rem 2rem"
-                                : "3rem 9rem 2rem 4rem ",
+                            padding: isMobile ? "2rem 2rem 3rem 2rem" : "2rem 9rem 2rem 4rem ",
                             position: "relative",
                             display: "flex",
                             flexDirection: "row",
@@ -216,6 +214,9 @@ export default function perfectcircle() {
                             isMobile && classes.imageMobile
                         )}
                     />
+                </div>
+                <div style={{display:"flex", justifyContent:"center", margin:"3rem 0 3rem 0"}}>
+                    <img src="picto/Separateur.png" width={250} style={{ zIndex: 2 }}/>
                 </div>
                 <TitleBar title="Nos Coachs" color="beige" />
                 <div

@@ -51,7 +51,7 @@ export function AnimatedImage(props: AnimatedImageProps) {
                 transform: `rotate(${rotation}deg) ${mirror}`
             }}
         >
-            <img src={props.url} style={{ width: "100%" }} />
+            <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
         </animated.div>
     );
 }

@@ -17,49 +17,27 @@ export function TitleBar(props: TitleProps) {
         return (
             <div
                 style={{
-                    marginTop: "2rem",
-                    paddingTop: "1rem"
+                    paddingTop: "1rem",
+                    paddingLeft: isMobile? "1rem" : "3rem",
+                    width: "100%",
+                    display:"flex", justifyContent:"flex-start"
                 }}
             >
                 <div
                     style={{
-                        width: isMobile ? "80%" : "40%",
-                        margin: "auto",
-                        position: "relative"
+                        position: "relative",
                     }}
                 >
-                    <div
-                        style={{
-                            position: "relative",
-                            borderRadius: 20,
-                            margin: "0 auto",
-                            backgroundColor: colors.beige,
-                            zIndex: 1,
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            padding: "1rem"
-                        }}
-                    >
-                        <Typography variant="h1" align="center">
-                            {props.title}
-                        </Typography>
+                    <Typography variant="h1" align="center">
+                        {props.title}
+                    </Typography>
+                    <div style={{width:"100%", display:"flex", justifyContent:"center"}}>
                         <Divider color={props.color} />
                     </div>
-                    <div
-                        style={{
-                            borderRadius: 20,
-                            position: "absolute",
-                            backgroundColor: colors.vert,
-                            top: "-1rem",
-                            bottom: "1rem",
-                            left: "-1rem",
-                            right: "1rem",
-                            zIndex: 0
-                        }}
-                    />
+                    
                 </div>
+                    
+                
             </div>
         )
     }
