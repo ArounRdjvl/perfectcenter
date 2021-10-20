@@ -21,6 +21,7 @@ import { Newsletter } from " components/Newsletter"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll"
+import { Divider2 } from " components/Dividder2"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -85,34 +86,9 @@ export default function index() {
 
                 <Valeurs />
                 <WelcomeMsg />
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        margin: "3rem 0 3rem 0"
-                    }}
-                >
-                    <img
-                        src="picto/Separateur.png"
-                        width={250}
-                        style={{ zIndex: 2 }}
-                    />
-                </div>
+                <Divider2 />
                 <Services />
-
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        margin: "6rem 0 4rem 0"
-                    }}
-                >
-                    <img
-                        src="picto/Separateur.png"
-                        width={250}
-                        style={{ zIndex: 2 }}
-                    />
-                </div>
+                <Divider2 />
                 <Newsletter />
                 <Footer />
             </Container>

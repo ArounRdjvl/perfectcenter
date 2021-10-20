@@ -76,7 +76,7 @@ export const dataProducts = [
 
 export const dataCoachs = [
     {
-        name: "Laurent BROSSEAU",
+        name: "Laurent CONSTANTINZAFIROS",
         photo: "coach/Laurent_BROSSEAU.png",
         practice1: "Préparateur Physique et Mental"
     },

@@ -19,8 +19,11 @@ export function Services() {
 
     return (
         <>
-            <Typography variant="h1" align="center">
-                Nos Services
+            <Typography
+                variant="h1"
+                align="center"
+            >
+                Nos 3 pôles
             </Typography>
             <Divider color="vert" />
             <Grid container style={{ margin: "2rem 0 1rem" }}>
