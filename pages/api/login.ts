@@ -12,28 +12,28 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         res.end("Error")
         return
     }
-    const { username, password } = req.body
+    const { email, password } = req.body
 
     const user = await prisma.user.findUnique({
         select: {
             email: true,
-            username: true,
+            firstname: true,
+            lastname: true,
             password: true,
             isAdmin: true
         },
         where: {
-            username: username
+            email: email
         }
     })
-
-    console.log(user)
 
     if (user && (await bcrypt.compare(password, user.password))) {
         res.json({
             token: jwt.sign(
                 {
-                    username: user.username,
                     email: user.email,
+                    firstname: user.firstname,
+                    lastname: user.lastname,
                     admin: user.isAdmin
                 },
                 KEY

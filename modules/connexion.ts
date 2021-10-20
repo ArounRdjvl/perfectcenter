@@ -10,13 +10,13 @@ export function useConnexion() {
         setToken(localStorage.getItem(tokenKey))
     }, [])
 
-    const { username, admin } = token
-        ? (jwt.decode(token) as { username: string; admin: boolean })
-        : { username: null, admin: null }
+    const { email, admin } = token
+        ? (jwt.decode(token) as { email: string; admin: boolean })
+        : { email: null, admin: null }
 
-    async function connect(username: string, password: string) {
+    async function connect(email: string, password: string) {
         const { token, error } = await fetchJson("/api/login", {
-            username,
+            email,
             password
         })
         if (error) {
@@ -37,7 +37,7 @@ export function useConnexion() {
     return {
         connected: token != null,
         token,
-        username,
+        email,
         admin,
         connect,
         disconnect,

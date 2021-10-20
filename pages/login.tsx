@@ -7,19 +7,19 @@ import React from "react"
 export default function index() {
     const {
         connected,
-        username: connectedUser, // c'est un alias car username est déjà utilisé pour le state
+        email: connectedUser, // c'est un alias car username est déjà utilisé pour le state
         admin,
         connect,
         disconnect
     } = useConnexion()
 
-    const [username, setUsername] = React.useState<string>("")
+    const [email, setEmail] = React.useState<string>("")
     const [password, setPassword] = React.useState<string>("")
     const [errorMessage, setErrorMessage] = React.useState<string>("")
 
     async function handleConnectionClick() {
         try {
-            await connect(username, password)
+            await connect(email, password)
         } catch (e: any) {
             setErrorMessage(e.toString())
         }
@@ -47,9 +47,9 @@ export default function index() {
             <div>
                 <TextField
                     name="user"
-                    label="Nom d'utilisateur"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    label="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     type="text"
                 />
                 <TextField
