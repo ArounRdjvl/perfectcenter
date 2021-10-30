@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "NODE_ENV=production node server.js"
+        "start": "node server.js",
+        "db:deploy": "npx prisma migrate deploy"
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
@@ -14,10 +15,12 @@
         "bcrypt": "^5.0.1",
         "bodymovin": "^4.13.0",
         "clsx": "^1.1.1",
+        "dotenv": "^10.0.0",
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
         "next": "^10.2.3",
         "nodemailer": "^6.5.0",
+        "prompt-sync": "^4.2.0",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
         "react-lottie": "^1.2.3",

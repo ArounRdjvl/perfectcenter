@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
             <Html lang="fr">
                 <Head>
                     <link
-                        href="http://fonts.cdnfonts.com/css/louis-george-cafe"
+                        href="https://fonts.cdnfonts.com/css/louis-george-cafe"
                         rel="stylesheet"
                     />
                 </Head>
