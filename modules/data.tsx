@@ -76,7 +76,7 @@ export const dataProducts = [
 
 export const dataCoachs = [
     {
-        name: "Laurent CONSTANTINZAFIROS",
+        name: "Laurent BROSSEAU",
         photo: "coach/Laurent_BROSSEAU.png",
         practice1: "Préparateur Physique et Mental"
     },
@@ -88,8 +88,7 @@ export const dataCoachs = [
     {
         name: "Laetitia LEMEUNIER",
         photo: "coach/Laetitia_LEMEUNIER.png",
-        practice1: "Sophrologue - Hypnothérapeute -",
-        practice2: "Massage bien-être"
+        practice1: "Sophrologue - Hypnothérapeute - Massage bien-être"
     },
     {
         name: "Christelle SIVRÉ",
@@ -114,8 +113,7 @@ export const dataCoachs = [
     {
         name: "Bruno LESCURE",
         photo: "coach/Bruno_LESCURE.png",
-        practice1: "Coach en stratégie d'entreprise",
-        practice2: " Coach mentor"
+        practice1: "Coach en stratégie d'entreprise - Coach mentor"
     },
     {
         name: "Malika ARNAUD",
@@ -125,8 +123,7 @@ export const dataCoachs = [
     {
         name: "Nicolas LAVROFF",
         photo: "coach/Nicolas_LAVROFF.png",
-        practice1: "Coach certifié - Formateur - Thérapeute",
-        practice2: "- Méditation de Pleine Conscience"
+        practice1: "Coach certifié - Formateur - Thérapeute - Méditation de Pleine Conscience",
     }
 ]
 

@@ -1,6 +1,7 @@
 import React from "react"
-import { Grid, useTheme, Typography, useMediaQuery } from "@material-ui/core"
+import { Grid, useTheme, Typography, useMediaQuery, makeStyles } from "@material-ui/core"
 import { Divider } from "./Divider"
+import { colors } from "../modules/theme"
 
 export interface UserProps {
     photo?: string
@@ -47,7 +48,7 @@ export function Membre(props: MembreProps) {
                                     display: "flex",
                                     flexDirection: "row",
                                     justifyContent: "center",
-                                    backgroundColor: "#E3CCB4",
+                                    backgroundColor: colors.beige,
                                     borderRadius: "20px 20px 0 0",
                                     height: "10rem",
                                     width: "14rem",
@@ -148,7 +149,7 @@ export function Membre(props: MembreProps) {
                             </div>
                             <div
                                 style={{
-                                    padding: "1rem 1rem",
+                                    padding: "1rem 2rem",
                                     position: "relative",
                                     zIndex: 2,
                                 }}
@@ -272,7 +273,7 @@ export function Membre(props: MembreProps) {
                         >
                             <div
                                 style={{
-                                    backgroundColor: "#E3CCB4",
+                                    backgroundColor: colors.beige,
                                     position: "relative",
                                     display:"flex",
                                     justifyContent:"center",
@@ -289,7 +290,7 @@ export function Membre(props: MembreProps) {
                             </div>
                             <div
                                 style={{
-                                    padding: "1rem 1rem",
+                                    padding: "1rem 2rem",
                                     position: "relative",
                                     zIndex: 2,
                                 }}
@@ -336,7 +337,7 @@ export function Membre(props: MembreProps) {
                                 flexDirection: "column",
                                 justifyContent: "space-around",
                                 paddingLeft: "0.8rem",
-                                backgroundColor: "#E3CCB4",
+                                backgroundColor: colors.beige,
                                 position: "absolute",
                                 height: "12rem",
                                 width: "13rem",
@@ -455,7 +456,7 @@ export function Membre(props: MembreProps) {
                 >
                     <div
                             style={{
-                                backgroundColor: "#E3CCB4",
+                                backgroundColor: colors.beige,
                                 position: "relative",
                                 display:"flex",
                                 justifyContent:"center",

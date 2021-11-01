@@ -17,11 +17,14 @@ import { Footer } from "../ components/Footer"
 import { Services } from "../ components/index/Services"
 import { WelcomeMsg } from "../ components/index/WelcomeMsg"
 import { Valeurs } from "../ components/index/Valeurs"
-import { Newsletter } from " components/Newsletter"
+import { Newsletter } from " components/index/Newsletter"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll"
-import { Divider2 } from " components/Dividder2"
+import { Divider2 } from " components/DividerLogo"
+import { WelcomeMsg2 } from " components/PerfectCircle/WelcomeMsg2"
+import { DecouvertePraticiens } from " components/index/DecouvertePraticiens"
+import { TitleBar } from " components/TitleBar"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -74,21 +77,21 @@ export default function index() {
                     spy={true}
                     smooth={true}
                     offset={-120}
-                    duration={500}
+                    duration={1500}
                 >
-                    <IconButton color="primary" className={classes.buttonStyles}>
+                    <IconButton color="primary"  className={classes.buttonStyles}>
                         <ExpandMoreIcon fontSize="large" />
                     </IconButton>
                 </Link>
             </div>
-
             <Container id="container">
-
-                <Valeurs />
-                <WelcomeMsg />
-                <Divider2 />
+            </Container>
+            <Valeurs />
+            <Container id="container">
                 <Services />
-                <Divider2 />
+            </Container>
+                <DecouvertePraticiens />
+            <Container id="container">
                 <Newsletter />
                 <Footer />
             </Container>

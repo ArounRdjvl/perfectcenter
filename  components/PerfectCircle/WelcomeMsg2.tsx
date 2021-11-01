@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => {
     }
 })
 
-export function WelcomeMsg(){
+export function WelcomeMsg2(){
     const theme = useTheme()
     const classes = useStyles(theme)
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
@@ -35,7 +35,7 @@ export function WelcomeMsg(){
                 alignItems:"center",
                 marginTop:"1rem"
             }}>
-                <TitleBar title="Bienvenue chez PerfectCenter" background={true} color="vert" paddingMobile="0 0 0 0rem" justifyContent="center" />
+                <TitleBar title="PerfectCirle" background={true} color="vert" paddingMobile="0 0 0 7vw" />
             </div>
             <div style={{
                 position: "relative",
@@ -87,11 +87,11 @@ export function WelcomeMsg(){
                     }}
                 >
                     <Typography variant="body1" align="justify">
-                        Avant d'être un centre de bien-être, j'ai souhaité que cet endroit soit un lieu d'échanges et de partages. <br/>
-                        Le cabaret historique "le Bœuf sur le toit" était le point de rendez-vous de tout Paris mais il était aussi un incubateur de talents.
-                        Il permettait notamment à des artistes sans le sou de pouvoir s'exprimer et se lancer.<br/>
-                        J'ai donc décidé de prolonger l'histoire en créant un centre avec des prestations haut de gamme et composé de personnes partageant 
-                        les mêmes valeurs de générosité et de bienveillance.<br/>
+                        Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous capitalisons nos talents 
+                        pour offrir des prestations liées au bien-être et au développement de tout potentiel, de son vrai "Soi". 
+                        En entreprise et en individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre 
+                        aux besoins des personnes qui viennent à nous...<br/>
+                        Nous créons des événements, formations et ateliers en collectif en plus des consultations individuelles que nous pouvons proposer.
                     </Typography>
                 </div>                
             </div>
@@ -100,13 +100,13 @@ export function WelcomeMsg(){
     }
     return (
         <>
-            <TitleBar title="Bienvenue chez PerfectCenter" background={true} color="vert" paddingMobile="0 0 0 5vw" />
+            <TitleBar title="PerfectCircle" background={true} color="vert" paddingMobile="0 0 0 5vw" />
             <div style={{
                 position: "absolute",
                 width: "56vw",
                 height:"50vh",
                 display:"flex",
-                marginTop :"1rem",
+                marginTop :"2vw",
                 flexDirection: "column"
             }}
             >
@@ -154,11 +154,11 @@ export function WelcomeMsg(){
                     padding:" 1rem 3rem 0 4vw"
                 }}>
                     <Typography variant="body1" align="justify">
-                    Avant d'être un centre de bien-être, j'ai souhaité que cet endroit soit un lieu d'échanges et de partages. <br/>
-                    Le cabaret historique "le Bœuf sur le toit" était le point de rendez-vous de tout Paris mais il était aussi un incubateur de talents.
-                    Il permettait notamment à des artistes sans le sou de pouvoir s'exprimer et se lancer.<br/>
-                    J'ai donc décidé de prolonger l'histoire en créant un centre avec des prestations haut de gamme et composé de personnes partageant 
-                    les mêmes valeurs de générosité et de bienveillance.<br/>
+                        Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous capitalisons nos talents 
+                        pour offrir des prestations liées au bien-être et au développement de tout potentiel, de son vrai "Soi". 
+                        En entreprise et en individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre 
+                        aux besoins des personnes qui viennent à nous...<br/>
+                        Nous créons des événements, formations et ateliers en collectif en plus des consultations individuelles que nous pouvons proposer.
                     </Typography>
                 </div>
                 

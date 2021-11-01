@@ -22,6 +22,7 @@ export function Services() {
             <Typography
                 variant="h1"
                 align="center"
+                style={{ margin: "2rem 0 1rem" }}
             >
                 Nos 3 pôles
             </Typography>
@@ -37,7 +38,7 @@ export function Services() {
                             style={{ margin: "auto" }}
                         />
                     </div>
-                    <Typography variant="h4" style={{ marginTop: "1rem" }}>
+                    <Typography variant="h4" style={{ marginBottom: "1rem" }}>
                         Nos Praticiens
                     </Typography>
                     <IconButton

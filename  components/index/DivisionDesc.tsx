@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => {
         root: {
             minHeight: "10rem",
             [theme.breakpoints.up("md")] : {
-                margin: "0 5rem",
+                margin: "0 5rem 7rem 5rem",
             },
             position: "relative"
         },
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => {
         },
         beigeDiv: {
             position: "relative",
-            marginTop:"-0.8rem",
+            marginTop:"-0.3rem",
             borderRadius: 20,
             backgroundColor: colors.beige,
             padding: "1rem 2rem",
@@ -84,7 +84,6 @@ export function DivisionDesc(props: DivisionDescProps) {
         content = (
             <>
                 <div style={{
-                   
                     display: "flex", 
                     flexDirection:"row",
                     }}
