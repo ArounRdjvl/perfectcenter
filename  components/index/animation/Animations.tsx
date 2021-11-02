@@ -102,6 +102,7 @@ export function Animations(props: AnimationsProps) {
             <AnimatedImage url="picto/Feuille.png" position={{x: "51vw", y : "19vh"}} width="7rem" rotation={20} />
             <AnimatedImage url="picto/Feuille_grande.png" position={{x: "80vw", y : "15vh"}} width="10rem" rotation={190} mirror/>
             <AnimatedImage url="picto/Feuille_grande_Beige.png" position={{x: "80vw", y : "70vh"}} width="12rem" rotation={210} mirror/>
+            <AnimatedImage url="picto/PerfectCenter.png" center width="20rem" />
 
         </div>
     )
