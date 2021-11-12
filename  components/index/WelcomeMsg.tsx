@@ -25,6 +25,7 @@ export function WelcomeMsg(){
     const theme = useTheme()
     const classes = useStyles(theme)
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+    const paragrapheErik = "Avant d'être un centre de bien-être, j'ai souhaité que cet endroit soit un lieu d'échanges et de partages. <br/>Le cabaret historique \"le Bœuf sur le toit\" était le point de rendez-vous de tout Paris mais il était aussi un incubateur de talents. Il permettait notamment à des artistes sans le sou de pouvoir s'exprimer et se lancer.<br/>J'ai donc décidé de prolonger l'histoire en créant un centre avec des prestations haut de gamme et composé de personnes partageant les mêmes valeurs de générosité et de bienveillance.<br/>"
     if (isMobile) {
         return (
         <>
@@ -86,13 +87,7 @@ export function WelcomeMsg(){
                         zIndex: 2,
                     }}
                 >
-                    <Typography variant="body1" align="justify">
-                        Avant d'être un centre de bien-être, j'ai souhaité que cet endroit soit un lieu d'échanges et de partages. <br/>
-                        Le cabaret historique "le Bœuf sur le toit" était le point de rendez-vous de tout Paris mais il était aussi un incubateur de talents.
-                        Il permettait notamment à des artistes sans le sou de pouvoir s'exprimer et se lancer.<br/>
-                        J'ai donc décidé de prolonger l'histoire en créant un centre avec des prestations haut de gamme et composé de personnes partageant 
-                        les mêmes valeurs de générosité et de bienveillance.<br/>
-                    </Typography>
+                    <Typography variant="body1" align="justify">{paragrapheErik}</Typography>
                 </div>                
             </div>
         </>
@@ -153,13 +148,7 @@ export function WelcomeMsg(){
                     width: "42vw",
                     padding:" 1rem 3rem 0 4vw"
                 }}>
-                    <Typography variant="body1" align="justify">
-                    Avant d'être un centre de bien-être, j'ai souhaité que cet endroit soit un lieu d'échanges et de partages. <br/>
-                    Le cabaret historique "le Bœuf sur le toit" était le point de rendez-vous de tout Paris mais il était aussi un incubateur de talents.
-                    Il permettait notamment à des artistes sans le sou de pouvoir s'exprimer et se lancer.<br/>
-                    J'ai donc décidé de prolonger l'histoire en créant un centre avec des prestations haut de gamme et composé de personnes partageant 
-                    les mêmes valeurs de générosité et de bienveillance.<br/>
-                    </Typography>
+                    <Typography variant="body1" align="justify">{paragrapheErik}</Typography>
                 </div>
                 
             </div>

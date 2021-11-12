@@ -13,30 +13,9 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-
-
 export function PraticiensCarousel() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
-  const state = {
-    praticiens: [
-      {id:1, title:"/tom.png"},
-      {id:2, title:"/erik.png"},
-      {id:3, title:"/erik.png"},
-      {id:4, title:"/erik.png"},
-      {id:5, title:"/erik.png"},
-      {id:6, title:"/erik.png"},
-      {id:7, title:"/erik.png"},
-      {id:8, title:"/erik.png"},
-      {id:9, title:"/erik.png"},
-      {id:10, title:"/erik.png"},
-      {id:11, title:"/erik.png"},
-      {id:12, title:"/erik.png"},
-      {id:13, title:"/erik.png"},
-      {id:14, title:"/erik.png"}
-    ]
-  }
-  const {praticiens}= state
   
   if (isMobile) {
     return (
@@ -129,7 +108,6 @@ export function PraticiensCarousel() {
                           backgroundPosition: "center",
                           backgroundSize: "100%"
                       }}>
-                      {/* <img src={praticiens.title} width="100%" style={{ zIndex: 2 }}/> */}
                   </div>
                   <div 
                       style={{

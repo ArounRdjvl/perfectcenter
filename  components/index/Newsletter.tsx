@@ -16,13 +16,13 @@ import { colors } from "../../modules/theme"
 export function Newsletter() {
     const [name, setName] = React.useState<string>("")
     const [email, setEmail] = React.useState<string>("")
-    const [subject, setSubject] = React.useState<string>("Newsletter")
-    const [content, setContent] = React.useState<string>("Inscription à la newsletter")
+    const subject = "Newsletter"
+    const content = "Inscription à la newsletter"
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
     function submitForm() {
-        fetch("../pages/api/sendMail", {
+        fetch("api/sendMail", {
             method: "post",
             headers: {
                 Accept: "application/json, text/plain, */*",
@@ -34,9 +34,8 @@ export function Newsletter() {
                 ? console.log("email sent")
                 : console.error("error email")
         })
-        setName(""),
-        setEmail(""),
-        setSubject("")
+        setName("")
+        setEmail("")
     }
 
     if(isMobile) {
