@@ -14,7 +14,7 @@ import { TitleBar } from "./TitleBar"
 import { getRedirectStatus } from "next/dist/lib/load-custom-routes"
 
 export interface ProductProps {
-    name?: string
+    name: string
     title?: string
     desc?: JSX.Element
     moreAboutLink?: string
@@ -26,9 +26,9 @@ export interface DisplayProps {
 
 const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     const box: HTMLDivElement = event.currentTarget
-    const fond = document.getElementById('fond')!
+    const fond = event.currentTarget.getElementsByClassName('fond').item(0)! as HTMLDivElement
     fond.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 35%, #AFB9B7 65%)"
-    const image = document.getElementById('image')!
+    const image = event.currentTarget.getElementsByClassName('image').item(0)! as HTMLDivElement
     image.style.marginTop = "-2.5rem"
     box.style.backgroundColor = "#BFC7C4"
     box.style.boxShadow = "0px 0px 50px #999999"
@@ -38,8 +38,9 @@ const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
   // This function will be triggered when the mouse pointer is moving out the box
 const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     const box: HTMLDivElement = event.currentTarget
-    document.getElementById('fond')!.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 15%, #AFB9B7 65%)"
-    const image = document.getElementById('image')!
+    const fond = event.currentTarget.getElementsByClassName('fond').item(0)! as HTMLDivElement
+    fond.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 15%, #AFB9B7 65%)"
+    const image = event.currentTarget.getElementsByClassName('image').item(0)! as HTMLDivElement
     image.style.marginTop = "1rem"
     box.style.boxShadow = "0px 0px 25px #BBBBBB"
     box.style.backgroundColor = "#EBEAE8"
@@ -47,9 +48,10 @@ const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement>) => {
 
 const boxClicked = (event: React.MouseEvent<HTMLDivElement>) => {
     const box: HTMLDivElement = event.currentTarget
-    const fond = document.getElementById('fond')!
+   
+    const fond = event.currentTarget.getElementsByClassName('fond').item(0)! as HTMLDivElement
     fond.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 35%, #AFB9B7 65%)"
-    const image = document.getElementById('image')!
+    const image = event.currentTarget.getElementsByClassName('image').item(0)! as HTMLDivElement
     image.style.marginTop = "-2.5rem"
     box.style.backgroundColor = "#BFC7C4"
     box.style.boxShadow = "0px 0px 50px #999999"
@@ -216,7 +218,7 @@ export function Product(props: DisplayProps) {
                     boxShadow : "0px 0px 25px #BBBBBB"
                 }}>
                 
-                <div id="fond" style ={{
+                <div className="fond" style ={{
                     position: "relative",
                     display : "flex",
                     width : "100%",
@@ -226,7 +228,7 @@ export function Product(props: DisplayProps) {
                     backgroundImage: "radial-gradient(farthest-corner at 50% 100%, #849994 15%, #AFB9B7 65%)"
                 }}>
                     <img
-                        id="image"
+                        className='image'
                         src={
                             "./produits/" +
                             props.product?.name +
