@@ -34,12 +34,21 @@ export default function perfectcare() {
                 <title>PerfectCare</title>
             </Head>
             <Navigation />
-            <Container>
-                <TitleBar title="Nos produits" background={true} color="vert" />
-                {dataProducts.map((product, i) => {
-                    const pair = i % 2 == 0
-                    return <Product pair={pair} product={product} />
+            <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        padding:"1rem 5vw",
+                        alignContent: "flex-start",
+                        justifyContent: "space-evenly"
+                    }}
+                >
+                <TitleBar title="Nos produits" background={true} color="vert" padding="0 0 2rem 0"/>
+                {dataProducts.map((product) => {
+                    return <Product product={product} />
                 })}
+            </div>
+            <Container>
                 <Footer />
             </Container>
         </div>

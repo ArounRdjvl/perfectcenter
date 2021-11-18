@@ -3,11 +3,13 @@ import {
     Button,
     Grid,
     Link,
+    makeStyles,
     Typography,
     useMediaQuery,
     useTheme
 } from "@material-ui/core"
 import { Divider } from "./Divider"
+import { colors } from "../modules/theme"
 import { TitleBar } from "./TitleBar"
 import { getRedirectStatus } from "next/dist/lib/load-custom-routes"
 
@@ -19,146 +21,59 @@ export interface ProductProps {
 }
 
 export interface DisplayProps {
-    pair?: boolean
     product?: ProductProps
 }
 
+const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    const box: HTMLDivElement = event.currentTarget
+    const fond = document.getElementById('fond')!
+    fond.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 35%, #AFB9B7 65%)"
+    const image = document.getElementById('image')!
+    image.style.marginTop = "-2.5rem"
+    box.style.backgroundColor = "#BFC7C4"
+    box.style.boxShadow = "0px 0px 50px #999999"
+    box.style.transitionDuration = "100ms"
+}
+
+  // This function will be triggered when the mouse pointer is moving out the box
+const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    const box: HTMLDivElement = event.currentTarget
+    document.getElementById('fond')!.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 15%, #AFB9B7 65%)"
+    const image = document.getElementById('image')!
+    image.style.marginTop = "1rem"
+    box.style.boxShadow = "0px 0px 25px #BBBBBB"
+    box.style.backgroundColor = "#EBEAE8"
+}
+
+const boxClicked = (event: React.MouseEvent<HTMLDivElement>) => {
+    const box: HTMLDivElement = event.currentTarget
+    const fond = document.getElementById('fond')!
+    fond.style.backgroundImage = "radial-gradient(farthest-corner at 50% 100%, #849994 35%, #AFB9B7 65%)"
+    const image = document.getElementById('image')!
+    image.style.marginTop = "-2.5rem"
+    box.style.backgroundColor = "#BFC7C4"
+    box.style.boxShadow = "0px 0px 50px #999999"
+    box.style.transitionDuration = "100ms"
+}
+
+const useStyles = makeStyles((theme) => {
+    return {
+        root: {
+            position: "relative",
+            borderRadius: "20px",
+            width: "30rem",
+            height: "28rem",
+            margin : "1rem"
+        }
+    }
+})
+
+
 export function Product(props: DisplayProps) {
     const theme = useTheme()
+    const classes = useStyles(theme)
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
     if (isMobile) {
-        if (props.pair) {
-            return (
-                <>
-                    <TitleBar color="vert" title={props.product?.name} />
-                    <Grid
-                        container
-                        justify="center"
-                        style={{
-                            marginBottom: "5rem"
-                        }}
-                    >
-                        <Grid
-                            xs={12}
-                            style={{
-                                position: "relative",
-                                zIndex: 4,
-                                margin: theme.spacing(2)
-                            }}
-                            item
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: "#3B424A",
-                                    position: "absolute",
-                                    borderRadius: "20px",
-                                    height: "8rem",
-                                    width: "50%",
-                                    top: -10,
-                                    zIndex: -1,
-                                    left: -10
-                                }}
-                            />
-                            <div
-                                style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    backgroundColor: "#E3CCB4",
-                                    borderRadius: "20px",
-                                    padding: theme.spacing(2),
-                                    zIndex: 3,
-                                    top: "1rem"
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        display: "flex",
-                                        zIndex: 3,
-                                        alignSelf: "center"
-                                    }}
-                                >
-                                    <img
-                                        style={{
-                                            maxHeight: "20rem",
-                                            maxWidth: "12rem",
-                                            borderRadius: "20px"
-                                        }}
-                                        alt={props.product?.name}
-                                        src={
-                                            "./produits/" +
-                                            props.product?.name +
-                                            ".png"
-                                        }
-                                    />
-                                </div>
-                                <div
-                                    style={{
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        position: "relative",
-                                        zIndex: 2,
-                                        padding: theme.spacing(2)
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            alignSelf: "center",
-                                            zIndex: 2
-                                        }}
-                                    >
-                                        <Typography
-                                            variant="h4"
-                                            style={{ alignSelf: "center" }}
-                                        >
-                                            {props.product?.title}
-                                        </Typography>
-                                        <Divider color="vert" />
-                                    </div>
-                                    <Typography
-                                        variant="body1"
-                                        align="justify"
-                                        style={{
-                                            paddingTop: theme.spacing(4),
-                                            paddingBottom: theme.spacing(4)
-                                        }}
-                                    >
-                                        {props.product?.desc}
-                                    </Typography>
-                                    <Link
-                                        underline="none"
-                                        target="_blank"
-                                        href={props.product?.moreAboutLink}
-                                        style={{
-                                            alignSelf: "center",
-                                            zIndex: 2
-                                        }}
-                                    >
-                                        <Button
-                                            variant="contained"
-                                            color="secondary"
-                                        >
-                                            En savoir plus
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div
-                                style={{
-                                    backgroundColor: "#849994",
-                                    position: "absolute",
-                                    borderRadius: "20px",
-                                    height: "8rem",
-                                    width: "50%",
-                                    zIndex: -1,
-                                    bottom: -10,
-                                    right: -10
-                                }}
-                            />
-                        </Grid>
-                    </Grid>
-                </>
-            )
-        }
         return (
             <>
                 <TitleBar color="vert" title={props.product?.name} />
@@ -291,157 +206,83 @@ export function Product(props: DisplayProps) {
             </>
         )
     }
-
-    if (props.pair) {
-        return (
-            <>
-                <TitleBar color="vert" title={props.product?.name} />
-                <Grid
-                    container
-                    justify="center"
-                    style={{
-                        maxHeight: "60rem",
-                        marginBottom: "5rem"
-                    }}
-                >
-                    <Grid
-                        xs={1}
-                        style={{
-                            position: "relative"
-                        }}
-                        item
-                    >
-                        <div
-                            style={{
-                                backgroundColor: "#3B424A",
-                                position: "absolute",
-                                borderRadius: "20px",
-                                height: "8rem",
-                                width: "30rem",
-                                top: 0,
-                                left: "5rem"
-                            }}
-                        />
-                    </Grid>
-                    <Grid
-                        xs={8}
-                        style={{
-                            position: "relative",
-                            zIndex: 4,
-                            margin: theme.spacing(2)
-                        }}
-                        item
-                    >
-                        <div
-                            style={{
-                                display: "flex",
-                                backgroundColor: "#E3CCB4",
-                                borderRadius: "20px",
-                                padding: theme.spacing(2),
-                                zIndex: 3,
-                                top: "1rem"
-                            }}
-                        >
-                            <div
-                                style={{
-                                    display: "flex",
-                                    zIndex: 3,
-                                    alignSelf: "center"
-                                }}
-                            >
-                                <img
-                                    style={{
-                                        maxHeight: "20rem",
-                                        maxWidth: "12rem",
-                                        borderRadius: "20px"
-                                    }}
-                                    alt={props.product?.name}
-                                    src={
-                                        "./produits/" +
-                                        props.product?.name +
-                                        ".png"
-                                    }
-                                />
-                            </div>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    position: "relative",
-                                    zIndex: 2,
-                                    padding: theme.spacing(2)
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignSelf: "center",
-                                        zIndex: 2
-                                    }}
-                                >
-                                    <Typography
-                                        variant="h4"
-                                        style={{ alignSelf: "center" }}
-                                    >
-                                        {props.product?.title}
-                                    </Typography>
-                                    <Divider color="vert" />
-                                </div>
-                                <Typography
-                                    variant="body1"
-                                    align="justify"
-                                    style={{
-                                        paddingTop: theme.spacing(4),
-                                        paddingBottom: theme.spacing(4)
-                                    }}
-                                >
-                                    {props.product?.desc}
-                                </Typography>
-                                <Link
-                                    underline="none"
-                                    target="_blank"
-                                    href={props.product?.moreAboutLink}
-                                    style={{
-                                        alignSelf: "center",
-                                        zIndex: 2
-                                    }}
-                                >
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                    >
-                                        En savoir plus
-                                    </Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        style={{
-                            position: "relative",
-                            zIndex: 0
-                        }}
-                        item
-                    >
-                        <div
-                            style={{
-                                backgroundColor: "#849994",
-                                position: "absolute",
-                                borderRadius: "20px",
-                                height: "8rem",
-                                width: "30rem",
-                                bottom: 0,
-                                right: "5rem"
-                            }}
-                        />
-                    </Grid>
-                </Grid>
-            </>
-        )
-    }
     return (
         <>
-            <TitleBar color="vert" title={props.product?.name} />
+            <div 
+                onMouseOver={boxMouseOverHandler}
+                onMouseLeave={boxMouseOutHandler}
+                className={classes.root}
+                style = {{
+                    boxShadow : "0px 0px 25px #BBBBBB"
+                }}>
+                
+                <div id="fond" style ={{
+                    position: "relative",
+                    display : "flex",
+                    width : "100%",
+                    height : "11rem",
+                    borderRadius : "20px 20px 0 0",
+                    justifyContent : "center",
+                    backgroundImage: "radial-gradient(farthest-corner at 50% 100%, #849994 15%, #AFB9B7 65%)"
+                }}>
+                    <img
+                        id="image"
+                        src={
+                            "./produits/" +
+                            props.product?.name +
+                            ".png"
+                        }
+                        width={225}
+                        style={{
+                            position : "absolute",
+                            zIndex: 1
+                        }}
+                    />
+                </div>
+
+                <div style ={{
+                    position: "absolute",
+                    width : "100%",
+                    zIndex : 2,
+                    height : "17rem",
+                    bottom : 0,
+                    borderRadius : "0 0 20px 20px",
+                    backgroundColor : "#EBEAE8"
+                }}>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            zIndex: 2,
+                            padding : "0.5rem"
+                        }}
+                    >
+                        <Typography
+                            variant="h2"
+                            style={{ alignSelf: "center" }}
+                        >
+                            {props.product?.name}
+                        </Typography>
+                    </div>
+                    <div 
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            zIndex: 2,
+                            padding : "0.5rem 1.5rem 0.5rem 1.5rem"
+                        }}>
+                        <Typography
+                            variant="body2"
+                            align="justify"
+                        >
+                            {props.product?.desc}
+                        </Typography>
+                    </div>
+                </div>
+            </div>
+            {/* <TitleBar color="vert" title={props.product?.name} />
             <Grid
                 container
                 justify="center"
@@ -576,7 +417,7 @@ export function Product(props: DisplayProps) {
                         }}
                     />
                 </Grid>
-            </Grid>
+            </Grid> */}
         </>
     )
 }

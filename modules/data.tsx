@@ -43,12 +43,7 @@ export const dataProducts = [
         title: "Accélérateur de bien-être",
         desc: (
             <>
-                Utilisant la technologie de la stimulation sensorielle, les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que :
-                <br />  - Le stress
-                <br />  - La fatigue
-                <br />  - Le dysfonctionnement corporel
-                <br />  - La dépression
-                <br />  - La gestion des émotions
+                Utilisant la technologie de la stimulation sensorielle, les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que le stress, la fatigue, le dysfonctionnement corporel, la dépression, la gestion des émotions..
                 <br />C’est une solution innovante, simple et efficace à toute personne désireuse d’améliorer sa qualité de vie et retrouver son bien-être. 
             </>
         ),
@@ -60,14 +55,27 @@ export const dataProducts = [
         desc: (
             <>
                 Mint-e propose une gamme de produits appréciée pour son
-                efficacité. <br />
-                <br /> Elle est conseillée par de nombreux médecins, thérapeutes
+                efficacité. Elle est conseillée par de nombreux médecins, thérapeutes
                 et centre hospitaliers comme le Centre Léon Bérard à Lyon
                 (Centre Régional de Lutte contre le Cancer) mais aussi par des
-                sportifs de haut niveau. <br />
+                sportifs de haut niveau.
                 <br /> Mint-e associe la phytothérapie, les Fleurs de Bach et
                 des dilutions homéo-compatibles pour une action globale sur la
                 santé et le bien-être"
+            </>
+        ),
+        moreAboutLink: "https://mint-elabs.fr/products/z-trauma"
+    },
+    {
+        name: "KAQUN",
+        title: "Water and more",
+        desc: (
+            <>
+                L'oxygène est indéniablement l'un des éléments les plus importants pour chaque 
+                cellule de notre corps. Sans elle, nos cellules ne peuvent pas produire beaucoup 
+                d'énergie et leur métabolisme devient moins efficace. En biologie cellulaire, 
+                le lauréat du prix Nobel de médecine et de biologie, Otto Heinrich Warburg, a découvert 
+                qu'aucune maladie ne peut survivre en présence de niveaux élevés d'oxygène.
             </>
         ),
         moreAboutLink: "https://mint-elabs.fr/products/z-trauma"
