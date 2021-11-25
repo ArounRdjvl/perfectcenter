@@ -1,4 +1,5 @@
 import { animated, useSpring } from "react-spring"
+import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core"
 
 interface BubbleProps {
     text?: string
@@ -8,7 +9,11 @@ interface BubbleProps {
     size: any
 }
 
+
 export function Bubble(props: BubbleProps) {
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+    
     const [springProps, setSpring] = useSpring(() => ({
         from: {
             top: props.from.y,
@@ -38,6 +43,26 @@ export function Bubble(props: BubbleProps) {
         delay: 200
     }))
 
+    if (isMobile) {
+        return (
+            <animated.div
+                style={{
+                    position: "absolute",
+                    top: springProps.top,
+                    left: springProps.left,
+                    backgroundColor: props.color,
+                    opacity: springProps.opacity,
+                    height: props.size,
+                    width: props.size,
+                    display: "flex",
+                    borderRadius: "100% / 100%",
+                    zIndex: 5
+                }}
+            >
+                <div style={{ margin: "auto", fontSize: 17, fontWeight: "bold" }}>{props.text}</div>
+            </animated.div>
+        )
+    }
     return (
         <animated.div
             style={{
@@ -53,7 +78,7 @@ export function Bubble(props: BubbleProps) {
                 zIndex: 5
             }}
         >
-            <div style={{ margin: "auto", fontSize: 25 }}>{props.text}</div>
+            <div style={{ margin: "auto", fontSize: 25, fontWeight: "bold" }}>{props.text}</div>
         </animated.div>
     )
 }

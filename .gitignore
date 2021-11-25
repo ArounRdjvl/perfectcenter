@@ -41,3 +41,6 @@ certificates
 
 # Keep environment variables out of version control
 .env
+
+# remove database sqlite from versionned files
+prisma/*.db*
