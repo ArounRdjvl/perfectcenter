@@ -20,7 +20,7 @@ export default function perfectcorporate() {
 
     return (
         <div ref={ref} style={{ height: "100vh" }}>
-            <Background elRef={ref} />
+            {/* <Background elRef={ref} /> */}
             <Head>
                 <title>PerfectCorporate</title>
             </Head>

@@ -28,7 +28,7 @@ export default function perfectcare() {
 
     return (
         <div ref={ref}>
-            <Background elRef={ref} />
+            {/* <Background elRef={ref} /> */}
 
             <Head>
                 <title>PerfectCare</title>
