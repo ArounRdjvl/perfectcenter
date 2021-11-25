@@ -1,11 +1,12 @@
 {
     "name": "perfectcenter",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "private": true,
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "NODE_ENV=production node server.js"
+        "start": "node server.js",
+        "db:deploy": "npx prisma migrate deploy"
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
@@ -14,20 +15,25 @@
         "bcrypt": "^5.0.1",
         "bodymovin": "^4.13.0",
         "clsx": "^1.1.1",
+        "dotenv": "^10.0.0",
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
         "next": "^10.2.3",
         "nodemailer": "^6.5.0",
+        "prompt-sync": "^4.2.0",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-elastic-carousel": "^0.11.5",
         "react-lottie": "^1.2.3",
         "react-scroll": "^1.8.4",
-        "react-spring": "^9.2.1"
+        "react-spring": "^9.2.1",
+        "styled-components": "^5.3.3"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^8.5.5",
         "@types/node": "^14.14.35",
         "@types/react": "^17.0.3",
+        "@types/react-dom": "^17.0.10",
         "@types/react-lottie": "^1.2.5",
         "@types/react-scroll": "^1.8.3",
         "@zeit/next-less": "^1.0.1",
