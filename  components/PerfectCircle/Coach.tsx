@@ -1,6 +1,7 @@
 import React from "react"
 import { Grid, useTheme, Typography } from "@material-ui/core"
-import { Divider } from "./Divider"
+import { Divider } from "../Divider"
+import { colors } from "modules/theme"
 
 export interface UserProps {
     photo?: string
@@ -14,6 +15,18 @@ export interface CoachProps {
     user?: UserProps 
 }
 
+const boxMouseOverHandlerVert = (event: React.MouseEvent<HTMLDivElement>) => {
+    const box: HTMLDivElement = event.currentTarget;
+    box.style.backgroundColor = "#BFC7C4";
+    box.style.transitionDuration = "500ms";
+};
+
+  // This function will be triggered when the mouse pointer is moving out the box
+const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    const box: HTMLDivElement = event.currentTarget;
+    box.style.backgroundColor = "#EBEAE8";
+};
+
 export function Coach(props: CoachProps) {
     const theme = useTheme()
     const pair = props.pair
@@ -22,19 +35,21 @@ export function Coach(props: CoachProps) {
         return (
             <> 
                 <div
+                    onMouseOver={boxMouseOverHandlerVert}
+                    onMouseLeave={boxMouseOutHandler}
+
                     style={{
                             width: "19rem",
-                            height: "100%",
-                            margin: "1rem 0.2rem",
+                            height: "28rem",
+                            borderRadius: "35px",
                             display: "flex",
+                            margin:"0.5rem",
                             flexDirection: "column",
                             alignItems: "center",
                         }}>
 
                     <div
                         style={{
-                            borderRadius: 20,
-                            backgroundColor: "#E3CCB4",
                             width: "100%",
                             height: "5rem",
                             display: "flex",
@@ -43,34 +58,31 @@ export function Coach(props: CoachProps) {
                             justifyContent: "center",
                             zIndex: 1
                         }}>
-                            <Typography variant="h4" align="center">
+                            <Typography variant="h3" align="center">
                                 {props.user?.name}
                             </Typography>
                     </div>
-                    <img
+                    <img                        
                         style={{
-                            maxHeight: "17rem",
-                            borderRadius: "20px",
+                            height: "17rem",
                             display: "flex",
-                            zIndex: 2
+                            borderRadius: "15px",
+                            zIndex: 2,
+                            borderRightColor : "#849994",
                         }}
                         alt={props.user?.name}
                         src={props.user?.photo}
                     />
                     <div
                         style={{
-                            borderRadius: 20,
-                            backgroundColor: "#E3CCB4",
                             position: "relative",
                             width: "100%",
-                            height: "7rem",
-                            bottom : "1rem",
+                            marginTop : "1rem",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 1,
-                            padding: "0rem 1rem",
                         }}>
                             <Typography align="center" style={{position: "relative", top:"3px"}}>
                                 {props.user?.practice1}
@@ -86,19 +98,22 @@ export function Coach(props: CoachProps) {
     return (
         <>
             <div
+                onMouseOver={boxMouseOverHandlerVert}
+                onMouseLeave={boxMouseOutHandler}
+
                 style={{
-                        width: "19rem",
-                        height: "29rem",
-                        margin: "1rem 0.2rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}>
+                    width: "19rem",
+                    height: "28rem",
+                    borderRadius: "35px",
+                    margin: "0.5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                }}>
 
                 <div
                     style={{
                         borderRadius: 20,
-                        backgroundColor: "#849994",
                         width: "100%",
                         height: "5rem",
                         display: "flex",
@@ -106,17 +121,16 @@ export function Coach(props: CoachProps) {
                         padding: "0rem 1rem",
                         justifyContent: "center",
                         zIndex: 1,
-                        color: "white"
                     }}>
-                        <Typography variant="h4" align="center">
+                        <Typography variant="h3" align="center">
                             {props.user?.name}
                         </Typography>
                 </div>
                 <img
                     style={{
-                        maxHeight: "17rem",
-                        borderRadius: "20px",
+                        height: "17rem",
                         display: "flex",
+                        borderRadius: "15px",
                         zIndex: 2
                     }}
                     alt={props.user?.name}
@@ -124,18 +138,14 @@ export function Coach(props: CoachProps) {
                 />
                 <div
                     style={{
-                        borderRadius: 20,
-                        backgroundColor: "#849994",
                         position: "relative",
                         width: "100%",
-                        height: "7rem",
-                        bottom : "1rem",
+                        marginTop : "1rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
                         zIndex: 1,
-                        color: "white"
                     }}>
                         <Typography align="center" style={{position: "relative", top:"5px"}}>
                                 {props.user?.practice1}

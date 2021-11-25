@@ -35,7 +35,7 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
 
     const calculateSpringProps = () => {
         const ratio = window.pageYOffset / window.innerHeight
-        const height = (1 - ratio) * 300 + heightHeader
+        const height = (1 - ratio) * 150 + heightHeader
         const defaultY = (window.innerHeight - height) / 2
         if (ratio < 0.8 && !menu.current) {
             return { top: (1 - ratio) * defaultY, height }
