@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid, useTheme, Typography } from "@material-ui/core"
+import { Grid, useTheme, Typography, useMediaQuery } from "@material-ui/core"
 import { Divider } from "../Divider"
 import { colors } from "modules/theme"
 
@@ -18,7 +18,7 @@ export interface CoachProps {
 const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     const box: HTMLDivElement = event.currentTarget;
     box.style.backgroundColor = "#BFC7C4"
-    box.style.transitionDuration = "500ms"
+    box.style.transitionDuration = "800ms"
 }
 
   // This function will be triggered when the mouse pointer is moving out the box
@@ -29,69 +29,69 @@ const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement>) => {
 
 export function Coach(props: CoachProps) {
     const theme = useTheme()
-    const pair = props.pair
-
-    if (pair) {
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+    if (isMobile) {
         return (
-            <> 
+            <>
+            <div
+                onMouseOver={boxMouseOverHandler}
+                onMouseLeave={boxMouseOutHandler}
+
+                style={{
+                    width: "19rem",
+                    height: "28rem",
+                    borderRadius: "35px",
+                    margin: "0.5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    backgroundColor: "#BFC7C4"
+                }}>
+
                 <div
-                    onMouseOver={boxMouseOverHandler}
-                    onMouseLeave={boxMouseOutHandler}
-
                     style={{
-                            width: "19rem",
-                            height: "28rem",
-                            borderRadius: "35px",
-                            display: "flex",
-                            margin:"0.5rem",
-                            flexDirection: "column",
-                            alignItems: "center",
-                        }}>
-
-                    <div
-                        style={{
-                            width: "100%",
-                            height: "5rem",
-                            display: "flex",
-                            alignItems: "center",
-                            padding: "0rem 1rem",
-                            justifyContent: "center",
-                            zIndex: 1
-                        }}>
-                            <Typography variant="h3" align="center">
-                                {props.user?.name}
-                            </Typography>
-                    </div>
-                    <img                        
-                        style={{
-                            height: "17rem",
-                            display: "flex",
-                            borderRadius: "15px",
-                            zIndex: 2,
-                            borderRightColor : "#849994",
-                        }}
-                        alt={props.user?.name}
-                        src={props.user?.photo}
-                    />
-                    <div
-                        style={{
-                            position: "relative",
-                            width: "100%",
-                            marginTop : "1rem",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            zIndex: 1,
-                        }}>
-                            <Typography align="center" style={{position: "relative", top:"3px"}}>
-                                {props.user?.practice1}
-                            </Typography>
-                            <Typography align="center" style={{position: "relative", top:"5px"}}>
-                                {props.user?.practice2}
-                            </Typography>
-                    </div>
+                        borderRadius: 20,
+                        width: "100%",
+                        height: "5rem",
+                        display: "flex",
+                        alignItems: "center",
+                        padding: "0rem 1rem",
+                        justifyContent: "center",
+                        zIndex: 1,
+                    }}>
+                        <Typography variant="h3" align="center">
+                            {props.user?.name}
+                        </Typography>
                 </div>
+                <img
+                    style={{
+                        height: "17rem",
+                        display: "flex",
+                        borderRadius: "15px",
+                        zIndex: 2
+                    }}
+                    alt={props.user?.name}
+                    src={props.user?.photo}
+                />
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",
+                        marginTop : "1rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1,
+                    }}>
+                        <Typography align="center" style={{position: "relative", top:"5px"}}>
+                                {props.user?.practice1}
+                        </Typography>
+                        <Typography align="center" style={{position: "relative", top:"5px"}}>
+                            {props.user?.practice2}
+                        </Typography>
+                </div>
+            </div>
             </>
         )
     }

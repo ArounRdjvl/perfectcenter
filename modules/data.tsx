@@ -43,10 +43,11 @@ export const dataProducts = [
         title: "Accélérateur de bien-être",
         desc: (
             <>
-                Utilisant la technologie de la stimulation sensorielle, les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que le stress, la fatigue, le dysfonctionnement corporel, la dépression, la gestion des émotions..
+                Les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que le stress, la fatigue, le dysfonctionnement corporel, la dépression, la gestion des émotions..
                 <br />C’est une solution innovante, simple et efficace à toute personne désireuse d’améliorer sa qualité de vie et retrouver son bien-être. 
             </>
         ),
+        link: "/perfectcare/psio",
         moreAboutLink: "https://www.psio.com/fr/catalogue/psio-2.html"
     },
     {
@@ -56,14 +57,13 @@ export const dataProducts = [
             <>
                 Mint-e propose une gamme de produits appréciée pour son
                 efficacité. Elle est conseillée par de nombreux médecins, thérapeutes
-                et centre hospitaliers comme le Centre Léon Bérard à Lyon
-                (Centre Régional de Lutte contre le Cancer) mais aussi par des
-                sportifs de haut niveau.
+                et centre hospitaliers.
                 <br /> Mint-e associe la phytothérapie, les Fleurs de Bach et
                 des dilutions homéo-compatibles pour une action globale sur la
-                santé et le bien-être"
+                santé et le bien-être.
             </>
         ),
+        link: "/perfectcare/mint-e",
         moreAboutLink: "https://mint-elabs.fr/products/z-trauma"
     },
     {
@@ -71,15 +71,50 @@ export const dataProducts = [
         title: "Water and more",
         desc: (
             <>
+                L'eau Kaqun n'est pas n'importe quelle eau. Elle contient 20 fois plus d'oxygen qu'une eau classique.
                 L'oxygène est indéniablement l'un des éléments les plus importants pour chaque 
-                cellule de notre corps. Sans elle, nos cellules ne peuvent pas produire beaucoup 
-                d'énergie et leur métabolisme devient moins efficace. En biologie cellulaire, 
-                le lauréat du prix Nobel de médecine et de biologie, Otto Heinrich Warburg, a découvert 
+                cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert 
                 qu'aucune maladie ne peut survivre en présence de niveaux élevés d'oxygène.
             </>
         ),
+        link: "/perfectcare/kaqun",
         moreAboutLink: "https://mint-elabs.fr/products/z-trauma"
     }
+]
+export const dataPsio = [
+    {
+        name: "Psio classic",
+        title: "Psio classic",
+        desc: (
+            <>
+                Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir avoir du texte
+            </>
+        ),
+        link: "/perfectcare/kaqun",
+        moreAboutLink: "https://www.psio.com/fr/catalogue/psio-2.html"
+    },
+    {
+        name: "Psio Custom",
+        title: "Psio Custom",
+        desc: (
+            <>
+                Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir avoir du texte
+            </>
+        ),
+        link: "/perfectcare/kaqun",
+        moreAboutLink: "https://www.psio.com/fr/catalogue/psio-2.html"
+    },
+    {
+        name: "Psio Prenium",
+        title: "Psio Prenium",
+        desc: (
+            <>
+                Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir avoir du texte
+            </>
+        ),
+        link: "/perfectcare/kaqun",
+        moreAboutLink: "https://www.psio.com/fr/catalogue/psio-2.html"
+    },
 ]
 
 export const dataCoachs = [
