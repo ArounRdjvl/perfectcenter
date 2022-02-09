@@ -93,8 +93,8 @@ export default function index() {
                 <DecouvertePraticiens />
             <Container id="container">
                 <Newsletter />
-                <Footer />
             </Container>
+            <Footer margin="3rem 0 0 0" />
         </div>
     )
 }

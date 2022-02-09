@@ -19,8 +19,7 @@ export default function perfectcorporate() {
     }
 
     return (
-        <div ref={ref} style={{ height: "100vh" }}>
-            {/* <Background elRef={ref} /> */}
+        <div ref={ref}>
             <Head>
                 <title>PerfectCorporate</title>
             </Head>
@@ -30,7 +29,6 @@ export default function perfectcorporate() {
                     display: "flex",
                     flexGrow: 1,
                     flexDirection: "column",
-                    justifyContent: "space-between",
                     height: "100%"
                 }}
             >
@@ -43,7 +41,7 @@ export default function perfectcorporate() {
                     >
                         <Lottie
                             options={bodymovinOptions}
-                            style={{ margin: "auto" }}
+                            style={{ margin: "1rem" }}
                         />
                     </div>
                 </div>
@@ -52,8 +50,8 @@ export default function perfectcorporate() {
                     title="Page en cours de construction"
                     color="vert"
                 />
-                <Footer />
             </Container>
+            <Footer />
         </div>
     )
 }
