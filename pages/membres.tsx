@@ -25,8 +25,8 @@ export default function membres() {
                     const pair = i % 2 == 0
                     return <Membre pair={pair} user={member} />
                 })}
-                <Footer />
             </Container>
+            <Footer />
         </div>
     )
 }

@@ -79,8 +79,8 @@ export default function index() {
             <DecouvertePraticiens />
             <Container>
                 <Newsletter />
-                <Footer />
             </Container>
+            <Footer margin="3rem 0 0 0" />
         </div>
     )
 }

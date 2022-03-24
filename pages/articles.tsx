@@ -33,8 +33,8 @@ export default function articles() {
                         return <Article pair={pair} user={article} />
                     })}
                 </div>
-                <Footer />
             </Container>
+            <Footer />
         </div>
     )
 }
