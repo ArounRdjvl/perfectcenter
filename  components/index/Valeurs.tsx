@@ -75,23 +75,6 @@ export function Valeurs() {
                                 clipPath : "ellipse(75% 125% at 0% -20%)",
                                 backgroundColor: "#EBEAE8",
                             }}>
-                            {/* <div  
-                                style={{
-                                    position: "absolute",
-                                    width: "17vw",
-                                    height: "17vw",
-                                    maxHeight : "15rem",
-                                    maxWidth : "15rem",
-                                    left:"10vw",
-                                    bottom:"12vh",
-                                    backgroundImage: "url(/picto/Feuille_grande_Beige.png)",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    transform: "rotate(50deg)",
-                                    backgroundSize: "80%"
-                                }}
-                            >
-                            </div> */}
                             <TitleBar title="Nos valeurs" background={true} color="vert" paddingMobile="2rem 0 0 5vw" />
                         </div>
                 </div>
@@ -225,14 +208,6 @@ export function Valeurs() {
     }
     return (
         <>
-            {/* <div style={{
-                    position: "relative",
-                    width: "100%",
-                    height:"100%",
-                    paddingLeft: "6rem"
-                }}>
-                <TitleBar title="Bienvenue chez PerfectCenter" background={true} color="vert" />
-            </div> */}
             <div
                 style={{
                     position: "relative",
@@ -278,23 +253,6 @@ export function Valeurs() {
                                 backgroundColor: "#EBEAE8",
                             }}>
                             <WelcomeMsg />
-                            {/* <div  
-                                style={{
-                                    position: "absolute",
-                                    width: "17vw",
-                                    height: "17vw",
-                                    maxHeight : "15rem",
-                                    maxWidth : "15rem",
-                                    left:"10vw",
-                                    bottom:"7vh",
-                                    backgroundImage: "url(/picto/Feuille_grande_Beige.png)",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    transform: "rotate(50deg)",
-                                    backgroundSize: "80%"
-                                }}
-                            >
-                            </div> */}
                         </div>
                 </div>
                 <div
