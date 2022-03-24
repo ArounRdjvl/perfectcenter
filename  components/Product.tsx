@@ -2,7 +2,6 @@ import React from "react"
 import {
     Button,
     Grid,
-    Link,
     makeStyles,
     Typography,
     useMediaQuery,
@@ -12,6 +11,7 @@ import { Divider } from "./Divider"
 import { colors } from "../modules/theme"
 import { TitleBar } from "./TitleBar"
 import { getRedirectStatus } from "next/dist/lib/load-custom-routes"
+import Link from "next/link"
 
 export interface ProductProps {
     name: string
@@ -92,7 +92,8 @@ export function Product(props: DisplayProps) {
                 <div 
                     className={classes.rootPhone}
                     style = {{
-                        boxShadow : "0px 0px 25px #BBBBBB"
+                        boxShadow : "0px 0px 25px #BBBBBB",
+                        cursor: "pointer"
                     }}>
                     
                     <div className="fond" style ={{
@@ -174,7 +175,8 @@ export function Product(props: DisplayProps) {
                     onMouseLeave={boxMouseOutHandler}
                     className={classes.root}
                     style = {{
-                        boxShadow : "0px 0px 25px #BBBBBB"
+                        boxShadow : "0px 0px 25px #BBBBBB",
+                        cursor: "pointer"
                     }}>
                     
                     <div className="fond" style ={{

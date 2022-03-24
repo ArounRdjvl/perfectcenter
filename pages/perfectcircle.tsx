@@ -118,7 +118,7 @@ export default function perfectcircle() {
                 >
                     {dataCoachs.map((coach, i) => {
                         const pair = i % 2 == 0
-                        return <Coach pair={pair} user={coach} />
+                        return <Coach user={coach} />
                     })}
                 </div>
             <Footer />

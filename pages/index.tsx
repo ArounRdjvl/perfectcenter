@@ -89,9 +89,6 @@ export default function index() {
             <Valeurs />
             <Container id="container">
                 <Services />
-            </Container>
-                <DecouvertePraticiens />
-            <Container id="container">
                 <Newsletter />
             </Container>
             <Footer margin="3rem 0 0 0" />

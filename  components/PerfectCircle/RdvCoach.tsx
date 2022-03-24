@@ -108,7 +108,7 @@ export function RdvCoach(props: RdvCoachProps){
                         container
                         >
                         <Grid
-                            xs={6}
+                            xs={8}
                             style={{
                                 position: "relative",
                                 zIndex: 3,
@@ -123,17 +123,15 @@ export function RdvCoach(props: RdvCoachProps){
                                 display: "flex",
                                 flexDirection: "column",
                             }}>
-                                <Prestation titre="Prestation 1" prix="50€"/>
-                                <Prestation titre="Prestation 2" prix="50€"/>
-                                <Prestation titre="Prestation 3" prix="50€"/>
-                                <Prestation titre="Prestation 4" prix="50€"/>
-                                <Prestation titre="Prestation 5" prix="50€"/>
-                                <Prestation titre="Prestation 6" prix="50€"/>
-                                
+                                <Prestation titre="Ecoute active" duree="1h30" prix="75€"/>
+                                <Prestation titre="Consultation classique (temps d’échange verbal + pratique thérapeutique)" duree="1h30" prix="75€"/>
+                                <Prestation titre="Massage nourrissant (massage + bulle de sérénité)" duree="1h" prix="50€"/>
+                                <Prestation titre="Sortir des relations pourries. Une renaissance en 9 séances." duree="9x1h30" prix="999€"/>
+                                <Prestation titre=" Cercle de paroles au masculin pour se soutenir dans les rechutes et les réussites" duree="2h" prix="20€"/>
                             </div>
                         </Grid>
                         <Grid
-                            xs={6}
+                            xs={4}
                             style={{
                                 position: "relative",
                                 zIndex: 3,

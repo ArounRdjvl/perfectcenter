@@ -25,10 +25,10 @@ const useStyles = makeStyles((theme) => {
 
 export interface AccueilCoachProps {
     titre: string
+    photo: string
     pratique: string
     description: string
 }
-
 
 export function AccueilCoach(props: AccueilCoachProps){
     const theme = useTheme()
@@ -63,7 +63,7 @@ export function AccueilCoach(props: AccueilCoachProps){
                             height: "15rem",
                             width: "15rem",
                             backgroundRepeat: "no-repeat",
-                            backgroundImage: `url(/membres/Laurent_BROSSEAU.png)`,  
+                            backgroundImage: `url(${props.photo})`,  
                             backgroundPosition: "center",
                             backgroundSize: "100%",
                             borderRadius: "40px",
@@ -99,7 +99,7 @@ export function AccueilCoach(props: AccueilCoachProps){
                         }}
                     >
                         <Typography variant="h3" align="center">
-                            Préparateur physique et Mental 
+                            {props.pratique}
                         </Typography>
                     </div>
                     <div
@@ -143,7 +143,7 @@ export function AccueilCoach(props: AccueilCoachProps){
                                 alignItems: "flex-end",
                                 paddingRight: "0.8rem",
                                 backgroundRepeat: "no-repeat",
-                                backgroundImage: `url(/membres/Laurent_BROSSEAU.png)`,  
+                                backgroundImage: `url(${props.photo})`,  
                                 backgroundPosition: "center",
                                 backgroundSize: "100%",
                                 position: "absolute",
@@ -193,7 +193,7 @@ export function AccueilCoach(props: AccueilCoachProps){
                                     zIndex: 2,
                                 }}
                             >
-                                <Typography variant="body1" align="justify" style={{marginTop:"2rem"}}>
+                                <Typography variant="body1" align="justify" style={{marginTop:"2rem", whiteSpace: 'pre-line'}}>
                                     {props.description}
                                 </Typography>
                             </div>

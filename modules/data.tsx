@@ -1,3 +1,5 @@
+import { PraticienType } from "./types"
+
 export const dataMembres = [
     {
         name: "Erik HENRION",
@@ -117,56 +119,56 @@ export const dataPsio = [
     },
 ]
 
-export const dataCoachs = [
+export const dataCoachs : PraticienType[] = [
     {
-        name: "Laurent BROSSEAU",
-        photo: "coach/Laurent_BROSSEAU.png",
-        practice1: "Préparateur Physique et Mental"
-    },
-    {
-        name: "Paola PEREZ",
-        photo: "coach/Paola_PEREZ.png",
-        practice1: "Coach et Consultante en Harmonie Relationnelle"
-    },
-    {
-        name: "Laetitia LEMEUNIER",
-        photo: "coach/Laetitia_LEMEUNIER.png",
-        practice1: "Sophrologue - Hypnothérapeute - Massage bien-être"
-    },
-    {
-        name: "Christelle SIVRÉ",
-        photo: "coach/Christelle_SIVRE.png",
-        practice1: "Instructrice Wim Hof - Coach de vie"
-    },
-    {
-        name: "Richard ESPINASSE",
-        photo: "coach/Richard_ESPINASSE.png",
-        practice1: "Coach en prise de parole en public"
+        name: "Véronique ROUBERTIE",
+        photo: "/coach/veronique_ROUBERTIE.png",
+        practice1: "Sens-thérapeute - Accompagnement des dépendants affectifs",
+        description: `« Si tu restes dans ta tête tu prends perpette » Tony ROBBINS.
+        C’est ce que nous faisons tous, quand on est dépendant affectif c’est encore plus dur car toute rencontre est un enjeu existentiel celui d’être aimé. On entre en relation pour de mauvaises raisons.
+        Je t’accompagne sur le chemin de l’autonomie affective. Car j’ai su le mal de vivre de la dépendance affective, toute notre énergie y passe, la douleur est paralysante, la vie un enfer.
+        Aujourd’hui, J’aime la phrase du Dr LEJOYEUX « il n’est pas de meilleur maitre en liberté qu’un dépendant guéri » qui me caractérise le mieux.
+        Grace à des pratiques ludiques, psychocorporelles, tu vas habiter ton corps, comprendre tes besoins, poser tes limites et surtout tu seras en mesure de te nourrir affectivement.
+        Cette démarche qui a déjà fait ses preuves va te permettre de quitter le monde de l’addiction relationnelle, les hauts et bas de l’alternance fusion-démission, je t’aime - je ne t’aime pas…`
     },
     {
         name: "Nadia CHABANE",
-        photo: "coach/Nadia_CHABANE.png",
-        practice1: "Coach thérapeutique"
+        photo: "/coach/Nadia_CHABANE.png",
+        practice1: "Coach thérapeutique",
+        description: `"Dis-moi Où Tu As Mal, Je Te Dirai Qui Tu Es."
+        J'ai libéré ma vocation d'aide aux autres, en suivant une formation de sophrologue.
+        Puis, souhaitant aussi appréhender le corps physique, j'ai décidé de me former aux modelages du monde pour soulager les tensions, les douleurs. Après plusieurs formations en techniques énergétiques, j'ai compris que pour apporter de l'aide à mes patients, il fallait apporter des soins holistiques en alliant le physique, le mental et la sphère émotionnelle.
+        Oscillant entre le France et le Maroc, je vous propose des soins sur mesure, utilisant l'écoute active, le dialogue bienveillant, le changement de visions, les soins énergétiques, les modelages du monde...
+        En apaisant le mental et en régulant l'émotionnel, le corps lâche prise et la voix de la libération surgit.
+        Mon objectif est de faire comprendre à chacun, que les solutions remèdes se trouvent en soi, et qu'il faut trouver les clés pour ouvrir la porte du bien-être et du bonheur.
+        Ensemble, nous décoderons les souffrances, pour les déprogrammer et retrouver votre être originel. En travaillant sur l'alignement et le rééquilibrage énergétique.
+        Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`
     },
     {
         name: "Ashuma ASH",
-        photo: "coach/Ashuma_ASH.png",
-        practice1: "Sophrologue - Relaxologue"
-    },
-    {
-        name: "Bruno LESCURE",
-        photo: "coach/Bruno_LESCURE.png",
-        practice1: "Coach en stratégie d'entreprise - Coach mentor"
+        photo: "/coach/Ashuma_ASH.png",
+        practice1: "Sophrologue - Relaxologue",
+        description: `"Dis-moi Où Tu As Mal, Je Te Dirai Qui Tu Es."
+        J'ai libéré ma vocation d'aide aux autres, en suivant une formation de sophrologue.
+        Puis, souhaitant aussi appréhender le corps physique, j'ai décidé de me former aux modelages du monde pour soulager les tensions, les douleurs. Après plusieurs formations en techniques énergétiques, j'ai compris que pour apporter de l'aide à mes patients, il fallait apporter des soins holistiques en alliant le physique, le mental et la sphère émotionnelle.
+        Oscillant entre le France et le Maroc, je vous propose des soins sur mesure, utilisant l'écoute active, le dialogue bienveillant, le changement de visions, les soins énergétiques, les modelages du monde...
+        En apaisant le mental et en régulant l'émotionnel, le corps lâche prise et la voix de la libération surgit.
+        Mon objectif est de faire comprendre à chacun, que les solutions remèdes se trouvent en soi, et qu'il faut trouver les clés pour ouvrir la porte du bien-être et du bonheur.
+        Ensemble, nous décoderons les souffrances, pour les déprogrammer et retrouver votre être originel. En travaillant sur l'alignement et le rééquilibrage énergétique.
+        Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`
     },
     {
         name: "Malika ARNAUD",
-        photo: "coach/Malika_ARNAUD.png",
-        practice1: "Coach en accompagnement à la réussite - Thérapeute Bien-être"
-    },
-    {
-        name: "Nicolas LAVROFF",
-        photo: "coach/Nicolas_LAVROFF.png",
-        practice1: "Coach certifié - Formateur - Thérapeute - Méditation de Pleine Conscience",
+        photo: "/coach/Malika_ARNAUD.png",
+        practice1: "Coach en accompagnement à la réussite - Thérapeute Bien-être",
+        description: `"Dis-moi Où Tu As Mal, Je Te Dirai Qui Tu Es."
+        J'ai libéré ma vocation d'aide aux autres, en suivant une formation de sophrologue.
+        Puis, souhaitant aussi appréhender le corps physique, j'ai décidé de me former aux modelages du monde pour soulager les tensions, les douleurs. Après plusieurs formations en techniques énergétiques, j'ai compris que pour apporter de l'aide à mes patients, il fallait apporter des soins holistiques en alliant le physique, le mental et la sphère émotionnelle.
+        Oscillant entre le France et le Maroc, je vous propose des soins sur mesure, utilisant l'écoute active, le dialogue bienveillant, le changement de visions, les soins énergétiques, les modelages du monde...
+        En apaisant le mental et en régulant l'émotionnel, le corps lâche prise et la voix de la libération surgit.
+        Mon objectif est de faire comprendre à chacun, que les solutions remèdes se trouvent en soi, et qu'il faut trouver les clés pour ouvrir la porte du bien-être et du bonheur.
+        Ensemble, nous décoderons les souffrances, pour les déprogrammer et retrouver votre être originel. En travaillant sur l'alignement et le rééquilibrage énergétique.
+        Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`
     }
 ]
 

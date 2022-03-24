@@ -58,7 +58,7 @@ export default function contact() {
             <Head>
                 <title>Nous contacter</title>
             </Head>
-            <Container ref={ref}>
+            <Container ref={ref} style={{marginBottom: "3rem"}}>
                 <Navigation />
                 <Grid container>
                     <Grid
@@ -284,13 +284,13 @@ export default function contact() {
         <Head>
             <title>Nous contacter</title>
         </Head>
-        <Container ref={ref}>
+        <Container ref={ref} style={{marginBottom: "2rem"}}>
             <Navigation />
             <Grid container style={{ marginTop: "2rem" }}>
                 <Grid
                     item
                     xs={12}
-                    md={7}
+                    md={6}
                     style={{
                         zIndex: 2,
                         margin: "3rem 0 3rem 0",
@@ -375,7 +375,7 @@ export default function contact() {
                 <Grid
                     item
                     xs={12}
-                    md={5}
+                    md={6}
                     style={{
                         display: "flex",
                         alignItems: "center",
