@@ -75,10 +75,14 @@ export function AnimatedImage(props: AnimatedImageProps) {
                     top: y,
                     opacity: springProps.opacity,
                     width: props.width,
-                    transform: `rotate(${rotation}deg) ${mirror}`
+                    height: props.width,
+                    transform: `rotate(${rotation}deg) ${mirror}`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundImage: `url(${props.url})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "80%",
                 }}
-                >
-                <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
+            >
             </animated.div>
         );
     }

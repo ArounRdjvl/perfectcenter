@@ -44,12 +44,16 @@ export default function contact() {
                 ? console.log("email sent")
                 : console.error("error email")
         })
+        setName(""),
+        setEmail(""),
+        setSubject(""),
+        setContent("")
     }
 
     if (isMobile) {
         return (
             <Container ref={ref}>
-                <Background elRef={ref} />
+                {/* <Background elRef={ref} /> */}
                 <Navigation />
                 <Grid container style={{ marginTop: "2rem" }}>
                     <Grid
@@ -326,7 +330,7 @@ export default function contact() {
     }
     return (
         <Container ref={ref}>
-            <Background elRef={ref} />
+            {/* <Background elRef={ref} /> */}
             <Navigation />
             <Grid container style={{ marginTop: "2rem" }}>
                 <Grid
@@ -393,11 +397,12 @@ export default function contact() {
                             flexDirection: "column"
                         }}
                     >
-                        <Button
+                        <Button 
                             variant="contained"
                             color="secondary"
+                            size="large"
                             onClick={submitForm}
-                            style={{ alignSelf: "center", margin: "2rem" }}
+                            style={{ alignSelf: "center", margin: "2rem", width: "20%", fontSize:"20px"}}
                         >
                             Envoyer
                         </Button>

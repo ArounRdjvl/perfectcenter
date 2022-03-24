@@ -1,6 +1,6 @@
 {
     "name": "perfectcenter",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -23,14 +23,17 @@
         "prompt-sync": "^4.2.0",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-elastic-carousel": "^0.11.5",
         "react-lottie": "^1.2.3",
         "react-scroll": "^1.8.4",
-        "react-spring": "^9.2.1"
+        "react-spring": "^9.2.1",
+        "styled-components": "^5.3.3"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^8.5.5",
         "@types/node": "^14.14.35",
         "@types/react": "^17.0.3",
+        "@types/react-dom": "^17.0.10",
         "@types/react-lottie": "^1.2.5",
         "@types/react-scroll": "^1.8.3",
         "@zeit/next-less": "^1.0.1",

@@ -3,8 +3,7 @@ import React from "react"
 import { Divider } from "../Divider"
 import { colors } from "../../modules/theme"
 import { heightHeader } from " components/Navigation"
-import { WelcomeMsg } from "./WelcomeMsg"
-import { WelcomeMsg2 } from "../PerfectCircle/WelcomeMsg2"
+import { WelcomeMsg2 } from "./WelcomeMsg2"
 import { Title } from "@material-ui/icons"
 import { TitleBar } from " components/TitleBar"
 
@@ -15,20 +14,20 @@ const useStyles = makeStyles((theme) => {
             left: 0,
             height: "8vw",
             width: "8vw",
-            maxHeight:"6rem",
-            maxWidth:"6rem"
+            maxHeight: "8rem",
+            maxWidth:"8rem",
         }
     }
 })
 
-export function Valeurs() {
+export function WelcomePerfectCircle() {
     const theme = useTheme()
     const classes = useStyles(theme)
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
     if (isMobile) {
         return (
         <>
-            <WelcomeMsg />
+            <WelcomeMsg2 />
             <div
                 style={{
                     position: "relative",
@@ -46,7 +45,7 @@ export function Valeurs() {
                         height: "100%",
                         width: "45rem",
                         maxWidth: "45rem", 
-                        backgroundImage: "url(/photos/Salle_consultation2.png)",
+                        backgroundImage: "url(/photos/Salle_consultation.png)",
                         backgroundPosition: "bottom right",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "-160vw"
@@ -75,6 +74,23 @@ export function Valeurs() {
                                 clipPath : "ellipse(75% 125% at 0% -20%)",
                                 backgroundColor: "#EBEAE8",
                             }}>
+                            {/* <div  
+                                style={{
+                                    position: "absolute",
+                                    width: "17vw",
+                                    height: "17vw",
+                                    maxHeight : "15rem",
+                                    maxWidth : "15rem",
+                                    left:"10vw",
+                                    bottom:"12vh",
+                                    backgroundImage: "url(/picto/Feuille_grande_Beige.png)",
+                                    backgroundPosition: "center",
+                                    backgroundRepeat: "no-repeat",
+                                    transform: "rotate(50deg)",
+                                    backgroundSize: "80%"
+                                }}
+                            >
+                            </div> */}
                             <TitleBar title="Nos valeurs" background={true} color="vert" paddingMobile="2rem 0 0 5vw" />
                         </div>
                 </div>
@@ -100,13 +116,13 @@ export function Valeurs() {
                             height: "5rem",
                             width: "5rem",
                             backgroundImage: "url(/picto/Bras_mains.png)",
-                            backgroundSize: "100%",
+                            backgroundSize: "80%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
                     <Typography variant="body1" color="textSecondary" align="center" style={{marginBottom:"5px", fontWeight: "bold"}}>
-                        Synergie
+                        Partage nos valeurs
                     </Typography>
                 </div>
                 <div
@@ -130,14 +146,14 @@ export function Valeurs() {
                         style={{
                             height: "5rem",
                             width: "5rem",
-                            backgroundImage: "url(/picto/Coeur_sur_main.png)",
-                            backgroundSize: "100%",
+                            backgroundImage: "url(/picto/Engagement.png)",
+                            backgroundSize: "70%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
                     <Typography variant="body1" align="center" style={{marginTop:"-0.5rem", marginBottom:"0.7rem", fontWeight: "bold"}}>
-                        Bienveillance
+                        Engagés
                     </Typography>
                 </div>
                 <div
@@ -161,45 +177,14 @@ export function Valeurs() {
                         style={{
                             height: "5rem",
                             width: "5rem",
-                            backgroundImage: "url(/picto/Coeur_deuxmains.png)",
-                            backgroundSize: "100%",
+                            backgroundImage: "url(/picto/Teste.png)",
+                            backgroundSize: "80%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
-                    <Typography variant="body1" align="center" color="textSecondary" style={{marginBottom:"0.7rem", fontWeight: "bold"}}>
-                        Générosité
-                    </Typography>
-                </div>
-                <div
-                    style={{
-                        zIndex:2,
-                        position: "absolute",
-                        right:"54vw",
-                        top:"23rem",
-                        width: "8rem",
-                        height:"8rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        borderRadius: "50%",
-                        alignContent:"center",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        background: colors.beige
-                    }}
-                >
-                    <div className={classes.img}
-                        style={{
-                            height: "5rem",
-                            width: "5rem",
-                            backgroundImage: "url(/picto/Coeur_main.png)",
-                            backgroundSize: "100%",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat"
-                        }}>
-                    </div>
-                    <Typography variant="body1" align="center" style={{fontWeight: "bold"}}>
-                        Partage
+                    <Typography variant="body1" color="textSecondary" align="center" style={{marginBottom:"0.7rem", fontWeight: "bold"}}>
+                        Téstés et validés
                     </Typography>
                 </div>
             </div>
@@ -208,12 +193,19 @@ export function Valeurs() {
     }
     return (
         <>
+            <div style={{
+                    position: "relative",
+                    width: "100%",
+                    height:"100%",
+                    paddingLeft: "6rem"
+                }}> 
+            </div>
             <div
                 style={{
                     position: "relative",
                     width: "100%",
                     height:"87vh",
-                    margin:"2rem 0 4rem 0"
+                    margin:"2rem 0 2rem 0"
                 }}
             >
                 <div 
@@ -222,9 +214,9 @@ export function Valeurs() {
                         zIndex:0,
                         bottom: 0,
                         right:0,
-                        height: "100%",
-                        width: "80%",
-                        backgroundImage: "url(/photos/Salle_consultation2.png)",
+                        height: "87vh",
+                        width: "100rem",
+                        backgroundImage: "url(/photos/Salle_consultation.png)",
                         backgroundPosition: "bottom right",
                         backgroundSize: "80%"
                     }}>
@@ -252,19 +244,36 @@ export function Valeurs() {
                                 clipPath : "ellipse(75% 125% at 0% -20%)",
                                 backgroundColor: "#EBEAE8",
                             }}>
-                            <WelcomeMsg />
+                            <WelcomeMsg2 />
+                            {/* <div  
+                                style={{
+                                    position: "absolute",
+                                    width: "17vw",
+                                    height: "17vw",
+                                    maxHeight : "15rem",
+                                    maxWidth : "15rem",
+                                    left:"10vw",
+                                    bottom:"7vh",
+                                    backgroundImage: "url(/picto/Feuille_grande_Beige.png)",
+                                    backgroundPosition: "center",
+                                    backgroundRepeat: "no-repeat",
+                                    transform: "rotate(50deg)",
+                                    backgroundSize: "80%"
+                                }}
+                            >
+                            </div> */}
                         </div>
                 </div>
                 <div
                     style={{
                         zIndex:2,
                         position: "absolute",
-                        right:"23vw",
-                        top:"0.5vh",
+                        right:"23.2vw",
+                        top:"7vh",
                         width: "15vw",
                         height:"15vw",
-                        maxWidth: "10rem",
-                        maxHeight:"10rem",
+                        maxWidth: "13rem",
+                        maxHeight:"13rem",
                         display: "flex",
                         flexDirection: "column",
                         borderRadius: "50%",
@@ -276,26 +285,26 @@ export function Valeurs() {
                 >
                     <div className={classes.img}
                         style={{
-                            backgroundImage: "url(/picto/Bras_mains.png)",
-                            backgroundSize: "100%",
+                            backgroundImage: "url(/picto/Valeurs.png)",
+                            backgroundSize: "80%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
-                    <Typography variant="h4" align="center" color="textSecondary" style={{marginTop:"8px", fontWeight: "bold"}}>
-                        Synergie
+                    <Typography variant="h4" color="textSecondary" align="center" style={{width: "90%", fontWeight: "bold"}}>
+                        Partage nos valeurs
                     </Typography>
                 </div>
                 <div
                     style={{
                         zIndex:2,
                         position: "absolute",
-                        right:"31vw",
-                        top:"28vh",
+                        right:"33.5vw",
+                        top:"36vh",
                         width: "15vw",
                         height:"15vw",
-                        maxWidth: "10rem",
-                        maxHeight:"10rem",
+                        maxWidth: "13rem",
+                        maxHeight:"13rem",
                         display: "flex",
                         flexDirection: "column",
                         borderRadius: "50%",
@@ -307,26 +316,26 @@ export function Valeurs() {
                 >
                     <div className={classes.img}
                         style={{
-                            backgroundImage: "url(/picto/Coeur_sur_main.png)",
-                            backgroundSize: "100%",
+                            backgroundImage: "url(/picto/Engagement.png)",
+                            backgroundSize: "70%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
-                    <Typography variant="h4" align="center" style={{marginBottom:"1rem", fontWeight: "bold"}}>
-                        Bienveillance
+                    <Typography variant="h4" align="center" style={{width: "70%", marginBottom:"1rem", fontWeight: "bold"}}>
+                        Engagés
                     </Typography>
                 </div>
                 <div
                     style={{
                         zIndex:2,
                         position: "absolute",
-                        right:"43vw",
-                        top:"51vh",
+                        right:"48vw",
+                        top:"58.9vh",
                         width: "15vw",
                         height:"15vw",
-                        maxWidth: "10rem",
-                        maxHeight:"10rem",
+                        maxWidth: "13rem",
+                        maxHeight:"13rem",
                         display: "flex",
                         flexDirection: "column",
                         borderRadius: "50%",
@@ -338,45 +347,15 @@ export function Valeurs() {
                 >
                     <div className={classes.img}
                         style={{
-                            backgroundImage: "url(/picto/Coeur_deuxmains.png)",
-                            backgroundSize: "100%",
+                            marginRight: "3px",
+                            backgroundImage: "url(/picto/Teste.png)",
+                            backgroundSize: "80%",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
                         }}>
                     </div>
-                    <Typography variant="h4" align="center" color="textSecondary" style={{marginTop:"8px", fontWeight: "bold"}}>
-                        Générosité
-                    </Typography>
-                </div>
-                <div
-                    style={{
-                        zIndex:2,
-                        position: "absolute",
-                        right:"60vw",
-                        top:"68vh",
-                        width: "15vw",
-                        height:"15vw",
-                        maxWidth: "10rem",
-                        maxHeight:"10rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        borderRadius: "50%",
-                        alignContent:"center",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        background: colors.beige
-                    }}
-                >
-                    <div className={classes.img}
-                        style={{
-                            backgroundImage: "url(/picto/Coeur_main.png)",
-                            backgroundSize: "100%",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat"
-                        }}>
-                    </div>
-                    <Typography variant="h4" align="center" style={{marginTop:"8px", fontWeight: "bold"}}>
-                        Partage
+                    <Typography variant="h4" color="textSecondary" align="center" style={{width: "70%", fontWeight: "bold"}}>
+                        Testés et validés
                     </Typography>
                 </div>
             </div>

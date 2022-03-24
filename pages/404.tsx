@@ -16,7 +16,7 @@ export default function Home() {
 
     return (
         <Container ref={ref} style={{ display: "flex", height: "100vh" }}>
-            <Background elRef={ref} />
+            {/* <Background elRef={ref} /> */}
 
             <div
                 style={{

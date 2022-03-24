@@ -13,7 +13,7 @@ export default function membres() {
 
     return (
         <div ref={ref}>
-            <Background elRef={ref} />
+            {/* <Background elRef={ref} /> */}
 
             <Head>
                 <title>Notre Equipe</title>
