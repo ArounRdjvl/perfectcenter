@@ -37,7 +37,7 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
         const ratio = window.pageYOffset / window.innerHeight
         const height = (1 - ratio) * 150 + heightHeader
         const defaultY = (window.innerHeight - height) / 2
-        if (ratio < 0.8 && !menu.current) {
+        if (ratio < 0.1 && !menu.current) {
             return { top: (1 - ratio) * defaultY, height }
         }
         return { top: 0, height: heightHeader }
