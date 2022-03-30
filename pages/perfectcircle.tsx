@@ -95,8 +95,6 @@ export default function perfectcircle() {
 
     return (
         <div ref={ref}>
-            {/* <Background elRef={ref} /> */}
-
             <Head>
                 <title>PerfectCircle</title>
             </Head>
@@ -104,6 +102,9 @@ export default function perfectcircle() {
             
             <WelcomePerfectCircle />
             
+            <Container>
+                <TitleBar title="Nos praticiens" color="vert" padding="2rem 0 2rem 0"/>
+            </Container>
             
             
                 <div
@@ -115,15 +116,12 @@ export default function perfectcircle() {
                         justifyContent: "space-evenly"
                     }}
                 >
-                    <TitleBar title="Nos praticiens" color="vert" padding="0 0 2rem 0"/>
                     {dataCoachs.map((coach, i) => {
                         const pair = i % 2 == 0
-                        return <Coach pair={pair} user={coach} />
+                        return <Coach user={coach} />
                     })}
                 </div>
-            <Container>
-                <Footer />
-            </Container>
+            <Footer />
         </div>
     )
 }

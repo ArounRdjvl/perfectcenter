@@ -96,7 +96,7 @@ export function Navigation(props: NavigationProps) {
                 <Link href="/">
                     <div>
                         <img
-                            src=".\Logo.png"
+                            src="../Logo.png"
                             height={heightHeader}
                             style={{ display: "block", margin: isMobile ? "0" : "0 2rem" }}
                         />

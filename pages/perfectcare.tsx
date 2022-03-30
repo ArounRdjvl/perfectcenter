@@ -28,20 +28,38 @@ export default function perfectcare() {
 
     return (
         <div ref={ref}>
-            {/* <Background elRef={ref} /> */}
 
             <Head>
                 <title>PerfectCare</title>
             </Head>
             <Navigation />
-            <Container>
-                <TitleBar title="Nos produits" background={true} color="vert" />
-                {dataProducts.map((product, i) => {
-                    const pair = i % 2 == 0
-                    return <Product pair={pair} product={product} />
-                })}
-                <Footer />
-            </Container>
+            <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        padding:"1rem 2vw",
+                        alignContent: "flex-start",
+                        justifyContent: "space-evenly"
+                    }}
+                >
+                <Container>
+                    <TitleBar title="Nos produits" background={true} color="vert" padding="0 0 2rem 0"/>
+                </Container>
+                <div style={{
+                    width: "100%",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    alignContent: "flex-start",
+                    justifyContent: "space-evenly",
+                    marginTop: "1rem"
+                }}>
+                    {dataProducts.map((product) => {
+                        return <Product product={product} />
+                    })}
+                </div>
+            </div>
+            <Footer />
+            
         </div>
     )
 }
