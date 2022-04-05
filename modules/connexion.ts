@@ -1,61 +1,61 @@
-import jwt from "jsonwebtoken"
-import { useEffect, useState } from "react"
+import jwt from 'jsonwebtoken';
+import { useEffect, useState } from 'react';
 
-const tokenKey = "jwtToken"
+const tokenKey = 'jwtToken';
 
 export function useConnexion() {
-    const [token, setToken] = useState<string | null>(null)
+  const [token, setToken] = useState<string | null>(null);
 
-    useEffect(() => {
-        setToken(localStorage.getItem(tokenKey))
-    }, [])
+  useEffect(() => {
+    setToken(localStorage.getItem(tokenKey));
+  }, []);
 
-    const { email, admin } = token
-        ? (jwt.decode(token) as { email: string; admin: boolean })
-        : { email: null, admin: null }
+  const { email, admin } = token
+    ? (jwt.decode(token) as { email: string; admin: boolean })
+    : { email: null, admin: null };
 
-    async function connect(email: string, password: string) {
-        const { token, error } = await fetchJson("/api/login", {
-            email,
-            password
-        })
-        if (error) {
-            throw new Error(error)
-        }
-        if (token) {
-            setToken(token)
-            // TODO not really secure
-            localStorage.setItem(tokenKey, token)
-        }
+  async function connect(email: string, password: string) {
+    const { token, error } = await fetchJson('/api/login', {
+      email,
+      password
+    });
+    if (error) {
+      throw new Error(error);
     }
-
-    function disconnect() {
-        setToken(null)
-        localStorage.removeItem(tokenKey)
+    if (token) {
+      setToken(token);
+      // TODO not really secure
+      localStorage.setItem(tokenKey, token);
     }
+  }
 
-    return {
-        connected: token != null,
-        token,
-        email,
-        admin,
-        connect,
-        disconnect,
-        api: getApiObject(token)
-    }
+  function disconnect() {
+    setToken(null);
+    localStorage.removeItem(tokenKey);
+  }
+
+  return {
+    connected: token != null,
+    token,
+    email,
+    admin,
+    connect,
+    disconnect,
+    api: getApiObject(token)
+  };
 }
 
 // TODO futures requests to the back end
 function getApiObject(token: string | null) {
-    return {}
+  return {};
 }
 
 function fetchJson(path: string, body: Object) {
-    return fetch(path, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(body)
-    }).then((t) => t.json())
+  return fetch(path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }).then((t) => t.json());
 }

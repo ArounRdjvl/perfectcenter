@@ -1,3 +1,3 @@
-import { Secret } from "jsonwebtoken"
+import { Secret } from 'jsonwebtoken';
 
-export const KEY = process.env.KEY as Secret
+export const KEY = process.env.KEY as Secret;
