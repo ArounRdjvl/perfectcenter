@@ -5,7 +5,7 @@ import { sendMail } from "../../modules/mailer"
 export default async (req : NextApiRequest, res : NextApiResponse) => {
     try {
         const {email, subject, content} = req.body
-        await sendMail(email, subject, content)
+        await sendMail(subject, content, email)
         res.send("sent")
     } catch(err) {
         console.error(err)

@@ -53,7 +53,7 @@ export function Background(props: BackgroundProps) {
         }
     }, [props.elRef])
 
-    const groups = []
+    const groups: JSX.Element[] = []
 
     for (let i = 0; i < groupNumber; i++) {
         groups.push(
