@@ -1,3 +1,5 @@
+import { Typography } from "@material-ui/core"
+import { ReactNode } from "react"
 import { PraticienType } from "./types"
 
 export const dataMembres = [
@@ -42,11 +44,12 @@ export const dataMembres = [
 export const dataProducts = [
     {
         name: "PSIO",
+        photo: "/produits/Psio classic.png",
         title: "Accélérateur de bien-être",
         desc: (
             <>
                 Les lunettes de lumino-relaxation PSIO garantissent des effets durables sur des problèmes tels que le stress, la fatigue, le dysfonctionnement corporel, la dépression, la gestion des émotions..
-                <br />C’est une solution innovante, simple et efficace à toute personne désireuse d’améliorer sa qualité de vie et retrouver son bien-être. 
+                <br />C’est une solution innovante, simple et efficace à toute personne désireuse d’améliorer sa qualité de vie et retrouver son bien-être.
             </>
         ),
         link: "/perfectcare/psio",
@@ -54,6 +57,7 @@ export const dataProducts = [
     },
     {
         name: "MINT-E",
+        photo: "/produits/MINT-E.png",
         title: "Utilisez la force de la nature",
         desc: (
             <>
@@ -70,12 +74,13 @@ export const dataProducts = [
     },
     {
         name: "KAQUN",
+        photo: "/produits/KAQUN.png",
         title: "Water and more",
         desc: (
             <>
                 L'eau Kaqun n'est pas n'importe quelle eau. Elle contient 20 fois plus d'oxygen qu'une eau classique.
-                L'oxygène est indéniablement l'un des éléments les plus importants pour chaque 
-                cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert 
+                L'oxygène est indéniablement l'un des éléments les plus importants pour chaque
+                cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert
                 qu'aucune maladie ne peut survivre en présence de niveaux élevés d'oxygène.
             </>
         ),
@@ -83,6 +88,38 @@ export const dataProducts = [
         moreAboutLink: "https://mint-elabs.fr/products/z-trauma"
     }
 ]
+
+export const slidesProducts: ReactNode[] = (
+    dataProducts.map((Product) => {
+        return (
+            <>
+                <img
+                    src={Product.photo}
+                    alt="Nos produits"
+                    style={{
+                        display: "block",
+                        width: "100%"
+                    }} />
+                <div style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    right: "0",
+                    display: "flex",
+                    padding: "1rem 1.5rem",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    background: "linear-gradient(transparent, 35%, #404040)"
+                }}>
+                    <Typography variant="h3" color="textSecondary">{Product.name}</Typography>
+                </div>
+
+            </>
+        )
+    })
+)
+
+
 export const dataPsio = [
     {
         name: "Psio classic",
@@ -119,7 +156,9 @@ export const dataPsio = [
     },
 ]
 
-export const dataCoachs : PraticienType[] = [
+
+
+export const dataCoachs: PraticienType[] = [
     {
         name: "Véronique ROUBERTIE",
         photo: "/coach/veronique_ROUBERTIE.png",
@@ -171,6 +210,38 @@ export const dataCoachs : PraticienType[] = [
         Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`
     }
 ]
+
+export const slidesCoaches: ReactNode[] = (
+    dataCoachs.map((Coach) => {
+        return (
+            <>
+                <a href={Coach.link} >
+                    <img
+                        src={Coach.photo}
+                        alt="Nos practiciens"
+                        style={{
+                            display: "block",
+                            width: "100%"
+                        }} />
+                </a>
+                <div style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    right: "0",
+                    display: "flex",
+                    padding: "1rem 1.5rem",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    background: "linear-gradient(transparent, 35%, #404040)"
+                }}>
+                    <Typography variant="h3" color="textSecondary">{Coach.name}</Typography>
+                    <Typography variant="body1" color="textSecondary">{Coach.practice1}</Typography>
+                </div>
+            </>
+        )
+    })
+)
 
 export const dataArticles = [
     {

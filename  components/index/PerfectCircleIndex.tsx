@@ -2,7 +2,12 @@ import React from "react"
 import { Grid, useTheme, Typography, makeStyles, useMediaQuery, Link, Button } from "@material-ui/core"
 import { colors } from "../../modules/theme"
 import { Divider } from "../../ components/Divider"
-import { MyCarrousel } from "../../ components/MyCarrousel"
+import { Carousel } from "../Carousel"
+import { slidesCoaches } from "../../modules/data"
+
+const carouselOptions = {
+    loop: true
+}
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -11,8 +16,8 @@ const useStyles = makeStyles((theme) => {
             left: 0,
             height: "8vw",
             width: "8vw",
-            maxHeight:"6rem",
-            maxWidth:"6rem"
+            maxHeight: "6rem",
+            maxWidth: "6rem"
         }
     }
 })
@@ -23,183 +28,183 @@ export function PerfectCircleIndex() {
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
     if (isMobile) {
         return (
-        <>
-            <Grid
-                justify="center"
-                direction="column"
-                container
-                style={{
-                    marginTop: "2rem"
-                }}
-            >
+            <>
                 <Grid
-                    xs={12}
+                    justify="center"
+                    direction="column"
+                    container
                     style={{
-                        position: "relative",
-                        zIndex: 3,
-                        display: "flex",
-                        justifyContent:"center",
-                        alignItems:"center",
+                        marginTop: "2rem"
                     }}
-                    item
                 >
-                    <div
+                    <Grid
+                        xs={12}
                         style={{
                             position: "relative",
+                            zIndex: 3,
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                        item
+                    >
+                        <div
+                            style={{
+                                position: "relative",
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                backgroundColor: colors.vert,
+                                height: "12rem",
+                                width: "12rem",
+                                left: 0,
+                                borderRadius: "40px",
+                                boxShadow: "0px 0px 25px #BBBBBB"
+                            }}>
+                            <img
+                                src="picto/therapeute.png"
+                                width="70%"
+                                style={{ marginTop: "1rem" }}
+                            />
+                            <Typography variant="h3" color="textSecondary" style={{ margin: "1rem 0 0 0" }}>Nos praticiens</Typography>
+                        </div>
+                    </Grid>
+                    <Grid
+                        xs={12}
+                        style={{
+                            position: "relative",
+                            minWidth: "16rem",
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "center",
                             alignItems: "center",
-                            backgroundColor: colors.vert,
-                            height: "12rem",
-                            width: "12rem",
-                            left: 0,
-                            borderRadius: "40px",
-                            boxShadow : "0px 0px 25px #BBBBBB"
-                        }}>
-                            <img
-                                src="picto/therapeute.png"
-                                width="70%"
-                                style={{marginTop: "1rem"}}
-                            />
-                            <Typography variant="h3" color="textSecondary" style={{margin: "1rem 0 0 0"}}>Nos praticiens</Typography>
-                    </div>
-                </Grid>
-                <Grid
-                    xs={12}
-                    style={{
-                        position: "relative",
-                        minWidth: "16rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent:"center",
-                        alignItems:"center",
-                        margin: "0.5rem 0"
-                    }}
-                    item
-                >
-                    <div
-                        style={{
-                            backgroundColor: colors.beige,
-                            position: "relative",
-                            display:"flex",
-                            justifyContent:"center",
-                            alignItems:"center",
-                            width: "90%",
-                            borderRadius:"25px",
-                            top: 0,
-                            padding: "0.5rem 1rem",
-                            boxShadow : "0px 0px 25px #BBBBBB"
+                            margin: "0.5rem 0"
                         }}
+                        item
                     >
-                        <Typography variant="h3" align="center">
-                            PerfectCircle 
-                        </Typography>
-                    </div>
-                    <div
-                        style={{
-                            padding: "1rem 10vw",
-                            position: "relative",
-                            zIndex: 2
-                        }}
-                    >
-                        <Typography variant="body1" align="justify">
-                            PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les valeurs de PerfectCenter.<br></br>
-                            Pour vous, c'est la possibilité de trouver dans un même lieu des pratiques diverses et complémentaires. 
-                            Leur bienveillance et leurs talents vous accompagneront vers la solution la plus adaptée à vos attentes et vos besoins.
-                        </Typography>
-                    </div>
-                    <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
-                        <Link href="/perfectcircle" underline="none" style={{ marginBottom: "2rem"}}>
-                            <Button variant="contained" color="secondary" size="large" >
-                                PerfectCircle
-                            </Button>
-                        </Link>
-                    </div>
-                    <div style={{width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0"}}>
-                        <Typography variant="h3" align="center">Découvrez nos praticiens</Typography>
-                        <Divider color="vert" />
-                        <div style={{margin:"2rem 0 0 0", padding:"0 0.5rem"}}>
-                            <MyCarrousel/>
-                        </div>
-                    </div>
-                </Grid>
-                <div style={{width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "1rem 0 2rem 0"}}>
-                    <Typography variant="h3" align="center">Vous êtes praticiens ? Rejoignez nous !</Typography>
-                    <Divider color="vert" width="150px" />
-                </div>
-                <div style={{width: "100%", display: "flex", flexDirection:"column", alignContent: "center", alignItems: "center", justifyContent: "center", padding: "0 3vw"}}>
-                    <Typography variant="body1" align="justify">
-                        Vous pensez être animés des mêmes valeurs que nous ?<br></br>
-                        Rejoignez notre équipe PerfectCircle et partagez l'aventure avec nous.
-                        Vous profiterez d'un environnement convivial, productif et enrichissant.<br></br><br></br>
-                        Télécharger notre brochure des différents avantages à être membre ici.<br></br><br></br>
-                        Pour rejoindre l'équipe, contactez nous via le formulaire ci-dessous.
-                    </Typography>
-                    <Link href="/contact" underline="none" style={{ margin: "2rem 0"}}>
-                        <Button variant="contained" color="secondary" size="large" >
-                            Nous contacter
-                        </Button>
-                    </Link>
-                </div>
-            </Grid>
-        </>
-        )
-    }
-    return(
-        <>
-            <Grid
-                justify="flex-end"
-                container
-                >
-                <Grid
-                    xs={9}
-                    style={{
-                        position: "relative",
-                        paddingTop: "3rem",
-                        minHeight:"15rem"
-                    }}
-                    item
-                >
-                    
-                    <div
+                        <div
                             style={{
                                 backgroundColor: colors.beige,
                                 position: "relative",
-                                display:"flex",
-                                alignItems:"center",
-                                width: "100%",
-                                right: 0,
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                width: "90%",
+                                borderRadius: "25px",
                                 top: 0,
-                                padding: "0.7rem",
-                                borderRadius: "30px 0 0 30px ",
-                                boxShadow : "0px 0px 25px #BBBBBB"
+                                padding: "0.5rem 1rem",
+                                boxShadow: "0px 0px 25px #BBBBBB"
                             }}
                         >
-                            <Typography variant="h2" align="left" style={{marginLeft: "5vw"}}>
+                            <Typography variant="h3" align="center">
                                 PerfectCircle
                             </Typography>
                         </div>
                         <div
                             style={{
-                                padding: "1rem 5rem",
+                                padding: "1rem 10vw",
                                 position: "relative",
-                                zIndex: 2,
+                                zIndex: 2
                             }}
                         >
-                            <Typography variant="body1" align="justify" style={{margin:"2rem 0"}}>
+                            <Typography variant="body1" align="justify">
                                 PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les valeurs de PerfectCenter.<br></br>
-                                Pour vous, c'est la possibilité de trouver dans un même lieu des pratiques diverses et complémentaires. 
+                                Pour vous, c'est la possibilité de trouver dans un même lieu des pratiques diverses et complémentaires.
                                 Leur bienveillance et leurs talents vous accompagneront vers la solution la plus adaptée à vos attentes et vos besoins.
                             </Typography>
-                            <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
-                                <Link href="/perfectcircle" underline="none" style={{ marginBottom: "2rem"}}>
-                                    <Button variant="contained" color="secondary" size="large" >
-                                        PerfectCircle
-                                    </Button>
-                                </Link>
+                        </div>
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                            <Link href="/perfectcircle" underline="none" style={{ marginBottom: "2rem" }}>
+                                <Button variant="contained" color="secondary" size="large" >
+                                    PerfectCircle
+                                </Button>
+                            </Link>
+                        </div>
+                        <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
+                            <Typography variant="h3" align="center">Découvrez nos praticiens</Typography>
+                            <Divider color="vert" />
+                            <div style={{ margin: "2rem 0 0 0", padding: "0 0.5rem" }}>
+                                <Carousel slides={slidesCoaches} options={carouselOptions} />
                             </div>
                         </div>
+                    </Grid>
+                    <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "1rem 0 2rem 0" }}>
+                        <Typography variant="h3" align="center">Vous êtes praticiens ? Rejoignez nous !</Typography>
+                        <Divider color="vert" width="150px" />
+                    </div>
+                    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", justifyContent: "center", padding: "0 3vw" }}>
+                        <Typography variant="body1" align="justify">
+                            Vous pensez être animés des mêmes valeurs que nous ?<br></br>
+                            Rejoignez notre équipe PerfectCircle et partagez l'aventure avec nous.
+                            Vous profiterez d'un environnement convivial, productif et enrichissant.<br></br><br></br>
+                            Télécharger notre brochure des différents avantages à être membre ici.<br></br><br></br>
+                            Pour rejoindre l'équipe, contactez nous via le formulaire ci-dessous.
+                        </Typography>
+                        <Link href="/contact" underline="none" style={{ margin: "2rem 0" }}>
+                            <Button variant="contained" color="secondary" size="large" >
+                                Nous contacter
+                            </Button>
+                        </Link>
+                    </div>
+                </Grid>
+            </>
+        )
+    }
+    return (
+        <>
+            <Grid
+                justify="flex-end"
+                container
+            >
+                <Grid
+                    xs={9}
+                    style={{
+                        position: "relative",
+                        paddingTop: "3rem",
+                        minHeight: "15rem"
+                    }}
+                    item
+                >
+
+                    <div
+                        style={{
+                            backgroundColor: colors.beige,
+                            position: "relative",
+                            display: "flex",
+                            alignItems: "center",
+                            width: "100%",
+                            right: 0,
+                            top: 0,
+                            padding: "0.7rem",
+                            borderRadius: "30px 0 0 30px ",
+                            boxShadow: "0px 0px 25px #BBBBBB"
+                        }}
+                    >
+                        <Typography variant="h2" align="left" style={{ marginLeft: "5vw" }}>
+                            PerfectCircle
+                        </Typography>
+                    </div>
+                    <div
+                        style={{
+                            padding: "1rem 5rem",
+                            position: "relative",
+                            zIndex: 2,
+                        }}
+                    >
+                        <Typography variant="body1" align="justify" style={{ margin: "2rem 0" }}>
+                            PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les valeurs de PerfectCenter.<br></br>
+                            Pour vous, c'est la possibilité de trouver dans un même lieu des pratiques diverses et complémentaires.
+                            Leur bienveillance et leurs talents vous accompagneront vers la solution la plus adaptée à vos attentes et vos besoins.
+                        </Typography>
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                            <Link href="/perfectcircle" underline="none" style={{ marginBottom: "2rem" }}>
+                                <Button variant="contained" color="secondary" size="large" >
+                                    PerfectCircle
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
                 </Grid>
                 <Grid
                     xs={3}
@@ -225,43 +230,43 @@ export function PerfectCircleIndex() {
                             minWidth: "12rem",
                             left: 0,
                             borderRadius: "40px",
-                            boxShadow : "0px 0px 25px #BBBBBB"
+                            boxShadow: "0px 0px 25px #BBBBBB"
                         }}>
-                            <img
-                                src="picto/therapeute.png"
-                                width="70%"
-                                style={{marginTop: "1rem"}}
-                            />
-                            <Typography variant="h3" color="textSecondary" style={{margin: "1rem 0 0 0"}}>Nos praticiens</Typography>
+                        <img
+                            src="picto/therapeute.png"
+                            width="70%"
+                            style={{ marginTop: "1rem" }}
+                        />
+                        <Typography variant="h3" color="textSecondary" style={{ margin: "1rem 0 0 0" }}>Nos praticiens</Typography>
                     </div>
                 </Grid>
-                <div style={{width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0"}}>
+                <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
                     <Typography variant="h3" align="center">Découvrez nos praticiens</Typography>
                     <Divider color="vert" />
-                    <div style={{margin:"2rem 0 0 0", padding:"0 6rem"}}>
-                        <MyCarrousel/>
+                    <div style={{ margin: "2rem 0 0 0", padding: "0 6rem" }}>
+                        <Carousel slides={slidesCoaches} options={carouselOptions} />
                     </div>
                 </div>
-                <div style={{width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "1rem 0 2rem 0"}}>
+                <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "1rem 0 2rem 0" }}>
                     <Typography variant="h3" align="center">Vous êtes praticiens ? Rejoignez nous !</Typography>
                     <Divider color="vert" width="150px" />
                 </div>
-                <div style={{width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "row", margin: "1rem 0 2rem 0"}}>
-                    <div style={{width: "40%", display: "flex", alignContent: "center", justifyContent: "center"}}>
+                <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "row", margin: "1rem 0 2rem 0" }}>
+                    <div style={{ width: "40%", display: "flex", alignContent: "center", justifyContent: "center" }}>
                         <div style={{
                             position: "relative",
                             height: "30rem",
                             width: "20rem",
-                            maxWidth: "45rem", 
+                            maxWidth: "45rem",
                             backgroundImage: "url(/photos/Nous_rejoindre.png)",
                             backgroundPosition: "40% 10%",
                             backgroundRepeat: "no-repeat",
                             borderRadius: "30px",
-                            boxShadow : "0px 0px 25px #BBBBBB"
+                            boxShadow: "0px 0px 25px #BBBBBB"
                         }}>
                         </div>
                     </div>
-                    <div style={{width: "60%", display: "flex", flexDirection:"column", alignContent: "center", alignItems: "center", justifyContent: "center", padding: "0 3vw"}}>
+                    <div style={{ width: "60%", display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", justifyContent: "center", padding: "0 3vw" }}>
                         <Typography variant="body1" align="justify">
                             Vous pensez être animés des mêmes valeurs que nous ?<br></br>
                             Rejoignez notre équipe PerfectCircle et partagez l'aventure avec nous.
@@ -269,7 +274,7 @@ export function PerfectCircleIndex() {
                             Télécharger notre brochure des différents avantages à être membre ici.<br></br><br></br>
                             Pour rejoindre l'équipe, contactez nous via le formulaire ci-dessous.
                         </Typography>
-                        <Link href="/contact" underline="none" style={{ marginTop: "2rem"}}>
+                        <Link href="/contact" underline="none" style={{ marginTop: "2rem" }}>
                             <Button variant="contained" color="secondary" size="large" >
                                 Nous contacter
                             </Button>

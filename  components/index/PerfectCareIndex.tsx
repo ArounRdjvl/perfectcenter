@@ -2,7 +2,6 @@ import React from "react"
 import { Grid, useTheme, Typography, makeStyles, useMediaQuery, Link, Button } from "@material-ui/core"
 import { colors } from "../../modules/theme"
 import { Divider } from "../../ components/Divider"
-import { MyCarrousel } from " components/MyCarrousel"
 
 const useStyles = makeStyles((theme) => {
     return {

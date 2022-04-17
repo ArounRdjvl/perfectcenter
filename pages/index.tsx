@@ -10,7 +10,6 @@ import { Valeurs } from "../ components/index/Valeurs"
 import { Newsletter } from " components/index/Newsletter"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Link, animateScroll as scroll } from "react-scroll"
-import { DecouvertePraticiens } from " components/index/DecouvertePraticiens"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -76,7 +75,6 @@ export default function index() {
             <Container>
                 <Services />
             </Container>
-            <DecouvertePraticiens />
             <Container>
                 <Newsletter />
             </Container>
