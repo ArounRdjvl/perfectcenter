@@ -107,7 +107,7 @@ export function Animations(props: AnimationsProps) {
     return (
         <div className={classes.root}>
             <Bubble
-                text="Dépression"
+                text="Luminothérapie"
                 from={{ x: "5vw", y: "15vh" }}
                 to={{ x: "-5vw", y: "10vh" }}
                 color={colors.beige}
@@ -126,7 +126,7 @@ export function Animations(props: AnimationsProps) {
                 size="4rem"
             />
             <Bubble
-                text="Addiction"
+                text="Bien-être"
                 from={{ x: "30vw", y: "80vh" }}
                 to={{ x: "26vw", y: "100vh" }}
                 color={colors.beige}
@@ -163,14 +163,14 @@ export function Animations(props: AnimationsProps) {
                 size= "7rem"
             />
             <Bubble
-                text="Stress"
+                text="Epanouissement"
                 from={{ x: "70vw", y: "22vh" }}
                 to={{ x: "83vw", y: "8vh" }}
                 color={colors.vert}
-                size="8rem"
+                size="13rem"
             />
             <Bubble
-                text="Insomnie"
+                text="Soins holistiques"
                 from={{ x: "67vw", y: "67vh" }}
                 to={{ x: "83vw", y: "77vh" }}
                 color={colors.beige}
