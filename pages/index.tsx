@@ -11,6 +11,7 @@ import { Newsletter } from " components/index/Newsletter"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { DecouvertePraticiens } from " components/index/DecouvertePraticiens"
+import { WelcomeMsg } from " components/index/WelcomeMsg"
 
 export const useStyles = makeStyles((theme) => {
     return {
@@ -72,7 +73,10 @@ export default function index() {
                 </Link>
             </div>
             <div id="container" />
-            <Valeurs />
+            <Container>
+                <WelcomeMsg />
+                <Valeurs />
+            </Container>
             <Container>
                 <Services />
             </Container>
