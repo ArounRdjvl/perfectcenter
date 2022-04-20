@@ -1,14 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navigation } from '../ components/Navigation'
-import { Background } from '../ components/Background'
-import { Membre } from '../ components/Membre'
+import { Navigation } from 'components/Navigation'
+import { Membre } from 'components/Membre'
 import { Container } from '@material-ui/core'
-import { Footer } from '../ components/Footer'
-import { TitleBar } from '../ components/TitleBar'
-import { dataMembres } from '../modules/data'
+import { Footer } from 'components/Footer'
+import { TitleBar } from 'components/TitleBar'
+import { dataMembres } from 'modules/data'
 
-export default function membres() {
+export default function Membres() {
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
@@ -20,9 +19,9 @@ export default function membres() {
       </Head>
       <Navigation />
       <Container>
-        <TitleBar title="Notre Equipe" background={true} color="vert" />
+        <TitleBar title="Notre Equipe" color="vert" />
         {dataMembres.map((member, i) => {
-          const pair = i % 2 == 0
+          const pair = i % 2 === 0
           return <Membre pair={pair} user={member} />
         })}
       </Container>

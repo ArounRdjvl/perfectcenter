@@ -4,14 +4,20 @@
     "es2021": true,
     "jest": true
   },
+  "ignorePatterns": "*.js",
   "rules": {
+    "react-hooks/exhaustive-deps": "off",
+    "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/iframe-has-title": "warn",
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+        "extensions": [".ts", ".tsx"]
       }
     ],
     "react/jsx-props-no-spreading": "off",
@@ -26,7 +32,9 @@
       }
     ],
     "no-nested-ternary": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off",
+    "no-shadow": "off"
   },
   "extends": [
     "react-app",

@@ -2,6 +2,21 @@ import jwt from 'jsonwebtoken'
 import { useEffect, useState } from 'react'
 
 const tokenKey = 'jwtToken'
+// TODO futures requests to the back end
+
+function getApiObject(token: string | null) {
+  return {}
+}
+
+function fetchJson(path: string, body: Record<string, unknown>) {
+  return fetch(path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  }).then((t) => t.json())
+}
 
 export function useConnexion() {
   const [token, setToken] = useState<string | null>(null)
@@ -43,19 +58,4 @@ export function useConnexion() {
     disconnect,
     api: getApiObject(token),
   }
-}
-
-// TODO futures requests to the back end
-function getApiObject(token: string | null) {
-  return {}
-}
-
-function fetchJson(path: string, body: Object) {
-  return fetch(path, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  }).then((t) => t.json())
 }

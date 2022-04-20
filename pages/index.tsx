@@ -1,36 +1,34 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navigation } from '../ components/Navigation'
-import { AnimatedLogo } from '../ components/index/animation/AnimatedLogo'
-import { Animations } from '../ components/index/animation/Animations'
 import { Container, IconButton, makeStyles } from '@material-ui/core'
-import { Footer } from '../ components/Footer'
-import { Services } from '../ components/index/Services'
-import { Valeurs } from '../ components/index/Valeurs'
-import { Newsletter } from ' components/index/Newsletter'
+import { Newsletter } from 'components/index/Newsletter'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { Link, animateScroll as scroll } from 'react-scroll'
-import { DecouvertePraticiens } from ' components/index/DecouvertePraticiens'
+import { Link } from 'react-scroll'
+import { DecouvertePraticiens } from 'components/index/DecouvertePraticiens'
+import { Navigation } from '../components/Navigation'
+import { AnimatedLogo } from '../components/index/animation/AnimatedLogo'
+import { Animations } from '../components/index/animation/Animations'
+import { Footer } from '../components/Footer'
+import { Services } from '../components/index/Services'
+import { Valeurs } from '../components/index/Valeurs'
 
-export const useStyles = makeStyles((theme) => {
-  return {
-    buttonStyles: { position: 'relative', zIndex: 3 },
-    itemStyle: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-    },
-    imageHandleStyle: {
-      flexGrow: 1,
-      display: 'flex',
-      width: '6rem',
-      height: '6rem',
-    },
-  }
-})
+export const useStyles = makeStyles((theme) => ({
+  buttonStyles: { position: 'relative', zIndex: 3 },
+  itemStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  imageHandleStyle: {
+    flexGrow: 1,
+    display: 'flex',
+    width: '6rem',
+    height: '6rem',
+  },
+}))
 
-export default function index() {
+export default function Index() {
   const classes = useStyles()
 
   return (
@@ -58,8 +56,8 @@ export default function index() {
         <Link
           activeClass="active"
           to="container"
-          spy={true}
-          smooth={true}
+          spy
+          smooth
           offset={-120}
           duration={1500}
         >

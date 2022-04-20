@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import jwt from 'jsonwebtoken'
 import { KEY } from 'modules/utils'
 import { PrismaClient } from '@prisma/client'
-const bcrypt = require('bcrypt')
+import bcrypt from 'bcrypt'
 
 const prisma = new PrismaClient()
 
@@ -23,7 +23,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       isAdmin: true,
     },
     where: {
-      email: email,
+      email,
     },
   })
 

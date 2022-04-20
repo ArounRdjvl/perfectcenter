@@ -5,7 +5,7 @@ let event: Event | null = null
 
 export function useFlux<T = any>(key: string, defaultValue?: T): [T | null, (value: T) => void] {
   const [value, setValue] = React.useState<T | null>(
-    defaultValue != undefined ? defaultValue : storage[key]
+    defaultValue !== undefined ? defaultValue : storage[key]
   )
 
   function setter(newValue: T) {
@@ -16,7 +16,7 @@ export function useFlux<T = any>(key: string, defaultValue?: T): [T | null, (val
 
   React.useEffect(() => {
     event = new Event('flux-updated')
-    if (defaultValue != undefined) {
+    if (defaultValue !== undefined) {
       setter(defaultValue)
     }
     const listener = () => {

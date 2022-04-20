@@ -1,12 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navigation } from '../ components/Navigation'
-import { Divider } from '../ components/Divider'
-import { Container, Grid, Typography, withStyles } from '@material-ui/core'
-import { Footer } from '../ components/Footer'
-import { TitleBar } from '../ components/TitleBar'
-import { Article } from '../ components/Article'
-import { dataArticles } from '../modules/data'
+import { Container } from '@material-ui/core'
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { TitleBar } from 'components/TitleBar'
+import { Article } from 'components/Article'
+import { dataArticles } from 'modules/data'
 
 export default function articles() {
   return (
@@ -17,7 +16,7 @@ export default function articles() {
       <Container>
         <Navigation />
 
-        <TitleBar title="Nos articles" background={true} color="vert" />
+        <TitleBar title="Nos articles" color="vert" />
 
         <div
           style={{
@@ -29,7 +28,7 @@ export default function articles() {
           }}
         >
           {dataArticles.map((article, i) => {
-            const pair = i % 2 == 0
+            const pair = i % 2 === 0
             return <Article pair={pair} user={article} />
           })}
         </div>

@@ -1,22 +1,19 @@
 import React from 'react'
-import { Navigation } from '../ components/Navigation'
-import { Background } from '../ components/Background'
-import { Footer } from '../ components/Footer'
 import Head from 'next/head'
 import {
   Button,
   Container,
-  Divider as MuiDivider,
   Grid,
   TextField,
-  Theme,
   Typography,
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { Divider } from '../ components/Divider'
+import { Navigation } from '../components/Navigation'
+import { Footer } from '../components/Footer'
+import { Divider } from '../components/Divider'
 
-export default function contact() {
+export default function Contact() {
   const [name, setName] = React.useState<string>('')
   const [email, setEmail] = React.useState<string>('')
   const [subject, setSubject] = React.useState<string>('')
@@ -26,13 +23,9 @@ export default function contact() {
 
   const ref = React.useRef<HTMLDivElement>(null)
 
-  const { palette, spacing } = useTheme()
+  const { spacing } = useTheme()
 
-  function validateForm() {
-    return true // TODO validate form
-  }
-
-  function submitForm() {
+  const submitForm = React.useCallback(() => {
     fetch('/api/sendMail', {
       method: 'post',
       headers: {
@@ -41,10 +34,16 @@ export default function contact() {
       },
       body: JSON.stringify({ email, subject, content }),
     }).then((res) => {
-      res.status === 200 ? console.log('email sent') : console.error('error email')
+      if (res.status === 200)
+        console.log('email sent')
+      else
+        console.error('error email')
     })
-    setName(''), setEmail(''), setSubject(''), setContent('')
-  }
+    setName('')
+    setEmail('')
+    setSubject('')
+    setContent('')
+  }, [email, subject, content])
 
   if (isMobile) {
     return (
@@ -158,7 +157,7 @@ export default function contact() {
                   width: '100%',
                   height: '100%',
                 }}
-              ></div>
+              />
               <div style={{ zIndex: 1, margin: '2rem 0' }}>
                 <Typography variant="h2" align="center" color="textSecondary">
                   Venir à PerfectCenter
@@ -170,7 +169,7 @@ export default function contact() {
                   height="300"
                   style={{ border: 0, margin: '2rem 0 1rem 0', borderRadius: '25px' }}
                   loading="lazy"
-                ></iframe>
+                />
                 <div style={{ marginBottom: '1rem' }}>
                   <Divider color="beige" width="60px" height="3px" />
                   <Typography color="textSecondary" style={{ textAlign: 'center', margin: '5px' }}>
@@ -376,7 +375,7 @@ export default function contact() {
                 width: '120%',
                 height: '100%',
               }}
-            ></div>
+            />
             <div style={{ zIndex: 1, margin: '2rem 0' }}>
               <Typography variant="h1" align="center" color="textSecondary">
                 Venir à PerfectCenter
@@ -388,7 +387,7 @@ export default function contact() {
                 height="300"
                 style={{ border: 0, margin: '1rem', borderRadius: '20px' }}
                 loading="lazy"
-              ></iframe>
+              />
               <div style={{ marginBottom: '5px' }}>
                 <Divider color="beige" width="60px" height="3px" />
                 <Typography color="textSecondary" style={{ textAlign: 'center', margin: '5px' }}>

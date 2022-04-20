@@ -75,10 +75,10 @@ export const dataProducts = [
     title: 'Water and more',
     desc: (
       <>
-        L'eau Kaqun n'est pas n'importe quelle eau. Elle contient 20 fois plus d'oxygen qu'une eau
-        classique. L'oxygène est indéniablement l'un des éléments les plus importants pour chaque
-        cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert qu'aucune
-        maladie ne peut survivre en présence de niveaux élevés d'oxygène.
+        L&apos;eau Kaqun n&apos;est pas n&apos;importe quelle eau. Elle contient 20 fois plus d&apos;oxygen qu&apos;une eau
+        classique. L&apos;oxygène est indéniablement l&apos;un des éléments les plus importants pour chaque
+        cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert qu&apos;aucune
+        maladie ne peut survivre en présence de niveaux élevés d&apos;oxygène.
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -91,8 +91,8 @@ export const dataPsio = [
     title: 'Psio classic',
     desc: (
       <>
-        Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir
+        Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
         avoir du texte
       </>
     ),
@@ -104,8 +104,8 @@ export const dataPsio = [
     title: 'Psio Custom',
     desc: (
       <>
-        Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir
+        Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
         avoir du texte
       </>
     ),
@@ -117,8 +117,8 @@ export const dataPsio = [
     title: 'Psio Prenium',
     desc: (
       <>
-        Le Psio Classic est l'entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d'un abonnement à notre newletter ! Je dis un peu n'importe quoi pour pouvoir
+        Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
         avoir du texte
       </>
     ),

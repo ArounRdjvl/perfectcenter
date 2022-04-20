@@ -1,18 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navigation } from '../../ components/Navigation'
 import { Container, Typography } from '@material-ui/core'
-import { colors } from '../../modules/theme'
-import { Footer } from '../../ components/Footer'
-import { TitleBar } from '../../ components/TitleBar'
-import { dataMembres } from '../../modules/data'
-import { AccueilProduit } from ' components/PerfectCare/AccueilProduit'
-import { LumiereMusique } from ' components/PerfectCare/Psio/LumiereMusique'
-import { AchatPsio } from ' components/PerfectCare/Psio/AchatPsio'
-import { BanniereInfo } from ' components/BanniereInfo'
-import { BulleInfo } from ' components/BulleInfo'
+import { AccueilProduit } from 'components/PerfectCare/AccueilProduit'
+import { LumiereMusique } from 'components/PerfectCare/Psio/LumiereMusique'
+import { AchatPsio } from 'components/PerfectCare/Psio/AchatPsio'
+import { BanniereInfo } from 'components/BanniereInfo'
+import { BulleInfo } from 'components/BulleInfo'
+import { Footer } from '../../components/Footer'
+import { Navigation } from '../../components/Navigation'
 
-export default function kaqun() {
+export default function Kaqun() {
   const ref = React.useRef<HTMLDivElement>(null)
   return (
     <div ref={ref}>

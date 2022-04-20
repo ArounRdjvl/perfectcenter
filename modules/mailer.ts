@@ -1,10 +1,11 @@
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
+
 const dev = process.env.NODE_ENV !== 'production'
 
 export async function sendMail(from: string, subject: string, content: string) {
   let authOptions
   if (dev) {
-    let testAccount = await nodemailer.createTestAccount()
+    const testAccount = await nodemailer.createTestAccount()
     authOptions = {
       host: 'smtp.ethereal.email',
       port: 587,
@@ -29,10 +30,10 @@ export async function sendMail(from: string, subject: string, content: string) {
     }
   }
 
-  let transporter = nodemailer.createTransport(authOptions)
+  const transporter = nodemailer.createTransport(authOptions)
 
   // send mail with defined transport object
-  let info = await transporter.sendMail({
+  const info = await transporter.sendMail({
     from, // sender address
     to: 'contact@hades.ovh', // list of receivers
     subject: `[site] : ${subject}`, // Subject line

@@ -1,4 +1,5 @@
 import { createTheme } from '@material-ui/core/styles'
+
 export const colors = {
   beige: '#E3CCB4',
   noir: '#3B424A',
