@@ -6,8 +6,8 @@ import { LumiereMusique } from 'components/PerfectCare/Psio/LumiereMusique'
 import { AchatPsio } from 'components/PerfectCare/Psio/AchatPsio'
 import { BanniereInfo } from 'components/BanniereInfo'
 import { BulleInfo } from 'components/BulleInfo'
-import { Footer } from '../../components/Footer'
-import { Navigation } from '../../components/Navigation'
+import { Footer } from 'components/Footer'
+import { Navigation } from 'components/Navigation'
 
 export default function Kaqun() {
   const ref = React.useRef<HTMLDivElement>(null)

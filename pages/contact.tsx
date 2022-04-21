@@ -9,9 +9,9 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
-import { Divider } from '../components/Divider'
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { Divider } from 'components/Divider'
 
 export default function Contact() {
   const [name, setName] = React.useState<string>('')
@@ -34,10 +34,8 @@ export default function Contact() {
       },
       body: JSON.stringify({ email, subject, content }),
     }).then((res) => {
-      if (res.status === 200)
-        console.log('email sent')
-      else
-        console.error('error email')
+      if (res.status === 200) console.log('email sent')
+      else console.error('error email')
     })
     setName('')
     setEmail('')

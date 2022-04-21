@@ -22,7 +22,7 @@ export default function Membres() {
         <TitleBar title="Notre Equipe" color="vert" />
         {dataMembres.map((member, i) => {
           const pair = i % 2 === 0
-          return <Membre pair={pair} user={member} />
+          return <Membre pair={pair} user={member} key={i} />
         })}
       </Container>
       <Footer />

@@ -4,7 +4,7 @@ export interface ExampleProps {
   sentence?: string
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   test: {
     backgroundColor: 'red',
   },

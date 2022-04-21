@@ -1,8 +1,4 @@
-import {
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@material-ui/core'
+import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 
 export interface PrestationProps {

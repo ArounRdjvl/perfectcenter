@@ -1,16 +1,24 @@
 import React from 'react'
-import {
-  Grid,
-  useTheme,
-  Typography,
-  useMediaQuery,
-  Link,
-  Button,
-} from '@material-ui/core'
-import { colors } from '../../modules/theme'
-import { Divider } from '../Divider'
-import { MyCarrousel } from '../MyCarrousel'
+import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@material-ui/core'
+import { colors } from 'modules/theme'
+import { Divider } from 'components/Divider'
+import { Carousel } from 'components/Carousel'
+import { slidesCoaches } from 'modules/data'
+import { AutoplayOptionsType } from 'embla-carousel-autoplay'
+import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
+import { EmblaOptionsType } from 'embla-carousel-react'
 
+const carouselOptions: EmblaOptionsType = {
+  loop: true,
+}
+
+const autoplayOptions: AutoplayOptionsType = {
+  stopOnMouseEnter: true,
+}
+
+const autoHeightOptions: AutoHeightOptionsType = {
+  destroyHeight: '40rem',
+}
 
 export function PerfectCircleIndex() {
   const theme = useTheme()
@@ -51,7 +59,12 @@ export function PerfectCircleIndex() {
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img src="picto/therapeute.png" width="70%" style={{ marginTop: '1rem' }} />
+            <img
+              src="picto/therapeute.png"
+              width="70%"
+              style={{ marginTop: '1rem' }}
+              alt="thérapeute"
+            />
             <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
               Nos praticiens
             </Typography>
@@ -97,10 +110,11 @@ export function PerfectCircleIndex() {
           >
             <Typography variant="body1" align="justify">
               PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les
-              valeurs de PerfectCenter.<br />
-              Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques diverses
-              et complémentaires. Leur bienveillance et leurs talents vous accompagneront vers la
-              solution la plus adaptée à vos attentes et vos besoins.
+              valeurs de PerfectCenter.
+              <br />
+              Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques
+              diverses et complémentaires. Leur bienveillance et leurs talents vous accompagneront
+              vers la solution la plus adaptée à vos attentes et vos besoins.
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -125,7 +139,12 @@ export function PerfectCircleIndex() {
             </Typography>
             <Divider color="vert" />
             <div style={{ margin: '2rem 0 0 0', padding: '0 0.5rem' }}>
-              <MyCarrousel />
+              <Carousel
+                slides={slidesCoaches}
+                options={carouselOptions}
+                autoplay={autoplayOptions}
+                autoheight={autoHeightOptions}
+              />
             </div>
           </div>
         </Grid>
@@ -157,10 +176,12 @@ export function PerfectCircleIndex() {
         >
           <Typography variant="body1" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
-            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous profiterez
-            d&apos;un environnement convivial, productif et enrichissant.<br />
+            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous
+            profiterez d&apos;un environnement convivial, productif et enrichissant.
             <br />
-            Télécharger notre brochure des différents avantages à être membre ici.<br />
+            <br />
+            Télécharger notre brochure des différents avantages à être membre ici.
+            <br />
             <br />
             Pour rejoindre l&apos;équipe, contactez nous via le formulaire ci-dessous.
           </Typography>
@@ -211,9 +232,10 @@ export function PerfectCircleIndex() {
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
             PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les
-            valeurs de PerfectCenter.<br />
-            Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques diverses et
-            complémentaires. Leur bienveillance et leurs talents vous accompagneront vers la
+            valeurs de PerfectCenter.
+            <br />
+            Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques diverses
+            et complémentaires. Leur bienveillance et leurs talents vous accompagneront vers la
             solution la plus adaptée à vos attentes et vos besoins.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -252,7 +274,12 @@ export function PerfectCircleIndex() {
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img src="picto/therapeute.png" width="70%" style={{ marginTop: '1rem' }} />
+          <img
+            src="picto/therapeute.png"
+            width="70%"
+            style={{ marginTop: '1rem' }}
+            alt="thérapeute"
+          />
           <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
             Nos praticiens
           </Typography>
@@ -273,7 +300,12 @@ export function PerfectCircleIndex() {
         </Typography>
         <Divider color="vert" />
         <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
-          <MyCarrousel />
+          <Carousel
+            slides={slidesCoaches}
+            options={carouselOptions}
+            autoplay={autoplayOptions}
+            autoheight={autoHeightOptions}
+          />
         </div>
       </div>
       <div
@@ -336,10 +368,12 @@ export function PerfectCircleIndex() {
         >
           <Typography variant="body1" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
-            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous profiterez
-            d&apos;un environnement convivial, productif et enrichissant.<br />
+            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous
+            profiterez d&apos;un environnement convivial, productif et enrichissant.
             <br />
-            Télécharger notre brochure des différents avantages à être membre ici.<br />
+            <br />
+            Télécharger notre brochure des différents avantages à être membre ici.
+            <br />
             <br />
             Pour rejoindre l&apos;équipe, contactez nous via le formulaire ci-dessous.
           </Typography>

@@ -10,7 +10,7 @@ export interface AnimatedImageProps {
   delay?: number
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: 'absolute',
   },

@@ -1,7 +1,7 @@
 import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 
 export function WelcomeMsg2() {
   const theme = useTheme()
@@ -18,7 +18,7 @@ export function WelcomeMsg2() {
             marginTop: '1rem',
           }}
         >
-          <TitleBar title="PerfectCirle" background color="vert" paddingMobile="0 0 0 7vw" />
+          <TitleBar title="PerfectCirle" color="vert" paddingMobile="0 0 0 7vw" />
         </div>
         <div
           style={{
@@ -73,9 +73,9 @@ export function WelcomeMsg2() {
             <Typography variant="body1" align="justify">
               Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous
               capitalisons nos talents pour offrir des prestations liées au bien-être et au
-              développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en individuel, en
-              présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des
-              personnes qui viennent à nous...
+              développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en
+              individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre
+              aux besoins des personnes qui viennent à nous...
               <br />
               Nous créons des événements, formations et ateliers en collectif en plus des
               consultations individuelles que nous pouvons proposer.
@@ -87,7 +87,7 @@ export function WelcomeMsg2() {
   }
   return (
     <>
-      <TitleBar title="PerfectCircle" background color="vert" paddingMobile="0 0 0 5vw" />
+      <TitleBar title="PerfectCircle" color="vert" paddingMobile="0 0 0 5vw" />
       <div
         style={{
           position: 'absolute',
@@ -154,9 +154,9 @@ export function WelcomeMsg2() {
           <Typography variant="body1" align="justify">
             Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous
             capitalisons nos talents pour offrir des prestations liées au bien-être et au
-            développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en individuel, en
-            présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des
-            personnes qui viennent à nous...
+            développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en
+            individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre aux
+            besoins des personnes qui viennent à nous...
             <br />
             Nous créons des événements, formations et ateliers en collectif en plus des
             consultations individuelles que nous pouvons proposer.

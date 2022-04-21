@@ -1,10 +1,9 @@
 import React from 'react'
 import { Typography } from '@material-ui/core'
-import { Product } from '../../Product'
-import { dataPsio } from '../../../modules/data'
+import { Product } from 'components/Product'
+import { dataPsio } from 'modules/data'
 
 export function AchatPsio() {
-
   return (
     <>
       <div
@@ -27,7 +26,9 @@ export function AchatPsio() {
           justifyContent: 'center',
         }}
       >
-        {dataPsio.map((product) => <Product product={product} />)}
+        {dataPsio.map((product, i) => (
+          <Product product={product} key={i} />
+        ))}
       </div>
     </>
   )
