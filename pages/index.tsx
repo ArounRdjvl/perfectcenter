@@ -4,13 +4,12 @@ import { Container, IconButton, makeStyles } from '@material-ui/core'
 import { Newsletter } from 'components/index/Newsletter'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { Link } from 'react-scroll'
-import { DecouvertePraticiens } from 'components/index/DecouvertePraticiens'
-import { Navigation } from '../components/Navigation'
-import { AnimatedLogo } from '../components/index/animation/AnimatedLogo'
-import { Animations } from '../components/index/animation/Animations'
-import { Footer } from '../components/Footer'
-import { Services } from '../components/index/Services'
-import { Valeurs } from '../components/index/Valeurs'
+import { Navigation } from 'components/Navigation'
+import { AnimatedLogo } from 'components/index/animation/AnimatedLogo'
+import { Animations } from 'components/index/animation/Animations'
+import { Footer } from 'components/Footer'
+import { Services } from 'components/index/Services'
+import { Valeurs } from 'components/index/Valeurs'
 
 export const useStyles = makeStyles((theme) => ({
   buttonStyles: { position: 'relative', zIndex: 3 },
@@ -71,7 +70,6 @@ export default function Index() {
       <Container>
         <Services />
       </Container>
-      <DecouvertePraticiens />
       <Container>
         <Newsletter />
       </Container>

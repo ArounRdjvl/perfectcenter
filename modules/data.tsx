@@ -217,16 +217,14 @@ export const dataCoachs: PraticienType[] = [
 
 export const slidesCoaches: ReactNode[] = (
   dataCoachs.map((Coach) => (
-    <>
-      <a href={Coach.link} >
-        <img
-          src={Coach.photo}
-          alt="Nos practiciens"
-          style={{
-            display: "block",
-            width: "100%"
-          }} />
-      </a>
+    <a href={`/perfectcircle/${Coach.name.replace(/ /g, "_").toLowerCase()}`} >
+      <img
+        src={Coach.photo}
+        alt="Nos practiciens"
+        style={{
+          display: "block",
+          width: "100%"
+        }} />
       <div style={{
         position: "absolute",
         bottom: "0",
@@ -241,7 +239,7 @@ export const slidesCoaches: ReactNode[] = (
         <Typography variant="h3" color="textSecondary">{Coach.name}</Typography>
         <Typography variant="body1" color="textSecondary">{Coach.practice1}</Typography>
       </div>
-    </>
+    </a>
   ))
 )
 

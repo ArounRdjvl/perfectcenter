@@ -38,7 +38,7 @@ export interface NavigationButtonProps {
 
 export function CarouselButton(props: NavigationButtonProps) {
     const classes = useStyles();
-    const left = props.left;
+    const { left } = props;
     if (left) {
         return (
             <IconButton

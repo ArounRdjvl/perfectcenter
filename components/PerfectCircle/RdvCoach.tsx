@@ -7,11 +7,8 @@ import {
   useTheme,
 } from '@material-ui/core'
 import React from 'react'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 import { Prestation } from './Prestation'
-
-
-
 
 export function RdvCoach() {
   const theme = useTheme()

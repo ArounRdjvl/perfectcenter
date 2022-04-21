@@ -48,7 +48,7 @@ export function AccueilProduit(props: ProductProps) {
             alignContent: 'center',
           }}
         >
-          <TitleBar title={props.title} background color="vert" padding="0 0 3vh 0" />
+          <TitleBar title={props.title} color="vert" padding="0 0 3vh 0" />
         </div>
         <div className={classes.floating}>
           <img src={props.path} style={{ width: '25vw', maxWidth: '40rem', minWidth: '20rem' }} />

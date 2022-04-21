@@ -9,9 +9,9 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
-import { Divider } from '../components/Divider'
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { Divider } from 'components/Divider'
 
 export default function Contact() {
   const [name, setName] = React.useState<string>('')

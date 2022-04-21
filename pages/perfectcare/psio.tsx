@@ -5,8 +5,8 @@ import { AccueilProduit } from 'components/PerfectCare/AccueilProduit'
 import { LumiereMusique } from 'components/PerfectCare/Psio/LumiereMusique'
 import { BanniereInfo } from 'components/BanniereInfo'
 import { BulleInfo } from 'components/BulleInfo'
-import { Footer } from '../../components/Footer'
-import { Navigation } from '../../components/Navigation'
+import { Footer } from 'components/Footer'
+import { Navigation } from 'components/Navigation'
 
 export default function Psio() {
   const ref = React.useRef<HTMLDivElement>(null)

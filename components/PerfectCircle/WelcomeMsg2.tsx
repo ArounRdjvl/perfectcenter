@@ -1,7 +1,7 @@
 import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 
 export function WelcomeMsg2() {
   const theme = useTheme()
@@ -18,7 +18,7 @@ export function WelcomeMsg2() {
             marginTop: '1rem',
           }}
         >
-          <TitleBar title="PerfectCirle" background color="vert" paddingMobile="0 0 0 7vw" />
+          <TitleBar title="PerfectCirle" color="vert" paddingMobile="0 0 0 7vw" />
         </div>
         <div
           style={{
@@ -87,7 +87,7 @@ export function WelcomeMsg2() {
   }
   return (
     <>
-      <TitleBar title="PerfectCircle" background color="vert" paddingMobile="0 0 0 5vw" />
+      <TitleBar title="PerfectCircle" color="vert" paddingMobile="0 0 0 5vw" />
       <div
         style={{
           position: 'absolute',

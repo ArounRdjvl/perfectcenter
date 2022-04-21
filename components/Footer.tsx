@@ -7,8 +7,8 @@ import {
   Container,
 } from '@material-ui/core'
 import React from 'react'
+import { colors } from 'modules/theme'
 import { Divider } from './Divider'
-import { colors } from '../modules/theme'
 
 const useStyles = makeStyles((theme) => ({
   root: {

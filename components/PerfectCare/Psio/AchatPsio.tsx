@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@material-ui/core'
-import { Product } from '../../Product'
-import { dataPsio } from '../../../modules/data'
+import { Product } from 'components/Product'
+import { dataPsio } from 'modules/data'
 
 export function AchatPsio() {
 

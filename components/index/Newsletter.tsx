@@ -6,7 +6,7 @@ import {
   Button,
 } from '@material-ui/core'
 import React from 'react'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 
 export function Newsletter() {
   const [name, setName] = React.useState<string>('')

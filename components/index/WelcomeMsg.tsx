@@ -24,7 +24,6 @@ export function WelcomeMsg() {
         >
           <TitleBar
             title="Bienvenue chez PerfectCenter"
-            background
             color="vert"
             paddingMobile="0 0 0 0rem"
             justifyContent="center"
@@ -92,7 +91,6 @@ export function WelcomeMsg() {
     <>
       <TitleBar
         title="Bienvenue chez PerfectCenter"
-        background
         color="vert"
         paddingMobile="0 0 0 5vw"
       />

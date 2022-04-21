@@ -1,21 +1,22 @@
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import React, { ReactNode, useCallback, useEffect, useState } from "react";
-
-import { CarouselButton } from "./CarouselButton";
-import { makeStyles } from "@material-ui/styles";
+import React, { ReactNode, useCallback } from "react";
 import useEmblaCarousel, {
     EmblaOptionsType,
 } from 'embla-carousel-react'
+import Autoplay, { AutoplayOptionsType, } from 'embla-carousel-autoplay'
+import AutoHeight, { AutoHeightOptionsType } from "embla-carousel-auto-height";
+import { CarouselButton } from "./CarouselButton";
 
 export interface CarouselProps {
     options?: EmblaOptionsType,
+    autoplay?: AutoplayOptionsType,
+    autoheight?: AutoHeightOptionsType,
     slides: ReactNode[]
 }
 
 export function Carousel(props: CarouselProps) {
-    const { options, slides } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
-    const [dragging, setDragging] = useState(false);
+    const { options, autoplay, autoheight, slides } = props
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay(autoplay), AutoHeight(autoheight)])
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
@@ -43,32 +44,32 @@ export function Carousel(props: CarouselProps) {
                         style={{
                             display: "flex",
                             userSelect: "none",
+                            transition: "height 0.2s",
+                            alignItems: "flex-start",
                         }}>
                         {
-                            slides.map((slide, i) => {
-                                return (
-                                    <div key={i}
+                            slides.map((slide, i) => (
+                                <div key={i}
+                                    style={{
+                                        position: "relative",
+                                        minWidth: "100%"
+                                    }}>
+                                    <div
                                         style={{
                                             position: "relative",
-                                            minWidth: "100%"
+                                            overflow: "hidden",
+                                            margin: "0 auto",
+                                            width: "10rem",
+                                            borderRadius: "35px"
                                         }}>
-                                        <div
-                                            style={{
-                                                position: "relative",
-                                                overflow: "hidden",
-                                                margin: "0 auto",
-                                                width: "20rem",
-                                                borderRadius: "35px"
-                                            }}>
-                                            {slide}
-                                        </div>
+                                        {slide}
                                     </div>
-                                );
-                            })
+                                </div>
+                            ))
                         }
                     </div>
                 </div>
-                <CarouselButton onClick={scrollPrev} left={true} />
+                <CarouselButton onClick={scrollPrev} left />
                 <CarouselButton onClick={scrollNext} left={false} />
             </div >
         );
@@ -91,30 +92,28 @@ export function Carousel(props: CarouselProps) {
                         userSelect: "none",
                     }}>
                     {
-                        slides.map((slide, i) => {
-                            return (
-                                <div key={i}
+                        slides.map((slide, i) => (
+                            <div key={i}
+                                style={{
+                                    position: "relative",
+                                    minWidth: "100%"
+                                }}>
+                                <div
                                     style={{
                                         position: "relative",
-                                        minWidth: "100%"
+                                        overflow: "hidden",
+                                        margin: "0 auto",
+                                        width: "40rem",
+                                        borderRadius: "35px"
                                     }}>
-                                    <div
-                                        style={{
-                                            position: "relative",
-                                            overflow: "hidden",
-                                            margin: "0 auto",
-                                            width: "40rem",
-                                            borderRadius: "35px"
-                                        }}>
-                                        {slide}
-                                    </div>
+                                    {slide}
                                 </div>
-                            );
-                        })
+                            </div>
+                        ))
                     }
                 </div>
             </div>
-            <CarouselButton onClick={scrollPrev} left={true} />
+            <CarouselButton onClick={scrollPrev} left />
             <CarouselButton onClick={scrollNext} left={false} />
         </div >
     );

@@ -1,5 +1,5 @@
-import { Navigation } from '../components/Navigation'
-import { Example } from '../components/Example'
+import { Navigation } from 'components/Navigation'
+import { Example } from 'components/Example'
 
 export default function Home() {
   return (

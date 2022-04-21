@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sendMail } from '../../modules/mailer'
+import { sendMail } from 'modules/mailer'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {

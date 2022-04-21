@@ -1,7 +1,7 @@
 import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 import { WelcomeMsg2 } from './WelcomeMsg2'
 
 const useStyles = makeStyles((theme) => ({
@@ -90,7 +90,6 @@ export function WelcomePerfectCircle() {
                             </div> */}
               <TitleBar
                 title="Nos valeurs"
-                background
                 color="vert"
                 paddingMobile="2rem 0 0 5vw"
               />

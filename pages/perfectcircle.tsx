@@ -4,11 +4,11 @@ import {
   Container,
 } from '@material-ui/core'
 import { WelcomePerfectCircle } from 'components/PerfectCircle/WelcomePerfectCircle'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
-import { TitleBar } from '../components/TitleBar'
-import { Coach } from '../components/PerfectCircle/Coach'
-import { dataCoachs } from '../modules/data'
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { TitleBar } from 'components/TitleBar'
+import { Coach } from 'components/PerfectCircle/Coach'
+import { dataCoachs } from 'modules/data'
 
 
 export default function Perfectcircle() {

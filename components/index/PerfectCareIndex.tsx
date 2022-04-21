@@ -7,7 +7,25 @@ import {
   Link,
   Button,
 } from '@material-ui/core'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
+import { slidesProducts } from 'modules/data'
+import { Divider } from "components/Divider"
+import { Carousel } from "components/Carousel"
+import { AutoplayOptionsType } from "embla-carousel-autoplay"
+import { AutoHeightOptionsType } from "embla-carousel-auto-height"
+import { EmblaOptionsType } from "embla-carousel-react"
+
+const carouselOptions: EmblaOptionsType = {
+  loop: true
+}
+
+const autoplayOptions: AutoplayOptionsType = {
+  stopOnMouseEnter: true
+}
+
+const autoHeightOptions: AutoHeightOptionsType = {
+  destroyHeight: "auto"
+}
 
 
 export function PerfectCareIndex() {
@@ -112,6 +130,13 @@ export function PerfectCareIndex() {
             </Link>
           </div>
         </Grid>
+        <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
+          <Typography variant="h3" align="center">Découvrez nos produits</Typography>
+          <Divider color="vert" />
+          <div style={{ margin: "2rem 0 0 0", padding: "0 6rem" }}>
+            <Carousel slides={slidesProducts} options={carouselOptions} autoplay={autoplayOptions} autoheight={autoHeightOptions} />
+          </div>
+        </div>
       </Grid>
     )
   }
@@ -203,6 +228,13 @@ export function PerfectCareIndex() {
           </div>
         </div>
       </Grid>
+      <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
+        <Typography variant="h3" align="center">Découvrez nos produits</Typography>
+        <Divider color="vert" />
+        <div style={{ margin: "2rem 0 0 0", padding: "0 6rem" }}>
+          <Carousel slides={slidesProducts} options={carouselOptions} autoplay={autoplayOptions} autoheight={autoHeightOptions} />
+        </div>
+      </div>
     </Grid>
   )
 }

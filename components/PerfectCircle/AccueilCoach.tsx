@@ -1,7 +1,7 @@
 import { Container, Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
-import { colors } from '../../modules/theme'
+import { colors } from 'modules/theme'
 
 
 
@@ -20,7 +20,6 @@ export function AccueilCoach(props: AccueilCoachProps) {
       <>
         <TitleBar
           title={props.titre}
-          background
           color="vert"
           padding="2rem 0 0 0"
           paddingMobile="1rem 0 0 5vw"
@@ -106,7 +105,7 @@ export function AccueilCoach(props: AccueilCoachProps) {
   }
   return (
     <Container>
-      <TitleBar title={props.titre} background color="vert" padding="2rem 0 0 0" />
+      <TitleBar title={props.titre} color="vert" padding="2rem 0 0 0" />
       <Grid justify="flex-end" container style={{ margin: '3rem 0' }}>
         <Grid
           xs={4}

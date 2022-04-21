@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, useTheme, Typography, useMediaQuery } from '@material-ui/core'
-import { colors } from '../modules/theme'
+import { colors } from 'modules/theme'
 
 export interface UserProps {
   photo?: string

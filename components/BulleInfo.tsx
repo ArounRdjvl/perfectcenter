@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography } from '@material-ui/core'
-import { colors } from '../modules/theme'
+import { colors } from 'modules/theme'
 
 export interface BulleInfoProps {
   titre: string

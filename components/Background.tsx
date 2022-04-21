@@ -54,7 +54,7 @@ export function Background(props: BackgroundProps) {
 
   const groups = []
 
-  for (let i = 0; i < groupNumber; i += 1) {
+  for (let i = 0; i < groupNumber; i++) {
     groups.push(
       <div key={i} className={classes.group}>
         <img src="picto/background_left.png" className={classes.leftSnap} />
