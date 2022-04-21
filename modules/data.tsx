@@ -217,8 +217,8 @@ export const dataCoachs: PraticienType[] = [
   },
 ]
 
-export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach) => (
-  <a href={`/perfectcircle/${Coach.name.replace(/ /g, '_').toLowerCase()}`}>
+export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach, i) => (
+  <a href={`/perfectcircle/${Coach.name.replace(/ /g, '_').toLowerCase()}`} key={i}>
     <img
       src={Coach.photo}
       alt="Nos practiciens"

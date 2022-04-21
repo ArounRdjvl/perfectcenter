@@ -26,8 +26,8 @@ export function AchatPsio() {
           justifyContent: 'center',
         }}
       >
-        {dataPsio.map((product) => (
-          <Product product={product} />
+        {dataPsio.map((product, i) => (
+          <Product product={product} key={i} />
         ))}
       </div>
     </>

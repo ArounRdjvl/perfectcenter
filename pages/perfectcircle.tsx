@@ -33,8 +33,8 @@ export default function Perfectcircle() {
           justifyContent: 'space-evenly',
         }}
       >
-        {dataCoachs.map((coach) => (
-          <Coach user={coach} />
+        {dataCoachs.map((coach, i) => (
+          <Coach user={coach} key={i} />
         ))}
       </div>
       <Footer />

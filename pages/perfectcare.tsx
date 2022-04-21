@@ -38,8 +38,8 @@ export default function Perfectcare() {
             marginTop: '1rem',
           }}
         >
-          {dataProducts.map((product) => (
-            <Product product={product} />
+          {dataProducts.map((product, i) => (
+            <Product product={product} key={i} />
           ))}
         </div>
       </div>

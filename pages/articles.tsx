@@ -29,7 +29,7 @@ export default function articles() {
         >
           {dataArticles.map((article, i) => {
             const pair = i % 2 === 0
-            return <Article pair={pair} user={article} />
+            return <Article pair={pair} user={article} key={i} />
           })}
         </div>
       </Container>
