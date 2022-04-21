@@ -1,14 +1,6 @@
 import React from 'react'
-import {
-  Grid,
-  useTheme,
-  Typography,
-  useMediaQuery,
-  Link,
-  Button,
-} from '@material-ui/core'
+import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@material-ui/core'
 import { colors } from 'modules/theme'
-
 
 export function PerfectCorporateIndex() {
   const theme = useTheme()
@@ -95,12 +87,12 @@ export function PerfectCorporateIndex() {
           >
             <Typography variant="body1" align="justify">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-              at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-              delenit augue duis dolore te feugait nulla facilisi.
+              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+              veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+              commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+              esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+              accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+              duis dolore te feugait nulla facilisi.
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

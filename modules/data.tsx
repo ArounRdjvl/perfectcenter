@@ -44,7 +44,7 @@ export const dataMembres = [
 export const dataProducts = [
   {
     name: 'PSIO',
-    photo: "/produits/Psio classic.png",
+    photo: '/produits/Psio classic.png',
     title: 'Accélérateur de bien-être',
     desc: (
       <>
@@ -61,7 +61,7 @@ export const dataProducts = [
   },
   {
     name: 'MINT-E',
-    photo: "/produits/MINT-E.png",
+    photo: '/produits/MINT-E.png',
     title: 'Utilisez la force de la nature',
     desc: (
       <>
@@ -76,14 +76,15 @@ export const dataProducts = [
   },
   {
     name: 'KAQUN',
-    photo: "/produits/KAQUN.png",
+    photo: '/produits/KAQUN.png',
     title: 'Water and more',
     desc: (
       <>
-        L&apos;eau Kaqun n&apos;est pas n&apos;importe quelle eau. Elle contient 20 fois plus d&apos;oxygen qu&apos;une eau
-        classique. L&apos;oxygène est indéniablement l&apos;un des éléments les plus importants pour chaque
-        cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert qu&apos;aucune
-        maladie ne peut survivre en présence de niveaux élevés d&apos;oxygène.
+        L&apos;eau Kaqun n&apos;est pas n&apos;importe quelle eau. Elle contient 20 fois plus
+        d&apos;oxygen qu&apos;une eau classique. L&apos;oxygène est indéniablement l&apos;un des
+        éléments les plus importants pour chaque cellule de notre corps. En biologie cellulaire,
+        Otto Heinrich Warburg, a découvert qu&apos;aucune maladie ne peut survivre en présence de
+        niveaux élevés d&apos;oxygène.
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -91,34 +92,35 @@ export const dataProducts = [
   },
 ]
 
-export const slidesProducts: ReactNode[] = (
-  dataProducts.map((Product) => (
-    <>
-      <img
-        src={Product.photo}
-        alt="Nos produits"
-        style={{
-          display: "block",
-          width: "100%"
-        }} />
-      <div style={{
-        position: "absolute",
-        bottom: "0",
-        left: "0",
-        right: "0",
-        display: "flex",
-        padding: "1rem 1.5rem",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        background: "linear-gradient(transparent, 35%, #404040)"
-      }}>
-        <Typography variant="h3" color="textSecondary">{Product.name}</Typography>
-      </div>
-
-    </>
-  ))
-)
-
+export const slidesProducts: ReactNode[] = dataProducts.map((Product) => (
+  <>
+    <img
+      src={Product.photo}
+      alt="Nos produits"
+      style={{
+        display: 'block',
+        width: '100%',
+      }}
+    />
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        right: '0',
+        display: 'flex',
+        padding: '1rem 1.5rem',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        background: 'linear-gradient(transparent, 35%, #404040)',
+      }}
+    >
+      <Typography variant="h3" color="textSecondary">
+        {Product.name}
+      </Typography>
+    </div>
+  </>
+))
 
 export const dataPsio = [
   {
@@ -127,8 +129,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -140,8 +142,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -153,8 +155,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -215,33 +217,38 @@ export const dataCoachs: PraticienType[] = [
   },
 ]
 
-export const slidesCoaches: ReactNode[] = (
-  dataCoachs.map((Coach) => (
-    <a href={`/perfectcircle/${Coach.name.replace(/ /g, "_").toLowerCase()}`} >
-      <img
-        src={Coach.photo}
-        alt="Nos practiciens"
-        style={{
-          display: "block",
-          width: "100%"
-        }} />
-      <div style={{
-        position: "absolute",
-        bottom: "0",
-        left: "0",
-        right: "0",
-        display: "flex",
-        padding: "1rem 1.5rem",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        background: "linear-gradient(transparent, 35%, #404040)"
-      }}>
-        <Typography variant="h3" color="textSecondary">{Coach.name}</Typography>
-        <Typography variant="body1" color="textSecondary">{Coach.practice1}</Typography>
-      </div>
-    </a>
-  ))
-)
+export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach) => (
+  <a href={`/perfectcircle/${Coach.name.replace(/ /g, '_').toLowerCase()}`}>
+    <img
+      src={Coach.photo}
+      alt="Nos practiciens"
+      style={{
+        display: 'block',
+        width: '100%',
+      }}
+    />
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        right: '0',
+        display: 'flex',
+        padding: '1rem 1.5rem',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        background: 'linear-gradient(transparent, 35%, #404040)',
+      }}
+    >
+      <Typography variant="h3" color="textSecondary">
+        {Coach.name}
+      </Typography>
+      <Typography variant="body1" color="textSecondary">
+        {Coach.practice1}
+      </Typography>
+    </div>
+  </a>
+))
 
 export const dataArticles = [
   {

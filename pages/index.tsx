@@ -52,14 +52,7 @@ export default function Index() {
           marginBottom: '5rem',
         }}
       >
-        <Link
-          activeClass="active"
-          to="container"
-          spy
-          smooth
-          offset={-120}
-          duration={1500}
-        >
+        <Link activeClass="active" to="container" spy smooth offset={-120} duration={1500}>
           <IconButton color="primary" className={classes.buttonStyles}>
             <ExpandMoreIcon fontSize="large" />
           </IconButton>

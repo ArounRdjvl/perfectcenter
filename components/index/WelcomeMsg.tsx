@@ -3,8 +3,6 @@ import React from 'react'
 import { colors } from 'modules/theme'
 import { TitleBar } from 'components/TitleBar'
 
-
-
 export function WelcomeMsg() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -89,11 +87,7 @@ export function WelcomeMsg() {
   }
   return (
     <>
-      <TitleBar
-        title="Bienvenue chez PerfectCenter"
-        color="vert"
-        paddingMobile="0 0 0 5vw"
-      />
+      <TitleBar title="Bienvenue chez PerfectCenter" color="vert" paddingMobile="0 0 0 5vw" />
       <div
         style={{
           position: 'absolute',

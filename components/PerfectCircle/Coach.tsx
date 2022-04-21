@@ -7,14 +7,18 @@ export interface CoachProps {
   user: PraticienType
 }
 
-const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>) => {
+const boxMouseOverHandler = (
+  event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>
+) => {
   const box: HTMLDivElement = event.currentTarget
   box.style.backgroundColor = '#BFC7C4'
   box.style.transitionDuration = '800ms'
 }
 
 // This function will be triggered when the mouse pointer is moving out the box
-const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>) => {
+const boxMouseOutHandler = (
+  event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>
+) => {
   const box: HTMLDivElement = event.currentTarget
   box.style.backgroundColor = '#EBEAE8'
 }

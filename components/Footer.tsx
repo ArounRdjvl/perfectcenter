@@ -1,11 +1,4 @@
-import {
-  Typography,
-  Grid,
-  useTheme,
-  useMediaQuery,
-  makeStyles,
-  Container,
-} from '@material-ui/core'
+import { Typography, Grid, useTheme, useMediaQuery, makeStyles, Container } from '@material-ui/core'
 import React from 'react'
 import { colors } from 'modules/theme'
 import { Divider } from './Divider'
@@ -100,27 +93,27 @@ export function Footer(props: FooterProps) {
           }}
         >
           <a href="https://www.facebook.com/PerfectCenterParis" target="_blank" rel="noreferrer">
-            <img
-              src="/picto/Facebook_fonce.png"
-              width={55}
-              style={{ margin: theme.spacing(1) }}
-            />
+            <img src="/picto/Facebook_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
-          <a href="https://www.instagram.com/perfectcenter_/?hl=fr" target="_blank" rel="noreferrer">
-            <img
-              src="/picto/Instagram_fonce.png"
-              width={55}
-              style={{ margin: theme.spacing(1) }}
-            />
+          <a
+            href="https://www.instagram.com/perfectcenter_/?hl=fr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/picto/Instagram_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
-          <a href="https://www.linkedin.com/company/perfectcenter/" target="_blank" rel="noreferrer">
-            <img
-              src="/picto/Linkedin_fonce.png"
-              width={55}
-              style={{ margin: theme.spacing(1) }}
-            />
+          <a
+            href="https://www.linkedin.com/company/perfectcenter/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/picto/Linkedin_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
-          <a href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/picto/YT_Fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
         </div>
@@ -141,9 +134,7 @@ export function Footer(props: FooterProps) {
             <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
               34 rue du colisée, 75008, Paris
             </Typography>
-            <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
-              01 42 89 52 37
-            </Typography>
+            <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>01 42 89 52 37</Typography>
             <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
               Contact@perfectcenter.fr
             </Typography>
@@ -172,21 +163,33 @@ export function Footer(props: FooterProps) {
                 style={{ margin: theme.spacing(1) }}
               />
             </a>
-            <a href="https://www.instagram.com/perfectcenter_/?hl=fr" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/perfectcenter_/?hl=fr"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="/picto/Instagram_fonce.png"
                 width={55}
                 style={{ margin: theme.spacing(1) }}
               />
             </a>
-            <a href="https://www.linkedin.com/company/perfectcenter/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/company/perfectcenter/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="/picto/Linkedin_fonce.png"
                 width={55}
                 style={{ margin: theme.spacing(1) }}
               />
             </a>
-            <a href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/picto/YT_Fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
             </a>
           </div>

@@ -10,7 +10,6 @@ export interface BulleInfoProps {
 }
 
 export function BulleInfo(props: BulleInfoProps) {
-
   return (
     <div
       style={{

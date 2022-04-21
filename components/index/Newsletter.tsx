@@ -1,10 +1,4 @@
-import {
-  Typography,
-  useTheme,
-  useMediaQuery,
-  TextField,
-  Button,
-} from '@material-ui/core'
+import { Typography, useTheme, useMediaQuery, TextField, Button } from '@material-ui/core'
 import React from 'react'
 import { colors } from 'modules/theme'
 
@@ -27,8 +21,7 @@ export function Newsletter() {
     }).then((res) => {
       if (res.status === 200) {
         console.log('email sent')
-      }
-      else {
+      } else {
         console.error('error email')
       }
     })

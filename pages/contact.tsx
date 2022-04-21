@@ -34,10 +34,8 @@ export default function Contact() {
       },
       body: JSON.stringify({ email, subject, content }),
     }).then((res) => {
-      if (res.status === 200)
-        console.log('email sent')
-      else
-        console.error('error email')
+      if (res.status === 200) console.log('email sent')
+      else console.error('error email')
     })
     setName('')
     setEmail('')

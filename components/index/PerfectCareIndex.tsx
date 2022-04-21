@@ -1,32 +1,24 @@
 import React from 'react'
-import {
-  Grid,
-  useTheme,
-  Typography,
-  useMediaQuery,
-  Link,
-  Button,
-} from '@material-ui/core'
+import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@material-ui/core'
 import { colors } from 'modules/theme'
 import { slidesProducts } from 'modules/data'
-import { Divider } from "components/Divider"
-import { Carousel } from "components/Carousel"
-import { AutoplayOptionsType } from "embla-carousel-autoplay"
-import { AutoHeightOptionsType } from "embla-carousel-auto-height"
-import { EmblaOptionsType } from "embla-carousel-react"
+import { Divider } from 'components/Divider'
+import { Carousel } from 'components/Carousel'
+import { AutoplayOptionsType } from 'embla-carousel-autoplay'
+import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
+import { EmblaOptionsType } from 'embla-carousel-react'
 
 const carouselOptions: EmblaOptionsType = {
-  loop: true
+  loop: true,
 }
 
 const autoplayOptions: AutoplayOptionsType = {
-  stopOnMouseEnter: true
+  stopOnMouseEnter: true,
 }
 
 const autoHeightOptions: AutoHeightOptionsType = {
-  destroyHeight: "auto"
+  destroyHeight: 'auto',
 }
-
 
 export function PerfectCareIndex() {
   const theme = useTheme()
@@ -116,10 +108,10 @@ export function PerfectCareIndex() {
               services qui se démarquent par leur <strong>innovation</strong> et leur{' '}
               <strong>efficacité</strong>.<br />
               Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes
-              de luminothérapie, en passant par les fleurs de bach et des compléments
-              alimentaires. Ces produits sont utilisés régulièrement par nos praticiens et
-              thérapeutes. Nous vous invitons à venir les découvir directement dans nos locaux ou
-              en prennant rendez-vous par télephone.
+              de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
+              Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
+              invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous
+              par télephone.
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -130,11 +122,27 @@ export function PerfectCareIndex() {
             </Link>
           </div>
         </Grid>
-        <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
-          <Typography variant="h3" align="center">Découvrez nos produits</Typography>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            margin: '0 0 2rem 0',
+          }}
+        >
+          <Typography variant="h3" align="center">
+            Découvrez nos produits
+          </Typography>
           <Divider color="vert" />
-          <div style={{ margin: "2rem 0 0 0", padding: "0 6rem" }}>
-            <Carousel slides={slidesProducts} options={carouselOptions} autoplay={autoplayOptions} autoheight={autoHeightOptions} />
+          <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
+            <Carousel
+              slides={slidesProducts}
+              options={carouselOptions}
+              autoplay={autoplayOptions}
+              autoheight={autoHeightOptions}
+            />
           </div>
         </div>
       </Grid>
@@ -210,8 +218,8 @@ export function PerfectCareIndex() {
           }}
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
-            Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des services
-            qui se démarquent par leur <strong>innovation</strong> et leur{' '}
+            Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
+            services qui se démarquent par leur <strong>innovation</strong> et leur{' '}
             <strong>efficacité</strong>.<br />
             Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes de
             luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
@@ -228,11 +236,27 @@ export function PerfectCareIndex() {
           </div>
         </div>
       </Grid>
-      <div style={{ width: "100%", display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", margin: "0 0 2rem 0" }}>
-        <Typography variant="h3" align="center">Découvrez nos produits</Typography>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignContent: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          margin: '0 0 2rem 0',
+        }}
+      >
+        <Typography variant="h3" align="center">
+          Découvrez nos produits
+        </Typography>
         <Divider color="vert" />
-        <div style={{ margin: "2rem 0 0 0", padding: "0 6rem" }}>
-          <Carousel slides={slidesProducts} options={carouselOptions} autoplay={autoplayOptions} autoheight={autoHeightOptions} />
+        <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
+          <Carousel
+            slides={slidesProducts}
+            options={carouselOptions}
+            autoplay={autoplayOptions}
+            autoheight={autoHeightOptions}
+          />
         </div>
       </div>
     </Grid>

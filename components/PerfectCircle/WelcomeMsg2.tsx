@@ -73,9 +73,9 @@ export function WelcomeMsg2() {
             <Typography variant="body1" align="justify">
               Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous
               capitalisons nos talents pour offrir des prestations liées au bien-être et au
-              développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en individuel, en
-              présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des
-              personnes qui viennent à nous...
+              développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en
+              individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre
+              aux besoins des personnes qui viennent à nous...
               <br />
               Nous créons des événements, formations et ateliers en collectif en plus des
               consultations individuelles que nous pouvons proposer.
@@ -154,9 +154,9 @@ export function WelcomeMsg2() {
           <Typography variant="body1" align="justify">
             Coach, thérapeute, conférencier, consultant, sophrologue, coach sportif... Nous
             capitalisons nos talents pour offrir des prestations liées au bien-être et au
-            développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en individuel, en
-            présentiel ou en distanciel, nos palettes sont infinies pour répondre aux besoins des
-            personnes qui viennent à nous...
+            développement de tout potentiel, de son vrai &quot;Soi&quot;. En entreprise et en
+            individuel, en présentiel ou en distanciel, nos palettes sont infinies pour répondre aux
+            besoins des personnes qui viennent à nous...
             <br />
             Nous créons des événements, formations et ateliers en collectif en plus des
             consultations individuelles que nous pouvons proposer.

@@ -3,8 +3,6 @@ import React from 'react'
 import { TitleBar } from 'components/TitleBar'
 import { colors } from 'modules/theme'
 
-
-
 export interface AccueilCoachProps {
   titre: string
   photo: string

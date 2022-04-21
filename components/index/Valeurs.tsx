@@ -71,11 +71,7 @@ export function Valeurs() {
                 backgroundColor: '#EBEAE8',
               }}
             >
-              <TitleBar
-                title="Nos valeurs"
-                color="vert"
-                paddingMobile="2rem 0 0 5vw"
-              />
+              <TitleBar title="Nos valeurs" color="vert" paddingMobile="2rem 0 0 5vw" />
             </div>
           </div>
           <div

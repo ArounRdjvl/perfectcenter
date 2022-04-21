@@ -16,7 +16,9 @@ export default function MembrePerfectCircle() {
 
   React.useEffect(() => {
     if (membre === undefined) return
-    const temp = dataCoachs.find((coach) => membre === coach.name.toLowerCase().split(/\s/).join('_'))
+    const temp = dataCoachs.find(
+      (coach) => membre === coach.name.toLowerCase().split(/\s/).join('_')
+    )
     if (temp === undefined) {
       setPraticien('error')
     } else {

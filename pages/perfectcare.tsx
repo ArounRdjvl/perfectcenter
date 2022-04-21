@@ -38,7 +38,9 @@ export default function Perfectcare() {
             marginTop: '1rem',
           }}
         >
-          {dataProducts.map((product) => <Product product={product} />)}
+          {dataProducts.map((product) => (
+            <Product product={product} />
+          ))}
         </div>
       </div>
       <Footer />

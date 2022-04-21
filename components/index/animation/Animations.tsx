@@ -4,7 +4,6 @@ import { colors } from 'modules/theme'
 import { AnimatedImage } from './AnimatedImage'
 import { Bubble } from './Bubble'
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     top: 0,
