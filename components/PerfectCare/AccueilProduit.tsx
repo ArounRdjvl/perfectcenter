@@ -2,7 +2,7 @@ import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     top: 0,
     position: 'absolute',

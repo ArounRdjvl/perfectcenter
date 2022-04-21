@@ -3,10 +3,10 @@ import clsx from 'clsx'
 import React from 'react'
 import { colors } from 'modules/theme'
 
-export type division = 'circle' | 'care' | 'corporate'
+export type Division = 'circle' | 'care' | 'corporate'
 
 export interface DivisionDescProps {
-  division: division
+  division: Division
 }
 
 const useStyles = makeStyles((theme) => ({

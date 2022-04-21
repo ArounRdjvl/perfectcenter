@@ -4,7 +4,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import { IconButton, makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   navButton: {
     outline: '0',
     cursor: 'pointer',

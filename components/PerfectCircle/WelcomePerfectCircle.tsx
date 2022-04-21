@@ -4,7 +4,7 @@ import { TitleBar } from 'components/TitleBar'
 import { colors } from 'modules/theme'
 import { WelcomeMsg2 } from './WelcomeMsg2'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   img: {
     position: 'relative',
     left: 0,

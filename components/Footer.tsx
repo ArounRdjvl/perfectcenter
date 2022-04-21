@@ -3,7 +3,7 @@ import React from 'react'
 import { colors } from 'modules/theme'
 import { Divider } from './Divider'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
     width: '100%',

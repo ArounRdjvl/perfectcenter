@@ -11,7 +11,7 @@ import { Footer } from 'components/Footer'
 import { Services } from 'components/index/Services'
 import { Valeurs } from 'components/index/Valeurs'
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   buttonStyles: { position: 'relative', zIndex: 3 },
   itemStyle: {
     display: 'flex',

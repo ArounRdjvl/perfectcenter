@@ -6,7 +6,7 @@ interface BackgroundProps {
   elRef: any
 }
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   // à paramétrer possiblement
   const pictoSize = '7%'
   const groupHeight = '100vh'

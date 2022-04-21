@@ -43,7 +43,7 @@ const boxMouseOutHandler = (
   box.style.backgroundColor = '#EBEAE8'
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
     borderRadius: '20px',

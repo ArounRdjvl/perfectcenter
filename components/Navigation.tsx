@@ -17,7 +17,7 @@ import { useFlux } from 'modules/Flux'
 
 export const heightHeader = 90
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   boxShadowNone: {
     boxShadow: 'none',
   },

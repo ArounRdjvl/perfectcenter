@@ -10,6 +10,7 @@
     "jsx-a11y/iframe-has-title": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-shadow": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/require-default-props": "off",
     "react/destructuring-assignment": "off",
@@ -44,6 +45,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "prettier"
