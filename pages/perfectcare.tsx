@@ -1,11 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import { Container } from '@material-ui/core'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
-import { TitleBar } from '../components/TitleBar'
-import { Product } from '../components/Product'
-import { dataProducts } from '../modules/data'
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { TitleBar } from 'components/TitleBar'
+import { Product } from 'components/Product'
+import { dataProducts } from 'modules/data'
 
 export default function Perfectcare() {
   const ref = React.useRef<HTMLDivElement>(null)
@@ -38,7 +38,9 @@ export default function Perfectcare() {
             marginTop: '1rem',
           }}
         >
-          {dataProducts.map((product) => <Product product={product} />)}
+          {dataProducts.map((product, i) => (
+            <Product product={product} key={i} />
+          ))}
         </div>
       </div>
       <Footer />

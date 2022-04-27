@@ -1,3 +1,5 @@
+import { Typography } from '@material-ui/core'
+import { ReactNode } from 'react'
 import { PraticienType } from './types'
 
 export const dataMembres = [
@@ -42,6 +44,7 @@ export const dataMembres = [
 export const dataProducts = [
   {
     name: 'PSIO',
+    photo: '/produits/Psio classic.png',
     title: 'Accélérateur de bien-être',
     desc: (
       <>
@@ -58,6 +61,7 @@ export const dataProducts = [
   },
   {
     name: 'MINT-E',
+    photo: '/produits/MINT-E.png',
     title: 'Utilisez la force de la nature',
     desc: (
       <>
@@ -72,19 +76,52 @@ export const dataProducts = [
   },
   {
     name: 'KAQUN',
+    photo: '/produits/KAQUN.png',
     title: 'Water and more',
     desc: (
       <>
-        L&apos;eau Kaqun n&apos;est pas n&apos;importe quelle eau. Elle contient 20 fois plus d&apos;oxygen qu&apos;une eau
-        classique. L&apos;oxygène est indéniablement l&apos;un des éléments les plus importants pour chaque
-        cellule de notre corps. En biologie cellulaire, Otto Heinrich Warburg, a découvert qu&apos;aucune
-        maladie ne peut survivre en présence de niveaux élevés d&apos;oxygène.
+        L&apos;eau Kaqun n&apos;est pas n&apos;importe quelle eau. Elle contient 20 fois plus
+        d&apos;oxygen qu&apos;une eau classique. L&apos;oxygène est indéniablement l&apos;un des
+        éléments les plus importants pour chaque cellule de notre corps. En biologie cellulaire,
+        Otto Heinrich Warburg, a découvert qu&apos;aucune maladie ne peut survivre en présence de
+        niveaux élevés d&apos;oxygène.
       </>
     ),
     link: '/perfectcare/kaqun',
     moreAboutLink: 'https://mint-elabs.fr/products/z-trauma',
   },
 ]
+
+export const slidesProducts: ReactNode[] = dataProducts.map((Product) => (
+  <>
+    <img
+      src={Product.photo}
+      alt="Nos produits"
+      style={{
+        display: 'block',
+        width: '100%',
+      }}
+    />
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        right: '0',
+        display: 'flex',
+        padding: '1rem 1.5rem',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        background: 'linear-gradient(transparent, 35%, #404040)',
+      }}
+    >
+      <Typography variant="h3" color="textSecondary">
+        {Product.name}
+      </Typography>
+    </div>
+  </>
+))
+
 export const dataPsio = [
   {
     name: 'Psio classic',
@@ -92,8 +129,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -105,8 +142,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -118,8 +155,8 @@ export const dataPsio = [
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
-        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour pouvoir
-        avoir du texte
+        bénéficier d&apos;un abonnement à notre newletter ! Je dis un peu n&apos;importe quoi pour
+        pouvoir avoir du texte
       </>
     ),
     link: '/perfectcare/kaqun',
@@ -133,11 +170,11 @@ export const dataCoachs: PraticienType[] = [
     photo: '/coach/veronique_ROUBERTIE.png',
     practice1: 'Sens-thérapeute - Accompagnement des dépendants affectifs',
     description: `« Si tu restes dans ta tête tu prends perpette » Tony ROBBINS.
-        C’est ce que nous faisons tous, quand on est dépendant affectif c’est encore plus dur car toute rencontre est un enjeu existentiel celui d’être aimé. On entre en relation pour de mauvaises raisons.
-        Je t’accompagne sur le chemin de l’autonomie affective. Car j’ai su le mal de vivre de la dépendance affective, toute notre énergie y passe, la douleur est paralysante, la vie un enfer.
-        Aujourd’hui, J’aime la phrase du Dr LEJOYEUX « il n’est pas de meilleur maitre en liberté qu’un dépendant guéri » qui me caractérise le mieux.
+      C’est ce que nous faisons tous, quand on est dépendant affectif c’est encore plus dur car toute rencontre est un enjeu existentiel celui d’être aimé.On entre en relation pour de mauvaises raisons.
+        Je t’accompagne sur le chemin de l’autonomie affective.Car j’ai su le mal de vivre de la dépendance affective, toute notre énergie y passe, la douleur est paralysante, la vie un enfer.
+      Aujourd’hui, J’aime la phrase du Dr LEJOYEUX « il n’est pas de meilleur maitre en liberté qu’un dépendant guéri » qui me caractérise le mieux.
         Grace à des pratiques ludiques, psychocorporelles, tu vas habiter ton corps, comprendre tes besoins, poser tes limites et surtout tu seras en mesure de te nourrir affectivement.
-        Cette démarche qui a déjà fait ses preuves va te permettre de quitter le monde de l’addiction relationnelle, les hauts et bas de l’alternance fusion-démission, je t’aime - je ne t’aime pas…`,
+        Cette démarche qui a déjà fait ses preuves va te permettre de quitter le monde de l’addiction relationnelle, les hauts et bas de l’alternance fusion- démission, je t’aime - je ne t’aime pas…`,
   },
   {
     name: 'Nadia CHABANE',
@@ -145,11 +182,11 @@ export const dataCoachs: PraticienType[] = [
     practice1: 'Coach thérapeutique',
     description: `"Dis-moi Où Tu As Mal, Je Te Dirai Qui Tu Es."
         J'ai libéré ma vocation d'aide aux autres, en suivant une formation de sophrologue.
-        Puis, souhaitant aussi appréhender le corps physique, j'ai décidé de me former aux modelages du monde pour soulager les tensions, les douleurs. Après plusieurs formations en techniques énergétiques, j'ai compris que pour apporter de l'aide à mes patients, il fallait apporter des soins holistiques en alliant le physique, le mental et la sphère émotionnelle.
+    Puis, souhaitant aussi appréhender le corps physique, j'ai décidé de me former aux modelages du monde pour soulager les tensions, les douleurs. Après plusieurs formations en techniques énergétiques, j'ai compris que pour apporter de l'aide à mes patients, il fallait apporter des soins holistiques en alliant le physique, le mental et la sphère émotionnelle.
         Oscillant entre le France et le Maroc, je vous propose des soins sur mesure, utilisant l'écoute active, le dialogue bienveillant, le changement de visions, les soins énergétiques, les modelages du monde...
         En apaisant le mental et en régulant l'émotionnel, le corps lâche prise et la voix de la libération surgit.
         Mon objectif est de faire comprendre à chacun, que les solutions remèdes se trouvent en soi, et qu'il faut trouver les clés pour ouvrir la porte du bien-être et du bonheur.
-        Ensemble, nous décoderons les souffrances, pour les déprogrammer et retrouver votre être originel. En travaillant sur l'alignement et le rééquilibrage énergétique.
+        Ensemble, nous décoderons les souffrances, pour les déprogrammer et retrouver votre être originel.En travaillant sur l'alignement et le rééquilibrage énergétique.
         Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`,
   },
   {
@@ -179,6 +216,39 @@ export const dataCoachs: PraticienType[] = [
         Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`,
   },
 ]
+
+export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach, i) => (
+  <a href={`/perfectcircle/${Coach.name.replace(/ /g, '_').toLowerCase()}`} key={i}>
+    <img
+      src={Coach.photo}
+      alt="Nos practiciens"
+      style={{
+        display: 'block',
+        width: '100%',
+      }}
+    />
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        right: '0',
+        display: 'flex',
+        padding: '1rem 1.5rem',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        background: 'linear-gradient(transparent, 35%, #404040)',
+      }}
+    >
+      <Typography variant="h3" color="textSecondary">
+        {Coach.name}
+      </Typography>
+      <Typography variant="body1" color="textSecondary">
+        {Coach.practice1}
+      </Typography>
+    </div>
+  </a>
+))
 
 export const dataArticles = [
   {

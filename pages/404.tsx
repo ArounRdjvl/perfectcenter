@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Container, Link, Typography } from '@material-ui/core'
 import Lottie from 'react-lottie'
-import animation from '../assets/logo404.json'
+import animation from 'assets/logo404.json'
 
 export default function Home() {
   const ref = React.useRef<HTMLDivElement>(null)
@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <Container ref={ref} style={{ display: 'flex', height: '100vh' }}>
-
       <div
         style={{
           margin: 'auto',

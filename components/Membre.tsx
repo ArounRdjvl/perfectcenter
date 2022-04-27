@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, useTheme, Typography, useMediaQuery } from '@material-ui/core'
-import { colors } from '../modules/theme'
+import { colors } from 'modules/theme'
 
 export interface UserProps {
   photo?: string
@@ -65,7 +65,8 @@ export function Membre(props: MembreProps) {
                 <a
                   href={props.user?.facebook}
                   target="_blank"
-                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                  rel="noreferrer"
                 >
                   <img
                     src="picto/Facebook_fonce.png"
@@ -78,7 +79,8 @@ export function Membre(props: MembreProps) {
                 <a
                   href={props.user?.instagram}
                   target="_blank"
-                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                  rel="noreferrer"
                 >
                   <img
                     src="picto/Instagram_fonce.png"
@@ -91,7 +93,8 @@ export function Membre(props: MembreProps) {
                 <a
                   href={props.user?.linkedin}
                   target="_blank"
-                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                  rel="noreferrer"
                 >
                   <img
                     src="picto/Linkedin_fonce.png"
@@ -218,7 +221,8 @@ export function Membre(props: MembreProps) {
               <a
                 href={props.user?.facebook}
                 target="_blank"
-                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                rel="noreferrer"
               >
                 <img
                   src="picto/Facebook_clair.png"
@@ -231,7 +235,8 @@ export function Membre(props: MembreProps) {
               <a
                 href={props.user?.instagram}
                 target="_blank"
-                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                rel="noreferrer"
               >
                 <img
                   src="picto/Instagram_clair.png"
@@ -244,7 +249,8 @@ export function Membre(props: MembreProps) {
               <a
                 href={props.user?.linkedin}
                 target="_blank"
-                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} rel="noreferrer"
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                rel="noreferrer"
               >
                 <img
                   src="picto/Linkedin_clair.png"

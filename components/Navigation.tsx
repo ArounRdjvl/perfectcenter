@@ -13,11 +13,11 @@ import Link from 'next/link'
 import MenuIcon from '@material-ui/icons/Menu'
 import MenuOpenIcon from '@material-ui/icons/MenuOpen'
 import { animated, config, useSpring } from 'react-spring'
-import { useFlux } from '../modules/Flux'
+import { useFlux } from 'modules/Flux'
 
 export const heightHeader = 90
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   boxShadowNone: {
     boxShadow: 'none',
   },

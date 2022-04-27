@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react'
 const tokenKey = 'jwtToken'
 // TODO futures requests to the back end
 
-function getApiObject(token: string | null) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function getApiObject(_token: string | null) {
   return {}
 }
 

@@ -4,9 +4,9 @@ import { AccueilCoach } from 'components/PerfectCircle/AccueilCoach'
 import { RdvCoach } from 'components/PerfectCircle/RdvCoach'
 import { useRouter } from 'next/router'
 import { PraticienType } from 'modules/types'
-import { dataCoachs } from '../../modules/data'
-import { Footer } from '../../components/Footer'
-import { Navigation } from '../../components/Navigation'
+import { dataCoachs } from 'modules/data'
+import { Footer } from 'components/Footer'
+import { Navigation } from 'components/Navigation'
 
 export default function MembrePerfectCircle() {
   const ref = React.useRef<HTMLDivElement>(null)
@@ -16,7 +16,9 @@ export default function MembrePerfectCircle() {
 
   React.useEffect(() => {
     if (membre === undefined) return
-    const temp = dataCoachs.find((coach) => membre === coach.name.toLowerCase().split(/\s/).join('_'))
+    const temp = dataCoachs.find(
+      (coach) => membre === coach.name.toLowerCase().split(/\s/).join('_')
+    )
     if (temp === undefined) {
       setPraticien('error')
     } else {
@@ -43,7 +45,7 @@ export default function MembrePerfectCircle() {
           description={praticien.description}
         />
       )}
-      <RdvCoach pratique="Pratique 1" />
+      <RdvCoach />
       <Footer />
     </div>
   )

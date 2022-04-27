@@ -14,7 +14,9 @@ export interface DisplayProps {
   product: ProductProps
 }
 
-const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>) => {
+const boxMouseOverHandler = (
+  event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>
+) => {
   const box: HTMLDivElement = event.currentTarget
   const fond = event.currentTarget.getElementsByClassName('fond').item(0)! as HTMLDivElement
   fond.style.backgroundImage =
@@ -28,7 +30,9 @@ const boxMouseOverHandler = (event: React.MouseEvent<HTMLDivElement> | React.Foc
 }
 
 // This function will be triggered when the mouse pointer is moving out the box
-const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>) => {
+const boxMouseOutHandler = (
+  event: React.MouseEvent<HTMLDivElement> | React.FocusEvent<HTMLDivElement>
+) => {
   const box: HTMLDivElement = event.currentTarget
   const fond = event.currentTarget.getElementsByClassName('fond').item(0)! as HTMLDivElement
   fond.style.backgroundImage =
@@ -39,8 +43,7 @@ const boxMouseOutHandler = (event: React.MouseEvent<HTMLDivElement> | React.Focu
   box.style.backgroundColor = '#EBEAE8'
 }
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
     borderRadius: '20px',

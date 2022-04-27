@@ -1,18 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
-import {
-  Container,
-} from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import { WelcomePerfectCircle } from 'components/PerfectCircle/WelcomePerfectCircle'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
-import { TitleBar } from '../components/TitleBar'
-import { Coach } from '../components/PerfectCircle/Coach'
-import { dataCoachs } from '../modules/data'
-
+import { Navigation } from 'components/Navigation'
+import { Footer } from 'components/Footer'
+import { TitleBar } from 'components/TitleBar'
+import { Coach } from 'components/PerfectCircle/Coach'
+import { dataCoachs } from 'modules/data'
 
 export default function Perfectcircle() {
-
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
@@ -37,7 +33,9 @@ export default function Perfectcircle() {
           justifyContent: 'space-evenly',
         }}
       >
-        {dataCoachs.map((coach, i) => <Coach user={coach} />)}
+        {dataCoachs.map((coach, i) => (
+          <Coach user={coach} key={i} />
+        ))}
       </div>
       <Footer />
     </div>

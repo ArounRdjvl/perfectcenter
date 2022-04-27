@@ -3,10 +3,10 @@ import clsx from 'clsx'
 import React from 'react'
 import { colors } from 'modules/theme'
 
-export type division = 'circle' | 'care' | 'corporate'
+export type Division = 'circle' | 'care' | 'corporate'
 
 export interface DivisionDescProps {
-  division: division
+  division: Division
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -99,8 +99,8 @@ export function DivisionDesc(props: DivisionDescProps) {
           </Typography>
           <Typography align="justify">
             PerfectCircle regroupe de nombreux praticiens, thérapeuthes et interventants divers.
-            C&apos;est ce qui permet à notre clientèle d&apos;être accompagnée vers la solution qui est la
-            plus adaptée à ses besoins spécifiques.
+            C&apos;est ce qui permet à notre clientèle d&apos;être accompagnée vers la solution qui
+            est la plus adaptée à ses besoins spécifiques.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/perfectcircle" underline="none" style={{ marginTop: '2rem' }}>
@@ -219,9 +219,9 @@ export function DivisionDesc(props: DivisionDescProps) {
             <b>Séminaires et formations !</b>
           </Typography>
           <Typography>
-            Nous travaillons actuellement à des offres de séminaires et des formations à
-            destination du personnel des entreprises. PerfectCenter est en cours d&apos;agrément
-            QUALIOPI et CPF.
+            Nous travaillons actuellement à des offres de séminaires et des formations à destination
+            du personnel des entreprises. PerfectCenter est en cours d&apos;agrément QUALIOPI et
+            CPF.
           </Typography>
         </div>
       </div>

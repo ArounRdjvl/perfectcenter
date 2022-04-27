@@ -19,7 +19,7 @@ export function Bubble(props: BubbleProps) {
       left: props.from.x,
       opacity: 0,
     },
-    to: async (next, cancel) => {
+    to: async (next) => {
       await next({
         top: props.from.y,
         left: props.from.x,
