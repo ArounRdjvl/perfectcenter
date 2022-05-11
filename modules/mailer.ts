@@ -1,5 +1,6 @@
+import {dev} from "./utils";
+
 const nodemailer = require("nodemailer")
-const dev = process.env.NODE_ENV !== 'production'
 
 const defaultEmail = process.env.EMAIL_USR ?? ""
 

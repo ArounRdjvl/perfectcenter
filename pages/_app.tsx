@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@material-ui/styles"
 import { getTheme } from "../modules/theme"
 import { CssBaseline } from "@material-ui/core"
+import "../styles/globalStyle.css"
 
 function MyApp({
     Component,

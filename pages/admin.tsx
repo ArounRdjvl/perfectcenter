@@ -5,9 +5,9 @@ import {useRouter} from "next/router";
 export default function Admin() {
     useRouter()
     return (
-        <div>
+        <div style={{display: "flex", flexDirection: "column", height: "100%"}}>
             <AdminNavigation/>
-            <Rooms/>
+            <Rooms style={{flex: 1}} />
         </div>
     )
 }

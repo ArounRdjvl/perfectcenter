@@ -1,6 +1,6 @@
 // might not be used for admin command
 import {NextApiRequest, NextApiResponse} from "next";
-import {prisma} from "modules/utils";
+import {getPrisma} from "modules/utils";
 const bcrypt = require("bcrypt")
 
 const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -24,7 +24,7 @@ async function register(req: NextApiRequest, res: NextApiResponse) {
     }
     const hash = await bcrypt.hash(plainPassword, 10)
 
-    const user = await prisma.user.create({
+    const user = await getPrisma().user.create({
         data: {
             email,
             firstname,

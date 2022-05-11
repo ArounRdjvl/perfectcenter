@@ -4,11 +4,22 @@ import {
     getAllRooms,
     createRoom,
     deleteRoom,
-    updateRoom
+    updateRoom, perform
 } from "modules/api/admin/room"
-import {prisma} from "../../../../modules/utils";
+import initMiddleware, {getPrisma} from "../../../../modules/utils";
+import Cors from 'cors'
+
+const cors = initMiddleware(
+    // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+    Cors({
+        // Only allow requests with GET, POST and OPTIONS
+        methods: ['GET', 'POST'],
+    })
+)
 
 export default async function hander(req: NextApiRequest, res: NextApiResponse) {
+    await cors(req, res)
+
     const {object, action} = req.query
 
     if (typeof object !== "string" || typeof action !== "string") {
@@ -22,7 +33,7 @@ export default async function hander(req: NextApiRequest, res: NextApiResponse) 
     }
     //console.info("performing request : ", req)
     try {
-        await handlers[object][action](req, res)
+        res.json(await handlers[object][action](req, res))
     } catch (e) {
         if (e instanceof Prisma.PrismaClientKnownRequestError) {
             res.status(400).json({code: e.code, meta: e.meta})
@@ -37,7 +48,7 @@ export async function createMember(req: NextApiRequest, res: NextApiResponse) {
     const {existingUserId, email, firstname, lastname, rcp, siret} = req.body
 
     if (existingUserId) {
-        const user = prisma.user.update({
+        const user = getPrisma().user.update({
             where: {id: existingUserId},
             data: {
                 member: {
@@ -48,9 +59,9 @@ export async function createMember(req: NextApiRequest, res: NextApiResponse) {
             }
         })
         //TODO: create token and send email invites
-        res.json(user)
+        return user
     } else {
-        const user = prisma.user.create({
+        const user = getPrisma().user.create({
             data: {
                 email,
                 firstname,
@@ -63,20 +74,21 @@ export async function createMember(req: NextApiRequest, res: NextApiResponse) {
             }
         })
         //TODO: notify by email
-        res.json(user)
+        return user
     }
 }
 
 const handlers: {
     [object: string]: {
-        [action: string]: (req: NextApiRequest, res: NextApiResponse) => Promise<unknown>
+        [action: string]: (req: NextApiRequest, res: NextApiResponse) => Promise<object>
     }
 } = {
     room: {
         all: getAllRooms,
         create: createRoom,
         delete: deleteRoom,
-        update: updateRoom
+        update: updateRoom,
+        perform: perform,
     },
     member: {
         create: createMember

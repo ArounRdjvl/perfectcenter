@@ -1,11 +1,11 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {prisma} from "modules/utils";
+import {getPrisma} from "modules/utils";
 
 export async function getAllRooms(req: NextApiRequest, res: NextApiResponse) {
-    res.json(prisma.room.findMany())
+    return getPrisma().room.findMany()
 }
 
-export async function createRoom(req: NextApiRequest, res: NextApiResponse) {
+export async function createRoom(req: NextApiRequest, res: NextApiResponse, content?: any) {
     const {
         name,
         description,
@@ -17,9 +17,9 @@ export async function createRoom(req: NextApiRequest, res: NextApiResponse) {
         parentRoomId,
         createStaticEq,
         useStaticEq
-    } = req.body
+    } = content ?? req.body
 
-    const room = await prisma.room.create({
+    const room = await getPrisma().room.create({
         data: {
             name,
             description,
@@ -35,27 +35,27 @@ export async function createRoom(req: NextApiRequest, res: NextApiResponse) {
             }
         }
     })
-    res.json(room)
+    return room
 }
 
-export async function deleteRoom(req: NextApiRequest, res: NextApiResponse) {
-    const {id, deleteStaticEquipment} = req.body
+export async function deleteRoom(req: NextApiRequest, res: NextApiResponse, content?: any) {
+    const {id, deleteStaticEquipment} = content ?? req.body
 
     let deletedEq = null
     if (deleteStaticEquipment) {
-        deletedEq = await prisma.staticEquipment.deleteMany({
+        deletedEq = await getPrisma().staticEquipment.deleteMany({
             where: {
                 roomId: id
             }
         })
     }
-    const deletedRoom = await prisma.room.delete({
+    const deletedRoom = await getPrisma().room.delete({
         where: {id}
     })
-    res.json({deletedEq, deletedRoom})
+    return {deletedEq, deletedRoom}
 }
 
-export async function updateRoom(req: NextApiRequest, res: NextApiResponse) {
+export async function updateRoom(req: NextApiRequest, res: NextApiResponse, content?: any) {
     const {
         id,
         name,
@@ -66,9 +66,9 @@ export async function updateRoom(req: NextApiRequest, res: NextApiResponse) {
         price,
         bookingOpen,
         parentRoomId,
-    } = req.body
+    } = content ?? req.body
 
-    const room = await prisma.room.update({
+    const room = await getPrisma().room.update({
         where: {id},
         data: {
             name,
@@ -81,5 +81,19 @@ export async function updateRoom(req: NextApiRequest, res: NextApiResponse) {
             parentRoomId,
         }
     })
-    res.json(room)
+    return room
+}
+
+export async function perform(req: NextApiRequest, res: NextApiResponse, content?: any) {
+    const {roomsAdded, roomsEdited, roomsRemoved} = content ?? req.body
+    for (const room of roomsAdded) {
+        await createRoom(req, res, room)
+    }
+    for (const room of roomsEdited) {
+        await updateRoom(req, res, room)
+    }
+    for (const room of roomsRemoved) {
+        await deleteRoom(req, res, room)
+    }
+    return getAllRooms(req, res)
 }

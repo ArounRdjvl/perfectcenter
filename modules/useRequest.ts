@@ -3,10 +3,12 @@ import useAuthentication from "./useAuthentication";
 const basePath = "http://localhost:3000"
 
 const defaultOptions: RequestInit = {
-    mode: 'cors',
+    mode: "cors",
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
@@ -35,7 +37,7 @@ export default function useRequest() {
     }
 
     function buildBodyMethod(method: string) {
-        return async <T = any>(path: string, body: Object): Promise<T> => {
+        return async <T = any>(path: string, body: Object): Promise<T | string> => {
             const url = basePath + path
             const response = await fetch(url, {
                 ...defaultOptions,
@@ -48,7 +50,11 @@ export default function useRequest() {
             });
             if (response.status >= 400)
                 throw response
-            return response.json()
+            try {
+                return response.json()
+            } catch (e) {
+                return response.text()
+            }
         }
     }
 
