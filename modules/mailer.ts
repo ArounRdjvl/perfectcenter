@@ -33,7 +33,7 @@ export async function sendMail(subject : string, content : string, from : string
         }
     }
 
-    let transporter = nodemailer.createTransport(authOptions)
+  const transporter = nodemailer.createTransport(authOptions)
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
@@ -43,8 +43,7 @@ export async function sendMail(subject : string, content : string, from : string
         text: content, // plain text body
     })
 
-    console.log("Message sent: %s", info.messageId)
+  console.log('Message sent: %s', info.messageId)
 
-    if (dev)
-        console.log("DEV MODE : Preview URL: %s", nodemailer.getTestMessageUrl(info))
+  if (dev) console.log('DEV MODE : Preview URL: %s', nodemailer.getTestMessageUrl(info))
 }
