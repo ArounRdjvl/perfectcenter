@@ -27,7 +27,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     },
   })
 
-  if (user && (await bcrypt.compare(password, user.password))) {
+  if (user && user.password && (await bcrypt.compare(password, user.password))) {
     res.json({
       token: jwt.sign(
         {

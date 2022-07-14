@@ -1,4 +1,3 @@
-
 export type PraticienType = {
   name: string
   photo: string
