@@ -40,7 +40,7 @@ export function Valeurs() {
                     flexWrap: "wrap",
                     alignContent: "flex-start",
                     justifyContent: "space-evenly",
-                    margin: "2rem 0 2rem 0",
+                    margin: "2rem 0 5rem 0",
                 }}
             >
                 <div
@@ -181,7 +181,8 @@ export function Valeurs() {
                             backgroundRepeat: "no-repeat",
                             backgroundColor: colors.beige,
                             backgroundImage: "url(/picto/Coeur_sur_main.png)",
-                            backgroundSize: "70%"
+                            backgroundSize: "70%",
+                            boxShadow : "0px 0px 25px #BBBBBB"
                         }}>
                     </div>
                     <Typography variant="h4" align="center" style={{marginTop:"1rem", fontWeight: "bold"}}>
@@ -205,7 +206,8 @@ export function Valeurs() {
                             backgroundRepeat: "no-repeat",
                             backgroundColor: colors.vert,
                             backgroundImage: "url(/picto/Bras_mains.png)",
-                            backgroundSize: "70%"
+                            backgroundSize: "70%",
+                            boxShadow : "0px 0px 25px #BBBBBB"
                         }}>
                     </div>
                     <Typography variant="h4" align="center" style={{marginTop:"1rem", fontWeight: "bold"}}>
@@ -229,7 +231,8 @@ export function Valeurs() {
                             backgroundRepeat: "no-repeat",
                             backgroundColor: colors.beige,
                             backgroundImage: "url(/picto/Coeur_main.png)",
-                            backgroundSize: "70%"
+                            backgroundSize: "70%",
+                            boxShadow : "0px 0px 25px #BBBBBB"
                         }}>
                     </div>
                     <Typography variant="h4" align="center" style={{marginTop:"1rem", fontWeight: "bold"}}>
@@ -253,7 +256,8 @@ export function Valeurs() {
                             backgroundRepeat: "no-repeat",
                             backgroundColor: colors.vert,
                             backgroundImage: "url(/picto/Coeur_deuxmains.png)",
-                            backgroundSize: "70%"
+                            backgroundSize: "70%",
+                            boxShadow : "0px 0px 25px #BBBBBB"
                         }}>
                     </div>
                     <Typography variant="h4" align="center" style={{marginTop:"1rem", fontWeight: "bold"}}>
