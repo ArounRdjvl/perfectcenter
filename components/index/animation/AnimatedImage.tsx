@@ -3,7 +3,8 @@ import { useSpring, animated } from 'react-spring'
 
 export interface AnimatedImageProps {
   url: string
-  position: { x: any; y: any }
+  position?: { x: any; y: any }
+  center?: boolean
   width: any
   rotation?: number
   mirror?: boolean
@@ -24,6 +25,9 @@ export function AnimatedImage(props: AnimatedImageProps) {
   const mirror = props.mirror ? 'scaleY(-1)' : ''
   const delay = props.delay ? props.delay : 3000
 
+  const x = props.position?.x ? props.position.x : 0
+  const y = props.position?.y ? props.position.y : 0
+
   const [springProps] = useSpring(() => ({
     from: {
       opacity: 0,
@@ -38,21 +42,40 @@ export function AnimatedImage(props: AnimatedImageProps) {
     },
   }))
 
+  if (props.center) {
+
+    return (
+      <animated.div
+        className={classes.root}
+        style={{
+          left: 0,
+          right: 0,
+          marginLeft: "auto",
+          marginRight: "auto",
+          top: "65vh",
+          opacity: springProps.opacity,
+          width: props.width,
+          transform: `rotate(${rotation}deg) ${mirror}`
+        }}
+      >
+        <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
+      </animated.div>
+    );
+  }
+
   return (
     <animated.div
       className={classes.root}
       style={{
-        left: props.position.x,
-        top: props.position.y,
+        left: x,
+        top: y,
         opacity: springProps.opacity,
         width: props.width,
-        height: props.width,
-        transform: `rotate(${rotation}deg) ${mirror}`,
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${props.url})`,
-        backgroundPosition: 'center',
-        backgroundSize: '80%',
+        transform: `rotate(${rotation}deg) ${mirror}`
       }}
-    />
-  )
+    >
+      <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
+    </animated.div>
+  );
+
 }
