@@ -69,8 +69,8 @@ export default function Index() {
       <div id="container" />
       <Container>
         <WelcomeMsg />
-        <Valeurs />
       </Container>
+      <Valeurs />
       <Container>
         <Services />
       </Container>
