@@ -41,10 +41,7 @@ export function PerfectCorporateIndex() {
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img src="picto/Malette.png" width="55%" style={{ marginTop: '1rem' }} />
-            <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-              Offres entreprise
-            </Typography>
+            <img src="picto/Malette.png" width="55%" alt="malette"/>
           </div>
         </Grid>
         <Grid
@@ -75,7 +72,7 @@ export function PerfectCorporateIndex() {
             }}
           >
             <Typography variant="h3" align="center">
-              PerfectCorporate
+              Nos formations
             </Typography>
           </div>
           <div
@@ -86,19 +83,15 @@ export function PerfectCorporateIndex() {
             }}
           >
             <Typography variant="body1" align="justify">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-              veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-              commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-              esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-              accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
-              duis dolore te feugait nulla facilisi.
+              PerfectCenter est également un organisme de formation validé Qualiopi vous proposant des formations de qualités sur différentes thématiques.
+              Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir !
+              Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes.
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/perfectcorporate" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
-                PerfectCorporate
+                Nos formations
               </Button>
             </Link>
           </div>
@@ -107,7 +100,7 @@ export function PerfectCorporateIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container>
+    <Grid justify="flex-end" container style={{margin: "4rem 0"}}>
       <Grid
         xs={9}
         style={{
@@ -132,7 +125,7 @@ export function PerfectCorporateIndex() {
           }}
         >
           <Typography variant="h2" align="left" style={{ marginLeft: '5vw' }}>
-            PerfectCorporate
+            Nos formations
           </Typography>
         </div>
         <div
@@ -143,18 +136,14 @@ export function PerfectCorporateIndex() {
           }}
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-            consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
-            odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-            nulla facilisi.
+            PerfectCenter est également un organisme de formation en cours de validation Qualiopi vous proposant des formations de qualités sur différentes thématiques.
+            Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir ! 
+            Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes. 
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/PerfectCorporate" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large">
-                PerfectCorporate
+              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+                Nos formations
               </Button>
             </Link>
           </div>
@@ -187,10 +176,7 @@ export function PerfectCorporateIndex() {
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img src="picto/Malette.png" width="60%" style={{ marginTop: '1rem' }} />
-          <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-            Offres entreprises
-          </Typography>
+          <img src="picto/Malette.png" width="60%" alt="malette"/>
         </div>
       </Grid>
     </Grid>

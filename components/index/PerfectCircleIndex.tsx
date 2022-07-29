@@ -52,22 +52,18 @@ export function PerfectCircleIndex() {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: colors.vert,
-              height: '12rem',
-              width: '12rem',
+              height: '8rem',
+              width: '8rem',
               left: 0,
-              borderRadius: '40px',
+              borderRadius: '30px',
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
             <img
               src="picto/therapeute.png"
               width="70%"
-              style={{ marginTop: '1rem' }}
               alt="thérapeute"
             />
-            <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-              Nos praticiens
-            </Typography>
           </div>
         </Grid>
         <Grid
@@ -98,7 +94,7 @@ export function PerfectCircleIndex() {
             }}
           >
             <Typography variant="h3" align="center">
-              PerfectCircle
+              Nos membres
             </Typography>
           </div>
           <div
@@ -108,9 +104,9 @@ export function PerfectCircleIndex() {
               zIndex: 2,
             }}
           >
-            <Typography variant="body1" align="justify">
-              PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les
-              valeurs de PerfectCenter.
+            <Typography variant="body2" align="justify">
+              PerfectCenter regroupe des praticiens, des coachs et des thérapeutes partageant nos
+              valeurs.
               <br />
               Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques
               diverses et complémentaires. Leur bienveillance et leurs talents vous accompagneront
@@ -120,7 +116,7 @@ export function PerfectCircleIndex() {
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/perfectcircle" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
-                PerfectCircle
+                Nos membres
               </Button>
             </Link>
           </div>
@@ -171,10 +167,10 @@ export function PerfectCircleIndex() {
             alignContent: 'center',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '0 3vw',
+            padding: '0 2rem',
           }}
         >
-          <Typography variant="body1" align="justify">
+          <Typography variant="body2" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
             Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous
             profiterez d&apos;un environnement convivial, productif et enrichissant.
@@ -220,7 +216,7 @@ export function PerfectCircleIndex() {
           }}
         >
           <Typography variant="h2" align="left" style={{ marginLeft: '5vw' }}>
-            PerfectCircle
+            Nos membres
           </Typography>
         </div>
         <div
@@ -231,8 +227,8 @@ export function PerfectCircleIndex() {
           }}
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
-            PerfectCircle regroupe des praticiens, des coachs et des thérapeutes partageant les
-            valeurs de PerfectCenter.
+            PerfectCenter regroupe des praticiens, des coachs et des thérapeutes partageant nos
+            valeurs.
             <br />
             Pour vous, c&apos;est la possibilité de trouver dans un même lieu des pratiques diverses
             et complémentaires. Leur bienveillance et leurs talents vous accompagneront vers la
@@ -240,8 +236,8 @@ export function PerfectCircleIndex() {
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/perfectcircle" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large">
-                PerfectCircle
+              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+                Nos membres
               </Button>
             </Link>
           </div>
@@ -263,12 +259,8 @@ export function PerfectCircleIndex() {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: colors.vert,
-            height: '15vw',
-            width: '15vw',
-            maxHeight: '15rem',
-            minHeight: '12rem',
-            maxWidth: '15rem',
-            minWidth: '12rem',
+            height: '12rem',
+            width: '12rem',
             left: 0,
             borderRadius: '40px',
             boxShadow: '0px 0px 25px #BBBBBB',
@@ -277,12 +269,8 @@ export function PerfectCircleIndex() {
           <img
             src="picto/therapeute.png"
             width="70%"
-            style={{ marginTop: '1rem' }}
-            alt="thérapeute"
+            alt="Praticiens"
           />
-          <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-            Nos praticiens
-          </Typography>
         </div>
       </Grid>
       <div
@@ -349,6 +337,7 @@ export function PerfectCircleIndex() {
               maxWidth: '45rem',
               backgroundImage: 'url(/photos/Nous_rejoindre.png)',
               backgroundPosition: '40% 10%',
+              backgroundSize: '280%',
               backgroundRepeat: 'no-repeat',
               borderRadius: '30px',
               boxShadow: '0px 0px 25px #BBBBBB',
@@ -378,7 +367,7 @@ export function PerfectCircleIndex() {
             Pour rejoindre l&apos;équipe, contactez nous via le formulaire ci-dessous.
           </Typography>
           <Link href="/contact" underline="none" style={{ marginTop: '2rem' }}>
-            <Button variant="contained" color="secondary" size="large">
+            <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
               Nous contacter
             </Button>
           </Link>
