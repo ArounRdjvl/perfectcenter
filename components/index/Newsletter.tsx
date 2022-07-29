@@ -56,7 +56,7 @@ export function Newsletter() {
             background: colors.vert,
           }}
         >
-          <img src="picto/E-mail.png" width={75} style={{ zIndex: 2 }} />
+          <img src="picto/E-mail.png" alt="picto_mail" width={75} style={{ zIndex: 2 }} />
         </div>
         <Typography align="justify" style={{ fontSize: '28px' }}>
           Newsletter
@@ -86,7 +86,7 @@ export function Newsletter() {
           color="secondary"
           size="large"
           onClick={submitForm}
-          style={{ width: '40%', fontSize: '20px' }}
+          style={{ width: '40%', fontSize: '20px', marginBottom: '2rem', padding: '0.5rem 5rem' }}
         >
           Inscription
         </Button>
@@ -120,7 +120,7 @@ export function Newsletter() {
           background: colors.vert,
         }}
       >
-        <img src="picto/E-mail.png" width={75} style={{ zIndex: 2 }} />
+        <img src="picto/E-mail.png" alt="picto_mail" width={75} style={{ zIndex: 2 }} />
       </div>
       <Typography align="justify" style={{ fontSize: '28px' }}>
         Newsletter
@@ -160,7 +160,7 @@ export function Newsletter() {
         color="secondary"
         size="large"
         onClick={submitForm}
-        style={{ width: '30%', fontSize: '20px' }}
+        style={{ width: '30%', fontSize: '20px', marginBottom: '1rem' }}
       >
         Inscription
       </Button>
