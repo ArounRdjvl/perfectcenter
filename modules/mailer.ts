@@ -1,8 +1,15 @@
 import nodemailer from 'nodemailer'
 
-const dev = process.env.NODE_ENV !== 'production'
+import { dev } from './utils'
 
-export async function sendMail(from: string, subject: string, content: string) {
+const defaultEmail = process.env.EMAIL_USR ?? ''
+
+export async function sendMail(
+  subject: string,
+  content: string,
+  from: string = defaultEmail,
+  to: string = defaultEmail
+) {
   let authOptions
   if (dev) {
     const testAccount = await nodemailer.createTestAccount()
@@ -17,7 +24,7 @@ export async function sendMail(from: string, subject: string, content: string) {
     }
   } else {
     authOptions = {
-      host: 'smtp.hades.ovh',
+      host: process.env.SMTP_HOST,
       port: 587,
       secure: false,
       tls: {
@@ -35,7 +42,7 @@ export async function sendMail(from: string, subject: string, content: string) {
   // send mail with defined transport object
   const info = await transporter.sendMail({
     from, // sender address
-    to: 'contact@hades.ovh', // list of receivers
+    to, // list of receivers
     subject: `[site] : ${subject}`, // Subject line
     text: content, // plain text body
   })

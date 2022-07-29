@@ -26,7 +26,7 @@ export function PerfectCircleIndex() {
   if (isMobile) {
     return (
       <Grid
-        justify="center"
+        justifyContent="center"
         direction="column"
         container
         style={{
@@ -60,7 +60,7 @@ export function PerfectCircleIndex() {
             }}
           >
             <img
-              src="picto/therapeute.png"
+              src="/picto/therapeute.png"
               width="70%"
               style={{ marginTop: '1rem' }}
               alt="thérapeute"
@@ -195,7 +195,7 @@ export function PerfectCircleIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container>
+    <Grid justifyContent="flex-end" container>
       <Grid
         xs={9}
         style={{
@@ -275,7 +275,7 @@ export function PerfectCircleIndex() {
           }}
         >
           <img
-            src="picto/therapeute.png"
+            src="/picto/therapeute.png"
             width="70%"
             style={{ marginTop: '1rem' }}
             alt="thérapeute"

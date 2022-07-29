@@ -2,97 +2,100 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-    provider = "sqlite"
-    url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 model User {
-    id        Int     @id @default(autoincrement())
-    email     String  @unique
-    firstname String  @unique
-    lastname  String  @unique
-    password  String
-    address   String?
-    isAdmin   Boolean
-    Member    Member?
+  id                Int     @id @default(autoincrement())
+  email             String  @unique
+  isVerified        Boolean @default(false)
+  verificationToken String?
+  firstname         String?
+  lastname          String?
+  password          String?
+  address           String?
+  isAdmin           Boolean @default(false)
+  member            Member?
 }
 
 model Member {
-    id         Int                @id @default(autoincrement())
-    user       User               @relation(fields: [userId], references: [id])
-    userId     Int
-    rcp        String
-    siret      String
-    activities ActivityOfMember[]
-    services   Service[]
-    Booking    Booking[]
+  id         Int                @id @default(autoincrement())
+  user       User               @relation(fields: [userId], references: [id])
+  userId     Int                @unique
+  rcp        String
+  siret      String
+  activities ActivityOfMember[]
+  services   Service[]
+  Booking    Booking[]
 }
 
 model Activity {
-    id         Int                @id @default(autoincrement())
-    name       String
-    activities ActivityOfMember[]
+  id         Int                @id @default(autoincrement())
+  name       String
+  activities ActivityOfMember[]
 }
 
 model ActivityOfMember {
-    member     Member   @relation(fields: [memberId], references: [id])
-    memberId   Int
-    activity   Activity @relation(fields: [activityId], references: [id])
-    activityId Int
+  member     Member   @relation(fields: [memberId], references: [id])
+  memberId   Int
+  activity   Activity @relation(fields: [activityId], references: [id])
+  activityId Int
 
-    @@id([memberId, activityId])
+  @@id([memberId, activityId])
 }
 
 model Service {
-    id          Int     @id @default(autoincrement())
-    name        String
-    price       Decimal
-    description String
-    member      Member  @relation(fields: [memberId], references: [id])
-    memberId    Int
+  id          Int     @id @default(autoincrement())
+  name        String
+  price       Decimal
+  description String
+  member      Member  @relation(fields: [memberId], references: [id])
+  memberId    Int
 }
 
 model Room {
-    id               Int               @id @default(autoincrement())
-    name             String
-    building         String
-    floor            String
-    area             Float
-    price            Decimal
-    bookingOpen      Int // number of days before booking is avaiable
-    parentRoomId     Int?
-    parentRoom       Room?             @relation("parentRoom", fields: [parentRoomId], references: [id])
-    innerRooms       Room[]            @relation("parentRoom")
-    staticEquipments StaticEquipment[]
-    Booking          Booking[]
+  id               Int               @id @default(autoincrement())
+  name             String            @unique
+  description      String?
+  building         String?
+  floor            String?
+  area             Float?
+  price            Decimal           @default(0)
+  bookingOpen      Int               @default(0) // number of days before booking is avaiable
+  parentRoomId     Int?
+  parentRoom       Room?             @relation("parentRoom", fields: [parentRoomId], references: [id])
+  innerRooms       Room[]            @relation("parentRoom")
+  staticEquipments StaticEquipment[]
+  Booking          Booking[]
 }
 
 model StaticEquipment {
-    id     Int    @id @default(autoincrement())
-    name   String
-    room   Room   @relation(fields: [roomId], references: [id])
-    roomId Int
+  id     Int    @id @default(autoincrement())
+  name   String
+  room   Room?  @relation(fields: [roomId], references: [id])
+  roomId Int?
 }
 
 model OptionalEquipment {
-    id        Int      @id @default(autoincrement())
-    name      String
-    price     Decimal?
-    booking   Booking? @relation(fields: [bookingId], references: [id])
-    bookingId Int?
+  id        Int      @id @default(autoincrement())
+  name      String
+  price     Decimal?
+  booking   Booking? @relation(fields: [bookingId], references: [id])
+  bookingId Int?
 }
 
 model Booking {
-    id                 Int                 @id @default(autoincrement())
-    start              DateTime
-    end                DateTime
-    owner              Member              @relation(fields: [memberId], references: [id])
-    memberId           Int
-    room               Room                @relation(fields: [roomId], references: [id])
-    roomId             Int
-    optionalEquipments OptionalEquipment[]
+  id                 Int                 @id @default(autoincrement())
+  start              DateTime
+  end                DateTime
+  owner              Member              @relation(fields: [memberId], references: [id])
+  memberId           Int
+  room               Room                @relation(fields: [roomId], references: [id])
+  roomId             Int
+  optionalEquipments OptionalEquipment[]
 }
