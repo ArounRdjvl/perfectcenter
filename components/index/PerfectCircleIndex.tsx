@@ -195,7 +195,7 @@ export function PerfectCircleIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container>
+    <Grid justifyContent="flex-end" container>
       <Grid
         xs={9}
         style={{

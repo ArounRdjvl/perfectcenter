@@ -30,13 +30,16 @@ export default function useRequest() {
           Authorization: `Bearer ${token}`,
         },
       })
-      if (response.status >= 400) throw new Error(response.statusText)
-      return response.json()
+      const json = await response.json()
+      if (response.status >= 400) {
+        throw new Error(json.message ?? response.statusText)
+      }
+      return json
     }
   }
 
   function buildBodyMethod(method: string) {
-    return async <T = any>(path: string, body: Record<string, unknown>): Promise<T | string> => {
+    return async <T = any>(path: string, body: Record<string, unknown>): Promise<T> => {
       const url = basePath + path
       const response = await fetch(url, {
         ...defaultOptions,
@@ -47,12 +50,11 @@ export default function useRequest() {
         },
         body: JSON.stringify(body),
       })
-      if (response.status >= 400) throw Error(`response : ${response.status}`)
-      try {
-        return await response.json()
-      } catch (e) {
-        return response.text()
+      const json = await response.json()
+      if (response.status >= 400) {
+        throw new Error(json.message ?? response.statusText)
       }
+      return json
     }
   }
 

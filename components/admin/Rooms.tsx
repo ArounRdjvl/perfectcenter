@@ -9,8 +9,6 @@ import {
   GridRowClassNameParams,
   GridToolbar,
   GridValueGetterParams,
-  MuiBaseEvent,
-  MuiEvent,
 } from '@mui/x-data-grid'
 import {
   Button,
@@ -19,9 +17,12 @@ import {
   DialogContent,
   makeStyles,
   Typography,
+  useTheme,
 } from '@material-ui/core'
 import { Prisma, Room } from '@prisma/client'
 import { isEqual } from 'modules/browserUtils'
+import { useCallback } from 'react'
+import { Alert } from '@material-ui/lab'
 
 function getColumns(
   gridRooms: GridRoom[],
@@ -98,7 +99,6 @@ function getColumns(
                 } else {
                   temp.splice(index, 1)
                 }
-                console.log('return', temp)
                 return temp
               })
             })
@@ -109,6 +109,13 @@ function getColumns(
       ),
     },
   ]
+}
+
+function toRoom(gridroom: GridRoom): Partial<Room> {
+  return {
+    ...gridroom.current,
+    ...(gridroom.id ? { id: gridroom.id } : {}),
+  }
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -141,8 +148,10 @@ export interface RoomsProps {
 }
 
 export function Rooms(props: RoomsProps) {
-  const [defaultRooms, setDefaultRooms] = React.useState<Room[]>([])
+  const [error, setError] = React.useState<string | null>(null)
   const [gridRooms, setGridRooms] = React.useState<GridRoom[]>([])
+
+  const theme = useTheme()
 
   const [popup, setPopup] = React.useState<PopupData | undefined>(undefined)
 
@@ -150,18 +159,8 @@ export function Rooms(props: RoomsProps) {
 
   const classes = useStyles()
 
-  /*
-      async function udpate() {
-          const defaultRooms = await get<Room[]>('/api/admin/rooms')
-          setGridRooms(old => old.map(r => ({
-              ...old,
-              default: defaultRooms.find(d => d.id === r.id)
-          })))
-      }
-       */
-
   async function init() {
-    const rooms = await get<Room[]>('/api/admin/rooms')
+    const rooms = await get<Room[]>('/api/admin/room/all')
 
     setGridRooms(
       rooms.map((r) => ({
@@ -177,11 +176,11 @@ export function Rooms(props: RoomsProps) {
   }, [])
 
   async function handleVerification() {
-    const roomsAdded = gridRooms.filter((r) => r.default === undefined)
-    const roomsRemoved = gridRooms.filter((r) => r.default && r.current === undefined)
-    const roomsEdited = gridRooms.filter(
-      (r) => r.current && r.default && !isEqual(r.default, r.current)
-    )
+    const roomsAdded = gridRooms.filter((r) => r.default === undefined).map(toRoom)
+    const roomsRemoved = gridRooms.filter((r) => r.default && r.current === undefined).map(toRoom)
+    const roomsEdited = gridRooms
+      .filter((r) => r.current && r.default && !isEqual(r.default, r.current))
+      .map(toRoom)
 
     if (roomsAdded.length !== 0 || roomsEdited.length !== 0 || roomsRemoved.length !== 0) {
       setPopup({
@@ -189,26 +188,35 @@ export function Rooms(props: RoomsProps) {
         nbEdited: roomsEdited.length,
         nbDeleted: roomsRemoved.length,
         perform: async () => {
-          const rooms = await post('/api/admin/room/perform', {
-            roomsAdded,
-            roomsEdited,
-            roomsRemoved,
-          })
-          setDefaultRooms(rooms)
+          // TODO : replace by react error handler
+          try {
+            const rooms = await post<Room[]>('/api/admin/room/perform', {
+              roomsAdded,
+              roomsEdited,
+              roomsRemoved,
+            })
+            setGridRooms(
+              rooms.map((r) => ({
+                id: r.id,
+                current: { ...r },
+                default: r,
+              }))
+            )
+          } catch (e: any) {
+            setError(e.message)
+          }
         },
       })
     }
   }
 
-  const handleCellEdit = React.useCallback(
-    (params: GridCellEditCommitParams, event: MuiEvent<MuiBaseEvent>) => {
-      // this is to avoid errors when committing a cell
-      // @ts-ignore
-      event.persist?.()
+  const handleCellEdit = useCallback(
+    (params: GridCellEditCommitParams) => {
+      const temp = { ...params }
       setGridRooms([
         ...gridRooms.map((room) => {
-          if (room.id === params.id) {
-            return { ...room, current: { ...room.current, [params.field]: params.value } }
+          if (room.id === temp.id) {
+            return { ...room, current: { ...room.current, [temp.field]: temp.value } }
           }
           return room
         }),
@@ -217,91 +225,93 @@ export function Rooms(props: RoomsProps) {
     [gridRooms]
   )
 
-  React.useEffect(() => {
-    console.table(gridRooms)
-  }, [gridRooms, defaultRooms])
+  const addRoom = React.useCallback(() => {
+    setGridRooms((old) => {
+      const allIds = old.map((g) => g.id).filter<number>((id): id is number => id != null)
+      return [
+        ...old,
+        {
+          // creating id corresponding to the max id + 1
+          id: allIds.length ? Math.max(...allIds) + 1 : 0,
+          current: {
+            name: '',
+            price: new Prisma.Decimal(0),
+            bookingOpen: 0,
+            description: '',
+            area: 0,
+          },
+          default: undefined,
+        },
+      ]
+    })
+  }, [gridRooms])
 
   return (
     <div
       style={{
         width: '100%',
-        padding: '1rem',
+        padding: theme.spacing(1),
+        gap: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',
         ...props.style,
       }}
     >
-      <div style={{ flex: '1 0 0' }}>
+      <Button onClick={addRoom} style={{ alignSelf: 'flex-start' }}>
+        ADD
+      </Button>
+      <DataGrid
+        style={{ minHeight: '20rem', flexGrow: 1 }}
+        rows={gridRooms}
+        columns={getColumns(gridRooms, setGridRooms)}
+        checkboxSelection
+        disableSelectionOnClick
+        components={{
+          Toolbar: GridToolbar,
+        }}
+        onCellEditCommit={handleCellEdit}
+        getRowClassName={(params: GridRowClassNameParams<GridRoom>) => {
+          if (params.row.default && params.row.current === undefined) {
+            return classes.deleted
+          }
+          if (!params.row.default) {
+            return classes.added
+          }
+          return ''
+        }}
+        getCellClassName={(params: GridCellParams<GridRoom>) => {
+          if (
+            params.row.default &&
+            params.row.current &&
+            params.row.current[params.field] !== params.row.default[params.field]
+          ) {
+            return classes.edited
+          }
+          return ''
+        }}
+      />
+      <div style={{ display: 'flex', alignSelf: 'flex-end', gap: '1rem', alignItems: 'center' }}>
+        {error && (
+          <Alert
+            variant="filled"
+            severity="error"
+            onClose={() => {
+              setError(null)
+            }}
+          >
+            {error}
+          </Alert>
+        )}
         <Button
+          variant="contained"
+          color="primary"
           onClick={() => {
-            setGridRooms((old) => [
-              ...old,
-              {
-                // id: Math.max(...old.map(r => r.id).filter(v => (v != undefined))) + 1,
-                id:
-                  Math.max(
-                    ...old.reduce<number[]>((prev, current) => {
-                      if (current.id) {
-                        prev.push(current.id)
-                      }
-                      return prev
-                    }, [])
-                  ) + 1,
-                current: {
-                  name: '',
-                  capacity: 0,
-                  price: new Prisma.Decimal(0),
-                  possibiliteReservation: 0,
-                  description: '',
-                  area: 0,
-                },
-                default: undefined,
-              },
-            ])
+            handleVerification()
           }}
         >
-          ADD
+          apply
         </Button>
-        <DataGrid
-          rows={gridRooms}
-          columns={getColumns(gridRooms, setGridRooms)}
-          checkboxSelection
-          disableSelectionOnClick
-          components={{
-            Toolbar: GridToolbar,
-          }}
-          onCellEditStop={handleCellEdit}
-          getRowClassName={(params: GridRowClassNameParams<GridRoom>) => {
-            if (params.row.default && params.row.current === undefined) {
-              return classes.deleted
-            }
-            if (!params.row.default) {
-              return classes.added
-            }
-            return ''
-          }}
-          getCellClassName={(params: GridCellParams<GridRoom>) => {
-            if (
-              params.row.default &&
-              params.row.current &&
-              params.row.current[params.field] !== params.row.default[params.field]
-            ) {
-              return classes.edited
-            }
-            return ''
-          }}
-        />
       </div>
-      <Button
-        variant="contained"
-        color="primary"
-        style={{ alignSelf: 'flex-end' }}
-        onClick={() => {
-          handleVerification()
-        }}
-      >
-        apply
-      </Button>
       <Popup onClose={() => setPopup(undefined)} data={popup} />
     </div>
   )

@@ -149,7 +149,7 @@ export function PerfectCareIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container style={{ marginTop: '2rem' }}>
+    <Grid justifyContent="flex-end" container style={{ marginTop: '2rem' }}>
       <Grid
         xs={3}
         style={{

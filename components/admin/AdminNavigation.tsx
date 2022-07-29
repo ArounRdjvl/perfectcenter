@@ -6,11 +6,11 @@ export function AdminNavigation() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography>Admin page</Typography>
+        <Typography>Page Admin</Typography>
 
-        <Button color="inherit">Rooms</Button>
-        <Link href="/pages">
-          <Button color="inherit">return to website</Button>
+        <Button color="inherit">Salles</Button>
+        <Link href="/">
+          <Button color="inherit">retourner sur le site</Button>
         </Link>
       </Toolbar>
     </AppBar>

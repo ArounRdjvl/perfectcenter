@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { Prisma } from '@prisma/client'
 import Cors from 'cors'
-import { getAllRooms, createRoom, deleteRoom, updateRoom, perform } from 'modules/api/admin/room'
+import { getAllRooms, perform } from 'modules/api/admin/room'
 import initMiddleware, { getPrisma } from 'modules/utils'
 
 const cors = initMiddleware(
@@ -49,14 +49,11 @@ export async function createMember(req: NextApiRequest) {
 
 const handlers: {
   [object: string]: {
-    [action: string]: (req: NextApiRequest, res: NextApiResponse) => Promise<object>
+    [action: string]: (req: NextApiRequest, res: NextApiResponse) => Promise<unknown>
   }
 } = {
   room: {
     all: getAllRooms,
-    create: createRoom,
-    delete: deleteRoom,
-    update: updateRoom,
     perform,
   },
   member: {
@@ -81,10 +78,10 @@ export default async function hander(req: NextApiRequest, res: NextApiResponse) 
   try {
     res.json(await handlers[object][action](req, res))
   } catch (e) {
+    console.error(e)
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
-      res.status(400).json({ code: e.code, meta: e.meta })
+      res.status(400).json({ code: e.code, meta: e.meta, message: e.message })
     } else {
-      console.error(e)
       res.status(400).end()
     }
   }
