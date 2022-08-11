@@ -37,7 +37,7 @@ export function Valeurs() {
             <Typography variant="h2" align="center">
               Nos valeurs
             </Typography>
-            <Divider color="beige" />
+            <Divider color="vert" />
         </div>
         <div
           style={{
@@ -67,7 +67,7 @@ export function Valeurs() {
               style={{
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                backgroundColor: colors.beige,
+                backgroundColor: colors.blanc,
                 backgroundImage: 'url(/picto/Coeur_sur_main.png)',
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
@@ -99,7 +99,7 @@ export function Valeurs() {
               style={{
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                backgroundColor: colors.beige,
+                backgroundColor: colors.blanc,
                 backgroundImage: 'url(/picto/Bras_mains.png)',
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
@@ -131,7 +131,7 @@ export function Valeurs() {
               style={{
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                backgroundColor: colors.beige,
+                backgroundColor: colors.blanc,
                 backgroundImage: 'url(/picto/Coeur_main.png)',
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
@@ -163,7 +163,7 @@ export function Valeurs() {
               style={{
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                backgroundColor: colors.beige,
+                backgroundColor: colors.blanc,
                 backgroundImage: 'url(/picto/Coeur_deuxmains.png)',
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
