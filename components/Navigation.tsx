@@ -22,6 +22,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: 'none',
   },
 }))
+
 export interface NavigationProps {
   displayLogo?: boolean
 }
@@ -40,7 +41,7 @@ export function Navigation(props: NavigationProps) {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   function handleScroll() {
-    if (window.pageYOffset === 0) {
+    if (window.scrollY === 0) {
       setShadow(false)
     } else {
       setShadow(true)

@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import animation from 'assets/logo.json'
 import { useFlux } from 'modules/Flux'
 import { heightHeader } from 'components/Navigation'
+import { AnimatedImage } from './AnimatedImage'
 
 export interface AnimatedLogoProps {
   delay: number
@@ -37,7 +38,7 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
     const ratio = window.pageYOffset / window.innerHeight
     const height = (1 - ratio) * 150 + heightHeader
     const defaultY = (window.innerHeight - height) / 2
-    if (ratio < 0.8 && !menu.current) {
+    if (ratio < 0.1 && !menu.current) {
       return { top: (1 - ratio) * defaultY, height }
     }
     return { top: 0, height: heightHeader }
@@ -78,18 +79,25 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
   }, [menuOpen])
 
   return (
-    <animated.div
-      style={{
-        opacity: springProps.opacity,
-        height: springProps.height,
-        top: springProps.top,
-        position: 'fixed',
-        pointerEvents: 'none',
-        width: '100%',
-        zIndex: 10,
-      }}
-    >
-      <Lottie options={bodymovinOptions} isStopped={!play} style={{ margin: 'auto' }} />
-    </animated.div>
+    <>
+      <animated.div
+        style={{
+          opacity: springProps.opacity,
+          height: springProps.height,
+          top: springProps.top,
+          position: "fixed",
+          pointerEvents: "none",
+          width: "100%",
+          zIndex: 10
+        }}
+      >
+        <Lottie
+          options={bodymovinOptions}
+          isStopped={!play}
+          style={{ margin: "auto" }}
+        />
+      </animated.div>
+      <AnimatedImage url="picto/PerfectCenter.png" center width="17rem" />
+    </>
   )
 }

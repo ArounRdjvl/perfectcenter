@@ -21,7 +21,7 @@ export default function Login() {
     try {
       await connect(email, password)
     } catch (e: any) {
-      setErrorMessage(e.toString())
+      setErrorMessage(`${e.name} : ${e.message}`)
     }
   }, [email, password])
 

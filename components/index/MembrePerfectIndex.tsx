@@ -26,7 +26,7 @@ export function MembrePerfectIndex() {
   if (isMobile) {
     return (
       <Grid
-        justify="center"
+        justifyContent="center"
         direction="column"
         container
         style={{
@@ -60,7 +60,7 @@ export function MembrePerfectIndex() {
             }}
           >
             <img
-              src="picto/therapeute.png"
+              src="/picto/therapeute.png"
               width="70%"
               alt="thérapeute"
             />
@@ -191,7 +191,7 @@ export function MembrePerfectIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container>
+    <Grid justifyContent="flex-end" container>
       <Grid
         xs={9}
         style={{
@@ -267,7 +267,7 @@ export function MembrePerfectIndex() {
           }}
         >
           <img
-            src="picto/therapeute.png"
+            src="/picto/therapeute.png"
             width="70%"
             alt="Praticiens"
           />
