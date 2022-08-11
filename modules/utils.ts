@@ -1,20 +1,9 @@
 import { Secret } from 'jsonwebtoken'
-import Analytics from 'analytics'
-import googleAnalytics from '@analytics/google-analytics'
 import { PrismaClient } from '@prisma/client'
 
 export const KEY = process.env.KEY as Secret
 
 const prisma = new PrismaClient()
-
-export const analytics = Analytics({
-  app: 'awesome-app',
-  plugins: [
-    googleAnalytics({
-      trackingId: 'G-F03RRE4ZWZ',
-    }),
-  ],
-})
 
 export const dev = process.env.NODE_ENV !== 'production'
 
