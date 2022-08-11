@@ -46,10 +46,10 @@ export function WelcomeMsg() {
           </div>
           <Typography variant="body1" align="center">
             PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine autour d&apos;activités holistiques est notre
-            mission. Essayer, se tromper, apprendre, recommencer et développer des idées, des
+            mission. Essayer, apprendre, recommencer et développer des idées, des
             innovations.. Nous nous positionnons comme un laboratoire de bien-être où chacun est
             libre de s&apos;engager avec bienveillance et générosité. <br />
-            Nous proposons des prestations, des produits et des formations aux particuliers comme aux professionnels.
+            Nous proposons des prestations, des produits et des formations innovantes et performantes aux particuliers et aux professionnels.
           </Typography>
         </div>
     )
@@ -113,10 +113,10 @@ export function WelcomeMsg() {
           </div>
           <Typography variant="body1" align="center">
             PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine autour d&apos;activités holistiques est notre
-            mission. Essayer, se tromper, apprendre, recommencer et développer des idées, des
+            mission. Essayer, apprendre, recommencer et développer des idées, des
             innovations.. Nous nous positionnons comme un laboratoire de bien-être où chacun est
             libre de s&apos;engager avec bienveillance et générosité. <br />
-            Nous proposons des prestations, des produits et des formations aux particuliers comme aux professionnels.
+            Nous proposons des prestations, des produits et des formations innovantes et performantes aux particuliers et aux professionnels.
           </Typography>
         </div>
         <div
