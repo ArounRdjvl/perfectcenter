@@ -1,14 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
-import { AccueilCoach } from 'components/PerfectCircle/AccueilCoach'
-import { RdvCoach } from 'components/PerfectCircle/RdvCoach'
+import { AccueilCoach } from 'components/MembrePerfect/AccueilCoach'
+import { RdvCoach } from 'components/MembrePerfect/RdvCoach'
 import { useRouter } from 'next/router'
 import { PraticienType } from 'modules/types'
 import { dataCoachs } from 'modules/data'
 import { Footer } from 'components/Footer'
 import { Navigation } from 'components/Navigation'
 
-export default function MembrePerfectCircle() {
+export default function MembrePerfect() {
   const ref = React.useRef<HTMLDivElement>(null)
   const router = useRouter()
   const { membre } = router.query

@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@material-ui/core'
 import { colors } from 'modules/theme'
 
-export function PerfectCorporateIndex() {
+export function FormationsIndex() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   if (isMobile) {
@@ -89,7 +89,7 @@ export function PerfectCorporateIndex() {
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcorporate" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/formations" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
                 Nos formations
               </Button>
@@ -141,7 +141,7 @@ export function PerfectCorporateIndex() {
             Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes. 
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/PerfectCorporate" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/formations" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
                 Nos formations
               </Button>

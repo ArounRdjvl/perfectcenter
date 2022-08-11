@@ -88,17 +88,18 @@ export function Navigation(props: NavigationProps) {
           justifyContent: 'center',
         }}
       >
-        <img src="/picto/braket_left.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
+        <img alt="left_bracket" src="/picto/braket_left.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
         <Link href="/">
           <div>
             <img
               src="../Logo.png"
+              alt="PerfectCenter_Logo"
               height={heightHeader}
               style={{ display: 'block', margin: isMobile ? '0' : '0 2rem' }}
             />
           </div>
         </Link>
-        <img src="/picto/braket_right.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
+        <img alt="right_bracket" src="/picto/braket_right.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
       </div>
     </div>
   )
@@ -162,24 +163,21 @@ export function Navigation(props: NavigationProps) {
                   <Link href="/">
                     <Button>Accueil</Button>
                   </Link>
-                  <Link href="/membres">
-                    <Button>Membres</Button>
-                  </Link>
-                  <Link href="/articles">
-                    <Button>Articles</Button>
+                  <Link href="/equipe">
+                    <Button>Notre equipe</Button>
                   </Link>
                   <Link href="/contact">
                     <Button>Nous contacter</Button>
                   </Link>
                   <Divider />
-                  <Link href="/perfectcare">
-                    <Button>PerfectCare</Button>
+                  <Link href="/produits">
+                    <Button>Nos produits</Button>
                   </Link>
-                  <Link href="/perfectcircle">
-                    <Button>PerfectCircle</Button>
+                  <Link href="/membres">
+                    <Button>Nos membres</Button>
                   </Link>
-                  <Link href="/perfectcorporate">
-                    <Button>PerfectCorporate</Button>
+                  <Link href="/formations">
+                    <Button>Nos formations</Button>
                   </Link>
                 </div>
               </div>
@@ -216,11 +214,8 @@ export function Navigation(props: NavigationProps) {
             <Link href="/">
               <Button style={{ margin: '0 5px 0 5px' }}>Accueil</Button>
             </Link>
-            <Link href="/membres">
-              <Button style={{ margin: '0 5px 0 5px' }}>Membres</Button>
-            </Link>
-            <Link href="/articles">
-              <Button style={{ margin: '0 5px 0 5px' }}>Articles</Button>
+            <Link href="/equipe">
+              <Button style={{ margin: '0 5px 0 5px' }}>Notre équipe</Button>
             </Link>
             <Link href="/contact">
               <Button style={{ margin: '0 5px 0 5px' }}>Nous contacter</Button>
@@ -228,14 +223,17 @@ export function Navigation(props: NavigationProps) {
           </div>
 
           <div>
-            <Link href="/perfectcare">
-              <Button style={{ margin: '0 5px 0 5px' }}>PerfectCare</Button>
+            <Link href="/prestations">
+              <Button style={{ margin: '0 5px 0 5px' }}>Nos prestations</Button>
             </Link>
-            <Link href="/perfectcircle">
-              <Button style={{ margin: '0 5px 0 5px' }}>PerfectCircle</Button>
+            <Link href="/produits">
+              <Button style={{ margin: '0 5px 0 5px' }}>Nos produits</Button>
             </Link>
-            <Link href="/perfectcorporate">
-              <Button style={{ margin: '0 5px 0 5px' }}>PerfectCorporate</Button>
+            <Link href="/membres">
+              <Button style={{ margin: '0 5px 0 5px' }}>Nos membres</Button>
+            </Link>
+            <Link href="/formations">
+              <Button style={{ margin: '0 5px 0 5px' }}>Nos formations</Button>
             </Link>
           </div>
         </Container>

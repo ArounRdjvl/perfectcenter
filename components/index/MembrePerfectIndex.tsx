@@ -20,7 +20,7 @@ const autoHeightOptions: AutoHeightOptionsType = {
   destroyHeight: '40rem',
 }
 
-export function PerfectCircleIndex() {
+export function MembrePerfectIndex() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   if (isMobile) {
@@ -114,7 +114,7 @@ export function PerfectCircleIndex() {
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcircle" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/membres" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
                 Nos membres
               </Button>
@@ -172,7 +172,7 @@ export function PerfectCircleIndex() {
         >
           <Typography variant="body2" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
-            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous
+            Rejoignez nos PerfectCenter et partagez l&apos;aventure avec nous. Vous
             profiterez d&apos;un environnement convivial, productif et enrichissant.
             <br />
             <br />
@@ -235,7 +235,7 @@ export function PerfectCircleIndex() {
             solution la plus adaptée à vos attentes et vos besoins.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcircle" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/membres" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
                 Nos membres
               </Button>
@@ -357,7 +357,7 @@ export function PerfectCircleIndex() {
         >
           <Typography variant="body1" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
-            Rejoignez notre équipe PerfectCircle et partagez l&apos;aventure avec nous. Vous
+            Rejoignez nos membres PerfectCenter et partagez l&apos;aventure avec nous. Vous
             profiterez d&apos;un environnement convivial, productif et enrichissant.
             <br />
             <br />

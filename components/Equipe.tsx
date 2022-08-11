@@ -12,12 +12,12 @@ export interface UserProps {
   instagram?: string
 }
 
-export interface MembreProps {
+export interface EquipeProps {
   pair?: boolean
   user?: UserProps
 }
 
-export function Membre(props: MembreProps) {
+export function Equipe(props: EquipeProps) {
   const theme = useTheme()
   const { pair } = props
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))

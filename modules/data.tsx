@@ -56,7 +56,7 @@ export const dataProducts = [
         qualité de vie et retrouver son bien-être.
       </>
     ),
-    link: '/perfectcare/psio',
+    link: '/produits/psio',
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
   {
@@ -71,7 +71,7 @@ export const dataProducts = [
         homéo-compatibles pour une action globale sur la santé et le bien-être.
       </>
     ),
-    link: '/perfectcare/mint-e',
+    link: '/produits/mint-e',
     moreAboutLink: 'https://mint-elabs.fr/products/z-trauma',
   },
   {
@@ -87,7 +87,7 @@ export const dataProducts = [
         niveaux élevés d&apos;oxygène.
       </>
     ),
-    link: '/perfectcare/kaqun',
+    link: '/produits/kaqun',
     moreAboutLink: 'https://mint-elabs.fr/products/z-trauma',
   },
 ]
@@ -133,7 +133,7 @@ export const dataPsio = [
         pouvoir avoir du texte
       </>
     ),
-    link: '/perfectcare/kaqun',
+    link: '/produits/kaqun',
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
   {
@@ -146,7 +146,7 @@ export const dataPsio = [
         pouvoir avoir du texte
       </>
     ),
-    link: '/perfectcare/kaqun',
+    link: '/produits/kaqun',
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
   {
@@ -159,7 +159,7 @@ export const dataPsio = [
         pouvoir avoir du texte
       </>
     ),
-    link: '/perfectcare/kaqun',
+    link: '/produits/kaqun',
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
 ]
@@ -218,7 +218,7 @@ export const dataCoachs: PraticienType[] = [
 ]
 
 export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach, i) => (
-  <a href={`/perfectcircle/${Coach.name.replace(/ /g, '_').toLowerCase()}`} key={i}>
+  <a href={`/membres/${Coach.name.replace(/ /g, '_').toLowerCase()}`} key={i}>
     <img
       src={Coach.photo}
       alt="Nos practiciens"

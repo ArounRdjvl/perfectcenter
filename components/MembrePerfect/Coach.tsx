@@ -28,7 +28,7 @@ export function Coach(props: CoachProps) {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   if (isMobile) {
     return (
-      <Link href={`perfectcircle/${props.user.name.toLowerCase().split(/\s/).join('_')}`}>
+      <Link href={`membres/${props.user.name.toLowerCase().split(/\s/).join('_')}`}>
         <div
           onMouseOver={boxMouseOverHandler}
           onMouseLeave={boxMouseOutHandler}
@@ -93,7 +93,7 @@ export function Coach(props: CoachProps) {
     )
   }
   return (
-    <Link href={`perfectcircle/${props.user.name.toLowerCase().split(/\s/).join('_')}`}>
+    <Link href={`membres/${props.user.name.toLowerCase().split(/\s/).join('_')}`}>
       <div
         onMouseOver={boxMouseOverHandler}
         onMouseLeave={boxMouseOutHandler}

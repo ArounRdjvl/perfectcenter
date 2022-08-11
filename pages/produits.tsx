@@ -7,13 +7,13 @@ import { TitleBar } from 'components/TitleBar'
 import { Product } from 'components/Product'
 import { dataProducts } from 'modules/data'
 
-export default function Perfectcare() {
+export default function Produits() {
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
     <div ref={ref}>
       <Head>
-        <title>PerfectCare</title>
+        <title>Nos Produits</title>
       </Head>
       <Navigation />
       <div

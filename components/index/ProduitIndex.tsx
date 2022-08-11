@@ -20,7 +20,7 @@ const autoHeightOptions: AutoHeightOptionsType = {
   destroyHeight: 'auto',
 }
 
-export function PerfectCareIndex() {
+export function ProduitIndex() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   if (isMobile) {
@@ -104,7 +104,7 @@ export function PerfectCareIndex() {
               Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
               services qui se démarquent par leur innovation et leur{' '}
               efficacité.<br />
-              Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes
+              Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
               de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
               Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
               invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous
@@ -112,7 +112,7 @@ export function PerfectCareIndex() {
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcare" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
                 Nos produits
               </Button>
@@ -211,14 +211,14 @@ export function PerfectCareIndex() {
             Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
             services qui se démarquent par leur innovation et leur{' '}
             efficacité.<br />
-            Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes de
+            Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes de
             luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
             produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
             invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous par
             télephone.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcare" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
                 Nos produits
               </Button>

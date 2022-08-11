@@ -18,7 +18,7 @@ export function WelcomeMsg2() {
             marginTop: '1rem',
           }}
         >
-          <TitleBar title="PerfectCirle" color="vert" paddingMobile="0 0 0 7vw" />
+          <TitleBar title="Nos membres" color="vert" paddingMobile="0 0 0 7vw" />
         </div>
         <div
           style={{
@@ -87,7 +87,7 @@ export function WelcomeMsg2() {
   }
   return (
     <>
-      <TitleBar title="PerfectCircle" color="vert" paddingMobile="0 0 0 5vw" />
+      <TitleBar title="Nos membres" color="vert" paddingMobile="0 0 0 5vw" />
       <div
         style={{
           position: 'absolute',
