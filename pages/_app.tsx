@@ -6,12 +6,10 @@ import 'global.css'
 
 function MyApp({ Component, pageProps }: { Component: React.ComponentType; pageProps: any }) {
   return (
-    <>
-      <CssBaseline />
-      <ThemeProvider theme={getTheme()}>
+    <ThemeProvider theme={getTheme()}>
+        <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
   )
 }
 

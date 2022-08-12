@@ -4,7 +4,6 @@ import { Container } from '@material-ui/core'
 import { WelcomePerfectCircle } from 'components/PerfectCircle/WelcomePerfectCircle'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
-import { TitleBar } from 'components/TitleBar'
 import { Coach } from 'components/PerfectCircle/Coach'
 import { dataCoachs } from 'modules/data'
 
@@ -17,26 +16,24 @@ export default function Perfectcircle() {
         <title>PerfectCircle</title>
       </Head>
       <Navigation />
-
-      <WelcomePerfectCircle />
-
       <Container>
-        <TitleBar title="Nos praticiens" color="vert" padding="2rem 0 2rem 0" />
-      </Container>
+        <WelcomePerfectCircle />
 
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          padding: '1rem 10vw',
-          alignContent: 'flex-start',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        {dataCoachs.map((coach, i) => (
-          <Coach user={coach} key={i} />
-        ))}
-      </div>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            width: '100%',
+            alignContent: 'flex-start',
+            justifyContent: 'space-evenly',
+            marginBottom: '3rem'
+          }}
+        >
+          {dataCoachs.map((coach, i) => (
+            <Coach user={coach} key={i} />
+          ))}
+        </div>
+      </Container>
       <Footer />
     </div>
   )
