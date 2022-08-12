@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Container } from '@material-ui/core'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
-import { TitleBar } from 'components/TitleBar'
+import { WelcomeProduits } from 'components/PerfectCare/WelcomeProduits'
 import { Product } from 'components/Product'
 import { dataProducts } from 'modules/data'
 
@@ -16,6 +16,9 @@ export default function Perfectcare() {
         <title>PerfectCare</title>
       </Head>
       <Navigation />
+      <Container>
+        <WelcomeProduits />
+      </Container>
       <div
         style={{
           display: 'flex',
@@ -25,9 +28,6 @@ export default function Perfectcare() {
           justifyContent: 'space-evenly',
         }}
       >
-        <Container>
-          <TitleBar title="Nos produits" color="vert" padding="0 0 2rem 0" />
-        </Container>
         <div
           style={{
             width: '100%',
@@ -35,7 +35,7 @@ export default function Perfectcare() {
             flexWrap: 'wrap',
             alignContent: 'flex-start',
             justifyContent: 'space-evenly',
-            marginTop: '1rem',
+            margin: '1rem 0 5rem',
           }}
         >
           {dataProducts.map((product, i) => (
