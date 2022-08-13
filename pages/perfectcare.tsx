@@ -21,6 +21,7 @@ export default function Perfectcare() {
       </Container>
       <div
         style={{
+          width: '100%',
           display: 'flex',
           flexWrap: 'wrap',
           padding: '1rem 2vw',

@@ -47,7 +47,7 @@ const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
     borderRadius: '20px',
-    width: '30rem',
+    width: '20rem',
     height: '28rem',
     margin: '1.5rem',
   },
@@ -89,6 +89,7 @@ export function Product(props: DisplayProps) {
           >
             <img
               className="image"
+              alt="produit"
               src={`../produits/${props.product?.name}.png`}
               width={225}
               style={{
@@ -169,6 +170,7 @@ export function Product(props: DisplayProps) {
         >
           <img
             className="image"
+            alt="produit"
             src={`../produits/${props.product?.name}.png`}
             width={225}
             style={{
@@ -212,7 +214,7 @@ export function Product(props: DisplayProps) {
               overflow: 'hidden',
             }}
           >
-            <Typography variant="body1" align="justify">
+            <Typography align="justify" style={{fontSize: '0.9rem'}}>
               {props.product?.desc}
             </Typography>
           </div>

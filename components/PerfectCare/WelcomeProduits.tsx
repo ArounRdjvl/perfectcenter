@@ -1,33 +1,8 @@
-import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
+import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { TitleBar } from 'components/TitleBar'
 import { colors } from 'modules/theme'
 
-const useStyles = makeStyles(() => ({
-  img: {
-    position: 'relative',
-    left: 0,
-    height: '8rem',
-    width: '8rem',
-  },
-  bulle: {
-    position: 'absolute',
-    float: 'left',
-    display: 'flex',
-    flexDirection: 'column',
-    borderRadius: '50%',
-    alignContent: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-    boxShadow: '0px 0px 25px #BBBBBB',
-  },
-  img_phone: {
-    position: 'relative',
-    width: '6.5rem',
-    height: '6.5rem',
-    borderRadius: '50%',
-  },
-}))
 
 export function WelcomeProduits() {
   const theme = useTheme()
