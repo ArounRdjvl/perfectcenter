@@ -11,11 +11,14 @@ function MyApp({
   Component: React.ComponentType
   pageProps: any
 }) {
+  const [theme] = React.useState(getTheme())
   return (
     <SessionProvider session={session}>
-      <ThemeProvider theme={getTheme()}>
-        <CssBaseline />
-        <Component {...pageProps} />
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <div style={{backgroundColor: theme.palette.background.default}}>
+          <Component {...pageProps}  />
+        </div>
       </ThemeProvider>
     </SessionProvider>
   )
