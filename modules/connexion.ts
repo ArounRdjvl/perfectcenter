@@ -1,11 +1,5 @@
-import jwt from 'jsonwebtoken'
-import { useEffect, useState } from 'react'
-
-const tokenKey = 'jwtToken'
-// TODO futures requests to the back end
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getApiObject(_token: string | null) {
+function getApiObject(token: string | null) {
+  // TODO futures requests to the back end
   return {}
 }
 
@@ -20,43 +14,23 @@ function fetchJson(path: string, body: Record<string, unknown>) {
 }
 
 export function useConnexion() {
-  const [token, setToken] = useState<string | null>(null)
-
-  useEffect(() => {
-    setToken(localStorage.getItem(tokenKey))
-  }, [])
-
-  const { email, admin } = token
-    ? (jwt.decode(token) as { email: string; admin: boolean })
-    : { email: null, admin: null }
 
   async function connect(email: string, password: string) {
-    const { token, error } = await fetchJson('/api/login', {
-      email,
-      password,
-    })
-    if (error) {
-      throw new Error(error)
-    }
-    if (token) {
-      setToken(token)
-      // TODO not really secure
-      localStorage.setItem(tokenKey, token)
-    }
+    // TDB
   }
 
   function disconnect() {
-    setToken(null)
-    localStorage.removeItem(tokenKey)
+    // TDB
   }
 
+  // TODO replace by real informations
   return {
-    connected: token != null,
-    token,
-    email,
-    admin,
+    connected: false,
+    token: null,
+    email: null,
+    admin: null,
     connect,
     disconnect,
-    api: getApiObject(token),
+    api: getApiObject(null),
   }
 }

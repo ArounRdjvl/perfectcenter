@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import { AdminNavigation } from '../components/admin/AdminNavigation'
-import { Rooms } from '../components/admin/Rooms'
+import { AdminNavigation } from 'components/admin/AdminNavigation'
+import { Rooms } from 'components/admin/Rooms'
 
 export default function Admin() {
   useRouter()

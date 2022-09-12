@@ -1,5 +1,4 @@
 import * as React from 'react'
-import useRequest from 'modules/useRequest'
 import {
   DataGrid,
   GridCellEditCommitParams,
@@ -155,12 +154,12 @@ export function Rooms(props: RoomsProps) {
 
   const [popup, setPopup] = React.useState<PopupData | undefined>(undefined)
 
-  const { get, post } = useRequest()
-
   const classes = useStyles()
 
   async function init() {
-    const rooms = await get<Room[]>('/api/admin/room/all')
+    // todo get rooms form database
+    // const rooms = await get<Room[]>('/api/admin/room/all')
+    const rooms : Room[] = []
 
     setGridRooms(
       rooms.map((r) => ({
@@ -190,11 +189,15 @@ export function Rooms(props: RoomsProps) {
         perform: async () => {
           // TODO : replace by react error handler
           try {
+            // todo : perform changes
+            /*
             const rooms = await post<Room[]>('/api/admin/room/perform', {
               roomsAdded,
               roomsEdited,
               roomsRemoved,
             })
+             */
+            const rooms : Room[] = []
             setGridRooms(
               rooms.map((r) => ({
                 id: r.id,
