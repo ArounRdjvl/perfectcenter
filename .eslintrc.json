@@ -39,6 +39,7 @@
       }
     ],
     "no-await-in-loop": "off",
+    "no-param-reassign": "off",
     "jsx-a11y/alt-text": "warn",
     "jsx-a11y/iframe-has-title": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",

@@ -1,6 +1,8 @@
+import React from 'react'
 import { useRouter } from 'next/router'
 import { AdminNavigation } from 'components/admin/AdminNavigation'
 import { Rooms } from 'components/admin/Rooms'
+import { getSession } from 'next-auth/react'
 
 export default function Admin() {
   useRouter()
@@ -10,4 +12,20 @@ export default function Admin() {
       <Rooms style={{ flex: 1 }} />
     </div>
   )
+}
+
+export async function getServerSideProps(context: any) {
+  // const session = await unstable_getServerSession(context.req, context.res, authOptions)
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/auth/signin',
+        permanent: false,
+      },
+    }
+  }
+  return {
+    props: { },
+  }
 }

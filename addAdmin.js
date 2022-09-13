@@ -18,6 +18,7 @@ async function createAdmin() {
       firstname,
       lastname,
       isAdmin: true,
+      isVerified: true,
       password: hash,
     },
   })

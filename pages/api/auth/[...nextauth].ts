@@ -1,0 +1,50 @@
+import NextAuth, {NextAuthOptions} from 'next-auth'
+import CredentialsProvider from 'next-auth/providers/credentials'
+import { getPrisma } from 'modules/utils'
+
+export const authOptions: NextAuthOptions = {
+  secret: process.env.SECRET,
+  providers: [
+    CredentialsProvider({
+      name: 'credentials',
+      credentials: {
+        email: { label: 'Email', type: 'email' },
+        password: { label: 'Password', type: 'password' },
+      },
+      async authorize(credentials, req) {
+        if (!credentials) return null
+        const user = await getPrisma().user.findUnique({
+          select: {
+            email: true,
+            firstname: true,
+            lastname: true,
+            isAdmin: true,
+            isVerified: true,
+          },
+          where: { email: credentials.email },
+        })
+        if (!user || !user.isVerified) return null
+        return user
+      },
+    }),
+  ],
+  callbacks: {
+    jwt: ({ token, user }) => {
+      if (user) {
+        token.isAdmin = user.isAdmin
+      }
+      return token
+    },
+    session: ({ session, token }) => {
+      if (token) {
+        session.isAdmin = token.isAdmin
+      }
+      return session
+    },
+  },
+  pages: {
+    signIn: '/auth/signin',
+  },
+}
+
+export default NextAuth(authOptions)
