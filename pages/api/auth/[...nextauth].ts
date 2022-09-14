@@ -1,4 +1,4 @@
-import NextAuth, {NextAuthOptions} from 'next-auth'
+import NextAuth, { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getPrisma } from 'modules/utils'
 
@@ -30,14 +30,21 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     jwt: ({ token, user }) => {
-      if (user) {
+      if (user) { // user object is not undefined only during the first connection
         token.isAdmin = user.isAdmin
+        token.firstname = user.firstname
+        token.lastname = user.lastname
       }
       return token
     },
-    session: ({ session, token }) => {
+    session: ({ session, token}) => {
       if (token) {
-        session.isAdmin = token.isAdmin
+        session.user = {
+          ...session.user,
+          isAdmin: token.isAdmin,
+          firstname: token.firstname,
+          lastname: token.lastname,
+        }
       }
       return session
     },

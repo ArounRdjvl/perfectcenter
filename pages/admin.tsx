@@ -15,6 +15,7 @@ export default function Admin() {
 }
 
 export async function getServerSideProps(context: any) {
+  // another way to get session, idk the diff
   // const session = await unstable_getServerSession(context.req, context.res, authOptions)
   const session = await getSession(context)
   if (!session) {
@@ -25,7 +26,12 @@ export async function getServerSideProps(context: any) {
       },
     }
   }
+  if (!session.user.isAdmin) {
+    return {
+      notFound: true
+    }
+  }
   return {
-    props: { },
+    props: {}
   }
 }
