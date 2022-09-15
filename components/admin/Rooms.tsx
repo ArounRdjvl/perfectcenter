@@ -22,6 +22,7 @@ import { Prisma, Room } from '@prisma/client'
 import { isEqual } from 'modules/browserUtils'
 import { useCallback } from 'react'
 import { Alert } from '@material-ui/lab'
+import {get, post} from 'modules/requests'
 
 function getColumns(
   gridRooms: GridRoom[],
@@ -157,17 +158,19 @@ export function Rooms(props: RoomsProps) {
   const classes = useStyles()
 
   async function init() {
-    // todo get rooms form database
-    // const rooms = await get<Room[]>('/api/admin/room/all')
-    const rooms : Room[] = []
+    try {
+      const rooms = await get<Room[]>('/api/admin/room/all')
 
-    setGridRooms(
-      rooms.map((r) => ({
-        id: r.id,
-        current: { ...r },
-        default: r,
-      }))
-    )
+      setGridRooms(
+        rooms.map((r) => ({
+          id: r.id,
+          current: { ...r },
+          default: r,
+        }))
+      )
+    } catch (e: any) {
+      setError(e.message)
+    }
   }
 
   React.useEffect(() => {
@@ -189,15 +192,11 @@ export function Rooms(props: RoomsProps) {
         perform: async () => {
           // TODO : replace by react error handler
           try {
-            // todo : perform changes
-            /*
             const rooms = await post<Room[]>('/api/admin/room/perform', {
               roomsAdded,
               roomsEdited,
               roomsRemoved,
             })
-             */
-            const rooms : Room[] = []
             setGridRooms(
               rooms.map((r) => ({
                 id: r.id,

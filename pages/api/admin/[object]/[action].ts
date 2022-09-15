@@ -3,6 +3,8 @@ import { Prisma } from '@prisma/client'
 import Cors from 'cors'
 import { getAllRooms, perform } from 'modules/api/admin/room'
 import initMiddleware, { getPrisma } from 'modules/utils'
+import {unstable_getServerSession} from "next-auth";
+import {authOptions} from "../../auth/[...nextauth]";
 
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
@@ -63,6 +65,11 @@ const handlers: {
 
 export default async function hander(req: NextApiRequest, res: NextApiResponse) {
   await cors(req, res)
+
+  const session = await unstable_getServerSession(req, res, authOptions)
+  if (!session?.user.isAdmin) {
+    res.status(404).json({ status: 'not found' })
+  }
 
   const { object, action } = req.query
 

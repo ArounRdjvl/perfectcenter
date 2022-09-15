@@ -3,7 +3,6 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { getPrisma } from 'modules/utils'
 
 export const authOptions: NextAuthOptions = {
-  secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
       name: 'credentials',

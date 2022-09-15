@@ -14,24 +14,4 @@ export default function Admin() {
   )
 }
 
-export async function getServerSideProps(context: any) {
-  // another way to get session, idk the diff
-  // const session = await unstable_getServerSession(context.req, context.res, authOptions)
-  const session = await getSession(context)
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/auth/signin',
-        permanent: false,
-      },
-    }
-  }
-  if (!session.user.isAdmin) {
-    return {
-      notFound: true
-    }
-  }
-  return {
-    props: {}
-  }
-}
+

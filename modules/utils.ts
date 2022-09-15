@@ -1,7 +1,5 @@
 import { PrismaClient } from '@prisma/client'
 
-export const { KEY } = process.env
-
 const prisma = new PrismaClient()
 
 export const dev = process.env.NODE_ENV !== 'production'
