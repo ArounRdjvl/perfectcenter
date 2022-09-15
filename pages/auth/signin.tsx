@@ -1,9 +1,12 @@
 import { Button, Container, TextField, Typography } from '@material-ui/core'
 import { colors } from 'modules/theme'
 import React from 'react'
-import {getSession, signIn} from 'next-auth/react'
+import { getSession, signIn } from 'next-auth/react'
+import { GetServerSideProps } from 'next'
+import { useRouter } from 'next/router'
 
 export default function Signin() {
+  const router = useRouter()
 
   const [email, setEmail] = React.useState<string>('')
   const [password, setPassword] = React.useState<string>('')
@@ -12,7 +15,11 @@ export default function Signin() {
 
   const handleConnectionClick = React.useCallback(async () => {
     try {
-      await signIn('credentials', { email, password })
+      await signIn('credentials', {
+        email,
+        password,
+        callbackUrl: typeof router.query.callbackUrl === 'string' ? router.query.callbackUrl : '/',
+      })
     } catch (e: any) {
       setErrorMessage(`${e.name} : ${e.message}`)
     }
@@ -102,7 +109,7 @@ export default function Signin() {
   )
 }
 
-export async function getServerSideProps(context: any) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context)
   if (session) {
     return {
@@ -113,6 +120,6 @@ export async function getServerSideProps(context: any) {
     }
   }
   return {
-    props: { },
+    props: {},
   }
 }
