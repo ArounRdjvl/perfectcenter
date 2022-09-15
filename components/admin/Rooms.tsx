@@ -1,5 +1,4 @@
 import * as React from 'react'
-import useRequest from 'modules/useRequest'
 import {
   DataGrid,
   GridCellEditCommitParams,
@@ -23,6 +22,7 @@ import { Prisma, Room } from '@prisma/client'
 import { isEqual } from 'modules/browserUtils'
 import { useCallback } from 'react'
 import { Alert } from '@material-ui/lab'
+import {get, post} from 'modules/requests'
 
 function getColumns(
   gridRooms: GridRoom[],
@@ -155,20 +155,22 @@ export function Rooms(props: RoomsProps) {
 
   const [popup, setPopup] = React.useState<PopupData | undefined>(undefined)
 
-  const { get, post } = useRequest()
-
   const classes = useStyles()
 
   async function init() {
-    const rooms = await get<Room[]>('/api/admin/room/all')
+    try {
+      const rooms = await get<Room[]>('/api/admin/room/all')
 
-    setGridRooms(
-      rooms.map((r) => ({
-        id: r.id,
-        current: { ...r },
-        default: r,
-      }))
-    )
+      setGridRooms(
+        rooms.map((r) => ({
+          id: r.id,
+          current: { ...r },
+          default: r,
+        }))
+      )
+    } catch (e: any) {
+      setError(e.message)
+    }
   }
 
   React.useEffect(() => {

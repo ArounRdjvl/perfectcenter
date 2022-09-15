@@ -47,7 +47,7 @@ export async function sendMail(
     text: content, // plain text body
   })
 
-  console.log('Message sent: %s', info.messageId)
+  console.info('Message sent: %s', info.messageId)
 
-  if (dev) console.log('DEV MODE : Preview URL: %s', nodemailer.getTestMessageUrl(info))
+  if (dev) console.info('DEV MODE : Preview URL: %s', nodemailer.getTestMessageUrl(info))
 }

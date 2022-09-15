@@ -1,7 +1,4 @@
-import { Secret } from 'jsonwebtoken'
 import { PrismaClient } from '@prisma/client'
-
-export const KEY = process.env.KEY as Secret
 
 const prisma = new PrismaClient()
 

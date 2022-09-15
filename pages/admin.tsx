@@ -1,6 +1,8 @@
+import React from 'react'
 import { useRouter } from 'next/router'
-import { AdminNavigation } from '../components/admin/AdminNavigation'
-import { Rooms } from '../components/admin/Rooms'
+import { AdminNavigation } from 'components/admin/AdminNavigation'
+import { Rooms } from 'components/admin/Rooms'
+import { getSession } from 'next-auth/react'
 
 export default function Admin() {
   useRouter()
@@ -11,3 +13,5 @@ export default function Admin() {
     </div>
   )
 }
+
+
