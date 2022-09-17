@@ -18,32 +18,32 @@ export default function Perfectcare() {
       <Navigation />
       <Container>
         <WelcomeProduits />
-      </Container>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          padding: '1rem 2vw',
-          alignContent: 'flex-start',
-          justifyContent: 'space-evenly',
-        }}
-      >
         <div
           style={{
             width: '100%',
             display: 'flex',
             flexWrap: 'wrap',
+            padding: '1rem 2vw',
             alignContent: 'flex-start',
             justifyContent: 'space-evenly',
-            margin: '1rem 0 5rem',
           }}
-        >
-          {dataProducts.map((product, i) => (
-            <Product product={product} key={i} />
-          ))}
+          >
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignContent: 'flex-start',
+              justifyContent: 'space-evenly',
+              margin: '1rem 0 5rem',
+            }}
+            >
+            {dataProducts.map((product, i) => (
+              <Product product={product} key={i} />
+              ))}
+          </div>
         </div>
-      </div>
+      </Container>
       <Footer />
     </div>
   )

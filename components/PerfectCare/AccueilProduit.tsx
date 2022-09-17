@@ -51,7 +51,7 @@ export function AccueilProduit(props: ProductProps) {
           <TitleBar title={props.title} color="vert" padding="0 0 3vh 0" />
         </div>
         <div className={classes.floating}>
-          <img src={props.path} style={{ width: '25vw', maxWidth: '40rem', minWidth: '20rem' }} />
+          <img alt={props.path} src={props.path} style={{ width: '25vw', maxWidth: '40rem', minWidth: '20rem' }} />
         </div>
       </div>
     </div>

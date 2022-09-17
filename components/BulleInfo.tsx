@@ -18,7 +18,6 @@ export function BulleInfo(props: BulleInfoProps) {
         flexDirection: 'column',
         justifyContent: 'center',
         margin: '2rem',
-        minWidth: '10rem',
       }}
     >
       <div

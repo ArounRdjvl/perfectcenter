@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Container, Typography } from '@material-ui/core'
 import { AccueilProduit } from 'components/PerfectCare/AccueilProduit'
-import { LumiereMusique } from 'components/PerfectCare/Psio/LumiereMusique'
+/* import { LumiereMusique } from 'components/PerfectCare/Psio/DecouvertePsio' */
 import { AchatPsio } from 'components/PerfectCare/Psio/AchatPsio'
 import { BanniereInfo } from 'components/BanniereInfo'
 import { BulleInfo } from 'components/BulleInfo'
@@ -73,7 +73,7 @@ export default function Kaqun() {
         />
       </div>
       <Container>
-        <LumiereMusique />
+        {/* <LumiereMusique /> */}
       </Container>
       <AchatPsio />
       <Footer />
