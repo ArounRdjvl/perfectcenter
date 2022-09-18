@@ -12,8 +12,6 @@ export default function Membres() {
 
   return (
     <div ref={ref}>
-      {/* <Background elRef={ref} /> */}
-
       <Head>
         <title>Notre Equipe</title>
       </Head>

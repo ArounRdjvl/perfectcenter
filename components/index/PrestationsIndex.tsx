@@ -23,48 +23,53 @@ const autoHeightOptions: AutoHeightOptionsType = {
 export function PrestationsIndex() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  if (isMobile) {
-    return (
+
+  return (
+    <Grid
+      justifyContent={isMobile ? "center" : "flex-end"}
+      direction={isMobile ? "column" : "row"}
+      container
+      style={isMobile ? { marginTop: '2rem' } : { margin: '4rem 0' }}>
       <Grid
-        justify="center"
-        direction="column"
-        container
-        style={{
-          marginTop: '2rem',
-        }}
-      >
-        <Grid
-          xs={12}
-          style={{
+        xs={isMobile ? 12 : 3}
+        style={isMobile ?
+          {
             position: 'relative',
             zIndex: 3,
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'center'
+          }
+          :
+          {
+            position: 'relative',
+            zIndex: 3
           }}
-          item
-        >
-          <div
-            style={{
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: colors.vert,
-              height: '8rem',
-              width: '8rem',
-              left: 0,
-              borderRadius: '30px',
-              boxShadow: '0px 0px 25px #BBBBBB',
-            }}
-          >
-            <img src="picto/Prestations.png" width="55%" alt="Nos prestations"/>
-          </div>
-        </Grid>
-        <Grid
-          xs={12}
+        item
+      >
+        <div
           style={{
+            position: isMobile ? 'relative' : 'absolute',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: colors.vert,
+            height: isMobile ? '8rem' : '12rem',
+            width: isMobile ? '8rem' : '12rem',
+            left: isMobile ? 0 : '',
+            right: isMobile ? '' : 0,
+            borderRadius: isMobile ? '30px' : '40px',
+            boxShadow: '0px 0px 25px #BBBBBB',
+          }}
+        >
+          <img src="picto/Prestations.png" alt="Nos prestations" width={isMobile ? "55%" : "60%"} />
+        </div>
+      </Grid>
+      <Grid
+        xs={isMobile ? 12 : 9}
+        style={isMobile ?
+          {
             position: 'relative',
             minWidth: '16rem',
             display: 'flex',
@@ -72,114 +77,13 @@ export function PrestationsIndex() {
             justifyContent: 'center',
             alignItems: 'center',
             margin: '0.5rem 0',
+          }
+          :
+          {
+            position: 'relative',
+            paddingTop: '3rem',
+            minHeight: '15rem',
           }}
-          item
-        >
-          <div
-            style={{
-              backgroundColor: colors.beige,
-              position: 'relative',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '90%',
-              borderRadius: '25px',
-              top: 0,
-              padding: '0.5rem 1rem',
-              boxShadow: '0px 0px 25px #BBBBBB',
-            }}
-          >
-            <Typography variant="h3" align="center">
-              Nos prestations
-            </Typography>
-          </div>
-          <div
-            style={{
-              padding: '1rem 10vw',
-              position: 'relative',
-              zIndex: 2,
-            }}
-          >
-            <Typography variant="body2" align="justify">
-              Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-              services qui se démarquent par leur innovation et leur{' '}
-              efficacité.<br />
-              Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
-              de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
-              Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
-              invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous
-              par télephone.
-            </Typography>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large">
-                Nos prestations
-              </Button>
-            </Link>
-          </div>
-        </Grid>
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            alignContent: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            margin: '0 0 2rem 0',
-          }}
-        >
-          <Typography variant="h3" align="center">
-            Découvrez nos prestations
-          </Typography>
-          <Divider color="vert" />
-          <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
-            <Carousel
-              slides={slidesProducts}
-              options={carouselOptions}
-              autoplay={autoplayOptions}
-              autoheight={autoHeightOptions}
-            />
-          </div>
-        </div>
-      </Grid>
-    )
-  }
-  return (
-    <Grid justify="flex-end" container style={{ margin: '4rem 0' }}>
-      <Grid
-        xs={3}
-        style={{
-          position: 'relative',
-          zIndex: 3,
-        }}
-        item
-      >
-        <div
-          style={{
-            position: 'absolute',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: colors.vert,
-            height: '12rem',
-            width: '12rem',
-            right: 0,
-            borderRadius: '40px',
-            boxShadow: '0px 0px 25px #BBBBBB',
-          }}
-        >
-          <img src="picto/Prestations.png" alt="Nos prestations" width="60%"/>
-        </div>
-      </Grid>
-      <Grid
-        xs={9}
-        style={{
-          position: 'relative',
-          paddingTop: '3rem',
-          minHeight: '15rem',
-        }}
         item
       >
         <div
@@ -187,46 +91,53 @@ export function PrestationsIndex() {
             backgroundColor: colors.beige,
             position: 'relative',
             display: 'flex',
+            justifyContent: isMobile ? 'center' : 'flex-start',
             alignItems: 'center',
-            width: '100%',
-            right: 0,
+            width: isMobile ? '90%' : '100%',
+            right: isMobile ? '' : 0,
             top: 0,
-            padding: '0.7rem',
-            borderRadius: '0 30px 30px 0',
+            padding: isMobile ? '0.5rem 1rem' : '0.7rem',
+            borderRadius: isMobile ? '25px' : '0 30px 30px 0',
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <Typography variant="h2" align="left" style={{ marginLeft: '5vw' }}>
+          <Typography
+            variant={isMobile ? "h3" : "h2"}
+            align={isMobile ? "center" : "left"}
+            style={isMobile ? {} : { marginLeft: '5vw' }}>
             Nos prestations
           </Typography>
         </div>
         <div
           style={{
-            padding: '1rem 5rem',
+            padding: isMobile ? '1rem 10vw' : '1rem 5rem',
             position: 'relative',
             zIndex: 2,
           }}
         >
-          <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
+          <Typography
+            variant={isMobile ? "body2" : "body1"}
+            align="justify"
+            style={isMobile ? { marginBottom: '16px' } : { margin: '2rem 0' }}>
             Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-            services qui se démarquent par leur innovation et leur{' '}
-            efficacité.<br />
+            services qui se démarquent par leur innovation et leur efficacité.<br />
             Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes de
             luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
             produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
             invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous par
             télephone.
           </Typography>
+
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+              <Button variant="contained" color="secondary" size="large" style={isMobile ? {} : { width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
                 Nos prestations
               </Button>
             </Link>
           </div>
         </div>
       </Grid>
-      {/* <div
+      {isMobile && <div
         style={{
           width: '100%',
           display: 'flex',
@@ -248,7 +159,7 @@ export function PrestationsIndex() {
             autoheight={autoHeightOptions}
           />
         </div>
-      </div> */}
-    </Grid>
+      </div>}
+    </Grid >
   )
 }

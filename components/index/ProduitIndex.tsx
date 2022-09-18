@@ -59,7 +59,7 @@ export function ProduitIndex() {
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img src="picto/produits.png" width="55%" alt="Nos produits"/>
+            <img src="picto/produits.png" width="55%" alt="Nos produits" />
           </div>
         </Grid>
         <Grid
@@ -102,8 +102,7 @@ export function ProduitIndex() {
           >
             <Typography variant="body2" align="justify">
               Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-              services qui se démarquent par leur innovation et leur{' '}
-              efficacité.<br />
+              services qui se démarquent par leur innovation et leur efficacité.<br />
               Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
               de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
               Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
@@ -170,7 +169,7 @@ export function ProduitIndex() {
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img src="picto/produits.png" alt="nos produits" width="60%"/>
+          <img src="picto/produits.png" alt="nos produits" width="60%" />
         </div>
       </Grid>
       <Grid
@@ -209,8 +208,7 @@ export function ProduitIndex() {
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
             Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-            services qui se démarquent par leur innovation et leur{' '}
-            efficacité.<br />
+            services qui se démarquent par leur innovation et leur efficacité.<br />
             Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes de
             luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
             produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
