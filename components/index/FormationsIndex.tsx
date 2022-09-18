@@ -8,7 +8,7 @@ export function FormationsIndex() {
   if (isMobile) {
     return (
       <Grid
-        justify="center"
+        justifyContent="center"
         direction="column"
         container
         style={{
@@ -41,7 +41,7 @@ export function FormationsIndex() {
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img src="picto/Malette.png" width="55%" alt="malette"/>
+            <img src="picto/Malette.png" width="55%" alt="malette" />
           </div>
         </Grid>
         <Grid
@@ -100,7 +100,7 @@ export function FormationsIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container style={{margin: "4rem 0"}}>
+    <Grid justifyContent="flex-end" container style={{ margin: "4rem 0" }}>
       <Grid
         xs={9}
         style={{
@@ -137,8 +137,8 @@ export function FormationsIndex() {
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
             PerfectCenter est également un organisme de formation en cours de validation Qualiopi vous proposant des formations de qualités sur différentes thématiques.
-            Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir ! 
-            Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes. 
+            Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir !
+            Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/formations" underline="none" style={{ marginBottom: '2rem' }}>
@@ -176,7 +176,7 @@ export function FormationsIndex() {
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img src="picto/Malette.png" width="60%" alt="malette"/>
+          <img src="picto/Malette.png" width="60%" alt="malette" />
         </div>
       </Grid>
     </Grid>
