@@ -1,16 +1,12 @@
 import { Button, Container, TextField, Typography } from '@material-ui/core'
-import { useConnexion } from 'modules/connexion'
 import { colors } from 'modules/theme'
 import React from 'react'
+import { getSession, signIn } from 'next-auth/react'
+import { GetServerSideProps } from 'next'
+import { useRouter } from 'next/router'
 
-export default function Login() {
-  const {
-    connected,
-    email: connectedUser, // c'est un alias car username est déjà utilisé pour le state
-    admin,
-    connect,
-    disconnect,
-  } = useConnexion()
+export default function Signin() {
+  const router = useRouter()
 
   const [email, setEmail] = React.useState<string>('')
   const [password, setPassword] = React.useState<string>('')
@@ -19,30 +15,16 @@ export default function Login() {
 
   const handleConnectionClick = React.useCallback(async () => {
     try {
-      await connect(email, password)
+      await signIn('credentials', {
+        email,
+        password,
+        callbackUrl: typeof router.query.callbackUrl === 'string' ? router.query.callbackUrl : '/',
+      })
     } catch (e: any) {
       setErrorMessage(`${e.name} : ${e.message}`)
     }
   }, [email, password])
 
-  React.useEffect(() => {
-    setPassword('')
-    setErrorMessage('')
-  }, [connected])
-
-  if (connected) {
-    return (
-      <div>
-        you are connected
-        <br />
-        username : {connectedUser}
-        <br />
-        you are {admin ? 'an admin' : 'not an admin'}
-        <br />
-        <Button onClick={() => disconnect()}>se déconnecter</Button>
-      </div>
-    )
-  }
   return (
     <Container ref={ref} style={{ display: 'flex', height: '100vh' }}>
       <div
@@ -70,7 +52,7 @@ export default function Login() {
             background: colors.vert,
           }}
         >
-          <img src="picto/connexion.png" width={75} style={{ zIndex: 2 }} />
+          <img src="/picto/connexion.png" width={75} style={{ zIndex: 2 }} />
         </div>
         <div
           style={{
@@ -125,4 +107,19 @@ export default function Login() {
       </div>
     </Container>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (session) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+  return {
+    props: {},
+  }
 }

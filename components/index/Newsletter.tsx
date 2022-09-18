@@ -20,7 +20,7 @@ export function Newsletter() {
       body: JSON.stringify({ email, subject, content }),
     }).then((res) => {
       if (res.status === 200) {
-        console.log('email sent')
+        console.info('email sent')
       } else {
         console.error('error email')
       }

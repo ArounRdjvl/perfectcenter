@@ -26,7 +26,7 @@ export function ProduitIndex() {
   if (isMobile) {
     return (
       <Grid
-        justify="center"
+        justifyContent="center"
         direction="column"
         container
         style={{
@@ -145,7 +145,7 @@ export function ProduitIndex() {
     )
   }
   return (
-    <Grid justify="flex-end" container style={{ margin: '6rem 0' }}>
+    <Grid justifyContent="flex-end" container style={{ margin: '6rem 0' }}>
       <Grid
         xs={3}
         style={{
