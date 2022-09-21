@@ -129,7 +129,7 @@ export function PrestationsIndex() {
           </Typography>
 
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/prestations" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large" style={isMobile ? {} : { width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
                 Nos prestations
               </Button>

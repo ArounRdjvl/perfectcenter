@@ -8,7 +8,7 @@ import { dataCoachs } from 'modules/data'
 import { Footer } from 'components/Footer'
 import { Navigation } from 'components/Navigation'
 
-export default function MembrePerfect() {
+export default function Membre() {
   const ref = React.useRef<HTMLDivElement>(null)
   const router = useRouter()
   const { membre } = router.query
