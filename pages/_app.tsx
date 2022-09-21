@@ -1,8 +1,7 @@
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from '@material-ui/styles'
-import { CssBaseline } from '@material-ui/core'
 import { getTheme } from 'modules/theme'
-import React from 'react'
+import { CssBaseline } from '@material-ui/core'
 import 'global.css'
 
 function MyApp({
@@ -14,8 +13,8 @@ function MyApp({
 }) {
   return (
     <SessionProvider session={session}>
-      <CssBaseline />
       <ThemeProvider theme={getTheme()}>
+        <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>

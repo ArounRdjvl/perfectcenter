@@ -1,30 +1,42 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navigation } from 'components/Navigation'
-import { Membre } from 'components/Membre'
 import { Container } from '@material-ui/core'
+import { WelcomeMembrePerfect } from 'components/MembrePerfect/WelcomeMembrePerfect'
+import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
 import { TitleBar } from 'components/TitleBar'
-import { dataMembres } from 'modules/data'
+import { Coach } from 'components/MembrePerfect/Coach'
+import { dataCoachs } from 'modules/data'
 
 export default function Membres() {
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
     <div ref={ref}>
-      {/* <Background elRef={ref} /> */}
-
       <Head>
-        <title>Notre Equipe</title>
+        <title>Nos membres</title>
       </Head>
       <Navigation />
+
+      <WelcomeMembrePerfect />
+
       <Container>
-        <TitleBar title="Notre Equipe" color="vert" />
-        {dataMembres.map((member, i) => {
-          const pair = i % 2 === 0
-          return <Membre pair={pair} user={member} key={i} />
-        })}
+        <TitleBar title="Nos praticiens" color="vert" padding="2rem 0 2rem 0" />
       </Container>
+
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          padding: '1rem 10vw',
+          alignContent: 'flex-start',
+          justifyContent: 'space-evenly',
+        }}
+      >
+        {dataCoachs.map((coach, i) => (
+          <Coach user={coach} key={i} />
+        ))}
+      </div>
       <Footer />
     </div>
   )

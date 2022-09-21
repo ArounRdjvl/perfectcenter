@@ -19,6 +19,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@material-ui/styles": "^4.11.5",
+    "analytics": "^0.8.1",
     "@mui/material": "^5.5.2",
     "@mui/system": "^5.2.8",
     "@mui/x-data-grid": "5.8.0",

@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export function WelcomePerfectCircle() {
+export function WelcomeMembrePerfect() {
   const theme = useTheme()
   const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
