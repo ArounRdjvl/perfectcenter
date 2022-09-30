@@ -1,7 +1,7 @@
 import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import { colors } from 'modules/theme'
-import {Divider} from "components/Divider";
+import { Divider } from 'components/Divider'
 
 export function WelcomeMsg() {
   const theme = useTheme()
@@ -10,48 +10,49 @@ export function WelcomeMsg() {
   if (isMobile) {
     return (
       <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          float: 'left',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 1.5rem 3rem 1.5rem',
+        }}
+      >
+        <div
           style={{
-            position: 'relative',
             width: '100%',
-            height: '100%',
-            float: 'left',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '0 1.5rem 3rem 1.5rem',
+            padding: '0 0 2rem 0 ',
           }}
         >
           <div
             style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '0 0 2rem 0 ',
+              position: 'relative',
             }}
           >
-            <div
-              style={{
-                position: 'relative',
-              }}
-            >
-              <Typography variant="h1" align="center">
-                Bienvenue chez PerfectCenter
-              </Typography>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <Divider color="vert" width="150px" margin="1rem 0 0 0" />
-              </div>
+            <Typography variant="h1" align="center">
+              Bienvenue chez PerfectCenter
+            </Typography>
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <Divider color="vert" width="150px" margin="1rem 0 0 0" />
             </div>
           </div>
-          <Typography variant="body1" align="center">
-            PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine autour d&apos;activités holistiques est notre
-            mission. Essayer, apprendre, recommencer et développer des idées, des
-            innovations.. Nous nous positionnons comme un laboratoire de bien-être où chacun est
-            libre de s&apos;engager avec bienveillance et générosité. <br />
-            Nous proposons des prestations, des produits et des formations innovantes et performantes aux particuliers et aux professionnels.
-          </Typography>
         </div>
+        <Typography variant="body1" align="center">
+          PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine
+          autour d&apos;activités holistiques est notre mission. Essayer, apprendre, recommencer et
+          développer des idées, des innovations.. Nous nous positionnons comme un laboratoire de
+          bien-être où chacun est libre de s&apos;engager avec bienveillance et générosité. <br />
+          Nous proposons des prestations, des produits et des formations innovantes et performantes
+          aux particuliers et aux professionnels.
+        </Typography>
+      </div>
     )
   }
   return (
@@ -67,7 +68,7 @@ export function WelcomeMsg() {
           borderRadius: '30px',
           top: 0,
         }}
-       />
+      />
       <div
         style={{
           position: 'relative',
@@ -112,11 +113,13 @@ export function WelcomeMsg() {
             </div>
           </div>
           <Typography variant="body1" align="center">
-            PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine autour d&apos;activités holistiques est notre
-            mission. Essayer, apprendre, recommencer et développer des idées, des
-            innovations.. Nous nous positionnons comme un laboratoire de bien-être où chacun est
-            libre de s&apos;engager avec bienveillance et générosité. <br />
-            Nous proposons des prestations, des produits et des formations innovantes et performantes aux particuliers et aux professionnels.
+            PerfectCenter est une entreprise familiale. Créer une synergie et une alchimie humaine
+            autour d&apos;activités holistiques est notre mission. Essayer, apprendre, recommencer
+            et développer des idées, des innovations.. Nous nous positionnons comme un laboratoire
+            de bien-être où chacun est libre de s&apos;engager avec bienveillance et générosité.{' '}
+            <br />
+            Nous proposons des prestations, des produits et des formations innovantes et
+            performantes aux particuliers et aux professionnels.
           </Typography>
         </div>
         <div
@@ -146,7 +149,7 @@ export function WelcomeMsg() {
                 backgroundColor: colors.beige,
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <div
               style={{
                 position: 'absolute',
@@ -159,7 +162,7 @@ export function WelcomeMsg() {
                 backgroundColor: colors.vert,
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <div
               style={{
                 position: 'absolute',
@@ -172,7 +175,7 @@ export function WelcomeMsg() {
                 backgroundColor: colors.vert,
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <div
               style={{
                 position: 'absolute',
@@ -188,7 +191,7 @@ export function WelcomeMsg() {
                 backgroundSize: '120%',
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
           </div>
         </div>
       </div>

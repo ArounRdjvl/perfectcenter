@@ -43,24 +43,29 @@ export function AnimatedImage(props: AnimatedImageProps) {
   }))
 
   if (props.center) {
-
     return (
       <animated.div
         className={classes.root}
         style={{
           left: 0,
           right: 0,
-          marginLeft: "auto",
-          marginRight: "auto",
-          top: "65vh",
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          top: '65vh',
           opacity: springProps.opacity,
           width: props.width,
-          transform: `rotate(${rotation}deg) ${mirror}`
+          transform: `rotate(${rotation}deg) ${mirror}`,
         }}
       >
-        <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
+        <img
+          src={props.url}
+          draggable="false"
+          referrerPolicy="no-referrer"
+          unselectable="on"
+          style={{ width: '100%' }}
+        />
       </animated.div>
-    );
+    )
   }
 
   return (
@@ -71,11 +76,16 @@ export function AnimatedImage(props: AnimatedImageProps) {
         top: y,
         opacity: springProps.opacity,
         width: props.width,
-        transform: `rotate(${rotation}deg) ${mirror}`
+        transform: `rotate(${rotation}deg) ${mirror}`,
       }}
     >
-      <img src={props.url} draggable="false" referrerPolicy="no-referrer" unselectable="on" style={{ width: "100%" }} />
+      <img
+        src={props.url}
+        draggable="false"
+        referrerPolicy="no-referrer"
+        unselectable="on"
+        style={{ width: '100%' }}
+      />
     </animated.div>
-  );
-
+  )
 }

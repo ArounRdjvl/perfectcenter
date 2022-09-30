@@ -29,7 +29,7 @@ export function AdminNavigation() {
         {session && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <Typography>{userStr}</Typography>
-            <Button color="inherit" onClick={() => signOut({callbackUrl: '/'})}>
+            <Button color="inherit" onClick={() => signOut({ callbackUrl: '/' })}>
               Déconnexion
             </Button>
           </div>

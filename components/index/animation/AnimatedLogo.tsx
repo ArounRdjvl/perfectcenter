@@ -85,17 +85,13 @@ export function AnimatedLogo(props: AnimatedLogoProps) {
           opacity: springProps.opacity,
           height: springProps.height,
           top: springProps.top,
-          position: "fixed",
-          pointerEvents: "none",
-          width: "100%",
-          zIndex: 10
+          position: 'fixed',
+          pointerEvents: 'none',
+          width: '100%',
+          zIndex: 10,
         }}
       >
-        <Lottie
-          options={bodymovinOptions}
-          isStopped={!play}
-          style={{ margin: "auto" }}
-        />
+        <Lottie options={bodymovinOptions} isStopped={!play} style={{ margin: 'auto' }} />
       </animated.div>
       <AnimatedImage url="picto/PerfectCenter.png" center width="17rem" />
     </>

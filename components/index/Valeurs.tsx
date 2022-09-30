@@ -25,19 +25,19 @@ export function Valeurs() {
   if (isMobile) {
     return (
       <>
-          <div
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignContent: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            <Typography variant="h2" align="center">
-              Nos valeurs
-            </Typography>
-            <Divider color="vert" />
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Typography variant="h2" align="center">
+            Nos valeurs
+          </Typography>
+          <Divider color="vert" />
         </div>
         <div
           style={{
@@ -72,7 +72,7 @@ export function Valeurs() {
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <Typography
               variant="h4"
               align="center"
@@ -104,7 +104,7 @@ export function Valeurs() {
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <Typography
               variant="h4"
               align="center"
@@ -136,7 +136,7 @@ export function Valeurs() {
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <Typography
               variant="h4"
               align="center"
@@ -168,7 +168,7 @@ export function Valeurs() {
                 backgroundSize: '70%',
                 boxShadow: '0px 0px 25px #BBBBBB',
               }}
-             />
+            />
             <Typography
               variant="h4"
               align="center"
@@ -182,28 +182,28 @@ export function Valeurs() {
     )
   }
   return (
-    <div 
+    <div
       style={{
         width: '100%',
         backgroundColor: colors.vert,
-        padding:'1rem',
-        marginBottom: '9rem'
+        padding: '1rem',
+        marginBottom: '9rem',
       }}
     >
       <Container>
         <div
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignContent: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            <Typography variant="h2" align="center" color="textSecondary">
-              Nos valeurs
-            </Typography>
-            <Divider color="beige" />
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Typography variant="h2" align="center" color="textSecondary">
+            Nos valeurs
+          </Typography>
+          <Divider color="beige" />
         </div>
         <div
           style={{
@@ -237,7 +237,12 @@ export function Valeurs() {
                 boxShadow: '0px 0px 10px #555555',
               }}
             />
-            <Typography variant="h4" align="center" color="textSecondary" style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+            <Typography
+              variant="h4"
+              align="center"
+              color="textSecondary"
+              style={{ marginTop: '1rem', fontWeight: 'bold' }}
+            >
               Bienveillance
             </Typography>
           </div>
@@ -263,7 +268,12 @@ export function Valeurs() {
                 boxShadow: '0px 0px 10px #555555',
               }}
             />
-            <Typography variant="h4" align="center" color="textSecondary" style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+            <Typography
+              variant="h4"
+              align="center"
+              color="textSecondary"
+              style={{ marginTop: '1rem', fontWeight: 'bold' }}
+            >
               Synergie
             </Typography>
           </div>
@@ -289,7 +299,12 @@ export function Valeurs() {
                 boxShadow: '0px 0px 10px #555555',
               }}
             />
-            <Typography variant="h4" align="center" color="textSecondary" style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+            <Typography
+              variant="h4"
+              align="center"
+              color="textSecondary"
+              style={{ marginTop: '1rem', fontWeight: 'bold' }}
+            >
               Partage
             </Typography>
           </div>
@@ -315,7 +330,12 @@ export function Valeurs() {
                 boxShadow: '0px 0px 10px #555555',
               }}
             />
-            <Typography variant="h4" align="center" color="textSecondary" style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+            <Typography
+              variant="h4"
+              align="center"
+              color="textSecondary"
+              style={{ marginTop: '1rem', fontWeight: 'bold' }}
+            >
               Générosité
             </Typography>
           </div>

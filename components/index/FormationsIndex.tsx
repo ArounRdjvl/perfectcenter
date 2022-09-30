@@ -83,9 +83,11 @@ export function FormationsIndex() {
             }}
           >
             <Typography variant="body1" align="justify">
-              PerfectCenter est également un organisme de formation validé Qualiopi vous proposant des formations de qualités sur différentes thématiques.
-              Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir !
-              Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes.
+              PerfectCenter est également un organisme de formation validé Qualiopi vous proposant
+              des formations de qualités sur différentes thématiques. Nous faisons intervenir dans
+              nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir
+              ! Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se
+              basant sur l&apos;analyse de vos besoins et de vos demandes.
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -100,7 +102,7 @@ export function FormationsIndex() {
     )
   }
   return (
-    <Grid justifyContent="flex-end" container style={{ margin: "4rem 0" }}>
+    <Grid justifyContent="flex-end" container style={{ margin: '4rem 0' }}>
       <Grid
         xs={9}
         style={{
@@ -136,13 +138,20 @@ export function FormationsIndex() {
           }}
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
-            PerfectCenter est également un organisme de formation en cours de validation Qualiopi vous proposant des formations de qualités sur différentes thématiques.
-            Nous faisons intervenir dans nos formations certains de nos praticiens qualifiés pour vous transmettre leur savoir !
-            Vous êtes une entreprise ? Nous pouvons créer une formation faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes.
+            PerfectCenter est également un organisme de formation en cours de validation Qualiopi
+            vous proposant des formations de qualités sur différentes thématiques. Nous faisons
+            intervenir dans nos formations certains de nos praticiens qualifiés pour vous
+            transmettre leur savoir ! Vous êtes une entreprise ? Nous pouvons créer une formation
+            faites sur mesure en se basant sur l&apos;analyse de vos besoins et de vos demandes.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/formations" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}
+              >
                 Nos formations
               </Button>
             </Link>

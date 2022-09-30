@@ -22,7 +22,7 @@ import { Prisma, Room } from '@prisma/client'
 import { isEqual } from 'modules/browserUtils'
 import { useCallback } from 'react'
 import { Alert } from '@material-ui/lab'
-import {get, post} from 'modules/requests'
+import { get, post } from 'modules/requests'
 
 function getColumns(
   gridRooms: GridRoom[],
