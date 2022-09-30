@@ -115,7 +115,7 @@ export const slidesProducts: ReactNode[] = dataProducts.map((Product) => (
         background: 'linear-gradient(transparent, 35%, #404040)',
       }}
     >
-      <Typography variant="h3" color="textSecondary">
+      <Typography variant="h2" color="textSecondary">
         {Product.name}
       </Typography>
     </div>
@@ -240,7 +240,7 @@ export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach, i) => (
         background: 'linear-gradient(transparent, 35%, #404040)',
       }}
     >
-      <Typography variant="h3" color="textSecondary">
+      <Typography variant="h2" color="textSecondary">
         {Coach.name}
       </Typography>
       <Typography variant="body1" color="textSecondary">
