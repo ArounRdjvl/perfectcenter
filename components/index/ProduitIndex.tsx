@@ -1,12 +1,13 @@
 import React from 'react'
 import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@material-ui/core'
 import { colors } from 'modules/theme'
-import { slidesProducts } from 'modules/data'
+import { dataProducts } from 'modules/data'
 import { Divider } from 'components/Divider'
 import { Carousel } from 'components/Carousel'
 import { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
 import { EmblaOptionsType } from 'embla-carousel-react'
+import { SlideProduct } from 'components/SlideProduct'
 
 const carouselOptions: EmblaOptionsType = {
   loop: true,
@@ -134,7 +135,9 @@ export function ProduitIndex() {
           <Divider color="vert" />
           <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
             <Carousel
-              slides={slidesProducts}
+              slides={dataProducts.map((product, i) => (
+                <SlideProduct product={product} key={i} />
+              ))}
               options={carouselOptions}
               autoplay={autoplayOptions}
               autoheight={autoHeightOptions}
@@ -240,7 +243,9 @@ export function ProduitIndex() {
         <Divider color="vert" />
         <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
           <Carousel
-            slides={slidesProducts}
+            slides={dataProducts.map((product, i) => (
+              <SlideProduct product={product} key={i} />
+            ))}
             options={carouselOptions}
             autoplay={autoplayOptions}
             autoheight={autoHeightOptions}

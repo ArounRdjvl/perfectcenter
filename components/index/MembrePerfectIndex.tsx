@@ -3,10 +3,11 @@ import { Grid, useTheme, Typography, useMediaQuery, Link, Button } from '@materi
 import { colors } from 'modules/theme'
 import { Divider } from 'components/Divider'
 import { Carousel } from 'components/Carousel'
-import { slidesCoaches } from 'modules/data'
+import { dataCoachs } from 'modules/data'
 import { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
 import { EmblaOptionsType } from 'embla-carousel-react'
+import { SlideCoach } from 'components/SlideCoach'
 
 const carouselOptions: EmblaOptionsType = {
   loop: true,
@@ -135,12 +136,14 @@ export function MembrePerfectIndex() {
             </Typography>
             <Divider color="vert" />
             <div style={{ margin: '2rem 0 0 0', padding: '0 0.5rem' }}>
-              <Carousel
-                slides={slidesCoaches}
+              {/* <Carousel
+                slides={dataCoachs.map(
+                  (coach, i) => (<SlideCoach coach={coach} key={i} />)
+                )}
                 options={carouselOptions}
                 autoplay={autoplayOptions}
                 autoheight={autoHeightOptions}
-              />
+              /> */}
             </div>
           </div>
         </Grid>
@@ -289,7 +292,9 @@ export function MembrePerfectIndex() {
         <Divider color="vert" />
         <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
           <Carousel
-            slides={slidesCoaches}
+            slides={dataCoachs.map((coach, i) => (
+              <SlideCoach coach={coach} key={i} />
+            ))}
             options={carouselOptions}
             autoplay={autoplayOptions}
             autoheight={autoHeightOptions}
