@@ -7,7 +7,7 @@ import animation from 'assets/logo404.json'
 import { TitleBar } from 'components/TitleBar'
 import { Footer } from 'components/Footer'
 
-export default function Perfectcorporate() {
+export default function Formations() {
   const ref = React.useRef<HTMLDivElement>(null)
 
   const bodymovinOptions = {
@@ -20,7 +20,7 @@ export default function Perfectcorporate() {
   return (
     <div ref={ref}>
       <Head>
-        <title>PerfectCorporate</title>
+        <title>Nos formations</title>
       </Head>
       <Navigation displayLogo={false} />
       <Container

@@ -98,14 +98,14 @@ export function DivisionDesc(props: DivisionDescProps) {
             <b>Trouver un praticien</b>
           </Typography>
           <Typography align="justify">
-            PerfectCircle regroupe de nombreux praticiens, thérapeuthes et interventants divers.
+            PerfectCenter regroupe de nombreux praticiens, thérapeuthes et interventants divers.
             C&apos;est ce qui permet à notre clientèle d&apos;être accompagnée vers la solution qui
             est la plus adaptée à ses besoins spécifiques.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcircle" underline="none" style={{ marginTop: '2rem' }}>
+            <Link href="/membres" underline="none" style={{ marginTop: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
-                PerfectCircle
+                Nos membres
               </Button>
             </Link>
           </div>
@@ -120,11 +120,11 @@ export function DivisionDesc(props: DivisionDescProps) {
           }}
         >
           <Typography style={{ fontSize: '20px', margin: '0rem 0rem 1rem 0rem' }}>
-            <b>Rejoindre PerfectCircle</b>
+            <b>Rejoindre nos membres</b>
           </Typography>
           <Typography align="justify">
             Vous êtes praticien ou thérapeute, et partagez les mêmes valeurs que nous ? Alors
-            rejoingnez l&apos;équipe PerfectCircle !
+            rejoingnez l&apos;équipe PerfectCenter !
           </Typography>
 
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -184,9 +184,9 @@ export function DivisionDesc(props: DivisionDescProps) {
             padding: '0rem 1rem 0rem 1rem',
           }}
         >
-          <Link href="/perfectcare" underline="none" style={{ marginTop: '1rem' }}>
+          <Link href="/produits" underline="none" style={{ marginTop: '1rem' }}>
             <Button variant="contained" color="secondary" size="large">
-              PerfectCare
+              Nos produits
             </Button>
           </Link>
           <Link href="/contact" underline="none" style={{ marginTop: '1rem' }}>

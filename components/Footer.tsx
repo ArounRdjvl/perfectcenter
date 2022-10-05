@@ -73,15 +73,21 @@ export function Footer(props: FooterProps) {
             justifyContent: 'center',
           }}
         >
-          <Typography align="center" style={{ fontWeight: 'bold' }}>
-            34 rue du colisée, 75008, Paris
-          </Typography>
-          <Typography align="center" style={{ fontWeight: 'bold' }}>
-            01 42 89 52 37
-          </Typography>
-          <Typography align="center" style={{ fontWeight: 'bold' }}>
-            Contact@perfectcenter.fr
-          </Typography>
+            <a href="https://www.google.com/maps/place/Perfectcenter/@48.8714395,2.3082491,17z/data=!3m1!4b1!4m5!3m4!1s0x47e8823b9b9a9b19:0x4e5130e5e04510fa!8m2!3d48.871436!4d2.3104378">
+              <Typography align="center" style={{ fontWeight: 'bold', margin: '0.5rem'}}>
+                34 rue du colisée, 75008, Paris
+              </Typography>
+            </a>
+            <a href="tel:+33 1 40 76 06 58">
+              <Typography align="center" style={{ fontWeight: 'bold', margin: '0.5rem' }}>
+                +33 1 40 76 06 58
+              </Typography>
+            </a>
+            <a href="mailto:contact@perfectcenter.fr">
+              <Typography align="center"style={{ fontWeight: 'bold', margin: '0.5rem' }}>
+                Contact@perfectcenter.fr
+              </Typography>
+            </a>
         </div>
 
         <div
@@ -93,28 +99,28 @@ export function Footer(props: FooterProps) {
           }}
         >
           <a href="https://www.facebook.com/PerfectCenterParis" target="_blank" rel="noreferrer">
-            <img src="/picto/Facebook_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
+            <img src="/picto/Facebook_fonce.png" alt="Facebook_logo" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
           <a
             href="https://www.instagram.com/perfectcenter_/?hl=fr"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/picto/Instagram_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
+            <img src="/picto/Instagram_fonce.png" alt="Instagram_logo" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
           <a
             href="https://www.linkedin.com/company/perfectcenter/"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/picto/Linkedin_fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
+            <img src="/picto/Linkedin_fonce.png" alt="Linkedin_logo" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
           <a
             href="https://www.youtube.com/channel/UCvcusrvzAdqfjT5ICXXNe-g"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/picto/YT_Fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
+            <img src="/picto/YT_Fonce.png" alt="Youtube_logo" width={55} style={{ margin: theme.spacing(1) }} />
           </a>
         </div>
 
@@ -131,13 +137,21 @@ export function Footer(props: FooterProps) {
       <Container className={classes.root}>
         <div className={classes.inside}>
           <div style={{ marginLeft: '3vw' }}>
-            <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
-              34 rue du colisée, 75008, Paris
-            </Typography>
-            <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>01 42 89 52 37</Typography>
-            <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
-              Contact@perfectcenter.fr
-            </Typography>
+            <a href="https://www.google.com/maps/place/Perfectcenter/@48.8714395,2.3082491,17z/data=!3m1!4b1!4m5!3m4!1s0x47e8823b9b9a9b19:0x4e5130e5e04510fa!8m2!3d48.871436!4d2.3104378">
+              <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
+                34 rue du colisée, 75008, Paris
+              </Typography>
+            </a>
+            <a href="tel:+33 1 40 76 06 58">
+              <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
+                +33 1 40 76 06 58
+              </Typography>
+            </a>
+            <a href="mailto:contact@perfectcenter.fr">
+              <Typography style={{ fontWeight: 'bold', margin: '0.5rem' }}>
+                Contact@perfectcenter.fr
+              </Typography>
+            </a>
           </div>
         </div>
         <div className={classes.inside}>
@@ -159,6 +173,7 @@ export function Footer(props: FooterProps) {
             <a href="https://www.facebook.com/PerfectCenterParis" target="_blank" rel="noreferrer">
               <img
                 src="/picto/Facebook_fonce.png"
+                alt="Facebook_logo"
                 width={55}
                 style={{ margin: theme.spacing(1) }}
               />
@@ -170,6 +185,7 @@ export function Footer(props: FooterProps) {
             >
               <img
                 src="/picto/Instagram_fonce.png"
+                alt="Instagram_logo"
                 width={55}
                 style={{ margin: theme.spacing(1) }}
               />
@@ -181,6 +197,7 @@ export function Footer(props: FooterProps) {
             >
               <img
                 src="/picto/Linkedin_fonce.png"
+                alt="Linkedin_logo"
                 width={55}
                 style={{ margin: theme.spacing(1) }}
               />
@@ -190,7 +207,7 @@ export function Footer(props: FooterProps) {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/picto/YT_Fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
+              <img alt="Youtube_logo" src="/picto/YT_Fonce.png" width={55} style={{ margin: theme.spacing(1) }} />
             </a>
           </div>
         </Grid>

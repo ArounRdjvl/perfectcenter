@@ -10,6 +10,7 @@ import { Animations } from 'components/index/animation/Animations'
 import { Footer } from 'components/Footer'
 import { Services } from 'components/index/Services'
 import { Valeurs } from 'components/index/Valeurs'
+import { WelcomeMsg } from 'components/index/WelcomeMsg'
 
 export const useStyles = makeStyles(() => ({
   buttonStyles: { position: 'relative', zIndex: 3 },
@@ -52,13 +53,23 @@ export default function Index() {
           marginBottom: '5rem',
         }}
       >
-        <Link activeClass="active" to="container" spy smooth offset={-120} duration={1500}>
+        <Link
+          activeClass="active"
+          to="container"
+          spy
+          smooth
+          offset={-120}
+          duration={1500}
+        >
           <IconButton color="primary" className={classes.buttonStyles}>
             <ExpandMoreIcon fontSize="large" />
           </IconButton>
         </Link>
       </div>
       <div id="container" />
+      <Container>
+        <WelcomeMsg />
+      </Container>
       <Valeurs />
       <Container>
         <Services />

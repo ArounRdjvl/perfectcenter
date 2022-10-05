@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import { Container, Typography } from '@material-ui/core'
-import { AccueilProduit } from 'components/PerfectCare/AccueilProduit'
-/* import { LumiereMusique } from 'components/PerfectCare/Psio/DecouvertePsio' */
-import { AchatPsio } from 'components/PerfectCare/Psio/AchatPsio'
+import { AccueilProduit } from 'components/Produits/AccueilProduit'
+import { LumiereMusique } from 'components/Produits/Psio/LumiereMusique'
+import { AchatPsio } from 'components/Produits/Psio/AchatPsio'
 import { BanniereInfo } from 'components/BanniereInfo'
 import { BulleInfo } from 'components/BulleInfo'
 import { Footer } from 'components/Footer'

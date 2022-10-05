@@ -3,17 +3,17 @@ import Head from 'next/head'
 import { Container } from '@material-ui/core'
 import { Navigation } from 'components/Navigation'
 import { Footer } from 'components/Footer'
-import { WelcomeProduits } from 'components/PerfectCare/WelcomeProduits'
+import { WelcomeProduits } from 'components/Produits/WelcomeProduits'
 import { Product } from 'components/Product'
 import { dataProducts } from 'modules/data'
 
-export default function Perfectcare() {
+export default function Produits() {
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
     <div ref={ref}>
       <Head>
-        <title>PerfectCare</title>
+        <title>Nos Produits</title>
       </Head>
       <Navigation />
       <Container>

@@ -126,7 +126,7 @@ export function AccueilProduit(props: ProductProps) {
             <div
               className={classes.bulle}
               style={{
-                backgroundImage: 'url({props.path})',
+                backgroundImage: `url(${props.path})`,
                 backgroundSize: '65%',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

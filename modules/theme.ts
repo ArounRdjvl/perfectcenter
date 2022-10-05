@@ -4,6 +4,7 @@ export const colors = {
   beige: '#E3CCB4',
   noir: '#3B424A',
   vert: '#849994',
+  blanc: '#EBEAE8'
 }
 
 export function getTheme() {

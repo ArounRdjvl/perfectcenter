@@ -20,13 +20,13 @@ const autoHeightOptions: AutoHeightOptionsType = {
   destroyHeight: 'auto',
 }
 
-export function PerfectCareIndex() {
+export function ProduitIndex() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   if (isMobile) {
     return (
       <Grid
-        justify="center"
+        justifyContent="center"
         direction="column"
         container
         style={{
@@ -52,17 +52,14 @@ export function PerfectCareIndex() {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: colors.vert,
-              height: '12rem',
-              width: '12rem',
+              height: '8rem',
+              width: '8rem',
               left: 0,
-              borderRadius: '40px',
+              borderRadius: '30px',
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img src="picto/produits.png" width="55%" style={{ marginTop: '1rem' }} />
-            <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-              Nos produits
-            </Typography>
+            <img src="picto/produits.png" width="55%" alt="Nos produits" />
           </div>
         </Grid>
         <Grid
@@ -93,7 +90,7 @@ export function PerfectCareIndex() {
             }}
           >
             <Typography variant="h3" align="center">
-              PerfectCare
+              Nos produits
             </Typography>
           </div>
           <div
@@ -103,11 +100,10 @@ export function PerfectCareIndex() {
               zIndex: 2,
             }}
           >
-            <Typography variant="body1" align="justify">
+            <Typography variant="body2" align="justify">
               Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-              services qui se démarquent par leur <strong>innovation</strong> et leur{' '}
-              <strong>efficacité</strong>.<br />
-              Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes
+              services qui se démarquent par leur innovation et leur efficacité.<br />
+              Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
               de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
               Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
               invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous
@@ -115,9 +111,9 @@ export function PerfectCareIndex() {
             </Typography>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcare" underline="none" style={{ marginBottom: '2rem' }}>
+            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
               <Button variant="contained" color="secondary" size="large">
-                PerfectCare
+                Nos produits
               </Button>
             </Link>
           </div>
@@ -149,7 +145,7 @@ export function PerfectCareIndex() {
     )
   }
   return (
-    <Grid justifyContent="flex-end" container style={{ marginTop: '2rem' }}>
+    <Grid justifyContent="flex-end" container style={{ margin: '6rem 0' }}>
       <Grid
         xs={3}
         style={{
@@ -166,21 +162,14 @@ export function PerfectCareIndex() {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: colors.vert,
-            height: '15vw',
-            width: '15vw',
-            maxHeight: '15rem',
-            minHeight: '12rem',
-            maxWidth: '15rem',
-            minWidth: '12rem',
+            height: '12rem',
+            width: '12rem',
             right: 0,
             borderRadius: '40px',
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img src="picto/produits.png" width="60%" style={{ marginTop: '1rem' }} />
-          <Typography variant="h3" color="textSecondary" style={{ margin: '1rem 0 0 0' }}>
-            Nos produits
-          </Typography>
+          <img src="picto/produits.png" alt="nos produits" width="60%" />
         </div>
       </Grid>
       <Grid
@@ -207,7 +196,7 @@ export function PerfectCareIndex() {
           }}
         >
           <Typography variant="h2" align="left" style={{ marginLeft: '5vw' }}>
-            PerfectCare
+            Nos produits
           </Typography>
         </div>
         <div
@@ -219,18 +208,17 @@ export function PerfectCareIndex() {
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
             Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-            services qui se démarquent par leur <strong>innovation</strong> et leur{' '}
-            <strong>efficacité</strong>.<br />
-            Dans PerfectCare, nous vous proposons toute une gamme de produit allant des lunettes de
+            services qui se démarquent par leur innovation et leur efficacité.<br />
+            Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes de
             luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
             produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
             invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous par
             télephone.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link href="/perfectcare" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large">
-                PerfectCare
+            <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
+              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+                Nos produits
               </Button>
             </Link>
           </div>
