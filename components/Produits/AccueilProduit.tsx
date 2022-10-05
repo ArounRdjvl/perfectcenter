@@ -45,28 +45,30 @@ export function AccueilProduit(props: ProductProps) {
   const theme = useTheme()
   const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  if (isMobile) {
-    return null
-  }
   return (
     <div className={classes.root}>
       <div
-        style={{
+        style={isMobile ? {
           display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          height: '100%',
+          alignItems: 'center',
+          justifyContent: 'space-evenly'} : 
+        { display: 'flex',
           flexDirection: 'row',
           width: '100%',
           height: '100%',
           alignItems: 'center',
-          justifyContent: 'space-evenly',
-        }}
-      >
+          justifyContent: 'space-evenly',}
+      }>
         <div
           style={{
             display: 'flex',
             alignContent: 'center',
           }}
         >
-          <TitleBar title={props.title} color="vert" padding="0 0 3vh 0" />
+          <TitleBar title={props.title} color="vert" padding="0 0 3vh 0" paddingMobile='5rem 0 0 0' />
         </div>
         <div className={classes.floating}>
           <div
@@ -74,6 +76,7 @@ export function AccueilProduit(props: ProductProps) {
               position: 'relative',
               width: '32rem',
               height: '35rem',
+              
             }}
           >
             <div
@@ -134,7 +137,7 @@ export function AccueilProduit(props: ProductProps) {
                 width: '20rem',
                 height: '20rem',
                 bottom: '150px',
-                right: '65px',
+                right: isMobile ? '90px' : '65px',
                 backgroundColor: colors.vert,
               }}
              />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
+import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import { colors } from 'modules/theme'
 
 export interface BulleInfoProps {
@@ -10,6 +10,8 @@ export interface BulleInfoProps {
 }
 
 export function BulleInfo(props: BulleInfoProps) {
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div
       style={{
@@ -17,7 +19,7 @@ export function BulleInfo(props: BulleInfoProps) {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        margin: '2rem',
+        margin: isMobile ? '0.5rem' : '2rem',
       }}
     >
       <div
@@ -34,7 +36,7 @@ export function BulleInfo(props: BulleInfoProps) {
           boxShadow: '0px 0px 25px #777777',
         }}
       />
-      <Typography variant="h4" align="center" style={{ marginTop: '2rem' }}>
+      <Typography variant={isMobile ? "body2" : "body1"} align="center" style={{ marginTop: '2rem' }}>
         {props.titre}
       </Typography>
     </div>

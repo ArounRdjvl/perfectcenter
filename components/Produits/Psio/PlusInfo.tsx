@@ -24,52 +24,66 @@ export function PlusInfo() {
   const theme = useTheme()
   const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  if (isMobile) {
-    return (
-      <>
-          
-      </>
-    )
-  }
   return (
-    <Grid justifyContent="flex-end" container style={{ marginTop: '2rem' }}>
+    <Grid
+      justifyContent={isMobile ? "center" : "flex-end"}
+      direction={isMobile ? "column" : "row"}
+      container
+      style={isMobile ? { marginTop: '2rem' } : { margin: '4rem 0' }}>
       <Grid
-        xs={3}
-        style={{
-          position: 'relative',
-          zIndex: 3,
-        }}
+        xs={isMobile ? 12 : 3}
+        style={isMobile ?
+          {
+            position: 'relative',
+            zIndex: 3,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }
+          :
+          {
+            position: 'relative',
+            zIndex: 3
+          }}
         item
       >
         <div
           style={{
-            position: 'absolute',
+            position: isMobile ? 'relative' : 'absolute',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: colors.vert,
-            height: '10vw',
-            width: '10vw',
-            maxHeight: '15rem',
-            minHeight: '12rem',
-            maxWidth: '15rem',
-            minWidth: '12rem',
-            right: 0,
-            borderRadius: '40px',
+            height: isMobile ? '8rem' : '12rem',
+            width: isMobile ? '8rem' : '12rem',
+            left: isMobile ? 0 : '',
+            right: isMobile ? '' : 0,
+            borderRadius: isMobile ? '30px' : '40px',
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img alt="info_icon" src="/picto/info.png" width="60%"/>
+          <img src="/picto/info.png" alt='' width={isMobile ? "55%" : "60%"} />
         </div>
       </Grid>
       <Grid
-        xs={9}
-        style={{
-          position: 'relative',
-          paddingTop: '3rem',
-          minHeight: '15rem',
-        }}
+        xs={isMobile ? 12 : 9}
+        style={isMobile ?
+          {
+            position: 'relative',
+            minWidth: '16rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: '0.5rem 0',
+          }
+          :
+          {
+            position: 'relative',
+            paddingTop: '3rem',
+            minHeight: '15rem',
+          }}
         item
       >
         <div
@@ -77,30 +91,36 @@ export function PlusInfo() {
             backgroundColor: colors.beige,
             position: 'relative',
             display: 'flex',
+            justifyContent: isMobile ? 'center' : 'flex-start',
             alignItems: 'center',
-            width: '100%',
-            right: 0,
+            width: isMobile ? '90%' : '100%',
+            right: isMobile ? '' : 0,
             top: 0,
-            padding: '0.7rem',
-            borderRadius: '0 30px 30px 0',
+            padding: isMobile ? '0.5rem 1rem' : '0.7rem',
+            borderRadius: isMobile ? '25px' : '0 30px 30px 0',
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <Typography variant="h2" align="left" style={{ marginLeft: '5vw' }}>
-            Des programmes adaptés
+          <Typography
+            variant={isMobile ? "h3" : "h2"}
+            align={isMobile ? "center" : "left"}
+            style={isMobile ? {} : { marginLeft: '5vw' }}>
+              Des programmes adaptés
           </Typography>
         </div>
         <div
           style={{
-            padding: '1rem 5rem',
+            padding: isMobile ? '1rem 10vw' : '1rem 5rem',
             position: 'relative',
             zIndex: 2,
           }}
         >
-          <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
-            La technologie des lunettes Psio permettent d&apos;adapter correctement l&apos;intensité, la fréquence 
-            et l&apos;alternance des couleurs avec le programme sonore. Il existe une multitude de programme 
-            disponibles sur la plateforme de téléchargement PsioPlanet pour répondre à vos problématiques personnelles.
+          <Typography
+            variant={isMobile ? "body2" : "body1"}
+            align="justify"
+            style={isMobile ? { marginBottom: '16px' } : { margin: '2rem 0' }}>
+             La technologie des lunettes Psio permettent d&apos;adapter correctement l&apos;intensité, la fréquence et l&apos;alternance des couleurs avec le programme sonore.
+             Il existe une multitude de programme disponibles sur la plateforme de téléchargement PsioPlanet pour répondre à vos problématiques personnelles.
           </Typography>
         </div>
       </Grid>
@@ -114,7 +134,7 @@ export function PlusInfo() {
           margin: '0 0 2rem 0',
         }}
       >
-        <Typography variant="h3" align="center">
+        <Typography variant={isMobile ? 'h4' : 'h3'} align="center">
           Une technologie approuvée
         </Typography>
         <Divider color="vert" />
@@ -126,7 +146,7 @@ export function PlusInfo() {
             alignContent: 'center',
             justifyContent: 'center',
         }}>
-            <Typography variant="body1" align="justify" style={{width: '50rem'}}>
+            <Typography variant={isMobile ? 'body2' : 'body1'} align="justify" style={{width: '85%'}}>
                 Depuis plus de vingt ans, la technologie PSIO est utilisée avec un grand succès dans les hôpitaux, 
                 notamment pour aider à la gestion du stress en anesthésiologie locale, en salle de réveil ou encore en laboratoire du sommeil.<br />
                 Durant le premier confinement, les dispositifs PSIO ont été déployés dans plusieurs hôpitaux parisiens tels que la Pitié Salpêtrière, 
