@@ -35,7 +35,7 @@ export const useStyles = makeStyles<Theme, ThemePerfectRating>((theme) => ({
     background: `conic-gradient(${props.primaryColor} ${props.value}turn, ${props.secondaryColor} ${props.value}turn 1turn)`,
     height: size,
     width: size,
-    padding: padding,
+    padding,
     borderRadius: '50%',
     position: 'relative',
     filter: 'drop-shadow(0 0 25px #BBB)',
