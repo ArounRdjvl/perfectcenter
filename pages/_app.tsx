@@ -1,3 +1,4 @@
+import React from "react"
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from '@material-ui/styles'
 import { getTheme } from 'modules/theme'
@@ -16,8 +17,8 @@ function MyApp({
     <SessionProvider session={session}>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <div style={{backgroundColor: theme.palette.background.default}}>
-          <Component {...pageProps}  />
+        <div style={{ backgroundColor: theme.palette.background.default }}>
+          <Component {...pageProps} />
         </div>
       </ThemeProvider>
     </SessionProvider>

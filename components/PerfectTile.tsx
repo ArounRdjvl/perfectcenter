@@ -40,13 +40,13 @@ export const useStyles = makeStyles<Theme, StyleProps>((theme) => ({
   }),
   root: {
     position: 'relative',
-    transition: "filter 0.2",
+    transition: 'filter 0.2',
     filter: 'drop-shadow(0 0 25px #BBB)',
+    textAlign: 'center',
   },
 
   content: (props) => ({
     paddingTop: props.iconUrl ? iconSize * 0.4 : '1rem',
-    textAlign: 'center',
     padding: '1rem',
     backgroundColor: props.color ?? colors.vert,
     borderRadius: '30px',
@@ -57,6 +57,7 @@ export const useStyles = makeStyles<Theme, StyleProps>((theme) => ({
   },
   title: {
     paddingTop: theme.spacing(1),
+    textAlign: 'center',
   },
   padding: (props) => ({
     paddingTop: (props.iconUrl ? iconSize : 0) * 0.6,
@@ -76,7 +77,7 @@ export function PerfectTile({
   const classes = useStyles({ iconUrl, color })
 
   return (
-    <div className={clsx(className, classes.root)} style={style}>
+    <div className={clsx(classes.root, className)} style={style}>
       {!!iconUrl && (
         <div className={classes.outerIcon}>
           <div className={classes.icon} />

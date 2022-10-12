@@ -45,7 +45,7 @@ export function TitleBar(props: TitleProps) {
         padding: props.padding ? `${props.padding}` : '1rem 0 0 2rem',
         width: '100%',
         display: 'flex',
-        justifyContent: 'flex-start',
+        justifyContent: props.justifyContent ? `${props.justifyContent}` : 'flex-start',
       }}
     >
       <div

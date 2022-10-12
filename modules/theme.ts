@@ -22,8 +22,8 @@ export function getTheme() {
         secondary: '#EBEAE8',
       },
       background: {
-        default: '#EBEAE8'
-      }
+        default: '#EBEAE8',
+      },
     },
     typography: {
       h1: {
