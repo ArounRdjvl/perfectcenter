@@ -1,12 +1,13 @@
 import React from 'react'
-import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
+import { Button, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import Link from 'next/link'
 
 export interface ProductProps {
   name: string
-  title: string
-  desc: JSX.Element
+  desc?: JSX.Element
   link: string
+  linkPhoto: string
+  prix?: string
   moreAboutLink?: string
 }
 
@@ -64,6 +65,51 @@ export function Product(props: DisplayProps) {
   const theme = useTheme()
   const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const getContenu = (   ()=> {
+    if (props.product?.desc) {
+      return (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            zIndex: 2,
+            padding: '0rem 1.5rem 0.5rem 1.5rem',
+            overflow: 'hidden',
+          }}
+        >
+          <Typography align="justify" style={{fontSize: '13.5px' }}>
+            {props.product?.desc}
+          </Typography>
+        </div>
+      )
+    }
+    if (props.product?.prix) {
+      return (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            height: '100%',
+            zIndex: 2,
+          }}
+        >
+          <Typography align="center" variant='h2'style={{position:'absolute', bottom: '0px', marginBottom: '7rem'}}>
+            {props.product?.prix}
+          </Typography>
+          <Link href="/produits" style={{ marginTop: '1rem' }}>
+            <Button variant="contained" color="secondary" size="large" style={{position:'absolute', bottom: '0px', marginBottom: '1rem'}}>
+              Voir le produit
+            </Button>
+          </Link>
+        </div>
+        
+      )
+    }
+    return null
+    }
+  )
   if (isMobile) {
     return (
       <Link href={props.product?.link}>
@@ -89,8 +135,8 @@ export function Product(props: DisplayProps) {
           >
             <img
               className="image"
-              alt="produit"
-              src={`../produits/${props.product?.name}.png`}
+              alt={props.product?.name}
+              src= {props.product?.linkPhoto}
               width={225}
               style={{
                 position: 'absolute',
@@ -123,20 +169,7 @@ export function Product(props: DisplayProps) {
                 {props.product?.name}
               </Typography>
             </div>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                zIndex: 2,
-                padding: '0rem 1.5rem 0.5rem 1.5rem',
-                overflow: 'hidden',
-              }}
-            >
-              <Typography variant="body2" align="justify">
-                {props.product?.desc}
-              </Typography>
-            </div>
+            {getContenu()}
           </div>
         </div>
       </Link>
@@ -170,8 +203,8 @@ export function Product(props: DisplayProps) {
         >
           <img
             className="image"
-            alt="produit"
-            src={`../produits/${props.product?.name}.png`}
+            alt={props.product?.name}
+            src={props.product?.linkPhoto}
             width={225}
             style={{
               position: 'absolute',
@@ -198,9 +231,10 @@ export function Product(props: DisplayProps) {
               alignItems: 'center',
               zIndex: 2,
               margin: '1rem 0 0.7rem 0',
+              padding: '0 0.5rem 0 0.5rem'
             }}
           >
-            <Typography variant="h2" style={{ alignSelf: 'center' }}>
+            <Typography variant="h2" align= 'center' style={{ alignSelf: 'center' }}>
               {props.product?.name}
             </Typography>
           </div>
@@ -214,9 +248,7 @@ export function Product(props: DisplayProps) {
               overflow: 'hidden',
             }}
           >
-            <Typography align="justify" style={{fontSize: '0.9rem'}}>
-              {props.product?.desc}
-            </Typography>
+            {getContenu()}
           </div>
         </div>
       </div>

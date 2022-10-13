@@ -1,28 +1,10 @@
 import React from 'react'
-import { Typography, makeStyles, useTheme, useMediaQuery, Grid, Link, Button} from '@material-ui/core'
+import { Typography, useTheme, useMediaQuery, Grid, Link, Button} from '@material-ui/core'
 import { colors } from 'modules/theme'
 import { Divider } from 'components/Divider'
 
-
-const useStyles = makeStyles(() => ({
-  img: {
-    position: 'relative',
-    width: '8rem',
-    height: '8rem',
-    borderRadius: '50%',
-  },
-  img_phone: {
-    position: 'relative',
-    width: '5rem',
-    height: '5rem',
-    borderRadius: '50%',
-  },
-}))
-
-
 export function PlusInfo() {
   const theme = useTheme()
-  const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <Grid

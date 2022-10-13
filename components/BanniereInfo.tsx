@@ -1,34 +1,15 @@
 import React from 'react'
-import { Grid, useTheme, Typography, useMediaQuery, makeStyles } from '@material-ui/core'
+import { Grid, useTheme, Typography, useMediaQuery } from '@material-ui/core'
 import { colors } from 'modules/theme'
-
-const useStyles = makeStyles(() => ({
-  img: {
-    position: 'relative',
-    width: '8rem',
-    height: '8rem',
-    borderRadius: '50%',
-  },
-  img_phone: {
-    position: 'relative',
-    width: '5rem',
-    height: '5rem',
-    borderRadius: '50%',
-  },
-}))
 
 export interface BanniereProps {
   titre: string
   description: string
   photo: string
-  /* photoSize: string
-  photoWidth: string
-  photoHeight: string */
 }
 
 export function BanniereInfo(props: BanniereProps) {
   const theme = useTheme()
-  const classes = useStyles(theme)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (

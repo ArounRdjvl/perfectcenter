@@ -3,7 +3,7 @@ import { Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import { colors } from 'modules/theme'
 
 export interface BulleInfoProps {
-  titre: string
+  titre?: string
   size: string
   photoUrl: string
   photoSize: string
@@ -12,6 +12,18 @@ export interface BulleInfoProps {
 export function BulleInfo(props: BulleInfoProps) {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const getContenu = (   ()=> {
+    if (props?.titre) {
+      return (
+        <Typography variant={isMobile ? "body2" : "body1"} align="center" style={{ marginTop: '2rem' }}>
+          {props?.titre}
+        </Typography>
+      )
+    }
+    return null
+    }
+  )
+
   return (
     <div
       style={{
@@ -28,7 +40,7 @@ export function BulleInfo(props: BulleInfoProps) {
           backgroundColor: colors.vert,
           backgroundRepeat: 'no-repeat',
           backgroundImage: `url(${props.photoUrl})`,
-          backgroundPosition: '50% 40%',
+          backgroundPosition: '50% 50%',
           backgroundSize: props.photoSize,
           width: props.size,
           height: props.size,
@@ -36,9 +48,7 @@ export function BulleInfo(props: BulleInfoProps) {
           boxShadow: '0px 0px 25px #777777',
         }}
       />
-      <Typography variant={isMobile ? "body2" : "body1"} align="center" style={{ marginTop: '2rem' }}>
-        {props.titre}
-      </Typography>
+       {getContenu()}
     </div>
   )
 }

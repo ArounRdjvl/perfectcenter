@@ -44,6 +44,7 @@ export const dataMembres = [
 export const dataProducts = [
   {
     name: 'PSIO',
+    linkPhoto: '/produits/PSIO.png',
     photo: '/produits/Psio classic.png',
     title: 'Accélérateur de bien-être',
     desc: (
@@ -62,6 +63,7 @@ export const dataProducts = [
   {
     name: 'MINT-E',
     photo: '/produits/MINT-E.png',
+    linkPhoto: '/produits/MINT-E.png',
     title: 'Utilisez la force de la nature',
     desc: (
       <>
@@ -77,6 +79,7 @@ export const dataProducts = [
   {
     name: 'KAQUN',
     photo: '/produits/KAQUN.png',
+    linkPhoto: '/produits/KAQUN.png',
     title: 'Water and more',
     desc: (
       <>

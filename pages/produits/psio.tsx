@@ -31,9 +31,6 @@ export default function Psio() {
           L&apos;utilisation du PSiO prouve son efficacité depuis plusieurs années en agissant sur de nombreuses
           problématiques."
           photo="/picto/info.png"
-          /* photoSize="100%"
-          photoHeight="18rem"
-          photoWidth="16rem" */
         />
         <div
           style={{

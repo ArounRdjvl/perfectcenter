@@ -7,6 +7,7 @@ import { BanniereInfo } from 'components/BanniereInfo'
 import { BulleInfo } from 'components/BulleInfo'
 import { Footer } from 'components/Footer'
 import { Navigation } from 'components/Navigation'
+import { InfoMinte } from 'components/Produits/Mint-e/InfoMinte'
 
 export default function Minte() {
   const ref = React.useRef<HTMLDivElement>(null)
@@ -25,55 +26,9 @@ export default function Minte() {
                         Elle est conseillée par de nombreux médecins, thérapeutes et centre hospitaliers comme le Centre Léon Bérard à Lyon (Centre Régional de Lutte contre le Cancer) mais aussi par des sportifs de haut niveau.
                         Mint-e associe la phytothérapie, les Fleurs de Bach et des dilutions homéo-compatibles pour une action globale sur la santé et le bien-être"
           photo="../picto/Nature.png"
-          photoSize="80%"
-          photoHeight="14rem"
-          photoWidth="14rem"
         />
+      <InfoMinte />  
       </Container>
-      <div
-        style={{
-          width: '100%',
-          marginTop: '8rem',
-        }}
-      >
-        <Typography variant="h2" align="center">
-          Les atouts des produits Mint-e
-        </Typography>
-      </div>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          flexWrap: 'wrap',
-          padding: '4rem 3rem',
-        }}
-      >
-        <BulleInfo
-          titre="Gestion des émotions"
-          size="10rem"
-          photoUrl="/picto/Gestion_emotions.png"
-          photoSize="50%"
-        />
-        <BulleInfo titre="Fatigue" size="10rem" photoUrl="/picto/Fatigue.png" photoSize="60%" />
-        <BulleInfo titre="Stress" size="10rem" photoUrl="/picto/Stress.png" photoSize="65%" />
-        <BulleInfo
-          titre="Dépression"
-          size="10rem"
-          photoUrl="/picto/Depression.png"
-          photoSize="50%"
-        />
-        <BulleInfo titre="Addiction" size="10rem" photoUrl="/picto/Addiction.png" photoSize="60%" />
-        <BulleInfo
-          titre="Mémoire et apprentissage"
-          size="10rem"
-          photoUrl="/picto/Apprentissage.png"
-          photoSize="60%"
-        />
-      </div>
-      <AchatPsio />
       <Footer />
     </div>
   )
