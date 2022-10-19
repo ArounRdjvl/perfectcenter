@@ -89,7 +89,12 @@ export function Navigation(props: NavigationProps) {
           justifyContent: 'center',
         }}
       >
-        <img alt="left_bracket" src="/picto/braket_left.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
+        <img
+          alt="left_bracket"
+          src="/picto/braket_left.png"
+          height={heightHeader}
+          style={{ maxHeight: '2rem' }}
+        />
         <Link href="/">
           <div>
             <img
@@ -100,7 +105,12 @@ export function Navigation(props: NavigationProps) {
             />
           </div>
         </Link>
-        <img alt="right_bracket" src="/picto/braket_right.png" height={heightHeader} style={{ maxHeight: '2rem' }} />
+        <img
+          alt="right_bracket"
+          src="/picto/braket_right.png"
+          height={heightHeader}
+          style={{ maxHeight: '2rem' }}
+        />
       </div>
     </div>
   )

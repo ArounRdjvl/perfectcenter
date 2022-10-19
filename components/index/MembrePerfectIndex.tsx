@@ -60,11 +60,7 @@ export function MembrePerfectIndex() {
               boxShadow: '0px 0px 25px #BBBBBB',
             }}
           >
-            <img
-              src="/picto/therapeute.png"
-              width="70%"
-              alt="thérapeute"
-            />
+            <img src="/picto/therapeute.png" width="70%" alt="thérapeute" />
           </div>
         </Grid>
         <Grid
@@ -175,8 +171,8 @@ export function MembrePerfectIndex() {
         >
           <Typography variant="body2" align="justify">
             Vous pensez être animés des mêmes valeurs que nous ?<br />
-            Rejoignez nos PerfectCenter et partagez l&apos;aventure avec nous. Vous
-            profiterez d&apos;un environnement convivial, productif et enrichissant.
+            Rejoignez nos PerfectCenter et partagez l&apos;aventure avec nous. Vous profiterez
+            d&apos;un environnement convivial, productif et enrichissant.
             <br />
             <br />
             Télécharger notre brochure des différents avantages à être membre ici.
@@ -239,7 +235,12 @@ export function MembrePerfectIndex() {
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/membres" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}
+              >
                 Nos membres
               </Button>
             </Link>
@@ -269,11 +270,7 @@ export function MembrePerfectIndex() {
             boxShadow: '0px 0px 25px #BBBBBB',
           }}
         >
-          <img
-            src="/picto/therapeute.png"
-            width="70%"
-            alt="Praticiens"
-          />
+          <img src="/picto/therapeute.png" width="70%" alt="Praticiens" />
         </div>
       </Grid>
       <div
@@ -372,7 +369,12 @@ export function MembrePerfectIndex() {
             Pour rejoindre l&apos;équipe, contactez nous via le formulaire ci-dessous.
           </Typography>
           <Link href="/contact" underline="none" style={{ marginTop: '2rem' }}>
-            <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}
+            >
               Nous contacter
             </Button>
           </Link>
