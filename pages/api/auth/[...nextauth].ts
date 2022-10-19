@@ -29,14 +29,15 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     jwt: ({ token, user }) => {
-      if (user) { // user object is not undefined only during the first connection
+      if (user) {
+        // user object is not undefined only during the first connection
         token.isAdmin = user.isAdmin
         token.firstname = user.firstname
         token.lastname = user.lastname
       }
       return token
     },
-    session: ({ session, token}) => {
+    session: ({ session, token }) => {
       if (token) {
         session.user = {
           ...session.user,
