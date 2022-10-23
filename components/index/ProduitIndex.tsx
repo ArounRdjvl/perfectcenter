@@ -142,7 +142,8 @@ export function ProduitIndex() {
                   key={i}
                   redirect=""
                   alt="Nos produits"
-                  title={product.name} />
+                  title={product.name}
+                />
               ))}
               options={carouselOptions}
               autoplay={autoplayOptions}
@@ -261,7 +262,8 @@ export function ProduitIndex() {
                 key={i}
                 redirect=""
                 alt="Nos produits"
-                title={product.name} />
+                title={product.name}
+              />
             ))}
             options={carouselOptions}
             autoplay={autoplayOptions}

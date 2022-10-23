@@ -37,16 +37,16 @@ export function PrestationsIndex() {
         style={
           isMobile
             ? {
-              position: 'relative',
-              zIndex: 3,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }
+                position: 'relative',
+                zIndex: 3,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }
             : {
-              position: 'relative',
-              zIndex: 3,
-            }
+                position: 'relative',
+                zIndex: 3,
+              }
         }
         item
       >
@@ -74,19 +74,19 @@ export function PrestationsIndex() {
         style={
           isMobile
             ? {
-              position: 'relative',
-              minWidth: '16rem',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              margin: '0.5rem 0',
-            }
+                position: 'relative',
+                minWidth: '16rem',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0.5rem 0',
+              }
             : {
-              position: 'relative',
-              paddingTop: '3rem',
-              minHeight: '15rem',
-            }
+                position: 'relative',
+                paddingTop: '3rem',
+                minHeight: '15rem',
+              }
         }
         item
       >
@@ -171,7 +171,8 @@ export function PrestationsIndex() {
                 key={i}
                 redirect=""
                 alt="Nos produits"
-                title={product.name} />
+                title={product.name}
+              />
             ))}
             options={carouselOptions}
             autoplay={autoplayOptions}

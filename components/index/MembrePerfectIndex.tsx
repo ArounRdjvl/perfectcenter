@@ -133,17 +133,16 @@ export function MembrePerfectIndex() {
             <Divider color="vert" />
             <div style={{ margin: '2rem 0 0 0', padding: '0 0.5rem' }}>
               <Carousel
-                slides={dataCoachs.map(
-                  (coach, i) => (
-                    <Slide
-                      src={coach.photo}
-                      key={i}
-                      redirect={`/membres/${coach.name.replace(/ /g, '_').toLowerCase()}`}
-                      alt="Nos practiciens"
-                      title={coach.name}
-                      subtitle={coach.practice1} />
-                  )
-                )}
+                slides={dataCoachs.map((coach, i) => (
+                  <Slide
+                    src={coach.photo}
+                    key={i}
+                    redirect={`/membres/${coach.name.replace(/ /g, '_').toLowerCase()}`}
+                    alt="Nos practiciens"
+                    title={coach.name}
+                    subtitle={coach.practice1}
+                  />
+                ))}
                 options={carouselOptions}
                 autoplay={autoplayOptions}
                 autoheight={autoHeightOptions}
@@ -304,7 +303,8 @@ export function MembrePerfectIndex() {
                 redirect={`/membres/${coach.name.replace(/ /g, '_').toLowerCase()}`}
                 alt="Nos practiciens"
                 title={coach.name}
-                subtitle={coach.practice1} />
+                subtitle={coach.practice1}
+              />
             ))}
             options={carouselOptions}
             autoplay={autoplayOptions}

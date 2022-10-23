@@ -14,7 +14,7 @@ export function Slide(props: SlideProps) {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <a href={redirect} style={redirect === "" ? { pointerEvents: "none", cursor: "default" } : {}} >
+    <a href={redirect} style={redirect === '' ? { pointerEvents: 'none', cursor: 'default' } : {}}>
       <img
         src={src}
         alt={alt}
@@ -34,16 +34,15 @@ export function Slide(props: SlideProps) {
           flexDirection: 'column',
           justifyContent: 'flex-start',
           background: 'linear-gradient(transparent, 35%, #404040)',
-        }
-        }
+        }}
       >
-        <Typography variant={isMobile ? "h3" : "h2"} color="textSecondary">
+        <Typography variant={isMobile ? 'h3' : 'h2'} color="textSecondary">
           {title}
         </Typography>
-        <Typography variant={isMobile ? "body2" : "body1"} color="textSecondary">
+        <Typography variant={isMobile ? 'body2' : 'body1'} color="textSecondary">
           {subtitle}
         </Typography>
-      </div >
+      </div>
     </a>
   )
 }
