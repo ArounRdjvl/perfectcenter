@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core'
 import React from 'react'
-import { MembrePerfectIndex} from './MembrePerfectIndex'
+import { MembrePerfectIndex } from './MembrePerfectIndex'
 import { ProduitIndex } from './ProduitIndex'
 import { FormationsIndex } from './FormationsIndex'
 import { PrestationsIndex } from './PrestationsIndex'

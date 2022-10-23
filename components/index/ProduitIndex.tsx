@@ -102,7 +102,8 @@ export function ProduitIndex() {
           >
             <Typography variant="body2" align="justify">
               Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-              services qui se démarquent par leur innovation et leur efficacité.<br />
+              services qui se démarquent par leur innovation et leur efficacité.
+              <br />
               Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
               de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
               Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
@@ -208,16 +209,22 @@ export function ProduitIndex() {
         >
           <Typography variant="body1" align="justify" style={{ margin: '2rem 0' }}>
             Depuis plus de 14 ans, Erik HENRION n&apos;a cessé de chercher des produits et des
-            services qui se démarquent par leur innovation et leur efficacité.<br />
-            Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes de
-            luminothérapie, en passant par les fleurs de bach et des compléments alimentaires. Ces
-            produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
+            services qui se démarquent par leur innovation et leur efficacité.
+            <br />
+            Chez PerfectCenter, nous vous proposons toute une gamme de produit allant des lunettes
+            de luminothérapie, en passant par les fleurs de bach et des compléments alimentaires.
+            Ces produits sont utilisés régulièrement par nos praticiens et thérapeutes. Nous vous
             invitons à venir les découvir directement dans nos locaux ou en prennant rendez-vous par
             télephone.
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link href="/produits" underline="none" style={{ marginBottom: '2rem' }}>
-              <Button variant="contained" color="secondary" size="large" style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                style={{ width: '100%', fontSize: '20px', marginBottom: '1rem' }}
+              >
                 Nos produits
               </Button>
             </Link>
