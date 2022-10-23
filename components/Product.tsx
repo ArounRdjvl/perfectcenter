@@ -1,10 +1,17 @@
 import React from 'react'
 import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import Link from 'next/link'
-import { ProduitType } from 'modules/types'
+
+export interface SousProduitType {
+  name: string
+  title: string
+  desc: JSX.Element
+  link: string
+  moreAboutLink?: string
+}
 
 export interface DisplayProps {
-  product: ProduitType
+  product: SousProduitType
 }
 
 const boxMouseOverHandler = (

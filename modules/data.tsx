@@ -118,8 +118,8 @@ export const dataPsio = [
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
   {
-    name: 'Psio Prenium',
-    title: 'Psio Prenium',
+    name: 'Psio Premium',
+    title: 'Psio Premium',
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et

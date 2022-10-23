@@ -7,7 +7,7 @@ import { Carousel } from 'components/Carousel'
 import { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
 import { EmblaOptionsType } from 'embla-carousel-react'
-import { SlideProduct } from 'components/SlideProduct'
+import { Slide } from 'components/Slide'
 
 const carouselOptions: EmblaOptionsType = {
   loop: true,
@@ -149,33 +149,36 @@ export function PrestationsIndex() {
           </div>
         </div>
       </Grid>
-      {isMobile && (
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            alignContent: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            margin: '0 0 2rem 0',
-          }}
-        >
-          <Typography variant="h3" align="center">
-            Découvrez nos prestations
-          </Typography>
-          <Divider color="vert" />
-          <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
-            <Carousel
-              slides={dataProducts.map((product, i) => (
-                <SlideProduct product={product} key={i} />
-              ))}
-              options={carouselOptions}
-              autoplay={autoplayOptions}
-              autoheight={autoHeightOptions}
-            />
-          </div>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignContent: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          margin: '0 0 2rem 0',
+        }}
+      >
+        <Typography variant="h3" align="center">
+          Découvrez nos prestations
+        </Typography>
+        <Divider color="vert" />
+        <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
+          <Carousel
+            slides={dataProducts.map((product, i) => (
+              <Slide
+                src={product.photo}
+                key={i}
+                redirect=""
+                alt="Nos produits"
+                title={product.name} />
+            ))}
+            options={carouselOptions}
+            autoplay={autoplayOptions}
+            autoheight={autoHeightOptions}
+          />
         </div>
-      )}
+      </div>
     </Grid>
   )
 }

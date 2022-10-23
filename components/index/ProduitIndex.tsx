@@ -7,7 +7,7 @@ import { Carousel } from 'components/Carousel'
 import { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import { AutoHeightOptionsType } from 'embla-carousel-auto-height'
 import { EmblaOptionsType } from 'embla-carousel-react'
-import { SlideProduct } from 'components/SlideProduct'
+import { Slide } from 'components/Slide'
 
 const carouselOptions: EmblaOptionsType = {
   loop: true,
@@ -137,7 +137,12 @@ export function ProduitIndex() {
           <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
             <Carousel
               slides={dataProducts.map((product, i) => (
-                <SlideProduct product={product} key={i} />
+                <Slide
+                  src={product.photo}
+                  key={i}
+                  redirect=""
+                  alt="Nos produits"
+                  title={product.name} />
               ))}
               options={carouselOptions}
               autoplay={autoplayOptions}
@@ -251,7 +256,12 @@ export function ProduitIndex() {
         <div style={{ margin: '2rem 0 0 0', padding: '0 6rem' }}>
           <Carousel
             slides={dataProducts.map((product, i) => (
-              <SlideProduct product={product} key={i} />
+              <Slide
+                src={product.photo}
+                key={i}
+                redirect=""
+                alt="Nos produits"
+                title={product.name} />
             ))}
             options={carouselOptions}
             autoplay={autoplayOptions}

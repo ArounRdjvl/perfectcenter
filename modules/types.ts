@@ -7,7 +7,7 @@ export type PraticienType = {
 
 export type ProduitType = {
   name: string
-  photo?: string
+  photo: string
   title: string
   desc: JSX.Element
   link: string
