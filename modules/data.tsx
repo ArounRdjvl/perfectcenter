@@ -1,6 +1,4 @@
-import { Typography } from '@material-ui/core'
-import { ReactNode } from 'react'
-import { PraticienType } from './types'
+import { PraticienType, ProduitType } from './types'
 
 export const dataMembres = [
   {
@@ -41,7 +39,7 @@ export const dataMembres = [
   },
 ]
 
-export const dataProducts = [
+export const dataProducts: ProduitType[] = [
   {
     name: 'PSIO',
     photo: '/produits/Psio classic.png',
@@ -92,36 +90,6 @@ export const dataProducts = [
   },
 ]
 
-export const slidesProducts: ReactNode[] = dataProducts.map((Product) => (
-  <>
-    <img
-      src={Product.photo}
-      alt="Nos produits"
-      style={{
-        display: 'block',
-        width: '100%',
-      }}
-    />
-    <div
-      style={{
-        position: 'absolute',
-        bottom: '0',
-        left: '0',
-        right: '0',
-        display: 'flex',
-        padding: '1rem 1.5rem',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        background: 'linear-gradient(transparent, 35%, #404040)',
-      }}
-    >
-      <Typography variant="h3" color="textSecondary">
-        {Product.name}
-      </Typography>
-    </div>
-  </>
-))
-
 export const dataPsio = [
   {
     name: 'Psio classic',
@@ -150,8 +118,8 @@ export const dataPsio = [
     moreAboutLink: 'https://www.psio.com/fr/catalogue/psio-2.html',
   },
   {
-    name: 'Psio Prenium',
-    title: 'Psio Prenium',
+    name: 'Psio Premium',
+    title: 'Psio Premium',
     desc: (
       <>
         Le Psio Classic est l&apos;entré en gamme des lunettes Psio. Vous pouvez acheter ce Psio et
@@ -216,39 +184,6 @@ export const dataCoachs: PraticienType[] = [
         Je vous conduirai sur le chemin du moment présent, car c'est bien là que nous devons tous être.`,
   },
 ]
-
-export const slidesCoaches: ReactNode[] = dataCoachs.map((Coach, i) => (
-  <a href={`/membres/${Coach.name.replace(/ /g, '_').toLowerCase()}`} key={i}>
-    <img
-      src={Coach.photo}
-      alt="Nos practiciens"
-      style={{
-        display: 'block',
-        width: '100%',
-      }}
-    />
-    <div
-      style={{
-        position: 'absolute',
-        bottom: '0',
-        left: '0',
-        right: '0',
-        display: 'flex',
-        padding: '1rem 1.5rem',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        background: 'linear-gradient(transparent, 35%, #404040)',
-      }}
-    >
-      <Typography variant="h3" color="textSecondary">
-        {Coach.name}
-      </Typography>
-      <Typography variant="body1" color="textSecondary">
-        {Coach.practice1}
-      </Typography>
-    </div>
-  </a>
-))
 
 export const dataArticles = [
   {

@@ -65,7 +65,7 @@ export function Carousel(props: CarouselProps) {
                     position: 'relative',
                     overflow: 'hidden',
                     margin: '0 auto',
-                    width: '10rem',
+                    width: '80%',
                     borderRadius: '35px',
                   }}
                 >
@@ -75,8 +75,6 @@ export function Carousel(props: CarouselProps) {
             ))}
           </div>
         </div>
-        <CarouselButton onClick={scrollPrev} left />
-        <CarouselButton onClick={scrollNext} left={false} />
       </div>
     )
   }
