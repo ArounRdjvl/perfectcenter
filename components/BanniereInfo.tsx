@@ -106,7 +106,7 @@ export function BanniereInfo(props: BanniereProps) {
             <Typography
               variant={isMobile ? "body2" : "body1"}
               align="justify"
-              style={isMobile ? { marginBottom: '16px' } : { margin: '2rem 0' }}>
+              style={isMobile ? { marginBottom: '16px', whiteSpace: 'pre-line' } : { margin: '2rem 0', whiteSpace: 'pre-line' }}>
               {props.description}
             </Typography>
           </div>

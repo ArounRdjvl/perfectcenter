@@ -29,7 +29,8 @@ export function ImageAndDescription(props: ImageAndDescriptionProps) {
               zIndex: 3,
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              order: -1
             }
             :
             {
@@ -169,7 +170,8 @@ export function ImageAndDescription(props: ImageAndDescriptionProps) {
               zIndex: 3,
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              order: -1
             }
             :
             {

@@ -73,7 +73,7 @@ export default function Kaqun() {
         L&apos;oxygène est indéniablement l&apos;un des éléments les plus importants pour chaque cellule de notre corps. Sans elle, nos cellules ne peuvent produire beaucoup d&apos;énergie et 
         leur métabolisme devient moins efficace. En biologie cellulaire, le prix Nobel de médecine et de biologie, Otto Heinrich Warburg, a découvert qu&apos;aucune maladie ne peut 
         survivre en présence de niveaux élevés d&apos;oxygène.
-        En 2002, le docteur Robert LYONS s&apos;est fixé pour objectif de créer un produit capable de stocker et de transporter l&apos;oxygène sous une forme complètement révolutionnaire. 
+        En 2002, le docteur Robert LYONS s&apos;est fixé pour objectif de créer un produit capable de stocker et de transporter l&apos;oxygène sous une forme complètement révolutionnaire.
         C&apos;est avec cette idée que la première eau oxygénée à vu le jour.
         La technologie révolutionnaire derrière l&apos;eau KAQUN® permet à un niveau élevé d&apos;oxygène d&apos;exister sous une forme unique, stable et liée qui favorise une absorption rapide dans le corps.
         La consommation régulière d&apos;eau KAQUN améliore la qualité de vie et aide le système immunitaire à fonctionner, détoxifie, rafraîchit et dynamise. De plus, il aide à la performance physique 
