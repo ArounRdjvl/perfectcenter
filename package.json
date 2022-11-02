@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "postinstall": "husky install && npx prisma generate"
+    "postinstall": "husky install && npx prisma@4.1.0 generate"
   },
   "dependencies": {
     "@analytics/google-analytics": "^0.5.3",
