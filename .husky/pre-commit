@@ -4,4 +4,3 @@
 yarn build
 yarn lint
 yarn format
-git add .
