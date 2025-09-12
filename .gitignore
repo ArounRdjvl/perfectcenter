@@ -44,3 +44,17 @@ certificates
 
 # remove database sqlite from versionned files
 prisma/*.db*
+
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
