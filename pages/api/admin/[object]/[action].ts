@@ -84,10 +84,11 @@ export default async function hander(req: NextApiRequest, res: NextApiResponse) 
   }
   try {
     res.json(await handlers[object][action](req, res))
-  } catch (e) {
+  } catch (e: unknown) {
     console.error(e)
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
-      res.status(400).json({ code: e.code, meta: e.meta, message: e.message })
+      const err: Prisma.PrismaClientKnownRequestError = e
+      res.status(400).json({ code: err.code, meta: err.meta, message: err.message })
     } else {
       res.status(400).end()
     }
