@@ -3,14 +3,13 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "npx prisma@4.1.0 generate && npx prisma@4.1.0 migrate deploy && next dev",
-    "build": "npx prisma@4.1.0 generate && npx prisma@4.1.0 migrate deploy && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "db:deploy": "npx prisma@4.1.0 migrate deploy",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "postinstall": "husky install && npx prisma generate"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@analytics/google-analytics": "^0.5.3",
@@ -23,7 +22,7 @@
     "@mui/material": "^5.5.2",
     "@mui/system": "^5.2.8",
     "@mui/x-data-grid": "5.8.0",
-    "@prisma/client": "4.1.0",
+    "@prisma/client": "6.16.1",
     "@types/nodemailer": "^6.4.4",
     "analytics": "^0.8.1",
     "aws-amplify": "^6.15.6",

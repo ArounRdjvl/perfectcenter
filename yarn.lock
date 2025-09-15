@@ -9386,24 +9386,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@prisma/client@npm:4.1.0"
-  dependencies:
-    "@prisma/engines-version": "npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
+"@prisma/client@npm:6.16.1":
+  version: 6.16.1
+  resolution: "@prisma/client@npm:6.16.1"
   peerDependencies:
     prisma: "*"
+    typescript: ">=5.1.0"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 10c0/9b7e0530fb63806384ff0329ae86a0e76919c723d3cda2461cab0d3615920287c0ab550d67af6242ebed875800489639fe42f89cd1e7a25c529e0ef79fb066fe
-  languageName: node
-  linkType: hard
-
-"@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8":
-  version: 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
-  resolution: "@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
-  checksum: 10c0/7c630a78a67d423efde3c2077bf3473dd3e81943d381db2578df4498c3e5127fe16096b06d4b0eaba52d9001f8310ff41281e2d5f2cd39c4b9039a8c84a49929
+    typescript:
+      optional: true
+  checksum: 10c0/45b130fa79ce74585292d6f2b7f0edb04a6ffe826215f26c1130e79719987b3a193a09acfeebb1d9ba3b2635e1bd96f53431e30c01cfeaedef85c381d943bc03
   languageName: node
   linkType: hard
 
@@ -23348,7 +23342,7 @@ __metadata:
     "@mui/material": "npm:^5.5.2"
     "@mui/system": "npm:^5.2.8"
     "@mui/x-data-grid": "npm:5.8.0"
-    "@prisma/client": "npm:4.1.0"
+    "@prisma/client": "npm:6.16.1"
     "@types/bcrypt": "npm:^5.0.0"
     "@types/cors": "npm:^2.8.12"
     "@types/jsonwebtoken": "npm:^8.5.5"
